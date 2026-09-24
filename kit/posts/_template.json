@@ -84,6 +84,14 @@
             }
           ]
         }
+      ],
+      "coverage": [
+        {
+          "publisher": "<허용 매체명>",
+          "title": "<원문 제목 그대로>",
+          "url": "<https://…>",
+          "date": "YYYY-MM-DD"
+        }
       ]
     },
     {
@@ -121,5 +129,6 @@
     "태그3",
     "태그4",
     "태그5"
-  ]
+  ],
+  "_note_coverage": "coverage = 같은 뉴스를 함께 다룬 허용 매체(선정 근거 기록, 카드 근거 아님). candidates.json 의 clusters 에서 옮긴다."
 }
