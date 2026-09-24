@@ -1,9 +1,12 @@
 # 매일 Claude가 issues/<날짜>/ready.json 을 올리면 실행 → 07:00(KST)까지 기다렸다 인스타그램에 게시
+#  - 클라우드 루틴(PC 꺼져도 동작)은 claude/… 브랜치로 push, Cowork 백업(PC Chrome)은 main 에 업로드 — 둘 다 여기서 처리
+#  - 브랜치로 온 호는 바로 main 의 issues/<날짜>/ 로 옮겨 기록을 main 한 곳에 모은다
+#  - main 에 published/<날짜>.json 이 있으면 게시하지 않는다 (하루 1회)
 # (GitHub 예약 실행(cron)은 몇 시간씩 늦는 사례가 있어 쓰지 않고, 파일이 올라오는 순간 시작해 시각을 맞춘다)
 name: Publish to Instagram
 on:
   push:
-    branches: [main]
+    branches: [main, "claude/**"]
     paths: ["issues/*/ready.json"]
   workflow_dispatch:
     inputs:
@@ -29,26 +32,73 @@ jobs:
     timeout-minutes: 300
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: 날짜·중복 확인
+        id: prep
+        env:
+          IN_DATE: ${{ inputs.date }}
+        run: |
+          D="${IN_DATE:-$(TZ=Asia/Seoul date +%F)}"
+          echo "date=$D" >> "$GITHUB_OUTPUT"
+          git fetch -q origin main
+          if git cat-file -e "origin/main:published/$D.json" 2>/dev/null; then
+            echo "이미 게시됨 — main 의 published/$D.json"; echo "skip=1" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          if [ ! -f "issues/$D/ready.json" ]; then
+            echo "issues/$D/ready.json 없음 (브랜치 ${GITHUB_REF_NAME}) — 게시할 호 없음"; echo "skip=1" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          echo "skip=0" >> "$GITHUB_OUTPUT"
+          echo "게시 대상: $D (브랜치 ${GITHUB_REF_NAME}, 커밋 ${GITHUB_SHA::7})"
+      - name: main 에 호 반영 (브랜치로 온 경우)
+        if: steps.prep.outputs.skip == '0' && github.ref_name != 'main'
+        env:
+          D: ${{ steps.prep.outputs.date }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git worktree add -f --detach /tmp/sync origin/main
+          cd /tmp/sync
+          rm -rf "issues/$D"
+          git checkout "$GITHUB_SHA" -- "issues/$D"
+          git add -A "issues/$D"
+          if git diff --cached --quiet; then echo "main 에 이미 같은 내용"; exit 0; fi
+          git commit -q -m "issue $D (from ${GITHUB_REF_NAME})"
+          for i in 1 2 3 4; do
+            git push -q origin HEAD:main && { echo "✓ main 에 issues/$D 반영"; exit 0; }
+            sleep $((i*3)); git fetch -q origin main && git rebase -q origin/main
+          done
+          echo "! main 반영 실패 — 게시는 계속 진행"; exit 0
       - name: 게시
+        if: steps.prep.outputs.skip == '0'
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
-          IN_DATE: ${{ inputs.date }}
+          D: ${{ steps.prep.outputs.date }}
           IN_NOW: ${{ inputs.now }}
           IN_DRY: ${{ inputs.dry_run }}
         run: |
-          D="${IN_DATE:-$(TZ=Asia/Seoul date +%F)}"
           ARGS="--date $D"
           [ "$IN_NOW" = "true" ] && ARGS="$ARGS --now"
           [ "$IN_DRY" = "true" ] && ARGS="$ARGS --dry-run"
           python3 scripts/ig_publish.py $ARGS
-      - name: 게시 기록 저장
-        if: always()
+      - name: 게시 기록 main 에 저장
+        if: always() && steps.prep.outputs.skip == '0'
+        env:
+          D: ${{ steps.prep.outputs.date }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add published/ 2>/dev/null || true
-          if ! git diff --cached --quiet; then
-            git commit -m "published $(TZ=Asia/Seoul date +%F)"
-            git pull --rebase origin main && git push origin HEAD:main
-          fi
+          [ -f "published/$D.json" ] || { echo "게시 기록 없음 (게시 실패 또는 점검 실행)"; exit 0; }
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch -q origin main
+          git worktree add -f --detach /tmp/rec origin/main
+          mkdir -p /tmp/rec/published
+          cp "published/$D.json" "/tmp/rec/published/$D.json"
+          cd /tmp/rec
+          git add "published/$D.json"
+          git commit -q -m "published $D"
+          for i in 1 2 3 4; do
+            git push -q origin HEAD:main && { echo "✓ main 에 published/$D.json 저장"; exit 0; }
+            sleep $((i*3)); git fetch -q origin main && git rebase -q origin/main
+          done
+          echo "✗ 게시 기록 저장 실패"; cat "/tmp/rec/published/$D.json"; exit 1
