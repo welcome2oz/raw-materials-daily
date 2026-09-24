@@ -1,0 +1,54 @@
+# 매일 Claude가 issues/<날짜>/ready.json 을 올리면 실행 → 07:00(KST)까지 기다렸다 인스타그램에 게시
+# (GitHub 예약 실행(cron)은 몇 시간씩 늦는 사례가 있어 쓰지 않고, 파일이 올라오는 순간 시작해 시각을 맞춘다)
+name: Publish to Instagram
+on:
+  push:
+    branches: [main]
+    paths: ["issues/*/ready.json"]
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "게시할 날짜 YYYY-MM-DD (비우면 오늘, KST)"
+        required: false
+      now:
+        description: "07:00까지 기다리지 않고 바로 게시"
+        type: boolean
+        default: false
+      dry_run:
+        description: "점검만 (게시하지 않음)"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: instagram-publish
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - name: 게시
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IN_DATE: ${{ inputs.date }}
+          IN_NOW: ${{ inputs.now }}
+          IN_DRY: ${{ inputs.dry_run }}
+        run: |
+          D="${IN_DATE:-$(TZ=Asia/Seoul date +%F)}"
+          ARGS="--date $D"
+          [ "$IN_NOW" = "true" ] && ARGS="$ARGS --now"
+          [ "$IN_DRY" = "true" ] && ARGS="$ARGS --dry-run"
+          python3 scripts/ig_publish.py $ARGS
+      - name: 게시 기록 저장
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add published/ 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "published $(TZ=Asia/Seoul date +%F)"
+            git pull --rebase origin main && git push origin HEAD:main
+          fi
