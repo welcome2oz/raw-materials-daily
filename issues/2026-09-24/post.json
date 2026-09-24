@@ -1,0 +1,331 @@
+{
+  "id": "2026-09-24-brief",
+  "date": "2026-09-24",
+  "issue": 1,
+  "category": "brief",
+  "topic": "supply",
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "세계 최대 구리 광산,\n**조업 전면 중단**",
+      "sub": "9월 23일(현지) 외신 보도 기준 · 3건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "nonferrous",
+      "topic": "supply",
+      "src": "reu-escondida",
+      "headline": "세계 최대 구리 광산\n**조업 전면 중단**",
+      "toc": "에스콘디다, 사망 사고로 조업 중단",
+      "key": {
+        "value": "1.28Mt",
+        "label": "올해 생산 전망"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "Escondida · BHP · Chile",
+          "items": [
+            {
+              "k": "STATUS",
+              "v": "전면 중단",
+              "tone": "alert"
+            },
+            {
+              "k": "RESTART",
+              "v": "미정",
+              "sub": "당국 안전 확인 후 재개",
+              "tone": "warn"
+            },
+            {
+              "k": "CAUSE",
+              "v": "정비 중 사망 사고"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "1.28",
+              "unit": "Mt",
+              "label": "올해 생산 전망 · 최대",
+              "hi": true
+            }
+          ],
+          "half": true
+        },
+        {
+          "type": "split",
+          "title": "지분 구조",
+          "unit": "%",
+          "parts": [
+            {
+              "label": "BHP (운영)",
+              "value": 57.5,
+              "calc": true
+            },
+            {
+              "label": "Rio Tinto",
+              "value": 30
+            },
+            {
+              "label": "JECO",
+              "value": 12.5
+            }
+          ],
+          "note": "* 100 − 나머지 지분 (계산값)",
+          "half": true
+        }
+      ],
+      "why": "칠레산 정광·전기동 선적 일정 점검"
+    },
+    {
+      "type": "news",
+      "category": "nonferrous",
+      "topic": "supply",
+      "src": [
+        "reu-escondida-union",
+        "reu-centinela"
+      ],
+      "headline": "칠레 구리 광산 2곳\n**파업 찬반 투표**",
+      "toc": "칠레 구리 광산 2곳, 파업 찬반 투표",
+      "key": {
+        "value": "09.26",
+        "label": "첫 투표 시작"
+      },
+      "viz": [
+        {
+          "type": "calendar",
+          "title": "Strike watch · 투표 일정",
+          "start": "2026-09-23",
+          "days": 15,
+          "today": "2026-09-24",
+          "rows": [
+            {
+              "label": "CENTINELA",
+              "sub": "Antofagasta · 노조 2곳",
+              "src": "reu-centinela",
+              "bars": [
+                {
+                  "from": "2026-09-26",
+                  "to": "2026-09-28",
+                  "kind": "vote",
+                  "label": "투표"
+                },
+                {
+                  "from": "2026-09-29",
+                  "to": "2026-10-03",
+                  "kind": "est",
+                  "label": "중재 5일"
+                },
+                {
+                  "from": "2026-10-04",
+                  "to": "2026-10-08",
+                  "kind": "opt",
+                  "label": "+5"
+                }
+              ]
+            },
+            {
+              "label": "ESCONDIDA",
+              "sub": "BHP · 감독직 노조",
+              "src": "reu-escondida-union",
+              "bars": [
+                {
+                  "from": "2026-09-28",
+                  "to": "2026-09-30",
+                  "kind": "vote",
+                  "label": "투표"
+                },
+                {
+                  "from": "2026-10-01",
+                  "to": "2026-10-05",
+                  "kind": "est",
+                  "label": "중재 5일"
+                },
+                {
+                  "from": "2026-10-06",
+                  "to": "2026-10-10",
+                  "kind": "opt",
+                  "label": "+5"
+                }
+              ]
+            }
+          ],
+          "legend": [
+            {
+              "kind": "vote",
+              "t": "찬반 투표 (보도)"
+            },
+            {
+              "kind": "est",
+              "t": "부결 시 정부 중재"
+            },
+            {
+              "kind": "opt",
+              "t": "합의 시 연장"
+            }
+          ],
+          "note": "중재 구간은 칠레 법(5일, 합의 시 +5일) 기준 추정 배치"
+        }
+      ],
+      "facts": [
+        {
+          "t": "에스콘디다 노조 집행부, BHP 제안 **만장일치 거부**",
+          "src": "reu-escondida-union"
+        }
+      ],
+      "why": "10월 선적분, 공급사와 일정 미리 확인"
+    },
+    {
+      "type": "news",
+      "category": "resin",
+      "topic": "supply",
+      "src": "icis-aster",
+      "headline": "싱가포르 Aster 크래커\n**불가항력 해제**",
+      "toc": "싱가포르 Aster 크래커, 불가항력 해제",
+      "key": {
+        "value": "197D",
+        "label": "불가항력 기간 · 계산값"
+      },
+      "viz": [
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "197",
+              "unit": "DAYS",
+              "label": "불가항력 기간 · 3.06 → 9.19",
+              "hi": true,
+              "calc": true
+            },
+            {
+              "value": "1.1",
+              "unit": "Mt/y",
+              "label": "에틸렌 생산능력"
+            }
+          ]
+        },
+        {
+          "type": "timeline",
+          "title": "Force majeure timeline",
+          "start": "2026-02-28",
+          "end": "2026-09-22",
+          "span": {
+            "from": "2026-03-06",
+            "to": "2026-09-19",
+            "label": "FORCE MAJEURE"
+          },
+          "events": [
+            {
+              "d": "2026-02-28",
+              "t": "미국-이란 전쟁"
+            },
+            {
+              "d": "2026-03-06",
+              "t": "FM 선언",
+              "hi": true
+            },
+            {
+              "d": "2026-09-19",
+              "t": "해제 (시장 관계자)",
+              "hi": true
+            },
+            {
+              "d": "2026-09-22",
+              "t": "회사, ICIS에 확인"
+            }
+          ]
+        },
+        {
+          "type": "gauge",
+          "title": "Run rate during FM",
+          "from": 50,
+          "to": 60,
+          "max": 100,
+          "display": "50–60%",
+          "label": "가동률 · 시장 관계자"
+        }
+      ],
+      "why": "싱가포르산 PE 등 공급 회복 속도 확인"
+    },
+    {
+      "type": "closing"
+    }
+  ],
+  "sources": [
+    {
+      "id": "reu-escondida",
+      "publisher": "Reuters",
+      "via": "Yahoo Finance",
+      "title": "World's largest copper mine halts operations after worker death",
+      "date": "2026-09-23",
+      "time": "15:40 EDT",
+      "accessed": "2026-09-24",
+      "url": "https://ca.finance.yahoo.com/news/fatal-accident-occurs-bhps-chile-181850851.html",
+      "evidence": [
+        "Operations at the world's largest copper mine, BHP's Escondida mine in Chile, were suspended on Wednesday after a worker was killed in an accident, the firm said.",
+        "BHP said the worker had been killed while carrying out maintenance work.",
+        "\"All operational activities at the mine have been suspended,\" BHP said in a statement, without giving a timeline for when they may restart.",
+        "Typically in Chile, mines may only kick off activities after a fatal incident once inspectors verify that conditions are safe enough for a restart.",
+        "BHP operates the mine, while Rio Tinto holds a 30% stake and Japan-based JECO Corp 12.5%.",
+        "BHP had estimated the site would produce up to 1.28 million metric tons of the red metal this year."
+      ]
+    },
+    {
+      "id": "reu-escondida-union",
+      "publisher": "Reuters",
+      "via": "MINING.COM",
+      "title": "BHP Escondida mine supervisors' union urges rejection of contract offer, strike looms",
+      "date": "2026-09-23",
+      "accessed": "2026-09-24",
+      "url": "https://www.mining.com/web/bhp-escondida-mine-supervisors-union-urges-rejection-of-contract-offer-strike-looms/",
+      "evidence": [
+        "BHP presented the offer at the end of Tuesday's session in the formal negotiation process, which will be voted on by union members on September 28-30.",
+        "The union board unanimously rejected the latest offer claiming it \"lacks essential elements,\" according to union leader Alexis Barrera.",
+        "If members vote to reject the offer, a mandatory five-day government mediation follows before a legal strike can begin, with the period extendable by five more days by mutual agreement."
+      ]
+    },
+    {
+      "id": "reu-centinela",
+      "publisher": "Reuters",
+      "via": "MINING.COM",
+      "title": "Unions call strike vote at Antofagasta copper mine in Chile",
+      "date": "2026-09-23",
+      "accessed": "2026-09-24",
+      "url": "https://www.mining.com/web/unions-call-strike-vote-at-antofagasta-copper-mine-in-chile",
+      "evidence": [
+        "Two unions representing workers at Antofagasta Minerals' (LON: ANTO) Centinela copper mine in Chile called on workers to hold a strike vote, saying negotiations with the firm had reached a \"dead end\".",
+        "said they received the latest proposal from the formal dialogue process on Wednesday, with voting scheduled between September 26 and September 28.",
+        "Under Chilean law, if the offer is rejected, the parties must still undergo a mandatory five-day government mediation, which can be extended for the same period by mutual agreement, before being authorized to start a strike."
+      ]
+    },
+    {
+      "id": "icis-aster",
+      "publisher": "ICIS",
+      "title": "Aster Chemicals lifts force majeure on Singapore cracker complex",
+      "date": "2026-09-23",
+      "accessed": "2026-09-24",
+      "url": "https://www.icis.com/explore/resources/news/2026/09/23/11234548/aster-chemicals-lifts-force-majeure-on-singapore-cracker-complex",
+      "evidence": [
+        "Aster Chemicals and Energy has lifted the force majeure previously declared on its ethylene cracker complex in Singapore.",
+        "\"Aster confirms that we have lifted the force majeure previously declared on our ethylene cracker complex,\" a company spokesperson told ICIS on 22 September, without providing details.",
+        "Market sources said that the force majeure was lifted on 19 September.",
+        "operates a cracker with a 1.1 million tonne/year ethylene capacity on Bukom Island",
+        "Aster declared a force majeure on 6 March due to disruptions to feedstock shipments and flow of raw materials from the Middle East when the US-Iran war broke out on 28 February.",
+        "Following the force majeure declaration, the company's cracker cut its run rate to around 50-60% of capacity, market sources noted, with ethylene pipeline supply impacted."
+      ]
+    }
+  ],
+  "caption": "9월 23일(현지) 외신 보도 기준 원재료 뉴스 3건.\n\n1) 세계 최대 구리 광산 에스콘디다, 근로자 사망 사고로 조업 전면 중단\n2) 칠레 구리 광산 2곳(에스콘디다·센티넬라), 파업 찬반 투표\n3) 싱가포르 Aster 에틸렌 크래커, 불가항력 해제\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": [
+    "원자재",
+    "구리",
+    "석유화학",
+    "공급망",
+    "구매"
+  ]
+}
