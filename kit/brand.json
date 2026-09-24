@@ -1,0 +1,280 @@
+{
+  "series": "RAW MATERIALS DAILY",
+  "series_ko": "원재료 데일리",
+  "handle": "@raw_material_procurement",
+  "tagline": "매일 아침, 원재료 뉴스를 한 장으로.",
+  "size": {
+    "width": 1080,
+    "height": 1350
+  },
+  "color_convention": "kr",
+  "categories": {
+    "steel": {
+      "en": "STEEL",
+      "ko": "스틸",
+      "accent": "#7FA3B8",
+      "desc": "열연·냉연·도금·STS·철근 등"
+    },
+    "resin": {
+      "en": "RESIN",
+      "ko": "레진",
+      "accent": "#A3B26E",
+      "desc": "PP·PE·ABS·HIPS·PS 등 석유화학 수지"
+    },
+    "nonferrous": {
+      "en": "NON-FERROUS",
+      "ko": "비철",
+      "accent": "#C98B5E",
+      "desc": "구리·알루미늄"
+    },
+    "chemical": {
+      "en": "CHEMICAL",
+      "ko": "화공",
+      "accent": "#A391C2",
+      "desc": "냉매·오일"
+    },
+    "brief": {
+      "en": "DAILY BRIEF",
+      "ko": "브리핑",
+      "accent": "#CDB16A",
+      "desc": "여러 카테고리 뉴스를 묶은 데일리 브리핑 커버·마무리"
+    }
+  },
+  "topics": {
+    "supply": {
+      "en": "S/D",
+      "ko": "수급"
+    },
+    "maker": {
+      "en": "MAKER",
+      "ko": "메이커"
+    },
+    "regulation": {
+      "en": "REG",
+      "ko": "규제"
+    },
+    "tariff": {
+      "en": "TARIFF",
+      "ko": "관세"
+    }
+  },
+  "disclaimer": "기사 요약은 원문을 바탕으로 정리했으며, 구매 관점은 의견입니다. 정확한 내용은 각 언론사 원문을 확인하세요. 정보 제공 목적이며 구매·투자 판단의 책임은 이용자에게 있습니다.",
+  "rules": {
+    "max_slides": 10,
+    "max_hashtags": 5,
+    "max_caption_chars": 2200,
+    "source_required_types": [
+      "news",
+      "number",
+      "table",
+      "bars",
+      "board",
+      "bullets"
+    ],
+    "price_allowed": false,
+    "news_max_age_days": 1,
+    "evidence_required": true,
+    "evidence_extract_required": true,
+    "dedup_required": true
+  },
+  "news_outlets": {
+    "_note": "뉴스 출처 허용 목록. 출처 URL의 도메인과 발행처(publisher)가 모두 이 목록에 있어야 한다. syndication=true인 호스트(Yahoo Finance 등)는 원 발행처가 목록에 있을 때만 허용.",
+    "core": [
+      {
+        "name": "Reuters",
+        "aliases": [
+          "로이터"
+        ],
+        "domains": [
+          "reuters.com"
+        ]
+      },
+      {
+        "name": "The Wall Street Journal",
+        "aliases": [
+          "WSJ",
+          "Wall Street Journal",
+          "월스트리트저널"
+        ],
+        "domains": [
+          "wsj.com"
+        ]
+      },
+      {
+        "name": "The New York Times",
+        "aliases": [
+          "NYT",
+          "New York Times",
+          "뉴욕타임스"
+        ],
+        "domains": [
+          "nytimes.com"
+        ]
+      },
+      {
+        "name": "Yahoo Finance",
+        "aliases": [
+          "야후파이낸스"
+        ],
+        "domains": [
+          "finance.yahoo.com"
+        ],
+        "syndication": true
+      }
+    ],
+    "global": [
+      {
+        "name": "Bloomberg",
+        "aliases": [
+          "블룸버그"
+        ],
+        "domains": [
+          "bloomberg.com"
+        ]
+      },
+      {
+        "name": "Financial Times",
+        "aliases": [
+          "FT"
+        ],
+        "domains": [
+          "ft.com"
+        ]
+      },
+      {
+        "name": "The Economist",
+        "aliases": [
+          "Economist"
+        ],
+        "domains": [
+          "economist.com"
+        ]
+      },
+      {
+        "name": "Associated Press",
+        "aliases": [
+          "AP"
+        ],
+        "domains": [
+          "apnews.com"
+        ]
+      },
+      {
+        "name": "CNBC",
+        "aliases": [],
+        "domains": [
+          "cnbc.com"
+        ]
+      },
+      {
+        "name": "Nikkei Asia",
+        "aliases": [
+          "Nikkei"
+        ],
+        "domains": [
+          "asia.nikkei.com"
+        ]
+      },
+      {
+        "name": "MarketWatch",
+        "aliases": [],
+        "domains": [
+          "marketwatch.com"
+        ]
+      },
+      {
+        "name": "Barron's",
+        "aliases": [
+          "Barrons"
+        ],
+        "domains": [
+          "barrons.com"
+        ]
+      }
+    ],
+    "trade": [
+      {
+        "name": "S&P Global Commodity Insights",
+        "aliases": [
+          "S&P Global",
+          "Platts"
+        ],
+        "domains": [
+          "spglobal.com"
+        ]
+      },
+      {
+        "name": "Argus",
+        "aliases": [
+          "Argus Media"
+        ],
+        "domains": [
+          "argusmedia.com"
+        ]
+      },
+      {
+        "name": "Fastmarkets",
+        "aliases": [],
+        "domains": [
+          "fastmarkets.com"
+        ]
+      },
+      {
+        "name": "ICIS",
+        "aliases": [],
+        "domains": [
+          "icis.com"
+        ]
+      },
+      {
+        "name": "MINING.COM",
+        "aliases": [
+          "Mining.com"
+        ],
+        "domains": [
+          "mining.com"
+        ],
+        "syndication": true
+      },
+      {
+        "name": "C&EN",
+        "aliases": [
+          "Chemical & Engineering News"
+        ],
+        "domains": [
+          "cen.acs.org"
+        ]
+      }
+    ]
+  },
+  "editor": "원재료 구매 담당자 발행",
+  "editor_note": "",
+  "instagram": {
+    "_note": "자동 게시(Instagram 공식 Content Publishing API) 기준 규격. API는 JPEG만, 비율 4:5~1.91:1, 캐러셀 최대 10장, 파일 8MB 이하, sRGB. 3:4는 앱 업로드에서만 지원되고 API에서는 받지 않아 4:5로 한다. 확인일 2026-09-24 — 출처는 FORMAT_GUIDE 7장.",
+    "ratio": "4:5",
+    "width": 1080,
+    "height": 1350,
+    "allowed_ratios": [
+      "4:5",
+      "1:1",
+      "1.91:1"
+    ],
+    "max_width": 1080,
+    "max_slides": 10,
+    "max_hashtags": 5,
+    "max_caption_chars": 2200,
+    "file_type": "jpg",
+    "jpeg_quality": 95,
+    "max_file_mb": 8,
+    "publish_time_kst": "07:00"
+  },
+  "github_repo": "welcome2oz/raw-materials-daily",
+  "_github_note": "자동 게시용 공개 저장소. 키트(kit/)도 이 저장소에 있고, Claude Code 루틴이 매일 이 저장소를 clone 해서 실행한다.",
+  "handoff": {
+    "method": "routine",
+    "note": "매일 05:00(KST) Claude Code 루틴이 이 저장소에서 실행 → claude/ 브랜치 push → Actions가 07:00 게시. 06:15 Cowork 예약 작업은 백업(루틴이 이미 넘겼으면 바로 종료, 아니면 사용자 PC Chrome으로 main에 업로드)",
+    "backup": "chrome",
+    "chrome_device_id": "c3fd1844-59e1-488d-8978-ccee1b1ec255",
+    "chrome_device_name": "Browser 2 (세종 왼쪽)"
+  }
+}

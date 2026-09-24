@@ -1,0 +1,97 @@
+{
+ "name": "raw-materials-daily-kit",
+ "sha": "8483cf9e1574",
+ "packed_at": "2026-09-24T23:11:50+09:00",
+ "files": [
+  {
+   "path": "kit/render.py",
+   "bytes": 32945,
+   "sha256": "15a39ecf16d89b56fdc584377ad047e460e988c66077b971a6c9ab567e6de17a"
+  },
+  {
+   "path": "kit/brand.json",
+   "bytes": 6639,
+   "sha256": "6adccb35ca8a2cba5ddffeed2cd47679df031b9307a601eede14d2d46220c10f"
+  },
+  {
+   "path": "kit/README.md",
+   "bytes": 5640,
+   "sha256": "5844d04c1f75f3e23d00eda725c2f2eceec052e857c52286591cdf4f358a25ad"
+  },
+  {
+   "path": "kit/FORMAT_GUIDE.md",
+   "bytes": 13982,
+   "sha256": "b4ef8dc539ee57acaf20bb6737d2b788879deb9f117f6e4079fc1fb943ef90e2"
+  },
+  {
+   "path": "kit/DATA_SOURCES.md",
+   "bytes": 6062,
+   "sha256": "fd993d7a9060ee09eaa5de0a40048733d473505776ed51fc0a38ae1937dcf220"
+  },
+  {
+   "path": "kit/template/card.html",
+   "bytes": 241,
+   "sha256": "0b4a23264fbfe3be8f40cfcca4630c0c46ceec40365ffb136b626d86bb1648ac"
+  },
+  {
+   "path": "kit/template/card.css",
+   "bytes": 19925,
+   "sha256": "16b622e0635e1d0956bb7822807f02f88633ecf925b91bda2cc4d173410530c5"
+  },
+  {
+   "path": "kit/template/card.js",
+   "bytes": 29073,
+   "sha256": "0f7eec8f3ec1c5630bac65157b8e2fc7a7adb911a02781ed61d5d998d5dd2774"
+  },
+  {
+   "path": "kit/pipeline/collect.py",
+   "bytes": 15630,
+   "sha256": "52875a886035657fcf2726d0fbf8cef1650f766714d1a86d5e95acad808bee95"
+  },
+  {
+   "path": "kit/pipeline/dedup.py",
+   "bytes": 11955,
+   "sha256": "f7addf832fc8f9c6de75dd1714e18014dff4d37e77b808dff965af498d5c3191"
+  },
+  {
+   "path": "kit/pipeline/gh_handoff.py",
+   "bytes": 8577,
+   "sha256": "68783a4946903df2d66ea6a88d1010215f78c293a05ce0479600a75024efa166"
+  },
+  {
+   "path": "kit/pipeline/mirror_repo.py",
+   "bytes": 2753,
+   "sha256": "5bd836bb15b58fe8d18aa7d66828799152d070ebc0ccad3383c12564f9c6a2da"
+  },
+  {
+   "path": "kit/pipeline/pack.py",
+   "bytes": 1727,
+   "sha256": "079ac7e3f87789b7c165ef1e611a2faa76ec5864b50b824da1fc9f2e52c2e083"
+  },
+  {
+   "path": "kit/pipeline/setup.sh",
+   "bytes": 2310,
+   "sha256": "61a08d18e37f28ca8c11103622f254c2c111fbbec66f74b276df0b098ea39aaf"
+  },
+  {
+   "path": "kit/pipeline/channels.json",
+   "bytes": 4454,
+   "sha256": "5eb5373c2b2bcd0aef177175e1b46c84b72e65f385da5841074c5ef18409e8b1"
+  },
+  {
+   "path": "kit/pipeline/keywords.json",
+   "bytes": 8068,
+   "sha256": "6fd86d93780b0778fe66995dc314173ca8c3b4024db82612b825e3043c62601e"
+  },
+  {
+   "path": "kit/pipeline/RUNBOOK.md",
+   "bytes": 12152,
+   "sha256": "87896bb0ca0d0bfa1e737d3a81c6886c761a4e0d851734d066b837008b26ea78"
+  },
+  {
+   "path": "kit/posts/_template.json",
+   "bytes": 3209,
+   "sha256": "099f6fcd78110e0416b2b88677e93cbe5e341b91b8b9da457a14b45e0f1d8c3a"
+  }
+ ]
+}
