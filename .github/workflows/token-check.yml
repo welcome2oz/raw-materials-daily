@@ -1,0 +1,50 @@
+# 인스타그램 토큰 점검 (게시하지 않음). 처음 설정할 때 한 번 수동 실행하고, 이후 매주 자동 실행.
+#  - 토큰이 살아 있는지, 어떤 계정(user_id·username)의 토큰인지 출력 → user_id 를 IG_USER_ID 시크릿에 넣는다
+#  - IG_USER_ID 가 있으면 게시 한도 조회로 게시 권한까지 확인
+#  - GH_PAT(이 저장소 Secrets 쓰기 권한 fine-grained 토큰)가 있으면 토큰을 연장해 IG_ACCESS_TOKEN 에 자동 저장 (장기 토큰 60일)
+name: Instagram token check
+on:
+  schedule:
+    - cron: "0 1 * * 1"
+  workflow_dispatch:
+jobs:
+  token:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 점검
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -e
+          API=https://graph.instagram.com/v25.0
+          [ -n "$IG_ACCESS_TOKEN" ] || { echo "✗ IG_ACCESS_TOKEN 시크릿이 없음"; exit 1; }
+          ME=$(curl -sS -H "Authorization: Bearer $IG_ACCESS_TOKEN" "$API/me?fields=user_id,username")
+          echo "$ME" | grep -q '"user_id"' || { echo "✗ 토큰이 유효하지 않음: $(echo "$ME" | head -c 300)"; exit 1; }
+          UID_=$(echo "$ME" | python3 -c 'import json,sys; print(json.load(sys.stdin)["user_id"])')
+          UNAME=$(echo "$ME" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("username",""))')
+          echo "✓ 토큰 유효 — 계정 @$UNAME / user_id $UID_"
+          if [ -z "$IG_USER_ID" ]; then
+            echo "! IG_USER_ID 시크릿이 없음 → 위 user_id 값($UID_)을 IG_USER_ID 로 등록하세요"
+          elif [ "$IG_USER_ID" != "$UID_" ]; then
+            echo "✗ IG_USER_ID 시크릿이 토큰의 계정($UID_)과 다름"; exit 1
+          else
+            LIM=$(curl -sS -H "Authorization: Bearer $IG_ACCESS_TOKEN" "$API/$IG_USER_ID/content_publishing_limit?fields=quota_usage,config")
+            echo "$LIM" | grep -q '"data"' || { echo "✗ 게시 권한 확인 실패 (instagram_business_content_publish 권한 필요): $(echo "$LIM" | head -c 300)"; exit 1; }
+            echo "✓ 게시 권한 확인 — $LIM"
+          fi
+          if [ -n "$GH_PAT" ]; then
+            R=$(curl -sS "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=$IG_ACCESS_TOKEN")
+            NEW=$(echo "$R" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("access_token",""))')
+            if [ -n "$NEW" ]; then
+              echo "::add-mask::$NEW"
+              GH_TOKEN="$GH_PAT" gh secret set IG_ACCESS_TOKEN --repo "$GH_REPO" --body "$NEW"
+              echo "✓ 토큰 연장·저장 (유효 $(echo "$R" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("expires_in",0)//86400)')일)"
+            else
+              echo "! 연장 안 됨 (발급 24시간 이내 토큰은 연장 불가): $(echo "$R" | head -c 200)"
+            fi
+          else
+            echo "! GH_PAT 없음 — 자동 연장은 건너뜀. 발급 후 60일 안에 토큰을 새로 받아 IG_ACCESS_TOKEN 을 바꿔 주세요."
+          fi
