@@ -84,7 +84,7 @@
 
 `cover(toc) → news × 2~5 → closing`
 
-- 뉴스 선정: 스틸·레진·비철·화공에서 각각 가장 중요한 1건씩. 해당 카테고리에 허용 매체의 최신 기사가 없으면 그날은 뺀다(억지로 채우지 않음)
+- 뉴스 선정: **여러 허용 매체가 함께 다룬 뉴스일수록 중요**(coverage). 스틸·레진·비철·화공에서 각각 최대 1건, 하루 최대 4건, coverage 2곳 이상 우선. 해당 카테고리에 그런 뉴스가 없으면 그날은 뺀다(억지로 채우지 않음, 사용자 결정 2026-09-25)
 - 우선순위: ① 공급 차질·가동 중단·불가항력 ② 관세·무역구제·규제 ③ 메이커 증설·감산·M&A ④ 수요 변화
 - 가격 등락이 주제인 기사(예: "구리 사상 최고가")는 선정하지 않는다
 - 같은 사건을 다룬 기사 여러 건은 한 장에 묶고, 사실마다 출처를 따로 단다
@@ -99,9 +99,10 @@
 |---|---|---|
 | 핵심 | Reuters · The Wall Street Journal · The New York Times · Yahoo Finance | reuters.com · wsj.com · nytimes.com · finance.yahoo.com |
 | 글로벌 주요 외신 | Bloomberg · Financial Times · The Economist · AP · CNBC · Nikkei Asia · MarketWatch · Barron's | bloomberg.com · ft.com · economist.com · apnews.com · cnbc.com · asia.nikkei.com · marketwatch.com · barrons.com |
-| 전문지 | S&P Global Commodity Insights · Argus · Fastmarkets · ICIS · MINING.COM · C&EN | spglobal.com · argusmedia.com · fastmarkets.com · icis.com · mining.com · cen.acs.org |
+| 전문지·거래소·리서치 | S&P Global Commodity Insights · Argus · Fastmarkets · ICIS · MINING.COM · C&EN · London Metal Exchange · Wood Mackenzie · Trading Economics · DIGITIMES | spglobal.com · argusmedia.com · fastmarkets.com · icis.com · mining.com · cen.acs.org · lme.com · woodmac.com · tradingeconomics.com · digitimes.com |
+| 국내 경제지·전문지 | 한국경제 · 매일경제 · 연합인포맥스 · 이데일리 · 철강금속신문 · 스틸데일리(스틸앤스틸) · 화학저널(ChemLOCUS) | hankyung.com · mk.co.kr · einfomax.co.kr · edaily.co.kr · snmnews.com · steeldaily.co.kr · chemlocus.co.kr |
 
-전문지 목록은 기본 제안이다. `brand.json`에서 빼거나 추가할 수 있다.
+2026-09-25 사용자 지정 20개 매체를 기본 매체로 넣었다. 유료·차단 매체(블룸버그·FT·WSJ·플래츠·아거스·닛케이·디지타임스·매일경제·연합인포맥스, 화학저널 본문)는 본문을 읽을 수 없어 **'함께 보도한 매체 수' 신호**로만 쓰고, 카드 근거는 본문을 읽은 기사에서만 가져온다. 안티 스크래핑 우회(헤더 위장·브라우저 자동화)는 쓰지 않는다. `brand.json`에서 빼거나 추가할 수 있다.
 
 ### 전재(syndication) 규칙
 
@@ -135,7 +136,7 @@
 
 ## 6. 매일 제작 절차
 
-매일 05:00(KST) Claude Code 루틴(클라우드, PC 꺼져도 동작)이 `pipeline/RUNBOOK.md` 순서대로 만든다. 06:15 Cowork 예약 작업은 백업이다.
+매일 04:00(KST) Cowork 예약 작업이 `pipeline/RUNBOOK.md`(P 모드) 순서대로 만들어 발행함에 올리고, 05:00 Claude Code 루틴(A 모드)이 받아 재검증 후 GitHub로 넘긴다. 둘 다 클라우드라 PC는 꺼져 있어도 된다.
 
 `채널 수집(WebFetch) → collect.py 후보 정리 → 기사 선택 → 본문 발췌 저장 → 포스트 JSON(근거 문장 포함) → render.py 검증·렌더 → 저장소 issues/<날짜>/ push → 보고`
 
@@ -180,4 +181,5 @@ pipeline/RUNBOOK.md 순서대로 오늘자 RAW MATERIALS DAILY를 만들어줘.
 
 - 판정: 최근 14일 게시 기록(저장소 `issues/<날짜>/post.json` 중 `published/<날짜>.json` 이 있는 호)과 고유명사(회사·광산·설비·지명)·사건 유형(파업·중단·불가항력·관세…) 겹침으로 같은 사건인지 보고, 새 근거 문장에 이전 근거에 없던 상태 변화·날짜·사건 관련 숫자가 있는지로 새 사실을 가린다 (`pipeline/dedup.py`)
 - 배경 숫자(작년 생산량 등)만 새로 나온 기사는 새 사실로 치지 않는다
+- 국내 기사도 같은 기준으로 본다: 한글 고유명사(에스콘디다·포스코 등, 영문 표기와 연결)·한국어 사건 단어(중단·파업·불가항력·관세…)·한국어 날짜(9월 27일)를 인식한다. 예: 전날 로이터 기사로 낸 사건을 오늘 한국경제가 새 사실 없이 다시 쓰면 건너뛴다
 - 자동 판정은 1차 거름망이다. 같은 사건인데 표현이 달라 못 잡는 경우를 대비해 3단계에서 후보의 이전 호 표시를 함께 본다

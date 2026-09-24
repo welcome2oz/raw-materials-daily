@@ -1,7 +1,7 @@
 # RAW MATERIALS DAILY — 원재료 카드뉴스 키트
 
 @raw_material_procurement 인스타그램용 원재료 카드뉴스. 그날의 원재료 뉴스(주요 외신·전문지)를 **인스타 캐러셀 4:5(1080×1350) JPEG + 캡션**으로 만든다. 가격은 싣지 않는다.
-매일 05:00(KST) Claude Code 루틴이 이 저장소에서 `pipeline/RUNBOOK.md` 순서대로 만들고 push 하면, GitHub Actions가 **07:00에 인스타그램에 자동 게시**한다(저장소 루트 `README.md`). 결과와 기록은 저장소 `issues/<날짜>/`·`published/<날짜>.json` 에 쌓인다.
+매일 04:00(KST) Cowork 예약 작업이 `pipeline/RUNBOOK.md`(P 모드) 순서대로 만들어 발행함에 올리고, 05:00 Claude Code 루틴(A 모드)이 받아 재검증·push 하면, GitHub Actions가 **07:00에 인스타그램에 자동 게시**한다(저장소 루트 `README.md`). 결과와 기록은 저장소 `issues/<날짜>/`·`published/<날짜>.json` 에 쌓인다.
 
 ```
 kit/
@@ -14,7 +14,10 @@ kit/
 │  ├─ keywords.json        카테고리·토픽 키워드, 가격 기사·종목 기사 제외 규칙, 본문 접근 가능 도메인
 │  ├─ collect.py           채널 결과 → 후보 목록 (허용 매체·게재일·가격 기사·이미 쓴 기사 필터)
 │  ├─ dedup.py             중복 기사 검열 (같은 사건·새 사실 판정)
-│  ├─ gh_handoff.py        issues/<날짜>/ 에 쓰고 push (--inplace) 또는 Chrome 업로드 준비 (--prepare)
+│  ├─ hub_stage.py         [P] 발행함에 올릴 파일·handoff.json(sha256 목록) 준비
+│  ├─ pickup.py            [A] 발행함에서 받은 호를 sha256 대조·재검증해 키트에 배치
+│  ├─ gh_handoff.py        [A] issues/<날짜>/ 에 쓰고 push (--inplace) · Chrome 업로드 준비 (--prepare)
+│  ├─ hub/index.html       발행함 페이지
 │  ├─ mirror_repo.py       [백업] push 권한 없는 환경에서 저장소를 raw 로 받아 오기
 │  ├─ pack.py              kit/manifest.json 갱신 (키트 파일을 고친 뒤 실행)
 │  └─ setup.sh             폰트(npm)·Playwright·Chromium 준비

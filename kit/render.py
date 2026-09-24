@@ -66,7 +66,7 @@ def iter_text(obj):
             yield from iter_text(v)
     elif isinstance(obj, dict):
         for k, v in obj.items():
-            if k not in ("src", "type", "category", "topic", "impact"):
+            if k not in ("src", "type", "category", "topic", "impact", "coverage"):
                 yield from iter_text(v)
 
 
@@ -360,6 +360,7 @@ def validate(post: dict, brand: dict, run_dir=None, history=None):
     if post.get("sample"):
         errors.append("sample=true — 가상 데이터는 게시용으로 렌더하지 않음 (레이아웃 확인만 --draft)")
     check_evidence(post, brand, run_dir, errors, warns)
+    check_coverage(post, brand, errors, warns)
     # 중복 기사 검열 (발행 이력 issues.json 과 비교)
     if history is not None:
         sys.path.insert(0, str(ROOT / "pipeline"))
@@ -370,6 +371,43 @@ def validate(post: dict, brand: dict, run_dir=None, history=None):
     elif rules.get("dedup_required"):
         errors.append("발행 이력이 없어 중복 검사를 못 함 — 키트를 저장소 안(<저장소>/kit)에서 실행하거나 --history 로 저장소 루트를 지정할 것")
     return errors, warns
+
+
+def check_coverage(post: dict, brand: dict, errors: list, warns: list):
+    """뉴스 슬라이드의 coverage(같은 뉴스를 함께 다룬 허용 매체 목록) 점검과 기사 수 한도.
+    coverage 는 선정 근거 기록일 뿐 카드 근거가 아니다(카드 숫자·인용은 sources[].evidence 에서만)."""
+    rules = brand.get("rules", {})
+    outlets = [o for grp in (brand.get("news_outlets") or {}).values() if isinstance(grp, list) for o in grp]
+    news = [(i, s) for i, s in enumerate(post.get("slides", []), 1) if s.get("type") == "news"]
+    if rules.get("max_news") and len(news) > rules["max_news"]:
+        errors.append(f"뉴스 {len(news)}건 — 하루 최대 {rules['max_news']}건 (여러 매체가 함께 다룬 중요 뉴스 위주로 줄일 것)")
+    S = {x.get("id"): x for x in post.get("sources") or []}
+    for i, s in news:
+        cov = s.get("coverage")
+        names = set()
+        for x in (S.get(r, {}) for r in slide_refs(s)):
+            o = outlet_by_name(x.get("publisher", ""), outlets) if x else None
+            if o:
+                names.add(o["name"])
+        if cov is None:
+            warns.append(f"slide {i}: coverage(함께 보도한 매체) 기록 없음 — 선정 근거를 남길 것")
+        else:
+            for c in cov:
+                o = outlet_by_name(c.get("publisher", ""), outlets)
+                if not o:
+                    errors.append(f"slide {i}: coverage 발행처 '{c.get('publisher')}' 는 허용 매체가 아님")
+                    continue
+                u = c.get("url", "")
+                if not str(u).startswith(("http://", "https://")) or not str(c.get("title", "")).strip():
+                    errors.append(f"slide {i}: coverage 항목에 title·url 필요 ({c.get('publisher')})")
+                    continue
+                host_o = outlet_by_url(u, outlets)
+                if not host_o or (host_o is not o and not host_o.get("syndication")):
+                    errors.append(f"slide {i}: coverage URL 도메인이 발행처 '{o['name']}' 와 맞지 않음 ({u})")
+                    continue
+                names.add(o["name"])
+        if rules.get("min_coverage") and len(names) < rules["min_coverage"]:
+            warns.append(f"slide {i}: 함께 보도한 허용 매체 {len(names)}곳 — 기준 {rules['min_coverage']}곳 미만 (RUNBOOK 3단계 예외 사유를 run_log 에 남길 것)")
 
 
 def build_caption(post: dict) -> str:

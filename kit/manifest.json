@@ -1,27 +1,27 @@
 {
  "name": "raw-materials-daily-kit",
- "sha": "8483cf9e1574",
- "packed_at": "2026-09-24T23:11:50+09:00",
+ "sha": "cc13ecd8047a",
+ "packed_at": "2026-09-25T00:07:23+09:00",
  "files": [
   {
    "path": "kit/render.py",
-   "bytes": 32945,
-   "sha256": "15a39ecf16d89b56fdc584377ad047e460e988c66077b971a6c9ab567e6de17a"
+   "bytes": 35418,
+   "sha256": "89370633c2daeac1df706066b812f285fc7a6347ed52f8ab860e0b05b10bc5e2"
   },
   {
    "path": "kit/brand.json",
-   "bytes": 6639,
-   "sha256": "6adccb35ca8a2cba5ddffeed2cd47679df031b9307a601eede14d2d46220c10f"
+   "bytes": 9820,
+   "sha256": "1d1f3b56dbe7555e280715a74dc38e80137355368a9d8167fbaee6cc003b78dd"
   },
   {
    "path": "kit/README.md",
-   "bytes": 5640,
-   "sha256": "5844d04c1f75f3e23d00eda725c2f2eceec052e857c52286591cdf4f358a25ad"
+   "bytes": 5977,
+   "sha256": "5667acf0290b58bc0fecf57d0c24aadfa3fb171bb4b63d6262ed678763dffa01"
   },
   {
    "path": "kit/FORMAT_GUIDE.md",
-   "bytes": 13982,
-   "sha256": "b4ef8dc539ee57acaf20bb6737d2b788879deb9f117f6e4079fc1fb943ef90e2"
+   "bytes": 15433,
+   "sha256": "f312deab2d36ef0ad4147bbaea623af7a60a545a049d1e11583840fb7d2d774b"
   },
   {
    "path": "kit/DATA_SOURCES.md",
@@ -45,18 +45,23 @@
   },
   {
    "path": "kit/pipeline/collect.py",
-   "bytes": 15630,
-   "sha256": "52875a886035657fcf2726d0fbf8cef1650f766714d1a86d5e95acad808bee95"
+   "bytes": 19354,
+   "sha256": "6dae3ebdbc87e5ffb0b0bf0167f7e717591a4510a1554ff1700275f886e1ba7b"
   },
   {
    "path": "kit/pipeline/dedup.py",
-   "bytes": 11955,
-   "sha256": "f7addf832fc8f9c6de75dd1714e18014dff4d37e77b808dff965af498d5c3191"
+   "bytes": 17128,
+   "sha256": "08d4abdbbfdb6b9f8dcce36211849f937cd91369ec188706f7fe6ce43f280717"
   },
   {
    "path": "kit/pipeline/gh_handoff.py",
    "bytes": 8577,
    "sha256": "68783a4946903df2d66ea6a88d1010215f78c293a05ce0479600a75024efa166"
+  },
+  {
+   "path": "kit/pipeline/hub_stage.py",
+   "bytes": 7681,
+   "sha256": "7879bffe0134d3d926da66923b62cd3c66f0c3c07fe13363f0d672a19838098c"
   },
   {
    "path": "kit/pipeline/mirror_repo.py",
@@ -69,29 +74,34 @@
    "sha256": "079ac7e3f87789b7c165ef1e611a2faa76ec5864b50b824da1fc9f2e52c2e083"
   },
   {
+   "path": "kit/pipeline/pickup.py",
+   "bytes": 5854,
+   "sha256": "7e4229d83599dbdad58bd514b570db83576067859d015690c2282716c8487bb0"
+  },
+  {
    "path": "kit/pipeline/setup.sh",
    "bytes": 2310,
    "sha256": "61a08d18e37f28ca8c11103622f254c2c111fbbec66f74b276df0b098ea39aaf"
   },
   {
    "path": "kit/pipeline/channels.json",
-   "bytes": 4454,
-   "sha256": "5eb5373c2b2bcd0aef177175e1b46c84b72e65f385da5841074c5ef18409e8b1"
+   "bytes": 10453,
+   "sha256": "0823ce92c16f0654e4764423f7935738d42a49a2db7ed818ff603d7254aa4ed9"
   },
   {
    "path": "kit/pipeline/keywords.json",
-   "bytes": 8068,
-   "sha256": "6fd86d93780b0778fe66995dc314173ca8c3b4024db82612b825e3043c62601e"
+   "bytes": 11640,
+   "sha256": "3e41b77d0fa8d2e014840eac05f7f71da388ca792f06c0c692cfec31c6693089"
   },
   {
    "path": "kit/pipeline/RUNBOOK.md",
-   "bytes": 12152,
-   "sha256": "87896bb0ca0d0bfa1e737d3a81c6886c761a4e0d851734d066b837008b26ea78"
+   "bytes": 16582,
+   "sha256": "aea6a1fecfe6330b74eef0cf5915e97bf380114b6e6e9d771b7dececfb2f9f72"
   },
   {
    "path": "kit/posts/_template.json",
-   "bytes": 3209,
-   "sha256": "099f6fcd78110e0416b2b88677e93cbe5e341b91b8b9da457a14b45e0f1d8c3a"
+   "bytes": 3588,
+   "sha256": "9c46970ff4cdba5475236326f801083f146f059f239b828634dbbe9d16420b28"
   }
  ]
 }

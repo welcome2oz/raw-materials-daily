@@ -75,10 +75,13 @@
     "news_max_age_days": 1,
     "evidence_required": true,
     "evidence_extract_required": true,
-    "dedup_required": true
+    "dedup_required": true,
+    "max_news": 4,
+    "min_coverage": 2,
+    "_note_selection": "기사 선정: 같은 뉴스를 함께 다룬 허용 매체 수(coverage)가 많을수록 중요. 카테고리당 최대 1건, 전체 max_news건 이하, coverage min_coverage 이상 우선 (RUNBOOK 3단계)."
   },
   "news_outlets": {
-    "_note": "뉴스 출처 허용 목록. 출처 URL의 도메인과 발행처(publisher)가 모두 이 목록에 있어야 한다. syndication=true인 호스트(Yahoo Finance 등)는 원 발행처가 목록에 있을 때만 허용.",
+    "_note": "뉴스 출처 허용 목록. 출처 URL의 도메인과 발행처(publisher)가 모두 이 목록에 있어야 한다. syndication=true인 호스트(Yahoo Finance 등)는 원 발행처가 목록에 있을 때만 허용. 2026-09-25 사용자 지정 20개 매체(블룸버그·로이터·FT·WSJ·S&P·패스트마켓츠·ICIS·아거스·LME·우드맥킨지·트레이딩이코노믹스·디지타임스·닛케이아시아·한국경제·매일경제·연합인포맥스·이데일리·철강금속신문·스틸앤스틸·화학저널)을 기본 매체로 포함. 유료·차단 매체는 본문을 읽을 수 없어 '함께 보도한 매체 수(중요도)' 신호로 쓰고, 카드 근거는 본문을 읽은 기사에서만 가져온다.",
     "core": [
       {
         "name": "Reuters",
@@ -190,6 +193,26 @@
         "domains": [
           "barrons.com"
         ]
+      },
+      {
+        "name": "DIGITIMES",
+        "aliases": [
+          "디지타임스",
+          "Digitimes Asia"
+        ],
+        "domains": [
+          "digitimes.com"
+        ]
+      },
+      {
+        "name": "Trading Economics",
+        "aliases": [
+          "트레이딩 이코노믹스",
+          "TradingEconomics"
+        ],
+        "domains": [
+          "tradingeconomics.com"
+        ]
       }
     ],
     "trade": [
@@ -243,6 +266,105 @@
         ],
         "domains": [
           "cen.acs.org"
+        ]
+      },
+      {
+        "name": "London Metal Exchange",
+        "aliases": [
+          "LME",
+          "런던금속거래소"
+        ],
+        "domains": [
+          "lme.com"
+        ]
+      },
+      {
+        "name": "Wood Mackenzie",
+        "aliases": [
+          "WoodMac",
+          "우드맥킨지",
+          "우드 맥킨지"
+        ],
+        "domains": [
+          "woodmac.com"
+        ]
+      }
+    ],
+    "korea": [
+      {
+        "name": "한국경제",
+        "aliases": [
+          "한경",
+          "한국경제신문",
+          "Korea Economic Daily",
+          "The Korea Economic Daily"
+        ],
+        "domains": [
+          "hankyung.com"
+        ]
+      },
+      {
+        "name": "매일경제",
+        "aliases": [
+          "매경",
+          "매일경제신문",
+          "Maeil Business Newspaper",
+          "Maeil Business News Korea"
+        ],
+        "domains": [
+          "mk.co.kr"
+        ]
+      },
+      {
+        "name": "연합인포맥스",
+        "aliases": [
+          "인포맥스",
+          "Yonhap Infomax"
+        ],
+        "domains": [
+          "einfomax.co.kr"
+        ]
+      },
+      {
+        "name": "이데일리",
+        "aliases": [
+          "Edaily"
+        ],
+        "domains": [
+          "edaily.co.kr"
+        ]
+      },
+      {
+        "name": "철강금속신문",
+        "aliases": [
+          "Steel & Metal News",
+          "SNM뉴스"
+        ],
+        "domains": [
+          "snmnews.com"
+        ]
+      },
+      {
+        "name": "스틸데일리",
+        "aliases": [
+          "스틸앤스틸",
+          "Steel&Steel",
+          "Steel Daily",
+          "SteelDaily"
+        ],
+        "domains": [
+          "steeldaily.co.kr"
+        ]
+      },
+      {
+        "name": "화학저널",
+        "aliases": [
+          "ChemLOCUS",
+          "켐로커스",
+          "화학경제연구원"
+        ],
+        "domains": [
+          "chemlocus.co.kr"
         ]
       }
     ]
