@@ -39,8 +39,10 @@ PC를 켜 두지 않아도 된다. 제작은 Anthropic 클라우드의 Claude Co
    ```
    모델은 가장 성능이 좋은 모델을 고른다.
 4. 저장소: `welcome2oz/raw-materials-daily`
-5. 환경(Environment): 구름 아이콘 → 환경 설정(톱니) → **Network access: Full** → Save
+   - 목록에 없거나 첫 실행에서 push 가 거부되면 [Claude GitHub App](https://github.com/apps/claude)을 이 저장소에 설치한다 (Only select repositories → raw-materials-daily)
+5. 환경(Environment): 구름 아이콘 → **Add cloud environment** → 이름 `cardnews`, **Network access: Full** → 만들기 → 이 환경 선택
    - 뉴스 사이트(WebFetch)와 Chromium 설치가 기본 허용 목록(Trusted) 밖이라 필요하다 ([Cloud environments: Access levels](https://code.claude.com/docs/en/cloud-environments#access-levels))
+   - Default 환경을 바꾸지 않고 따로 만들면 다른 작업에는 영향이 없다
    - 이 환경에는 비밀값을 넣지 않는다 (인스타 토큰은 GitHub Secrets에만 있다)
 6. 트리거: **Schedule → Daily → 05:00** (시간은 내 지역 시간으로 입력하면 자동 변환)
 7. 커넥터: 모두 제거 (이 작업에는 필요 없음)
