@@ -1,0 +1,117 @@
+{
+  "_note": "매일 기사 후보를 찾는 채널. 클라우드 셸(curl)은 뉴스 사이트가 막혀 있으므로 Claude가 WebFetch로 각 URL을 읽어 runs/<날짜>/raw/<id>.json 으로 저장한다(RUNBOOK 2단계). 접근성 실측 2026-09-24: Bing은 OR 검색식에서 빈 결과가 나와 단일 키워드로 바꿈. Yahoo Finance 목록 페이지(topic/commodities 404, markets/commodities 기사 없음)는 채널로 쓸 수 없어 제외 → Reuters 기사의 Yahoo 전재본은 RUNBOOK 3단계에서 제목 검색으로 찾는다.",
+  "fetch_prompt": "List EVERY news item on this page/feed as a JSON array, newest first, with no commentary. Each element: {\"title\": exact headline, \"url\": exact link as given, \"published\": exact date/time string as given (pubDate or on-page date), \"source\": publisher/source name if shown (e.g. News:Source, byline agency like 'Reuters'), \"snippet\": first sentence of description if shown}. Copy text exactly; do not paraphrase, translate or invent. If a field is missing, use an empty string.",
+  "channels": [
+    {
+      "id": "miningcom-web",
+      "kind": "rss",
+      "url": "https://www.mining.com/web/feed/",
+      "covers": [
+        "nonferrous",
+        "steel"
+      ],
+      "note": "MINING.COM 전재 피드(Reuters·Bloomberg 기사). 가장 중요한 채널. 본문 끝 '(Reporting by …)' 또는 'told Reuters' 등으로 원 발행처 확인"
+    },
+    {
+      "id": "miningcom",
+      "kind": "rss",
+      "url": "https://www.mining.com/feed/",
+      "covers": [
+        "nonferrous",
+        "steel"
+      ],
+      "note": "MINING.COM 자체 기사. 발행처 = MINING.COM"
+    },
+    {
+      "id": "icis",
+      "kind": "html",
+      "url": "https://www.icis.com/explore/resources/news/",
+      "covers": [
+        "resin",
+        "chemical"
+      ],
+      "note": "ICIS 무료 뉴스 목록(날짜 포함)"
+    },
+    {
+      "id": "bing-copper",
+      "kind": "rss",
+      "url": "https://www.bing.com/news/search?q=copper+mine&qft=sortbydate%3d%221%22&format=rss",
+      "covers": [
+        "nonferrous"
+      ]
+    },
+    {
+      "id": "bing-aluminium",
+      "kind": "rss",
+      "url": "https://www.bing.com/news/search?q=aluminium+smelter&qft=sortbydate%3d%221%22&format=rss",
+      "covers": [
+        "nonferrous"
+      ]
+    },
+    {
+      "id": "bing-steel-tariff",
+      "kind": "rss",
+      "url": "https://www.bing.com/news/search?q=steel+tariff&qft=sortbydate%3d%221%22&format=rss",
+      "covers": [
+        "steel"
+      ]
+    },
+    {
+      "id": "bing-steelmaker",
+      "kind": "rss",
+      "url": "https://www.bing.com/news/search?q=steelmaker&qft=sortbydate%3d%221%22&format=rss",
+      "covers": [
+        "steel"
+      ]
+    },
+    {
+      "id": "bing-petchem",
+      "kind": "rss",
+      "url": "https://www.bing.com/news/search?q=petrochemical&qft=sortbydate%3d%221%22&format=rss",
+      "covers": [
+        "resin"
+      ]
+    },
+    {
+      "id": "bing-polyethylene",
+      "kind": "rss",
+      "url": "https://www.bing.com/news/search?q=polyethylene&qft=sortbydate%3d%221%22&format=rss",
+      "covers": [
+        "resin"
+      ]
+    },
+    {
+      "id": "bing-refrigerant",
+      "kind": "rss",
+      "url": "https://www.bing.com/news/search?q=refrigerant&qft=sortbydate%3d%221%22&format=rss",
+      "covers": [
+        "chemical"
+      ]
+    },
+    {
+      "id": "bing-opec",
+      "kind": "rss",
+      "url": "https://www.bing.com/news/search?q=OPEC+oil&qft=sortbydate%3d%221%22&format=rss",
+      "covers": [
+        "chemical"
+      ]
+    }
+  ],
+  "fallback": {
+    "websearch_queries": [
+      "copper mine Reuters {date}",
+      "aluminium smelter Reuters {date}",
+      "steel tariff Reuters {date}",
+      "petrochemical cracker force majeure {date}",
+      "refrigerant HFC regulation {date}",
+      "OPEC oil supply Reuters {date}"
+    ],
+    "note": "채널 절반 이상이 실패하면 WebSearch로 보충. 검색 결과는 후보 발견용일 뿐, 반드시 본문을 열어 확인한다."
+  },
+  "read_hosts": {
+    "_note": "본문 확인용. Reuters·Bloomberg 원문 대신 이 호스트의 전재본을 연다.",
+    "finance.yahoo.com": "Reuters·Bloomberg·AP 전재. 기사 상단에 'Reuters' 등 원 발행처 표기 확인",
+    "mining.com": "/web/ 경로는 전재(Reuters·Bloomberg). 본문 끝 '(By ... ; Editing by ...)' 또는 출처 문구 확인",
+    "icis.com": "자체 기사. 무료 공개분만"
+  }
+}
