@@ -1,0 +1,125 @@
+{
+  "id": "YYYY-MM-DD-brief",
+  "date": "YYYY-MM-DD",
+  "issue": 0,
+  "category": "brief",
+  "topic": "supply",
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "대표 뉴스 첫 줄\n**핵심 한 구절**",
+      "sub": "M월 D일(현지) 외신 보도 기준\n오늘의 원재료 뉴스 N건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "steel | resin | nonferrous | chemical",
+      "topic": "supply | maker | regulation | tariff",
+      "src": "src-id-1",
+      "headline": "한국어 헤드라인 첫 줄\n**핵심 한 구절**",
+      "toc": "커버 목차에 들어갈 한 줄 요약 (없으면 headline 사용)",
+      "orig": "Original English headline as published",
+      "facts": [
+        {
+          "t": "시각화로 못 보여주는 사실 한 줄 (선택)"
+        }
+      ],
+      "why": "구매 관점 한 줄 (약 20자)",
+      "key": {
+        "value": "핵심 숫자",
+        "label": "커버 목차용 설명"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "대상 · 회사 · 국가",
+          "items": [
+            {
+              "k": "STATUS",
+              "v": "상태",
+              "tone": "alert"
+            },
+            {
+              "k": "NEXT",
+              "v": "다음 단계",
+              "sub": "보조 설명",
+              "tone": "warn"
+            },
+            {
+              "k": "CAUSE",
+              "v": "원인"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "0.0",
+              "unit": "Mt",
+              "label": "수치 설명",
+              "hi": true
+            }
+          ]
+        },
+        {
+          "type": "split",
+          "half": true,
+          "title": "구성비",
+          "unit": "%",
+          "parts": [
+            {
+              "label": "A",
+              "value": 50
+            },
+            {
+              "label": "B",
+              "value": 30
+            },
+            {
+              "label": "C",
+              "value": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "closing"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-id-1",
+      "publisher": "Reuters",
+      "via": "Yahoo Finance (전재된 경우만, 아니면 삭제)",
+      "title": "Original headline",
+      "date": "YYYY-MM-DD",
+      "time": "HH:MM TZ (페이지에 있을 때)",
+      "accessed": "YYYY-MM-DD",
+      "url": "https://",
+      "evidence": [
+        "카드에 쓴 사실·숫자가 들어 있는 원문 문장을 runs/<날짜>/articles/<출처 id>.md 에서 그대로 복사"
+      ]
+    },
+    {
+      "id": "src-id-2",
+      "publisher": "",
+      "title": "",
+      "date": "YYYY-MM-DD",
+      "accessed": "YYYY-MM-DD",
+      "url": "https://",
+      "evidence": []
+    }
+  ],
+  "caption": "M월 D일(현지) 외신 보도 기준 원재료 뉴스 N건.\n\n1) ...\n2) ...\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": [
+    "원자재",
+    "태그2",
+    "태그3",
+    "태그4",
+    "태그5"
+  ]
+}
