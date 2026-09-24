@@ -1,0 +1,10 @@
+# 매일 작업용 (결과는 issues/<날짜>/ 로 옮겨 커밋됨)
+kit/runs/
+kit/out/
+kit/posts/*_brief.json
+kit/handoff/
+kit/handoff_work/
+kit/gh_repo/
+kit/template/fonts/
+__pycache__/
+*.pyc
