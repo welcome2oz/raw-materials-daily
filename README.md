@@ -1,16 +1,18 @@
 # RAW MATERIALS DAILY
 
 @raw_material_procurement 원재료 카드뉴스(스틸·레진·비철·화공)를 매일 **07:00(KST)** 인스타그램에 자동 게시하는 저장소.
-PC를 켜 두지 않아도 된다. 제작은 Anthropic 클라우드의 Claude Code 루틴이, 게시는 GitHub Actions가 한다.
+PC를 켜 두지 않아도 된다. 제작은 Cowork 예약 작업, GitHub 전달은 Claude Code 루틴, 게시는 GitHub Actions가 한다 — 모두 클라우드에서 돈다.
 
 ```
+04:00  Cowork 예약 작업 (클라우드): 뉴스 수집(WebFetch) → 원문 발췌·근거 검증·중복 검열 → 카드(4:5 JPEG) 제작
+       → 발행함(허브 아티팩트)에 오늘 호 + handoff.json 업로드
 05:00  Claude Code 루틴 (claude.ai/code/routines, 이 저장소 연결)
-       뉴스 수집(WebFetch) → 원문 발췌·근거 검증·중복 검열 → 카드(4:5 JPEG) 제작
-       → issues/<날짜>/ 커밋 → 작업 브랜치(claude/…) push
+       발행함에서 오늘 호를 받아 sha256 대조·재검증 → issues/<날짜>/ 커밋 → 작업 브랜치(claude/…) push
+       (05:50까지 발행함에 호가 없으면 루틴이 직접 제작)
        └ ready.json 이 올라오면 Actions 'Publish to Instagram' 시작 → 곧바로 main 의 issues/<날짜>/ 에 반영
-06:15  (백업) Cowork 예약 작업: main 에 오늘 호가 있으면 바로 종료. 없으면 PC Chrome으로 업로드 (PC 켜져 있을 때만)
 07:00  Actions: 규격 점검 → Instagram 공식 API로 캐러셀 게시 → main 에 published/<날짜>.json 기록
 ```
+역할을 나눈 이유: 루틴 환경에서는 mining.com·ICIS 기사를 읽을 수 없고(2026-09-24 점검), Cowork 환경에서는 GitHub에 push 할 수 없다. 둘 다 클라우드라 PC는 꺼져 있어도 된다.
 
 | 폴더 | 내용 |
 |---|---|
