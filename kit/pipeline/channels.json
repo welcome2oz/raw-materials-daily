@@ -95,6 +95,121 @@
       "covers": [
         "chemical"
       ]
+    },
+    {
+      "id": "bing-reuters-copper",
+      "url": "https://www.bing.com/news/search?q=copper+site%3areuters.com&qft=sortbydate%3d%221%22&format=rss",
+      "note": "Reuters 구리 (site: 필터 확인 2026-09-25, 12건 전부 reuters.com)"
+    },
+    {
+      "id": "bing-reuters-steel",
+      "url": "https://www.bing.com/news/search?q=steel+site%3areuters.com&qft=sortbydate%3d%221%22&format=rss",
+      "note": "Reuters 철강 (같은 형식, 미확인)"
+    },
+    {
+      "id": "bing-reuters-petchem",
+      "url": "https://www.bing.com/news/search?q=petrochemical+site%3areuters.com&qft=sortbydate%3d%221%22&format=rss",
+      "note": "Reuters 석유화학 (같은 형식, 미확인)"
+    },
+    {
+      "id": "bing-bloomberg-steel",
+      "url": "https://www.bing.com/news/search?q=steel+site%3abloomberg.com&qft=sortbydate%3d%221%22&format=rss",
+      "note": "Bloomberg 철강 (확인 2026-09-25)"
+    },
+    {
+      "id": "bing-bloomberg-copper",
+      "url": "https://www.bing.com/news/search?q=copper+site%3abloomberg.com&qft=sortbydate%3d%221%22&format=rss",
+      "note": "Bloomberg 구리 (같은 형식, 미확인)"
+    },
+    {
+      "id": "bing-wsj-steel",
+      "url": "https://www.bing.com/news/search?q=steel+site%3awsj.com&qft=sortbydate%3d%221%22&format=rss",
+      "note": "WSJ 철강 (같은 형식, 미확인)"
+    },
+    {
+      "id": "bing-ft-metals",
+      "url": "https://www.bing.com/news/search?q=metals+site%3aft.com&format=rss",
+      "note": "FT (ft.com 은 sortbydate 를 붙이면 빈 페이지 → 붙이지 않음. 결과에 무관 기사 많음)"
+    },
+    {
+      "id": "bing-argus-steel",
+      "url": "https://www.bing.com/news/search?q=steel+site%3aargusmedia.com&qft=sortbydate%3d%221%22&format=rss",
+      "note": "Argus 철강 (확인 2026-09-25, 본문은 robots 차단)"
+    },
+    {
+      "id": "bing-nikkei-steel",
+      "url": "https://www.bing.com/news/search?q=steel+site%3aasia.nikkei.com&qft=sortbydate%3d%221%22&format=rss",
+      "note": "Nikkei Asia 철강 (확인 2026-09-25, 본문 robots 차단)"
+    },
+    {
+      "id": "bing-digitimes-copper",
+      "url": "https://www.bing.com/news/search?q=copper+site%3adigitimes.com&qft=sortbydate%3d%221%22&format=rss",
+      "note": "DIGITIMES 구리·소재 (확인 2026-09-25, 본문 403)"
+    },
+    {
+      "id": "bing-woodmac",
+      "url": "https://www.bing.com/news/search?q=site%3awoodmac.com&qft=sortbydate%3d%221%22&format=rss",
+      "note": "Wood Mackenzie (확인 2026-09-25, 업데이트 드묾. 보도자료 본문은 읽힘)"
+    },
+    {
+      "id": "fastmarkets-insights",
+      "url": "https://www.fastmarkets.com/insights/",
+      "note": "Fastmarkets 무료 인사이트 목록·본문 읽힘 (확인 2026-09-25)"
+    },
+    {
+      "id": "te-copper",
+      "url": "https://tradingeconomics.com/commodity/copper",
+      "note": "Trading Economics 구리 뉴스 (확인 2026-09-25). 대부분 가격 기사 → 가격 필터로 걸러짐"
+    },
+    {
+      "id": "te-steel",
+      "url": "https://tradingeconomics.com/commodity/steel",
+      "note": "Trading Economics 철강 뉴스 (확인 2026-09-25). 대부분 가격 기사"
+    },
+    {
+      "id": "hankyung-economy",
+      "url": "https://www.hankyung.com/feed/economy",
+      "note": "한국경제 경제 RSS (확인 2026-09-25, 본문 읽힘. 산업 피드는 없음)"
+    },
+    {
+      "id": "snmnews",
+      "url": "https://www.snmnews.com/rss/allArticle.xml",
+      "note": "철강금속신문 전체 기사 RSS (확인 2026-09-25, 본문 읽힘)"
+    },
+    {
+      "id": "steeldaily",
+      "url": "https://www.steeldaily.co.kr/rss/allArticle.xml",
+      "note": "스틸데일리(발행 스틸앤스틸) 전체 기사 RSS (확인 2026-09-25, 본문 읽힘)"
+    },
+    {
+      "id": "edaily-industry",
+      "url": "https://www.edaily.co.kr/articles/business/industry",
+      "note": "이데일리 산업 목록 (확인 2026-09-25, 본문 읽힘. 목록이 며칠 늦게 갱신됨 · RSS는 리다이렉트 반복으로 못 읽음)"
+    },
+    {
+      "id": "chemlocus-petchem",
+      "url": "https://www.chemlocus.co.kr/news/daily?category=02",
+      "note": "화학저널(ChemLOCUS) 석유화학 목록 (확인 2026-09-25). 본문 유료 → 제목·첫 문단만, '함께 보도' 신호로"
+    },
+    {
+      "id": "bing-ko-steel-tariff",
+      "url": "https://www.bing.com/news/search?q=%EC%B2%A0%EA%B0%95+%EA%B4%80%EC%84%B8&qft=sortbydate%3d%221%22&format=rss",
+      "note": "국내 '철강 관세' (확인 2026-09-25, 여러 매체 섞임 → 허용 매체만 후보)"
+    },
+    {
+      "id": "bing-ko-petchem",
+      "url": "https://www.bing.com/news/search?q=%EC%84%9D%EC%9C%A0%ED%99%94%ED%95%99&qft=sortbydate%3d%221%22&format=rss",
+      "note": "국내 '석유화학' (같은 형식, 미확인)"
+    },
+    {
+      "id": "bing-ko-copper",
+      "url": "https://www.bing.com/news/search?q=%EA%B5%AC%EB%A6%AC+%EA%B4%91%EC%82%B0&qft=sortbydate%3d%221%22&format=rss",
+      "note": "국내 '구리 광산' (같은 형식, 미확인)"
+    },
+    {
+      "id": "bing-ko-refrigerant",
+      "url": "https://www.bing.com/news/search?q=%EB%83%89%EB%A7%A4&qft=sortbydate%3d%221%22&format=rss",
+      "note": "국내 '냉매' (같은 형식, 미확인)"
     }
   ],
   "fallback": {
@@ -113,5 +228,6 @@
     "finance.yahoo.com": "Reuters·Bloomberg·AP 전재. 기사 상단에 'Reuters' 등 원 발행처 표기 확인",
     "mining.com": "/web/ 경로는 전재(Reuters·Bloomberg). 본문 끝 '(By ... ; Editing by ...)' 또는 출처 문구 확인",
     "icis.com": "자체 기사. 무료 공개분만"
-  }
+  },
+  "_note_2026_09_25": "사용자 지정 20개 매체 추가. 직접 읽히는 목록이 없는 매체(Reuters·Bloomberg·WSJ·FT·Argus·Nikkei·DIGITIMES·Wood Mackenzie)는 Bing 뉴스 RSS의 site: 필터로 제목·링크만 모은다 — Bing 링크(apiclick.aspx?url=…)는 collect.py 가 원문 주소로 풀고, site: 결과에는 주제와 무관한 기사도 섞여 카테고리 키워드로 거른다. Bing이 'title: Bing' 빈 페이지를 주면 &qft=… 를 빼고 한 번 더. 매일경제·연합인포맥스는 WebFetch 차단(SITE_BLOCKED), LME는 목록이 스크립트로만 떠서 채널 없음(허용 매체로만 등록). S&P Global RSS(metals.xml·chemicals.xml)는 6~10주 전 기사뿐이라 채널에서 뺌."
 }

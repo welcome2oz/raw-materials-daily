@@ -62,32 +62,43 @@ def clean_url(u: str) -> str:
 MONTHS = {m: i for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
 
 
+KR_HOSTS = (".kr", "hankyung.com", "snmnews.com")
+
+
 def parse_date(s: str, url: str = ""):
-    """다양한 날짜 문자열 → datetime(aware). 실패 시 URL의 /YYYY/MM/DD/ 로 보조."""
+    """다양한 날짜 문자열 → datetime(aware). 시간대가 없으면 한국 매체는 KST, 그 밖은 UTC. 실패 시 URL의 /YYYY/MM/DD/ 로 보조."""
+    host = (urlparse(url or "").hostname or "").lower()
+    tz0 = KST if host.endswith(KR_HOSTS) else dt.timezone.utc
+    d = _parse_date(s, url)
+    return d.replace(tzinfo=tz0) if d is not None and d.tzinfo is None else d
+
+
+def _parse_date(s: str, url: str = ""):
     s = (s or "").strip()
     if s:
         try:  # RFC 822 (RSS pubDate)
-            d = email.utils.parsedate_to_datetime(s)
-            return d if d.tzinfo else d.replace(tzinfo=dt.timezone.utc)
+            return email.utils.parsedate_to_datetime(s)
         except Exception:
             pass
-        try:  # ISO 8601
-            d = dt.datetime.fromisoformat(s.replace("Z", "+00:00"))
-            return d if d.tzinfo else d.replace(tzinfo=dt.timezone.utc)
+        try:  # ISO 8601 · 2026-09-24 16:54:23
+            return dt.datetime.fromisoformat(s.replace("Z", "+00:00"))
         except Exception:
             pass
         m = re.search(r"(\d{4})[-/.](\d{1,2})[-/.](\d{1,2})", s)
         if m:
-            return dt.datetime(int(m[1]), int(m[2]), int(m[3]), tzinfo=dt.timezone.utc)
+            return dt.datetime(int(m[1]), int(m[2]), int(m[3]))
+        m = re.match(r"(\d{2})\.(\d{2})\.(\d{2})(?:\s+(\d{1,2}):(\d{2}))?", s)  # 이데일리 26.09.19 07:00
+        if m:
+            return dt.datetime(2000 + int(m[1]), int(m[2]), int(m[3]), int(m[4] or 0), int(m[5] or 0))
         m = re.search(r"(\d{1,2})\s+([A-Za-z]{3})[a-z]*\.?,?\s+(\d{4})", s)  # 23 Sep 2026
         if m and m[2].lower()[:3] in MONTHS:
-            return dt.datetime(int(m[3]), MONTHS[m[2].lower()[:3]], int(m[1]), tzinfo=dt.timezone.utc)
+            return dt.datetime(int(m[3]), MONTHS[m[2].lower()[:3]], int(m[1]))
         m = re.search(r"([A-Za-z]{3})[a-z]*\.?\s+(\d{1,2}),?\s+(\d{4})", s)  # Sep 23, 2026
         if m and m[1].lower()[:3] in MONTHS:
-            return dt.datetime(int(m[3]), MONTHS[m[1].lower()[:3]], int(m[2]), tzinfo=dt.timezone.utc)
+            return dt.datetime(int(m[3]), MONTHS[m[1].lower()[:3]], int(m[2]))
     m = re.search(r"/(20\d{2})/(\d{2})/(\d{2})/", url or "")
     if m:
-        return dt.datetime(int(m[1]), int(m[2]), int(m[3]), tzinfo=dt.timezone.utc)
+        return dt.datetime(int(m[1]), int(m[2]), int(m[3]))
     return None
 
 
@@ -151,6 +162,59 @@ def classify(item, kw):
     event = hits(title, ph["event_override"])
     ex = hits(title, kw["exclude"]["title_words"])
     return cats, tops, price, event, ex
+
+
+# ---------- 같은 뉴스 묶기 (함께 보도한 허용 매체 수 = 중요도) ----------
+def _feat(rec):
+    t = rec["title"] + " " + rec.get("snippet", "")
+    return set(dedup.entities(t)), set(dedup.events(t))
+
+
+def cluster_candidates(inc, outlets):
+    """오늘 후보끼리 같은 사건을 묶는다: 고유명사(한글 표기↔영문 포함) 겹침이 작은 쪽의 절반 이상이고,
+    양쪽 모두 사건 단어가 있으면 하나 이상 같아야 한다. 묶음마다 서로 다른 허용 매체 수 = coverage."""
+    n = len(inc)
+    parent = list(range(n))
+
+    def find(i):
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+    F = [_feat(r) for r in inc]
+    for i in range(n):
+        for j in range(i + 1, n):
+            (ea, va), (eb, vb) = F[i], F[j]
+            shared = ea & eb
+            if not shared or len(shared) / max(1, min(len(ea), len(eb))) < 0.5:
+                continue
+            if va and vb and not (va & vb):
+                continue
+            parent[find(i)] = find(j)
+    groups = {}
+    for i in range(n):
+        groups.setdefault(find(i), []).append(i)
+    names = {o["name"] for o in outlets}
+    clusters = []
+    for k, (root, idx) in enumerate(sorted(groups.items(), key=lambda kv: -len(kv[1])), 1):
+        members = [inc[i] for i in idx]
+        outs = []
+        for r in members:
+            pub = r.get("publisher_hint", "")
+            name = pub if pub in names else ("" if (outlet_by_url(r["url"], outlets) or {}).get("syndication") else r.get("outlet", ""))
+            if name and name not in outs:
+                outs.append(name)
+        cid = f"c{k}"
+        for r in members:
+            r["cluster"] = cid
+            r["coverage"] = len(outs)
+            r["coverage_outlets"] = outs
+            r["score"] += 3 * max(0, len(outs) - 1)
+        clusters.append({"id": cid, "coverage": len(outs), "outlets": outs, "category": members[0].get("category", ""),
+                         "items": [{"title": r["title"], "outlet": r.get("outlet", ""), "publisher": r.get("publisher_hint", ""),
+                                    "url": r["url"], "published": r.get("published", ""), "access": r.get("access", "")} for r in members]})
+    clusters.sort(key=lambda c: (-c["coverage"], -len(c["items"])))
+    return clusters
 
 
 # ---------- 메인 ----------
@@ -280,16 +344,26 @@ def main():
         hard = [r for r in reasons if not r.startswith("게재일 불명")]
         (exc if hard else inc).append({**rec, "reasons": reasons})
 
+    clusters = cluster_candidates(inc, outlets)
     inc.sort(key=lambda r: (r["category"], -r["score"], r["published"] or ""), reverse=False)
     order = ["nonferrous", "steel", "resin", "chemical"]
     inc.sort(key=lambda r: (order.index(r["category"]) if r["category"] in order else 9, -r["score"]))
     out = {"date": a.date, "window": [oldest.isoformat(), post_day.isoformat()], "generated_at": dt.datetime.now(KST).isoformat(timespec="seconds"),
-           "channels": channel_stats, "included": inc, "excluded": exc}
+           "channels": channel_stats, "clusters": clusters, "included": inc, "excluded": exc}
     (run / "candidates.json").write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
 
     # 사람이 읽는 표
     L = [f"# 후보 기사 — {a.date} (게재일 {oldest}~{post_day})", "", "## 채널", "", "| 채널 | 항목 수 | 오류 |", "|---|---:|---|"]
     L += [f"| {c['channel']} | {c['items']} | {c.get('error', '')} |" for c in channel_stats]
+    L += ["", "## 여러 매체가 함께 다룬 뉴스 (중요도 순)", "",
+          "같은 사건을 다룬 허용 매체 수(coverage)가 많을수록 중요. 자동 묶음은 고유명사·사건 단어 기준이라 틀릴 수 있다 — 3단계에서 제목을 보고 확인·합산한다.", ""]
+    multi = [c for c in clusters if c["coverage"] >= 2]
+    if not multi:
+        L.append("- 2곳 이상이 함께 다룬 뉴스 없음")
+    for c in multi[:15]:
+        L.append(f"- **[{c['coverage']}곳] {c['items'][0]['title']}** ({c['category']}, {c['id']}) — {', '.join(c['outlets'])}")
+        for it in c["items"]:
+            L.append(f"  - {it['outlet'] or it['publisher']} · {it['published'][:16]} · 접근 {it['access']} · {it['title'][:80]} — {it['url']}")
     for c in order:
         rows = [r for r in inc if r["category"] == c][: a.top]
         L += ["", f"## {c} ({len([r for r in inc if r['category'] == c])}건 중 상위 {len(rows)})", ""]
@@ -297,7 +371,7 @@ def main():
             L.append("- 후보 없음 → 이 카테고리는 오늘 생략")
         for r in rows:
             flag = " ⚠ 게재일 확인" if r.get("date_unknown") else ""
-            L.append(f"- **{r['title']}** — {r['outlet']} / 발행처: {r.get('publisher_hint', '')} / {r['published'][:16]} / 토픽 {r['topic']} / 점수 {r['score']} / 접근 {r['access']}{flag}")
+            L.append(f"- **{r['title']}** — {r['outlet']} / 발행처: {r.get('publisher_hint', '')} / {r['published'][:16]} / 토픽 {r['topic']} / 함께 보도 {r.get('coverage', 1)}곳({r.get('cluster', '')}) / 점수 {r['score']} / 접근 {r['access']}{flag}")
             L.append(f"  - {r['url']}")
             if r.get("note"):
                 L.append(f"  - {r['note']}")
@@ -305,7 +379,7 @@ def main():
     L += [f"- {r['title'][:90]} — {'; '.join(r['reasons'])}" for r in exc[:80]]
     (run / "candidates.md").write_text("\n".join(L) + "\n", encoding="utf-8")
 
-    print(f"■ 후보 {len(inc)}건 / 제외 {len(exc)}건 → {run/'candidates.md'}")
+    print(f"■ 후보 {len(inc)}건 / 제외 {len(exc)}건 / 2곳 이상 함께 보도 {len(multi)}묶음 → {run/'candidates.md'}")
     for c in order:
         n = len([r for r in inc if r["category"] == c])
         print(f"  {c:<11} {n}건")

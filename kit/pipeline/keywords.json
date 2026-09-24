@@ -18,7 +18,22 @@
         "electric arc furnace",
         "coking coal",
         "pig iron",
-        "galvanized"
+        "galvanized",
+        "철강",
+        "열연",
+        "냉연",
+        "강판",
+        "후판",
+        "철광석",
+        "철스크랩",
+        "고철",
+        "강관",
+        "선재",
+        "도금강판",
+        "스테인리스",
+        "제철소",
+        "전기로",
+        "고로"
       ],
       "names": [
         "POSCO",
@@ -36,7 +51,17 @@
         "Vale",
         "Rio Tinto iron",
         "Fortescue",
-        "Simandou"
+        "Simandou",
+        "포스코",
+        "현대제철",
+        "동국제강",
+        "세아베스틸",
+        "KG스틸",
+        "일본제철",
+        "바오산",
+        "바오우",
+        "아르셀로미탈",
+        "뉴코어"
       ]
     },
     "resin": {
@@ -60,7 +85,18 @@
         "styrene",
         "butadiene",
         "benzene",
-        "paraxylene"
+        "paraxylene",
+        "폴리에틸렌",
+        "폴리프로필렌",
+        "합성수지",
+        "에틸렌",
+        "프로필렌",
+        "나프타",
+        "NCC",
+        "석유화학",
+        "스티렌",
+        "폴리스티렌",
+        "부타디엔"
       ],
       "names": [
         "LyondellBasell",
@@ -78,7 +114,16 @@
         "Shell Chemicals",
         "Aster",
         "Chandra Asri",
-        "Westlake"
+        "Westlake",
+        "LG화학",
+        "롯데케미칼",
+        "한화솔루션",
+        "여천NCC",
+        "대한유화",
+        "SK지오센트릭",
+        "금호석유화학",
+        "효성화학",
+        "S-OIL"
       ]
     },
     "nonferrous": {
@@ -93,7 +138,18 @@
         "copper concentrate",
         "refinery copper",
         "primary aluminium",
-        "billet"
+        "billet",
+        "전기동",
+        "구리 광산",
+        "구리광산",
+        "동광산",
+        "구리 제련",
+        "알루미늄",
+        "알루미나",
+        "보크사이트",
+        "제련소",
+        "비철금속",
+        "런던금속거래소"
       ],
       "names": [
         "Codelco",
@@ -122,7 +178,16 @@
         "Cobre Panama",
         "Collahuasi",
         "Centinela",
-        "Los Pelambres"
+        "Los Pelambres",
+        "고려아연",
+        "LS MnM",
+        "풍산",
+        "노벨리스",
+        "코델코",
+        "에스콘디다",
+        "글렌코어",
+        "알코아",
+        "루살"
       ]
     },
     "chemical": {
@@ -149,7 +214,14 @@
         "diesel",
         "fuel oil",
         "oil supply",
-        "oil output"
+        "oil output",
+        "냉매",
+        "수소불화탄소",
+        "불소",
+        "윤활유",
+        "원유",
+        "정유",
+        "석유수출국기구"
       ],
       "names": [
         "Chemours",
@@ -170,7 +242,14 @@
         "Chevron",
         "Shell",
         "ExxonMobil",
-        "TotalEnergies"
+        "TotalEnergies",
+        "케무어스",
+        "허니웰",
+        "다이킨",
+        "아케마",
+        "후성",
+        "아람코",
+        "OPEC+"
       ]
     }
   },
@@ -189,7 +268,14 @@
         "quota",
         "CBAM",
         "trade remedy",
-        "levy"
+        "levy",
+        "관세",
+        "반덤핑",
+        "상계관세",
+        "세이프가드",
+        "쿼터",
+        "탄소국경조정",
+        "탄소국경"
       ]
     },
     "regulation": {
@@ -207,7 +293,15 @@
         "sanction",
         "phase-down",
         "phasedown",
-        "emission"
+        "emission",
+        "규제",
+        "금지",
+        "제재",
+        "수출통제",
+        "수출 통제",
+        "법안",
+        "허가",
+        "단계적 감축"
       ]
     },
     "maker": {
@@ -227,7 +321,16 @@
         "invest",
         "joint venture",
         "stake",
-        "spin off"
+        "spin off",
+        "인수",
+        "합병",
+        "증설",
+        "감산",
+        "신규 공장",
+        "폐쇄",
+        "구조조정",
+        "매각",
+        "합작"
       ]
     },
     "supply": {
@@ -255,7 +358,17 @@
         "explosion",
         "flood",
         "maintenance",
-        "turnaround"
+        "turnaround",
+        "수급",
+        "공급",
+        "수요",
+        "부족",
+        "파업",
+        "불가항력",
+        "가동 중단",
+        "조업 중단",
+        "생산 중단",
+        "차질"
       ]
     }
   },
@@ -292,7 +405,21 @@
       "per barrel",
       "a barrel",
       "outlook for prices",
-      "price forecast"
+      "price forecast",
+      "가격",
+      "시세",
+      "단가",
+      "급등",
+      "급락",
+      "강세",
+      "약세",
+      "톤당",
+      "최고치",
+      "최저치",
+      "상승세",
+      "하락세",
+      "오름세",
+      "내림세"
     ],
     "event_override": [
       "strike",
@@ -306,7 +433,18 @@
       "accident",
       "sanction",
       "quota",
-      "anti-dumping"
+      "anti-dumping",
+      "파업",
+      "불가항력",
+      "관세",
+      "금지",
+      "가동 중단",
+      "조업 중단",
+      "폐쇄",
+      "사고",
+      "제재",
+      "쿼터",
+      "반덤핑"
     ]
   },
   "exclude": {
@@ -329,7 +467,21 @@
       "opinion",
       "column",
       "sponsored",
-      "press release"
+      "press release",
+      "주가",
+      "특징주",
+      "목표주가",
+      "목표가",
+      "종목",
+      "증권가",
+      "[포토]",
+      "[사진]",
+      "[인사]",
+      "부고",
+      "사설",
+      "칼럼",
+      "[기고]",
+      "[시론]"
     ],
     "publishers": [
       "Zacks",
@@ -350,11 +502,19 @@
     ]
   },
   "access": {
-    "_note": "본문을 WebFetch로 읽을 수 있는지(2026-09-24 실측). blocked 도메인 기사는 같은 기사의 Yahoo Finance·MINING.COM 전재본을 찾아야 쓸 수 있다.",
+    "_note": "본문을 WebFetch로 읽을 수 있는지. Cowork 환경 실측 2026-09-24~25. blocked(또는 유료) 도메인 기사는 같은 뉴스를 다룬 readable 매체 기사를 찾아 출처로 쓴다. 루틴(Claude Code) 환경에서는 mining.com·icis.com 도 읽히지 않음(RUNBOOK 1A 참고).",
     "readable": [
       "finance.yahoo.com",
       "mining.com",
-      "icis.com"
+      "icis.com",
+      "hankyung.com",
+      "snmnews.com",
+      "steeldaily.co.kr",
+      "edaily.co.kr",
+      "fastmarkets.com",
+      "tradingeconomics.com",
+      "lme.com",
+      "woodmac.com"
     ],
     "blocked": [
       "reuters.com",
@@ -370,7 +530,11 @@
       "asia.nikkei.com",
       "spglobal.com",
       "argusmedia.com",
-      "fastmarkets.com"
+      "fastmarkets.com",
+      "mk.co.kr",
+      "einfomax.co.kr",
+      "digitimes.com",
+      "chemlocus.co.kr"
     ]
   },
   "off_commodity": [

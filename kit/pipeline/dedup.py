@@ -45,7 +45,56 @@ EVENT = {
     "deal": ["acquire", "acquisition", "merger", "takeover", "stake", "joint venture", "offtake"],
     "capacity": ["expansion", "capacity", "new plant", "startup", "start-up", "commission", "cut output", "production cut", "curtail"],
 }
-STATUS_TERMS = {t for k in ("halt", "restart", "fm", "fm_lift", "strike") for t in EVENT[k]} | {"agreement", "deal reached", "rejected", "approved", "accepted", "ended", "extended", "delayed"}
+# 한국어 기사용 사건 단어 (국내 매체 추가, 2026-09-25)
+EVENT_KO = {
+    "halt": ["가동 중단", "가동중단", "조업 중단", "조업중단", "생산 중단", "생산중단", "셧다운", "폐쇄", "중단"],
+    "restart": ["재개", "재가동", "정상화"],
+    "strike": ["파업", "노조", "찬반 투표", "찬반투표", "임금 협상", "임금협상"],
+    "fm": ["불가항력"],
+    "fm_lift": ["불가항력 해제", "불가항력을 해제"],
+    "accident": ["사고", "사망", "화재", "폭발", "부상"],
+    "tariff": ["관세", "반덤핑", "상계관세", "세이프가드", "쿼터", "탄소국경"],
+    "regulation": ["규제", "금지", "제재", "수출통제", "수출 통제", "허가", "단계적 감축"],
+    "deal": ["인수", "합병", "지분", "합작"],
+    "capacity": ["증설", "감산", "신규 공장", "생산능력", "생산 능력", "가동률", "구조조정"],
+}
+for _k, _ws in EVENT_KO.items():
+    EVENT[_k] = EVENT[_k] + _ws
+KO_PARTICLES = sorted("은 는 이 가 을 를 의 에 에서 에게 로 으로 와 과 도 만 까지 부터 서 께 이다 였다 했다 한다 하고 하며 하는 된다 되는".split(), key=len, reverse=True)
+KO_STOP = set("""기자 오늘 어제 올해 지난해 내년 이번 관련 대한 위해 통해 따라 따른 대해 등 및 또 또한 이날 현지 시간 당국 정부 업계 시장 국내 해외
+글로벌 세계 최대 최고 최저 전년 전월 대비 이상 이하 가능성 전망 예상 우려 영향 발표 밝혔다 말했다 전했다 보도 보도했다 뉴스 소식 속보 단독
+종합 사진 영상 제공 기업 회사 그룹 산업 경제 가운데 가격 시세 수요 공급 수급 수출 수입 생산 판매 계획 방침 결정 검토 추진 확대 축소 증가 감소
+상승 하락 급등 급락 원재료 원자재 철강 구리 알루미늄 광산 제련소 제련 석유화학 화학 냉매 원유 정유 나프타 에틸렌 합성수지 비철 금속
+전면 근로자 노동자 관계자 여파 계속 공장 설비 업체 제품 소재 사업 투자 조업 현장 인근 일대 지역 주요 일부 전체 모든 각국 당시 최근 향후""".split())
+_KO_EVENT_WORDS = {w for ws in EVENT_KO.values() for w in ws}
+
+
+# 한글 표기 ↔ 영문 고유명사 (국내·해외 기사를 같은 사건으로 묶기 위함). 필요하면 추가한다
+KO_ALIAS = {"에스콘디다": "escondida", "센티넬라": "centinela", "코델코": "codelco", "안토파가스타": "antofagasta", "글렌코어": "glencore",
+            "리오틴토": "rio", "앵글로아메리칸": "anglo", "프리포트": "freeport", "그라스베르그": "grasberg", "퍼스트퀀텀": "quantum",
+            "알코아": "alcoa", "루살": "rusal", "노벨리스": "novelis", "고려아연": "korea zinc", "포스코": "posco", "현대제철": "hyundai",
+            "아르셀로미탈": "arcelormittal", "일본제철": "nippon", "뉴코어": "nucor", "클리블랜드클리프스": "cliffs", "바오산": "baosteel",
+            "바오우": "baowu", "아람코": "aramco", "사빅": "sabic", "라이온델바젤": "lyondellbasell", "다우": "dow", "시노펙": "sinopec",
+            "엑손모빌": "exxonmobil", "케무어스": "chemours", "허니웰": "honeywell", "다이킨": "daikin", "아케마": "arkema", "오페크": "opec",
+            "석유수출국기구": "opec", "런던금속거래소": "lme", "칠레": "chile", "페루": "peru", "인도네시아": "indonesia", "싱가포르": "singapore"}
+
+
+def ko_tokens(text):
+    """한국어 고유명사 후보: 2자 이상 한글 낱말에서 조사를 떼고 일반어·사건어·품목어를 뺀 것."""
+    out = set()
+    for w in re.findall(r"[가-힣]{2,}", _norm(text)):
+        for pt in KO_PARTICLES:
+            if w.endswith(pt) and len(w) - len(pt) >= 2:
+                w = w[: -len(pt)]
+                break
+        if w in KO_STOP or len(w) < 2 or w[-1] in "져졌해했돼됐" or any(e in w for e in _KO_EVENT_WORDS if " " not in e):
+            continue
+        out.add(w)
+        if w in KO_ALIAS:
+            out.add(KO_ALIAS[w])
+    return out
+STATUS_TERMS = {t for k in ("halt", "restart", "fm", "fm_lift", "strike") for t in EVENT[k]} | {"agreement", "deal reached", "rejected", "approved", "accepted", "ended", "extended", "delayed",
+                                                                                     "타결", "합의", "부결", "가결", "승인", "거부", "종료", "연장", "연기"}
 
 
 def _norm(t):
@@ -63,7 +112,7 @@ def entities(text):
         w = m.group(1).lower().strip("-")
         if w not in STOP and len(w) > 1 and not w.isdigit():
             out.add(w)
-    return out
+    return out | ko_tokens(text)
 
 
 def events(text):
@@ -82,6 +131,8 @@ def facts_tokens(text):
     for m in re.finditer(r"(\d{1,2})\s+(" + "|".join(MONTHS) + r")|(" + "|".join(MONTHS) + r")\s+(\d{1,2})", low):
         d, mo = (m.group(1), m.group(2)) if m.group(1) else (m.group(4), m.group(3))
         dates.add(f"{mo}-{int(d)}")
+    for m in re.finditer(r"(\d{1,2})월\s*(\d{1,2})일", low):   # 9월 25일
+        dates.add(f"{MONTHS[int(m.group(1)) - 1]}-{int(m.group(2))}")
     status = {t for t in STATUS_TERMS if re.search(rf"(?<![a-z]){re.escape(t)}(?![a-z])", low)}
     return nums, dates, status
 
@@ -94,7 +145,7 @@ def story_features(slide, sources):
         refs += v if isinstance(v, list) else ([v] if v else [])
     refs = list(dict.fromkeys(refs))
     ev = [q for r in refs for q in (S.get(r, {}).get("evidence") or [])]
-    titles = [S.get(r, {}).get("title", "") for r in refs] + [slide.get("orig", "")]
+    titles = [S.get(r, {}).get("title", "") for r in refs] + [slide.get("orig", ""), slide.get("toc") or slide.get("headline", "")]
     text = " ".join(titles + ev)
     return {"refs": refs, "urls": [S.get(r, {}).get("url", "") for r in refs], "titles": [t for t in titles if t],
             "evidence": ev, "entities": sorted(entities(text)), "events": sorted(events(text))}
@@ -107,20 +158,33 @@ def score(a, b):
     return round(ent * (1.0 if evt else 0.6), 3), sorted(ea & eb), sorted(set(a["events"]) & set(b["events"]))
 
 
+STATUS_CANON = {"타결": "agreement", "합의": "agreement", "deal reached": "agreement", "부결": "rejected", "거부": "rejected",
+                "가결": "approved", "승인": "approved", "accepted": "approved", "종료": "ended", "연장": "extended", "연기": "delayed"}
+
+
+def _canon_status(terms):
+    """상태 단어를 언어와 관계없이 같은 뜻끼리 묶는다 (예: '조업 중단' = 'halt', '재개' = 'resume')."""
+    out = set()
+    for t in terms:
+        key = next((k for k, ws in EVENT.items() if t in ws), None)
+        out.add(key or STATUS_CANON.get(t, t))
+    return out
+
+
 def novel_facts(new_ev, old_ev):
     """새 근거 문장 중 이전 근거에 없던 숫자·날짜·상태를 담은 문장."""
     old_n, old_d, old_s = set(), set(), set()
     old_norm = [_norm(q).lower() for q in old_ev]
     for q in old_ev:
         n, d, s = facts_tokens(q)
-        old_n |= n; old_d |= d; old_s |= s
+        old_n |= n; old_d |= d; old_s |= _canon_status(s)
     out = []
     for q in new_ev:
         nq = _norm(q).lower()
         if any(nq in o or o in nq for o in old_norm):
             continue
         n, d, s = facts_tokens(q)
-        new_s, new_d, new_n = s - old_s, d - old_d, n - old_n
+        new_s, new_d, new_n = _canon_status(s) - old_s, d - old_d, n - old_n
         # 배경 숫자(작년 생산량 등)만 새로 나온 문장은 새 사실로 보지 않는다:
         # 상태 변화(재개·타결·해제…)나 새 날짜가 있거나, 새 숫자가 사건 단어와 함께 나올 때만 인정
         if new_s or new_d or (new_n and events(q)):
