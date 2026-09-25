@@ -312,6 +312,11 @@ def validate(post: dict, brand: dict, run_dir=None, history=None):
                     errors.append(f"slide {i}: 시세판 행 '{r.get('name')}'에 src 누락 (행마다 출처 필수)")
         if t == "cover" and len(str(s.get("title", "")).replace("**", "").replace("\n", "")) > 34:
             warns.append(f"slide {i}: 커버 제목이 34자 초과 — 한눈에 안 읽힐 수 있음")
+    # --- 번역판 금지: 영어·한국어 원문만 (중복 검열·근거 대조가 영어·한국어 기준. 2026-09-26 스페인어판 오판정 사례)
+    for k, x in known.items():
+        h = (urlparse(str(x.get("url", ""))).hostname or "").lower()
+        if re.match(r"^(es|espanol|fr|de|it|br|mx|ar|co|cl|pe|jp|tw|hk|cn|vn|id|th|tr|ru)\.", h):
+            errors.append(f"출처 '{k}': 번역판 페이지({h}) — 영어·한국어 원문 페이지만 쓴다")
     # --- 뉴스 출처: 허용 매체(도메인+발행처)만, 최신 기사만
     outlets = [o for grp in (brand.get("news_outlets") or {}).values() if isinstance(grp, list) for o in grp]
     if outlets:

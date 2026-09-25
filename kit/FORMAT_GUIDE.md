@@ -137,7 +137,7 @@
 
 ## 6. 매일 제작 절차
 
-매일 04:00(KST) Cowork 예약 작업이 `pipeline/RUNBOOK.md`(P 모드) 순서대로 만들어 발행함에 올리고, 05:00 Claude Code 루틴(A 모드)이 받아 재검증 후 GitHub로 넘긴다. 둘 다 클라우드라 PC는 꺼져 있어도 된다.
+매일 04:00(KST) Cowork 예약 작업이 기사를 수집해 발행함에 올리고(코드 실행 없음), 05:00 Claude Code 루틴이 `pipeline/RUNBOOK.md` 0~8단계로 카드를 만들어 GitHub로 넘긴다. 둘 다 클라우드라 PC는 꺼져 있어도 된다.
 
 `채널 수집(WebFetch) → collect.py 후보 정리 → 기사 선택 → 본문 발췌 저장 → 포스트 JSON(근거 문장 포함) → render.py 검증·렌더 → 저장소 issues/<날짜>/ push → 보고`
 

@@ -1,12 +1,12 @@
 {
  "name": "raw-materials-daily-kit",
- "sha": "61605b3fccc8",
- "packed_at": "2026-09-25T10:06:37+09:00",
+ "sha": "4ad96555c56d",
+ "packed_at": "2026-09-26T07:58:41+09:00",
  "files": [
   {
    "path": "kit/render.py",
-   "bytes": 35986,
-   "sha256": "00cbb73c2472e2add8dc4547c00f69ad56bfad766940b9191cdc53e270ad65e1"
+   "bytes": 36462,
+   "sha256": "ee691241253a9c364e5240d3458acab4304c29ef507b38ba93ef1effb20aceb3"
   },
   {
    "path": "kit/brand.json",
@@ -15,13 +15,13 @@
   },
   {
    "path": "kit/README.md",
-   "bytes": 5977,
-   "sha256": "5667acf0290b58bc0fecf57d0c24aadfa3fb171bb4b63d6262ed678763dffa01"
+   "bytes": 6049,
+   "sha256": "107116a8a3b39692177254a4f8728ccb62cbd5e8304822adbc8194535dd13c5e"
   },
   {
    "path": "kit/FORMAT_GUIDE.md",
-   "bytes": 15902,
-   "sha256": "32d5fa203e723976cd5a7c61a7f7187d88a0ff1afcc85e8927e9420283e3528e"
+   "bytes": 15913,
+   "sha256": "6d16afbfcd53494a9c979ad50ad194b4d1ac2a13c2883be3ad3f66a5b66e2edd"
   },
   {
    "path": "kit/DATA_SOURCES.md",
@@ -75,8 +75,8 @@
   },
   {
    "path": "kit/pipeline/pickup.py",
-   "bytes": 5854,
-   "sha256": "7e4229d83599dbdad58bd514b570db83576067859d015690c2282716c8487bb0"
+   "bytes": 8942,
+   "sha256": "19eb4f8efc68f9bf6fcc8de1fce8396973401dbb4e2120c6f085987588404c89"
   },
   {
    "path": "kit/pipeline/setup.sh",
@@ -95,8 +95,8 @@
   },
   {
    "path": "kit/pipeline/RUNBOOK.md",
-   "bytes": 16835,
-   "sha256": "83ee03971f9ff5d40e0bb16caea15143f373d8fd35e6f855c3c6e9d4c145bba3"
+   "bytes": 19339,
+   "sha256": "9e60aff2611e0b4155b0285159cb135f33865f47356b41696ee66fdcdb9c82d5"
   },
   {
    "path": "kit/posts/_template.json",
