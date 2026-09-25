@@ -139,6 +139,7 @@ python3 render.py posts/${DATE}_brief.json --check     # 오류 0 될 때까지 
 python3 render.py posts/${DATE}_brief.json             # out/${DATE}-brief/ NN.jpg(게시용 4:5) + NN.png(보관) + ledger.xlsx
 python3 pipeline/dedup.py posts/${DATE}_brief.json     # 중복 판정 내역 (보고에 요약)
 ```
+- 카드 테마는 호수로 자동으로 정해진다: 홀수 호 다크, 짝수 호 라이트 (`brand.json > theme_rotation`, 사용자 결정 2026-09-25). 렌더 출력의 `테마:` 줄로 확인하고, 포스트 JSON에 `theme` 을 넣지 않는다
 - `같은 사건 … 새 사실이 없음` 오류 → 그 뉴스를 뺀다 (매체가 달라도)
 - JPG를 Read로 전부 열어 본다: 글자 잘림·겹침·빈 카드·깨진 한글이 없어야 한다
 
