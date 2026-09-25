@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
-"""[A 모드: 클라우드 루틴] Cowork가 발행함에 올린 오늘 호를 받아 키트 작업 폴더에 놓고 다시 검증한다.
-그다음 gh_handoff.py --inplace 로 GitHub에 넘긴다.
+"""[A 모드: 클라우드 루틴] Cowork가 발행함에 올린 자료를 받아 키트 작업 폴더에 놓는다.
+
+  (기본) --feed : Cowork 수집 자료(feeds/<날짜>/: feed.json · raw.json · articles/*.md)
+                  → runs/<날짜>/raw/<채널>.json · runs/<날짜>/articles/*.md  (이후 RUNBOOK 2~6단계를 루틴이 진행)
+  python3 pipeline/pickup.py 2026-09-27 --feed <FROM>/feeds/2026-09-27
+
+  (예전) --from : Cowork가 카드까지 만든 호(issues/<날짜>/handoff.json) → 재검증 후 gh_handoff.py --inplace
 
   # 1) Artifact read 로 발행함의 issues/<날짜>/handoff.json 과 그 안의 files 전부를 받는다 (저장 폴더 = FROM)
   python3 pipeline/pickup.py 2026-09-25 --from <FROM>/issues/2026-09-25
@@ -47,11 +52,60 @@ def jpeg_size(p: Path):
     return None
 
 
+def pickup_feed(date: str, src: Path):
+    """Cowork 수집 자료 → runs/<날짜>/raw·articles. 형식이 틀리면 중단(exit 2~3)."""
+    fj = src / "feed.json"
+    if not fj.exists():
+        print(f"✗ {fj} 없음 — 발행함에 오늘 수집 자료가 아직 없음")
+        sys.exit(2)
+    feed = load_json(fj)
+    if feed.get("date") != date:
+        print(f"✗ feed.json 날짜 {feed.get('date')} ≠ {date}")
+        sys.exit(2)
+    raw_p = src / feed.get("raw_file", "raw.json")
+    try:
+        raw = load_json(raw_p)
+    except Exception as e:  # 채널 목록이 깨졌어도 원문 발췌는 쓴다 — 채널 수집은 루틴이 직접
+        print(f"! {raw_p.name} 읽기 실패({e}) → 채널 수집(1단계)은 루틴이 직접 하고, 원문 발췌만 받음")
+        raw = {}
+    chans = raw.get("channels", raw) if isinstance(raw, dict) else {}
+    run = ROOT / "runs" / date
+    (run / "raw").mkdir(parents=True, exist_ok=True)
+    (run / "articles").mkdir(parents=True, exist_ok=True)
+    n_items = 0
+    for cid, c in chans.items():
+        if not isinstance(c, dict):
+            continue
+        rec = {"channel": c.get("channel", cid), "url": c.get("url", ""), "fetched_at": c.get("fetched_at", ""),
+               "error": c.get("error", ""), "items": c.get("items") or [], "collected_by": "cowork"}
+        n_items += len(rec["items"])
+        (run / "raw" / f"{cid}.json").write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding="utf-8")
+    missing, n_art = [], 0
+    for art in feed.get("articles", []):
+        f = src / art.get("file", f"articles/{art.get('id')}.md")
+        if not f.exists() or not f.read_text(encoding="utf-8").strip():
+            missing.append(art.get("id"))
+            continue
+        shutil.copy2(f, run / "articles" / f.name)
+        n_art += 1
+    with open(run / "run_log.md", "a", encoding="utf-8") as fh:
+        fh.write(f"- {dt.datetime.now(KST).strftime('%H:%M')} [루틴] 발행함 수집 자료 받음 (Cowork {feed.get('created_at', '')}): "
+                 f"채널 {len(chans)}개·항목 {n_items}건, 원문 발췌 {n_art}개" + (f", 누락 {missing}" if missing else "") + "\n")
+    print(f"✓ 수집 자료 받음: 채널 {len(chans)}개(항목 {n_items}건), 원문 발췌 {n_art}개 → runs/{date}/"
+          + (f"  ! 발췌 파일 누락: {missing}" if missing else ""))
+    print("  다음: python3 pipeline/collect.py " + date + "  (RUNBOOK 2단계부터)")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("date")
-    ap.add_argument("--from", dest="src", required=True, help="발행함에서 받은 issues/<날짜>/ 폴더 (handoff.json 이 있는 곳)")
+    ap.add_argument("--from", dest="src", default="", help="발행함에서 받은 issues/<날짜>/ 폴더 (handoff.json 이 있는 곳)")
+    ap.add_argument("--feed", default="", help="발행함에서 받은 feeds/<날짜>/ 폴더 (feed.json 이 있는 곳)")
     a = ap.parse_args()
+    if a.feed:
+        return pickup_feed(a.date, Path(a.feed))
+    if not a.src:
+        ap.error("--feed 또는 --from 중 하나가 필요함")
     src = Path(a.src)
     hf = src / "handoff.json"
     if not hf.exists():

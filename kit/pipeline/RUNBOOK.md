@@ -3,16 +3,16 @@
 매일 새벽 이 문서대로 카드뉴스를 만들어 GitHub 저장소 `welcome2oz/raw-materials-daily` 로 넘기면, 저장소의 GitHub Actions(`publish.yml`)가 **07:00(KST)에 인스타그램 @raw_material_procurement 에 자동 게시**한다.
 결과물은 **인스타그램 공식 API 규격: 4:5(1080×1350) JPEG, 캐러셀 최대 10장** + 캡션.
 
-실행 모드는 둘이다. 둘 다 클라우드에서 돌아 **PC가 꺼져 있어도 된다.** 단계마다 해당 모드만 따른다.
+실행 모드는 둘이다. 둘 다 클라우드에서 돌아 **PC가 꺼져 있어도 된다.**
 
 | 모드 | 언제 | 어디서 | 하는 일 |
 |---|---|---|---|
-| **P. Cowork 제작** | 매일 04:00 KST | Cowork 예약 작업 | 뉴스 수집·원문 발췌·검증·카드 제작(1~6단계) → **발행함**(허브 아티팩트)에 오늘 호와 `handoff.json` 을 올린다. GitHub에는 쓰지 않는다 |
-| **A. 클라우드 루틴** | 매일 05:00 KST | Claude Code 루틴 (저장소 연결) | 발행함에서 오늘 호를 받아 **다시 검증** → 저장소에 커밋 → 작업 브랜치(`claude/…`) push. 05:50까지 발행함에 호가 없으면 직접 제작(1~6단계) |
+| **P. Cowork 수집** | 매일 04:00 KST | Cowork 예약 작업 | **코드를 실행하지 않는다.** WebFetch로 채널 목록과 기사 원문을 읽어 파일로 쓰고 발행함에 올린다 (`feeds/<날짜>/`). 절차는 맨 아래 "P. Cowork 수집 절차" |
+| **A. 클라우드 루틴** | 매일 05:00 KST | Claude Code 루틴 (저장소 연결) | 발행함 수집 자료를 받아 0~8단계: 후보 정리·선정·카드 제작·검증 → 작업 브랜치(`claude/…`) push. 05:50까지 자료가 없으면 수집부터 직접 |
 
-역할을 나눈 이유 (2026-09-24 점검): 루틴 환경의 WebFetch는 mining.com(403)·icis.com(빈 응답)을 읽지 못하고, Cowork 환경은 GitHub에 push 하지 못한다. Cowork는 기사를 읽고, 루틴은 GitHub에 넘긴다.
+역할을 나눈 이유: 루틴 환경의 WebFetch는 mining.com(403)·icis.com(빈 응답)을 읽지 못하고(2026-09-24 점검), Cowork 예약 작업은 인터넷에서 받은 스크립트를 실행하려 하면 자동 승인 안전 검사가 '외부 코드 실행'으로 막는다(2026-09-25·26 실제로 중단). 그래서 Cowork는 읽기만, 코드는 루틴만 실행한다.
 
-- 발행함: https://claude.ai/artifact/3SR1vSAzM6inN4WTHvjoBZ (최근 7일 호, 목록 issues.json)
+- 발행함: https://claude.ai/artifact/3SR1vSAzM6inN4WTHvjoBZ (Cowork 수집 자료 `feeds/<날짜>/`, 최근 7일)
 - 기준 문서: `kit/FORMAT_GUIDE.md`(편집 원칙), `kit/brand.json`(허용 매체·규칙·인스타 규격), `kit/pipeline/channels.json`, `kit/pipeline/keywords.json`
 - 발행 기록은 저장소가 전부다: `issues/<날짜>/`(카드 JPG·캡션·post.json·근거 CSV·ledger.xlsx·원문 발췌) + `published/<날짜>.json`(게시 링크). 중복 검열도 이 기록으로 한다.
 
@@ -20,7 +20,7 @@
 
 1. 기사 본문을 WebFetch로 직접 읽고 저장한 내용만 카드에 쓴다. 검색 스니펫·제목만으로 쓰지 않는다. 지어낸 숫자·인용·날짜는 한 글자도 넣지 않는다. 가상 데이터로는 카드를 만들지 않는다.
 2. 가격(시세·단가) 수치는 쓰지 않는다. 가격 등락이 주제인 기사는 고르지 않는다.
-3. 출처는 `brand.json > news_outlets` 허용 매체만. Yahoo Finance·MINING.COM 전재 기사는 원 발행처가 허용 매체일 때만, `via`로 표기.
+3. 출처는 `brand.json > news_outlets` 허용 매체만. Yahoo Finance·MINING.COM 전재 기사는 원 발행처가 허용 매체일 때만, `via`로 표기. **영어·한국어 원문 페이지만** 쓴다 — 번역판(es.finance.yahoo.com 등)은 쓰지 않는다 (중복 검열·근거 대조가 영어·한국어 기준. 2026-09-26 스페인어판 오판정 사례)
 4. 게재일은 포스트 날짜 전날~당일(`news_max_age_days: 1`)만.
 5. 카드의 숫자는 모두 `sources[].evidence`(원문 문장 그대로)에 있어야 한다. 기사에 없는 계산값은 `calc: true`, 추정 구간은 `est`/`opt`.
 6. **중복 금지**: 이미 게시한 기사(URL)는 다시 쓰지 않는다. 이미 게시한 사건은 **새로 확인된 사실이 있을 때만** 후속(`update_of`)으로 쓰고, 다른 매체가 같은 내용을 다시 쓴 것(예: 전날 로이터 → 오늘 NYT)은 건너뛴다. render.py가 저장소 기록과 대조해 막는다.
@@ -31,23 +31,8 @@
 11. 사용자에게 질문하지 않는다(무인 실행). 판단이 필요하면 이 문서 기준으로 보수적으로 고르고(애매하면 뺀다) 보고에 적는다.
 12. main 브랜치로 직접 push 하지 않는다(A 모드). 저장소의 `kit/`, `.github/`, `scripts/`, `published/` 는 고치지 않는다 — 매일 쓰는 곳은 `issues/<오늘>/` 뿐이다.
 
-## 0단계. 준비
+## 0단계. 준비 (A. 클라우드 루틴)
 
-### P. Cowork 제작
-```bash
-DATE=$(TZ=Asia/Seoul date +%F)
-RAW=https://raw.githubusercontent.com/welcome2oz/raw-materials-daily/main
-curl -s -o /dev/null -w "%{http_code}\n" $RAW/issues/$DATE/ready.json    # 200 → 이미 넘어감 → 종료
-curl -s -o /dev/null -w "%{http_code}\n" $RAW/published/$DATE.json       # 200 → 이미 게시됨 → 종료
-```
-200이 하나라도 나오면 한 줄 보고하고 끝낸다. 아니면 세션 시작 폴더(pwd) 아래로 저장소를 받아 온다 (Cowork는 git clone 불가, raw 읽기만 됨):
-```bash
-curl -fsSL $RAW/kit/pipeline/mirror_repo.py -o mirror_repo.py && python3 mirror_repo.py repo
-cd repo/kit && bash pipeline/setup.sh
-```
-Artifact `read` — url: 발행함, path: `issues.json` → 저장된 파일을 `hub_index.json` 으로 복사 (없으면 빈 목록으로 진행).
-
-### A. 클라우드 루틴
 작업 위치는 저장소 루트(세션이 clone 한 폴더)다.
 ```bash
 DATE=$(TZ=Asia/Seoul date +%F)          # 포스트 날짜 (KST)
@@ -59,21 +44,20 @@ cd kit && bash pipeline/setup.sh         # 폰트(npm)·Playwright·Chromium 준
 ```
 "종료"가 나오면 8단계 보고만 하고 끝낸다. 아니면 **바로 1A단계**로 간다.
 
-### 1A단계 (A 전용). 발행함에서 오늘 호 받기
-1. Artifact `read` — url: 발행함, path: `issues/$DATE/handoff.json`
-   - 없으면(파일 없음 오류): `sleep 300` 후 다시 읽는다. **05:50 KST까지** 반복. 그때까지 없으면 → P 제작이 실패한 것 → 1~6단계를 직접 한다 (아래 "A 직접 제작 시 제한" 참고) → 7A단계
-2. 있으면: handoff.json 의 `files[].path` 앞에 `issues/$DATE/` 를 붙인 목록을 `paths` 로 한 번에 Artifact `read`. 결과에 나온 저장 위치에서 `issues/$DATE/` 폴더 경로를 FROM 으로 둔다 (handoff.json 도 같은 폴더에 있어야 한다)
-3. 받아서 재검증:
+### 1A단계. 발행함에서 Cowork 수집 자료 받기
+1. Artifact `read` — url: 발행함, path: `feeds/$DATE/feed.json`
+   - 없으면(파일 없음 오류): `sleep 300` 후 다시 읽는다. **05:50 KST까지** 반복. 그때까지 없으면 → 1단계부터 직접 한다 (아래 "직접 수집 시 제한")
+2. 있으면: feed.json 의 `raw_file`(보통 `raw.json`)과 `articles[].file` 앞에 `feeds/$DATE/` 를 붙인 목록을 `paths` 로 한 번에 Artifact `read`. 결과에 나온 저장 위치에서 `feeds/$DATE/` 폴더 경로를 FROM 으로 둔다 (feed.json 도 같은 폴더에 있어야 한다)
+3. 받아서 배치:
 ```bash
-python3 pipeline/pickup.py $DATE --from "$FROM"      # sha256 대조 → 배치 → 근거표 재생성 → 검증(근거·중복·인스타 규격)
+python3 pipeline/pickup.py $DATE --feed "$FROM"    # → runs/$DATE/raw/<채널>.json, runs/$DATE/articles/<id>.md
 ```
-   - `✓ 받음·재검증 통과` → 7A단계
-   - sha256 불일치 → 2번을 한 번 더. 그래도 실패하면 직접 제작
-   - 검증 오류(예: 중복) → 넘기지 않고 오류를 보고한다 (P 제작 이후 게시 기록이 바뀐 경우 등). 직접 제작으로 넘어가지 않는다
+   - `✓ 수집 자료 받음` → **1단계는 건너뛰고 2단계부터**. Cowork가 받아 둔 원문 발췌(articles)를 4단계 근거로 그대로 쓴다 (루틴에서 못 읽는 mining.com·ICIS 기사 포함)
+   - `raw.json 읽기 실패` → 원문 발췌만 받은 것. 1단계 채널 수집은 직접 한 뒤 2단계로
 
-**A 직접 제작 시 제한** (루틴 환경 WebFetch 점검 2026-09-24): `mining.com`(403)·`icis.com`(빈 응답)은 읽을 수 없다. 1단계 채널 중 `miningcom-web`·`miningcom`·`icis` 는 건너뛰고 나머지 채널과 `fallback.websearch_queries`(WebSearch)로 후보를 찾는다. 국내·기타 매체 채널은 루틴 환경에서 확인되지 않았으니 실패하면 사유만 기록한다. 본문은 WebFetch로 읽히는 곳(예: finance.yahoo.com 전재)만 쓴다.
+**직접 수집 시 제한** (루틴 환경 WebFetch 점검 2026-09-24): `mining.com`(403)·`icis.com`(빈 응답)은 읽을 수 없다. 1단계 채널 중 `miningcom-web`·`miningcom`·`icis` 는 건너뛰고 나머지 채널과 `fallback.websearch_queries`(WebSearch)로 후보를 찾는다. 본문은 WebFetch로 읽히는 곳(예: finance.yahoo.com 전재, 국내 매체)만 쓴다.
 
-### 공통 (P 제작, A 직접 제작)
+### 공통
 - 다음 호수: `python3 -c "from render import load_history; h=load_history(); print(max([i.get('issue') or 0 for i in h['issues']], default=0)+1)"`
 - `runs/$DATE/run_log.md` 를 만들고 이후 단계마다 한 줄씩 기록한다 (시각, 한 일, 결과).
 - 전날 호가 `issues/<전날>/ready.json` 은 있는데 `published/<전날>.json` 이 없으면 **게시 실패**로 보고에 넣는다.
@@ -120,6 +104,7 @@ ATTRIBUTION: the byline and original publisher/agency attribution exactly as sho
 BODY: the full article body text verbatim, paragraph by paragraph, in order. If the body is cut off or paywalled, write BODY NOT AVAILABLE after the last available paragraph.
 ```
 받은 내용을 그대로 `runs/$DATE/articles/<id>.md` 에 저장 (머리말: `source_id`, `url`, `fetched_at`, `method: WebFetch`).
+- 1A에서 받은 Cowork 발췌가 있으면 그 파일을 그대로 쓴다 (다시 읽지 않는다). 출처 id 는 발췌 파일 이름(확장자 제외)과 같게 한다.
 - ATTRIBUTION이 허용 매체인가 / PUBLISHED가 날짜 범위 안인가 / 본문이 있는가 — 하나라도 아니면 버리고 run_log에 사유.
 
 ## 5단계. 포스트 JSON 작성
@@ -143,19 +128,7 @@ python3 pipeline/dedup.py posts/${DATE}_brief.json     # 중복 판정 내역 (�
 - `같은 사건 … 새 사실이 없음` 오류 → 그 뉴스를 뺀다 (매체가 달라도)
 - JPG를 Read로 전부 열어 본다: 글자 잘림·겹침·빈 카드·깨진 한글이 없어야 한다
 
-## 7단계. 넘기기
-
-### P. Cowork 제작 → 발행함
-```bash
-python3 pipeline/hub_stage.py $DATE --index ../../hub_index.json    # 재검증 → hub_stage/ + handoff.json + files.json
-cat hub_stage/files.json
-```
-Artifact publish — `url`: 발행함, `file_path`: `pipeline/hub/index.html`, `files`: files.json 그대로 (값이 null인 항목은 7일 지난 파일 삭제). `capabilities`는 넘기지 않는다.
-- 충돌(conflict)이면 발행함 `issues.json` 을 다시 read → `hub_index.json` 갱신 → hub_stage 부터 반복
-- 올린 뒤 Artifact `read` path `issues/$DATE/handoff.json` 으로 올라갔는지 확인
-- 결과: 성공 `staged (hub)`, 실패 `failed: <사유>`. GitHub push·Chrome 업로드는 하지 않는다 (루틴이 05:00에 가져간다)
-
-### A. 클라우드 루틴 → GitHub
+## 7단계. GitHub로 넘기기 → 07:00 자동 게시
 ```bash
 python3 pipeline/gh_handoff.py $DATE --inplace
 ```
@@ -170,11 +143,50 @@ python3 pipeline/gh_handoff.py $DATE --inplace
 
 ## 8단계. 보고
 
-### P. Cowork 제작
-1. SendUserFile: `out/${DATE}-brief/*.jpg`, `caption.txt` (status: proactive)
-2. SendUserMessage (한국어, 짧게): 만든 뉴스·매체 / 후속으로 쓴 것과 새 사실 / 중복으로 뺀 후보와 이전 호 / 그 밖에 뺀 후보와 이유 / 채널 오류·검증 경고 / 발행함 올림 결과 ("05:00 루틴이 GitHub로 넘김 → 07:00 게시 예정") / 전날 게시 결과·링크
-3. 뉴스가 0건이면 발행함은 건드리지 않고 이유와 채널 상태만 보고한다.
+마지막 메시지(한국어, 짧게): 받은 곳(Cowork 수집 자료 / 직접 수집) / 넘긴 뉴스·매체 / 재검증 결과·경고 / push 결과(브랜치·커밋)와 07:00 게시 예정 / 직접 제작했다면 뺀 후보와 이유 / 전날 게시 실패가 있으면 그 사실.
+같은 내용을 gh_handoff 전에 `runs/$DATE/run_log.md` 에 적는다.
 
-### A. 클라우드 루틴
-마지막 메시지(한국어, 짧게): 받은 곳(발행함 / 직접 제작) / 넘긴 뉴스·매체 / 재검증 결과·경고 / push 결과(브랜치·커밋)와 07:00 게시 예정 / 직접 제작했다면 뺀 후보와 이유 / 전날 게시 실패가 있으면 그 사실.
-직접 제작한 경우 같은 내용을 gh_handoff 전에 `runs/$DATE/run_log.md` 에 적는다.
+---
+
+## P. Cowork 수집 절차 (04:00 Cowork 예약 작업 — 코드 실행 없음)
+
+**Python·셸 스크립트를 실행하지 않는다** (인터넷에서 받은 코드 실행은 자동 승인 안전 검사가 막는다). 쓰는 도구: Bash는 날짜·상태 확인(`date`, `curl -s -o /dev/null -w "%{http_code}"`)만, 나머지는 Projects(프로젝트 문서 읽기)·WebFetch·WebSearch·Write(파일 쓰기)·Artifact(발행함 읽기·올리기)·SendUserMessage.
+위 **절대 규칙**은 모두 적용된다 (특히 1·2·3·4·9·10).
+
+### P0. 확인·준비
+1. `DATE=$(TZ=Asia/Seoul date +%F)`. `https://raw.githubusercontent.com/welcome2oz/raw-materials-daily/main/published/$DATE.json` 과 `.../issues/$DATE/ready.json` 의 HTTP 코드를 확인 — 하나라도 200이면 이미 처리됨 → 한 줄 보고하고 끝.
+2. Projects `project_read` 로 읽는다: `cardnews-kit/pipeline/channels.json`(채널·fetch_prompt), `cardnews-kit/brand.json`(허용 매체 `news_outlets`, `rules`), `cardnews-kit/pipeline/keywords.json`(카테고리·가격 기사 판정 단어).
+3. 작업 폴더: 세션 시작 폴더 아래 `feeds/$DATE/` (파일은 Write 도구로 쓴다).
+
+### P1. 채널 수집
+channels.json 의 채널마다 WebFetch(url, prompt = `fetch_prompt`). 결과를 **받은 그대로** 모아 `feeds/$DATE/raw.json` 하나로 쓴다:
+```json
+{"<채널 id>": {"channel": "<id>", "url": "...", "fetched_at": "<KST ISO>", "error": "", "items": [{"title": "", "url": "", "published": "", "source": "", "snippet": ""}]}}
+```
+- 실패(404·차단·빈 결과)면 `items: []`, `error` 에 사유. 재시도 1번. Bing이 `title: Bing` 빈 페이지면 `&qft=…` 빼고 한 번 더.
+- 올바른 JSON 이어야 한다 (제목 안의 큰따옴표는 `\"` 로). Bing 링크는 받은 그대로 둔다 (루틴의 collect.py 가 원문 주소로 푼다).
+
+### P2. 원문 발췌 (루틴이 못 읽는 곳 위주)
+P1 결과에서 아래를 모두 만족하는 기사를 고른다 — 허용 매체(또는 원 발행처가 허용 매체인 전재) / 게재일 전날~당일 / 가격 기사·종목·칼럼 아님 / 4개 카테고리 중 하나 / 영어·한국어 원문.
+- 여러 매체가 함께 다룬 사건을 먼저, 카테고리마다 최대 3건, **전체 최대 12건**. 같은 사건은 가장 본문이 온전한 1건(전재본 포함)만.
+- 특히 루틴이 못 읽는 `mining.com`·`icis.com` 기사는 여기서 꼭 읽어 둔다. Reuters·Bloomberg 원문(reuters.com 등)은 차단이니 Yahoo Finance·MINING.COM `/web/` 전재본을 연다.
+- 기사마다 id 를 정하고(예 `reu-escondida-restart`) RUNBOOK 4단계의 WebFetch prompt 로 읽어, 받은 내용을 그대로 `feeds/$DATE/articles/<id>.md` 에 쓴다. 머리말 4줄: `source_id: <id>` / `url: <열어 본 URL>` / `fetched_at: <KST ISO>` / `method: WebFetch (Cowork)`.
+- 본문이 없거나(BODY NOT AVAILABLE만) ATTRIBUTION 이 허용 매체가 아니면 파일을 만들지 않는다.
+
+### P3. feed.json
+`feeds/$DATE/feed.json`:
+```json
+{"date": "<DATE>", "created_at": "<KST ISO>", "created_by": "cowork", "raw_file": "raw.json",
+ "channels": [{"id": "", "items": 0, "error": ""}],
+ "articles": [{"id": "", "file": "articles/<id>.md", "url": "", "headline": "", "attribution": "", "published": "", "category": "", "also_covered_by": ["<다른 허용 매체>"]}],
+ "notes": "고른 이유·뺀 후보 한두 줄"}
+```
+
+### P4. 발행함에 올리기
+1. Artifact `read` — url: 발행함, path: `index.html` (페이지 파일을 받아 둔다). Artifact `list` scope `files` 로 올라가 있는 파일 목록도 본다.
+2. Artifact publish — `url`: 발행함, `file_path`: 받아 둔 index.html, `files`: `{"feeds/$DATE/feed.json": ..., "feeds/$DATE/raw.json": ..., "feeds/$DATE/articles/<id>.md": ...}` + 목록에 있는 **7일 지난 `feeds/<날짜>/…` 파일은 `null`**(삭제). `capabilities` 는 넘기지 않는다.
+3. Artifact `read` path `feeds/$DATE/feed.json` 으로 올라갔는지 확인.
+
+### P5. 보고
+SendUserMessage (한국어, 3~5줄): 채널 성공·실패 수 / 읽어 둔 원문 발췌 수와 카테고리 / 발행함 올림 결과 / "05:00 루틴이 카드를 만들어 07:00 게시". 발췌할 기사가 0건이어도 raw.json·feed.json 은 올린다 (루틴이 이어서 판단).
+
