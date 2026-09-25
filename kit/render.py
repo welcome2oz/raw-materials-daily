@@ -622,6 +622,18 @@ def contact_sheet(page, pngs, out: Path, w: int, h: int):
     sheet.unlink()
 
 
+def theme_for(post: dict, brand: dict) -> str:
+    """카드 테마: 포스트에 theme 이 있으면 그것, 없으면 brand.theme_rotation 을 호수로 돌린다 (No.1 다크, No.2 라이트 …)."""
+    if post.get("theme") in ("dark", "light"):
+        return post["theme"]
+    rot = brand.get("theme_rotation") or ["dark"]
+    try:
+        n = int(post.get("issue") or 1)
+    except (TypeError, ValueError):
+        n = 1
+    return rot[(n - 1) % len(rot)]
+
+
 def render(post_paths, out_dir: Path, draft: bool, ratio: str | None, runs: Path = ROOT / "runs", history=None):
     brand = load_json(ROOT / "brand.json")
     if ratio == "3:4":
@@ -654,7 +666,9 @@ def render(post_paths, out_dir: Path, draft: bool, ratio: str | None, runs: Path
                     document.fonts.load('700 40px InterLatin'), document.fonts.load('500 40px InterLatin')]);
                   await document.fonts.ready; }"""
             )
-            res = page.evaluate("([p, b]) => window.renderPost(p, b)", [post, brand])
+            theme = theme_for(post, brand)
+            print(f"  테마: {theme}")
+            res = page.evaluate("([p, b]) => window.renderPost(p, b)", [post, {**brand, "theme": theme}])
             page.evaluate("document.fonts.ready")
             for w_ in res["warnings"]:
                 print(f"  ! 레이아웃: {w_}")

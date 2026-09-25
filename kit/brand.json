@@ -13,31 +13,36 @@
       "en": "STEEL",
       "ko": "스틸",
       "accent": "#7FA3B8",
-      "desc": "열연·냉연·도금·STS·철근 등"
+      "desc": "열연·냉연·도금·STS·철근 등",
+      "accent_light": "#3F6F8C"
     },
     "resin": {
       "en": "RESIN",
       "ko": "레진",
       "accent": "#A3B26E",
-      "desc": "PP·PE·ABS·HIPS·PS 등 석유화학 수지"
+      "desc": "PP·PE·ABS·HIPS·PS 등 석유화학 수지",
+      "accent_light": "#5E6B24"
     },
     "nonferrous": {
       "en": "NON-FERROUS",
       "ko": "비철",
       "accent": "#C98B5E",
-      "desc": "구리·알루미늄"
+      "desc": "구리·알루미늄",
+      "accent_light": "#955426"
     },
     "chemical": {
       "en": "CHEMICAL",
       "ko": "화공",
       "accent": "#A391C2",
-      "desc": "냉매·오일"
+      "desc": "냉매·오일",
+      "accent_light": "#6E5A99"
     },
     "brief": {
       "en": "DAILY BRIEF",
       "ko": "브리핑",
       "accent": "#CDB16A",
-      "desc": "여러 카테고리 뉴스를 묶은 데일리 브리핑 커버·마무리"
+      "desc": "여러 카테고리 뉴스를 묶은 데일리 브리핑 커버·마무리",
+      "accent_light": "#7D6419"
     }
   },
   "topics": {
@@ -398,5 +403,10 @@
     "backup": "chrome",
     "chrome_device_id": "c3fd1844-59e1-488d-8978-ccee1b1ec255",
     "chrome_device_name": "Browser 2 (세종 왼쪽)"
-  }
+  },
+  "theme_rotation": [
+    "dark",
+    "light"
+  ],
+  "_note_theme": "카드 테마를 호수마다 번갈아 쓴다 (사용자 결정 2026-09-25): No.1 다크 → No.2 라이트 → No.3 다크 …. theme_rotation[(호수-1) % 길이]. 포스트 JSON에 \"theme\": \"dark\"|\"light\" 를 적으면 그 호만 고정. 라이트는 종이색 바탕(#F5F3EE)·먹색 글자, 카테고리 색은 accent_light(바탕 대비 4.9~5.3:1)."
 }

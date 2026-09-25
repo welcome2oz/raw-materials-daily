@@ -1,17 +1,17 @@
 {
  "name": "raw-materials-daily-kit",
- "sha": "cc13ecd8047a",
- "packed_at": "2026-09-25T00:07:23+09:00",
+ "sha": "61605b3fccc8",
+ "packed_at": "2026-09-25T10:06:37+09:00",
  "files": [
   {
    "path": "kit/render.py",
-   "bytes": 35418,
-   "sha256": "89370633c2daeac1df706066b812f285fc7a6347ed52f8ab860e0b05b10bc5e2"
+   "bytes": 35986,
+   "sha256": "00cbb73c2472e2add8dc4547c00f69ad56bfad766940b9191cdc53e270ad65e1"
   },
   {
    "path": "kit/brand.json",
-   "bytes": 9820,
-   "sha256": "1d1f3b56dbe7555e280715a74dc38e80137355368a9d8167fbaee6cc003b78dd"
+   "bytes": 10418,
+   "sha256": "bb3f41af799ae1a04656e4ddc19a5bf3f04ad577ea58cfde0a3ba88be192ab0b"
   },
   {
    "path": "kit/README.md",
@@ -20,8 +20,8 @@
   },
   {
    "path": "kit/FORMAT_GUIDE.md",
-   "bytes": 15433,
-   "sha256": "f312deab2d36ef0ad4147bbaea623af7a60a545a049d1e11583840fb7d2d774b"
+   "bytes": 15902,
+   "sha256": "32d5fa203e723976cd5a7c61a7f7187d88a0ff1afcc85e8927e9420283e3528e"
   },
   {
    "path": "kit/DATA_SOURCES.md",
@@ -35,13 +35,13 @@
   },
   {
    "path": "kit/template/card.css",
-   "bytes": 19925,
-   "sha256": "16b622e0635e1d0956bb7822807f02f88633ecf925b91bda2cc4d173410530c5"
+   "bytes": 20919,
+   "sha256": "282d619ba9c4744d8e60e00ab5ea3458cfa5311e5c6509ea8292c1402c02851c"
   },
   {
    "path": "kit/template/card.js",
-   "bytes": 29073,
-   "sha256": "0f7eec8f3ec1c5630bac65157b8e2fc7a7adb911a02781ed61d5d998d5dd2774"
+   "bytes": 29565,
+   "sha256": "50119c164be5379258029b4bfe317c0ba68031c779101704829c760914e9e353"
   },
   {
    "path": "kit/pipeline/collect.py",
@@ -95,8 +95,8 @@
   },
   {
    "path": "kit/pipeline/RUNBOOK.md",
-   "bytes": 16582,
-   "sha256": "aea6a1fecfe6330b74eef0cf5915e97bf380114b6e6e9d771b7dececfb2f9f72"
+   "bytes": 16835,
+   "sha256": "83ee03971f9ff5d40e0bb16caea15143f373d8fd35e6f855c3c6e9d4c145bba3"
   },
   {
    "path": "kit/posts/_template.json",
