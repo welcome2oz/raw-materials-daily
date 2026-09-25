@@ -31,6 +31,12 @@
   }
 
   /* ---------- chart (drawn after layout, fits its container) ---------- */
+  // 테마: "dark"(기본) | "light". 라이트에서는 카테고리 색을 대비를 올린 accent_light 로
+  let THEME = "dark";
+  function accOf(cat, fb = "#fff") {
+    return (THEME === "light" && cat.accent_light) || cat.accent || fb;
+  }
+
   function drawChart(el, spec, accent) {
     const W = el.clientWidth, H = el.clientHeight;
     const vals = spec.values.map(Number);
@@ -52,20 +58,20 @@
     // grid + y labels
     for (let k = 0; k <= nTicks; k++) {
       const v = lo + step * k, yy = y(v);
-      g += `<line x1="${padL}" x2="${W - padR + 12}" y1="${yy}" y2="${yy}" stroke="#1F2733" stroke-width="1.5" ${k === 0 ? "" : 'stroke-dasharray="4 8"'}/>`;
-      g += `<text x="${W - padR + 24}" y="${yy + 7}" font-family="InterLatin, Pretendard" font-size="20" fill="#7D8898">${fmtNum(v, tdec)}</text>`;
+      g += `<line x1="${padL}" x2="${W - padR + 12}" y1="${yy}" y2="${yy}" style="stroke:var(--grid)" stroke-width="1.5" ${k === 0 ? "" : 'stroke-dasharray="4 8"'}/>`;
+      g += `<text x="${W - padR + 24}" y="${yy + 7}" font-family="InterLatin, Pretendard" font-size="20" style="fill:var(--axis-text)">${fmtNum(v, tdec)}</text>`;
     }
     // x labels
     const xi = spec.xTicks || [0, Math.floor((vals.length - 1) / 2), vals.length - 1];
     xi.forEach((i) => {
       const anchor = i === 0 ? "start" : i === vals.length - 1 ? "end" : "middle";
-      g += `<text x="${x(i)}" y="${H - 20}" text-anchor="${anchor}" font-family="InterLatin, Pretendard" font-size="20" fill="#7D8898">${esc(labels[i])}</text>`;
+      g += `<text x="${x(i)}" y="${H - 20}" text-anchor="${anchor}" font-family="InterLatin, Pretendard" font-size="20" style="fill:var(--axis-text)">${esc(labels[i])}</text>`;
     });
     // annotations
     (spec.annotations || []).forEach((a) => {
       const xx = x(a.i);
-      g += `<line x1="${xx}" x2="${xx}" y1="${padT - 14}" y2="${H - padB}" stroke="#4A5566" stroke-width="2" stroke-dasharray="6 6"/>`;
-      g += `<text x="${xx + 10}" y="${padT - 22}" font-family="Pretendard" font-weight="700" font-size="22" fill="#B4BECB">${esc(a.text)}</text>`;
+      g += `<line x1="${xx}" x2="${xx}" y1="${padT - 14}" y2="${H - padB}" style="stroke:var(--annot-line)" stroke-width="2" stroke-dasharray="6 6"/>`;
+      g += `<text x="${xx + 10}" y="${padT - 22}" font-family="Pretendard" font-weight="700" font-size="22" style="fill:var(--annot-text)">${esc(a.text)}</text>`;
     });
     // area + line
     const pts = vals.map((v, i) => [x(i), y(v)]);
@@ -78,9 +84,9 @@
     const iHi = vals.indexOf(Math.max(...vals)), iLo = vals.indexOf(Math.min(...vals));
     [[iHi, "H", -18], [iLo, "L", 36]].forEach(([i, t, dy]) => {
       if (i === vals.length - 1) return;
-      g += `<circle cx="${x(i)}" cy="${y(vals[i])}" r="6" fill="#0A0D12" stroke="#B4BECB" stroke-width="2.5"/>`;
+      g += `<circle cx="${x(i)}" cy="${y(vals[i])}" r="6" style="fill:var(--dot-fill);stroke:var(--annot-text)" stroke-width="2.5"/>`;
       const anc = x(i) < padL + 80 ? "start" : "middle";
-      g += `<text x="${x(i)}" y="${y(vals[i]) + dy}" text-anchor="${anc}" font-family="InterLatin, Pretendard" font-size="20" font-weight="700" fill="#B4BECB">${t} ${fmtNum(vals[i], dec)}</text>`;
+      g += `<text x="${x(i)}" y="${y(vals[i]) + dy}" text-anchor="${anc}" font-family="InterLatin, Pretendard" font-size="20" font-weight="700" style="fill:var(--annot-text)">${t} ${fmtNum(vals[i], dec)}</text>`;
     });
     // last point
     const [lx, ly] = pts[pts.length - 1];
@@ -88,7 +94,7 @@
     const lastTxt = fmtNum(vals[vals.length - 1], dec);
     const bw = lastTxt.length * 14.5 + 28;
     g += `<rect x="${W - padR + 14}" y="${ly - 22}" width="${bw}" height="44" rx="6" fill="${accent}"/>`;
-    g += `<text x="${W - padR + 28}" y="${ly + 8}" font-family="InterLatin, Pretendard" font-weight="800" font-size="23" fill="#0A0D12">${lastTxt}</text>`;
+    g += `<text x="${W - padR + 28}" y="${ly + 8}" font-family="InterLatin, Pretendard" font-weight="800" font-size="23" style="fill:var(--accent-ink)">${lastTxt}</text>`;
     el.innerHTML = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">${g}</svg>`;
   }
 
@@ -167,7 +173,7 @@
     },
     split(v, ctx) {
       const total = (v.parts || []).reduce((a, p) => a + Number(p.value), 0) || 1;
-      const shades = ["var(--accent)", "#8D97A6", "#4A5566", "#2B3441"];
+      const shades = ["var(--accent)", "var(--shade-2)", "var(--shade-3)", "var(--shade-4)"];
       const segs = (v.parts || []).map((p, i) => `<div class="sp-s" style="width:${(Number(p.value) / total) * 100}%; background:${shades[i] || shades[3]}"></div>`).join("");
       const labs = (v.parts || []).map((p, i) => `<div class="sp-l" style="width:${(Number(p.value) / total) * 100}%"><i style="background:${shades[i] || shades[3]}"></i><b>${esc(p.value)}${esc(v.unit || "")}${p.calc ? "*" : ""}</b><span>${esc(p.label)}</span></div>`).join("");
       const leg = (v.parts || []).map((p, i) => `<div class="sp-g"><i style="background:${shades[i] || shades[3]}"></i><span>${esc(p.label)}</span><b>${esc(p.value)}${esc(v.unit || "")}${p.calc ? "*" : ""}</b></div>`).join("");
@@ -229,7 +235,7 @@
     return `<div class="toc">${news.map((o, k) => {
       const cat = ctx.brand.categories[o.x.category || ctx.post.category] || {};
       const src = ctx.S[ids(o.x.src)[0]] || {};
-      return `<div class="toc-i" style="--gc:${cat.accent || "#fff"}"><span class="tn">${String(k + 1).padStart(2, "0")}</span>
+      return `<div class="toc-i" style="--gc:${accOf(cat)}"><span class="tn">${String(k + 1).padStart(2, "0")}</span>
         <div><div class="tc">${esc(cat.ko || "")}<span>${esc(src.publisher || "")}</span></div><div class="th">${esc(o.x.toc || plain(o.x.headline))}</div></div>
         ${o.x.key ? `<div class="tk"><b>${esc(o.x.key.value)}</b><span>${kz(esc(o.x.key.label || ""))}</span></div>` : "<div></div>"}</div>`;
     }).join("")}</div>`;
@@ -320,7 +326,7 @@
         const cat = ctx.brand.categories[g.category] || {};
         const rows = g.rows.map((r) => `<div class="row"><div class="rn">${esc(r.name)}${r.unit ? `<small>${esc(r.unit)}</small>` : ""}${ref(r, ctx)}</div>
             <div class="rv">${esc(r.value)}</div><div class="rc">${chgSpan(r.chg)}</div></div>`).join("");
-        return `<div class="grp" style="--gc:${cat.accent || "#fff"}"><div class="grp-h"><i></i><span>${esc(cat.en || g.category)}</span><span class="ko">${esc(cat.ko || "")}</span></div>${rows}</div>`;
+        return `<div class="grp" style="--gc:${accOf(cat)}"><div class="grp-h"><i></i><span>${esc(cat.en || g.category)}</span><span class="ko">${esc(cat.ko || "")}</span></div>${rows}</div>`;
       }).join("");
       return `${head(s)}${s.asof ? `<div class="asof">AS OF ${kz(esc(s.asof))}</div>` : ""}<div class="board">${grps}</div>
         <div class="spacer"></div>${s.note ? `<div class="note">${md(s.note)}</div>` : ""}${srcLine(ctx.refs, ctx, ctx.need)}`;
@@ -345,6 +351,8 @@
     const W = brand.size?.width || 1080, H = brand.size?.height || 1350;
     document.documentElement.style.setProperty("--W", W + "px");
     document.documentElement.style.setProperty("--H", H + "px");
+    THEME = post.theme || brand.theme || "dark";
+    document.body.classList.toggle("theme-light", THEME === "light");
     if (brand.color_convention === "global") document.body.classList.add("cv-global");
     const need = new Set(brand.rules?.source_required_types || []);
     const d = new Date(post.date + "T00:00:00");
@@ -358,7 +366,7 @@
       const catKey = s.category || post.category;
       const cat = brand.categories[catKey] || {};
       const top = catKey === "brief" ? {} : (brand.topics[s.topic || post.topic] || {});
-      const accent = cat.accent || "#FB923C";
+      const accent = accOf(cat, "#FB923C");
       const refs = slideRefs(s);
       const ctx = { brand, post, accent, need: need.has(s.type), S, refs, multi: refs.length > 1 };
       const card = document.createElement("section");

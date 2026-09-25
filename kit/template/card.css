@@ -1,5 +1,5 @@
 /* ============================================================
-   RAW MATERIALS DAILY — card template  (v4 · restrained news graphics, dark)
+   RAW MATERIALS DAILY — card template  (v5 · restrained news graphics, dark + light)
    Canvas 1080 x 1350 (4:5). Height is flexible (3:4 = 1440 OK).
    Principles: flat surfaces, hairline rules, one muted accent per card,
    no glows / gradients / rounded panels / icon buttons.
@@ -40,9 +40,49 @@
   --flat: #8C8983;
 
   --accent: #C98B5E;          /* per-category, muted */
-  --accent-ink: #121314;
+  --accent-ink: #121314;      /* text on an accent-filled chip */
+
+  /* charts & split bars */
+  --grid: #1F2733;
+  --axis-text: #7D8898;
+  --annot-line: #4A5566;
+  --annot-text: #B4BECB;
+  --dot-fill: #0A0D12;
+  --shade-2: #8D97A6;
+  --shade-3: #4A5566;
+  --shade-4: #2B3441;
 
   --sans: "InterLatin", "Pretendard", "Apple SD Gothic Neo", sans-serif;
+}
+
+/* ---------- Light theme (호수마다 다크/라이트 번갈아: brand.json > theme_rotation) ----------
+   같은 레이아웃·같은 절제된 규칙. 종이색 바탕 + 먹색 글자, 카테고리 색은 대비를 올린 accent_light 사용 */
+body.theme-light {
+  --bg: #F5F3EE;
+  --panel: #ECE9E2;
+  --line: #DCD8CF;
+  --line-2: #C3BEB3;
+  --text: #17181B;
+  --text-2: #3F4045;
+  --muted: #66635D;
+  --faint: #9A968E;
+
+  --alert: #B03F2A;
+  --warn: #8C6310;
+  --up: #B03F2A;
+  --down: #2C5F91;
+  --flat: #66635D;
+
+  --accent-ink: #FFFFFF;
+
+  --grid: #E1DDD5;
+  --axis-text: #77746D;
+  --annot-line: #A9A499;
+  --annot-text: #3F4045;
+  --dot-fill: #F5F3EE;
+  --shade-2: #8C9097;
+  --shade-3: #B8BCC2;
+  --shade-4: #D9DCE0;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
