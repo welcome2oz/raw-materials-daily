@@ -1,0 +1,113 @@
+{
+  "id": "2026-09-26-brief",
+  "date": "2026-09-26",
+  "issue": 2,
+  "category": "brief",
+  "topic": "supply",
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "JFE 지바제철소\n**60만톤 생산 차질**",
+      "sub": "9월 25일(현지) 외신 보도 기준 · 1건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "supply",
+      "src": "reu-jfe-chiba-output",
+      "headline": "JFE 지바제철소\n**60만톤 생산 차질**",
+      "toc": "JFE 지바제철소, 60만톤 생산 차질",
+      "orig": "JFE Steel sees 600,000-ton production impact from Chiba weather damage",
+      "key": {
+        "value": "600,000t",
+        "label": "지바 공장 생산 영향 전망"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "JFE Steel · Chiba Plant · Japan",
+          "items": [
+            {
+              "k": "STATUS",
+              "v": "복구 진행 중",
+              "tone": "warn"
+            },
+            {
+              "k": "CAUSE",
+              "v": "8월 폭우 + 태풍 설비 침수"
+            },
+            {
+              "k": "OUTLOOK",
+              "v": "영향 장기화 전망",
+              "sub": "복구 진행 상황에 따라 변동",
+              "tone": "warn"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "600,000",
+              "unit": "t",
+              "label": "지바 공장 연간 생산 영향 전망",
+              "hi": true
+            },
+            {
+              "value": "3.59",
+              "unit": "Mt",
+              "label": "지바 공장 FY2025 생산량"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "t": "일부 제품 납기 지연, 고객사와 일정 조율 중"
+        }
+      ],
+      "why": "일본산 철강 공급 일정 점검",
+      "coverage": [
+        {
+          "publisher": "Reuters",
+          "title": "JFE Steel sees 600,000-ton production impact from Chiba weather damage",
+          "url": "https://www.mining.com/web/jfe-steel-sees-600000-ton-production-impact-from-chiba-weather-damage/",
+          "date": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "type": "closing"
+    }
+  ],
+  "sources": [
+    {
+      "id": "reu-jfe-chiba-output",
+      "publisher": "Reuters",
+      "via": "MINING.COM",
+      "title": "JFE Steel sees 600,000-ton production impact from Chiba weather damage",
+      "date": "2026-09-25",
+      "time": "7:02 am",
+      "accessed": "2026-09-26",
+      "url": "https://www.mining.com/web/jfe-steel-sees-600000-ton-production-impact-from-chiba-weather-damage/",
+      "evidence": [
+        "Japan's No.2 steelmaker JFE Steel said on Friday crude steel output at its plant in Chiba near Tokyo is expected to fall by about 600,000 metric tons due to damage from heavy rain in August and a recent typhoon, with the impact expected to be prolonged.",
+        "Some equipment at the Chiba plant was flooded by the typhoon after being damaged by heavy rain in August, JFE Steel, a unit of JFE Holdings (TYO: 5411), said.",
+        "No injuries were reported. The blast furnace remains in the process of returning to normal operations following the August flooding.",
+        "The estimated production impact could change depending on the progress of recovery work, and JFE Steel is still assessing the impact on production and earnings, it said.",
+        "The Chiba plant produced 3.59 million tons of crude steel in fiscal 2025, which ended in March, according to a company spokesperson. JFE Steel's total crude steel output was 21.37 million tons in fiscal 2025.",
+        "Deliveries of some products have been delayed, and JFE is coordinating with customers to minimise the impact on supplies."
+      ]
+    }
+  ],
+  "caption": "9월 25일(현지) 외신 보도 기준 원재료 뉴스 1건.\n\n1) JFE 지바제철소, 폭우·태풍 설비 피해로 연간 60만톤 생산 차질 전망\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": [
+    "원자재",
+    "철강",
+    "공급망",
+    "일본",
+    "구매"
+  ]
+}
