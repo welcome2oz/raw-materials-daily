@@ -412,7 +412,7 @@ def check_coverage(post: dict, brand: dict, errors: list, warns: list):
                     continue
                 names.add(o["name"])
         if rules.get("min_coverage") and len(names) < rules["min_coverage"]:
-            warns.append(f"slide {i}: 함께 보도한 허용 매체 {len(names)}곳 — 기준 {rules['min_coverage']}곳 미만 (RUNBOOK 3단계 예외 사유를 run_log 에 남길 것)")
+            warns.append(f"slide {i}: 단독 보도(함께 보도한 허용 매체 {len(names)}곳) — RUNBOOK 3단계 '유용한 단독 보도' 기준(새 사실 유형)을 run_log 에 남길 것")
 
 
 def build_caption(post: dict) -> str:
