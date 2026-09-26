@@ -38,8 +38,10 @@
 DATE=$(TZ=Asia/Seoul date +%F)          # 포스트 날짜 (KST)
 git branch --show-current                # 작업 브랜치 (claude/…). 바꾸지 않는다
 git fetch -q origin main
-git cat-file -e origin/main:published/$DATE.json 2>/dev/null && echo "이미 게시됨 → 종료"
-git cat-file -e origin/main:issues/$DATE/ready.json 2>/dev/null && echo "이미 넘김 → 종료"
+W=$(git show origin/main:published/$DATE.json 2>/dev/null | python3 -c "import json,sys; print('withdrawn' if json.load(sys.stdin).get('withdrawn') else 'published')" 2>/dev/null)
+[ "$W" = "published" ] && echo "이미 게시됨 → 종료"
+[ "$W" != "withdrawn" ] && git cat-file -e origin/main:issues/$DATE/ready.json 2>/dev/null && echo "이미 넘김 → 종료"
+# withdrawn = 사용자가 인스타에서 지운 게시물. 같은 날짜로 다시 만들어 게시한다 (publish.yml·ig_publish.py 가 허용)
 cd kit && bash pipeline/setup.sh         # 폰트(npm)·Playwright·Chromium 준비
 ```
 "종료"가 나오면 8단계 보고만 하고 끝낸다. 아니면 **바로 1A단계**로 간다.
@@ -159,7 +161,7 @@ python3 pipeline/gh_handoff.py $DATE --inplace
 위 **절대 규칙**은 모두 적용된다 (특히 1·2·3·4·9·10).
 
 ### P0. 확인·준비
-1. `DATE=$(TZ=Asia/Seoul date +%F)`. `https://raw.githubusercontent.com/welcome2oz/raw-materials-daily/main/published/$DATE.json` 과 `.../issues/$DATE/ready.json` 의 HTTP 코드를 확인 — 하나라도 200이면 이미 처리됨 → 한 줄 보고하고 끝.
+1. `DATE=$(TZ=Asia/Seoul date +%F)`. `https://raw.githubusercontent.com/welcome2oz/raw-materials-daily/main/published/$DATE.json` 과 `.../issues/$DATE/ready.json` 의 HTTP 코드를 확인 — 하나라도 200이면 이미 처리됨 → 한 줄 보고하고 끝. 단 published 파일 내용에 `"withdrawn": true` 가 있으면(인스타에서 지운 게시물) 처리 안 된 것으로 보고 계속한다.
 2. Projects `project_read` 로 읽는다: `cardnews-kit/pipeline/channels.json`(채널·fetch_prompt), `cardnews-kit/brand.json`(허용 매체 `news_outlets`, `rules`), `cardnews-kit/pipeline/keywords.json`(카테고리·가격 기사 판정 단어).
 3. 작업 폴더: 세션 시작 폴더 아래 `feeds/$DATE/` (파일은 Write 도구로 쓴다).
 
