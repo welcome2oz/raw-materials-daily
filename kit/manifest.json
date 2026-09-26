@@ -1,12 +1,12 @@
 {
  "name": "raw-materials-daily-kit",
- "sha": "13e8d0286a31",
- "packed_at": "2026-09-26T09:19:47+09:00",
+ "sha": "7574cac57854",
+ "packed_at": "2026-09-26T11:12:05+09:00",
  "files": [
   {
    "path": "kit/render.py",
-   "bytes": 36472,
-   "sha256": "27c8fe5feca7b875f2985cf970a8ffdf810558765e8c413c2af8b590db6f3f85"
+   "bytes": 36622,
+   "sha256": "c8a13f77be1cc4ca5405fc475043c79d3daf18bde82b2bd9770b0d6fb3a7ae78"
   },
   {
    "path": "kit/brand.json",
@@ -95,8 +95,8 @@
   },
   {
    "path": "kit/pipeline/RUNBOOK.md",
-   "bytes": 20811,
-   "sha256": "106f18d7ace48ec943b1e84ba3593069c00d831b7f4e9b09e8e2ca26f09065d4"
+   "bytes": 21273,
+   "sha256": "f29bdce9deb4a9552ad117f2d06536a749cf2c0cb03fb2492a52273b3a485daf"
   },
   {
    "path": "kit/posts/_template.json",

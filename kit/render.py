@@ -224,6 +224,8 @@ def history_from_repo(repo: Path):
             pub = load_json(rec)
         except Exception:
             continue
+        if pub.get("withdrawn"):  # 인스타에서 지운 게시물 — 게시 이력에서 뺀다 (같은 날짜 재게시용)
+            continue
         out.append({"date": d, "id": post.get("id"), "issue": post.get("issue"),
                     "sources": [{k: s.get(k) for k in ("id", "publisher", "via", "title", "date", "url")} for s in post.get("sources", [])],
                     "stories": dedup.stories_for_index(post),
