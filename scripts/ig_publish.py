@@ -7,7 +7,6 @@ Instagram 공식 Content Publishing API (Instagram API with Instagram Login, gra
   3) 상태 확인                               GET  /{container}?fields=status_code  (FINISHED 대기)
   4) 게시                                    POST /{IG_ID}/media_publish  creation_id
   5) 기록                                    published/<날짜>.json (media id·permalink) → 같은 날 두 번 게시하지 않음
-                                             (인스타에서 지운 게시물은 기록에 "withdrawn": true 를 넣으면 같은 날짜로 다시 게시)
 
 필요한 저장소 Secrets: IG_ACCESS_TOKEN, IG_USER_ID
 이미지 주소: https://raw.githubusercontent.com/<저장소>/<커밋>/issues/<날짜>/NN.jpg (공개 저장소라 Meta가 내려받을 수 있음)
@@ -134,16 +133,9 @@ def main():
 
     day = ROOT / "issues" / a.date
     rec = ROOT / "published" / f"{a.date}.json"
-    prev = None
     if rec.exists():
-        try:
-            prev = json.loads(rec.read_text(encoding="utf-8"))
-        except Exception:
-            prev = {}
-        if not prev.get("withdrawn"):  # 인스타에서 지운 게시물(withdrawn: true)만 같은 날짜 재게시 허용
-            log(f"이미 게시됨 — {rec.read_text(encoding='utf-8').strip()[:200]}")
-            return 0
-        log(f"{a.date} 이전 게시물은 삭제 표시(withdrawn)됨 — 다시 게시")
+        log(f"이미 게시됨 — {rec.read_text(encoding='utf-8').strip()[:200]}")
+        return 0
     ready_p = day / "ready.json"
     if not ready_p.exists():
         log(f"{a.date} 게시할 포스트 없음 (issues/{a.date}/ready.json 없음)")
@@ -211,11 +203,9 @@ def main():
         return 1
 
     rec.parent.mkdir(exist_ok=True)
-    out = {"date": a.date, "media_id": mid, "permalink": info.get("permalink"), "timestamp": info.get("timestamp"),
-           "slides": ready["slides"], "commit": sha, "published_at": dt.datetime.now(KST).isoformat(timespec="seconds")}
-    if prev and prev.get("withdrawn"):  # 지운 게시물 기록은 previous 에 남긴다
-        out["previous"] = prev.get("previous", []) + [{k: v for k, v in prev.items() if k != "previous"}]
-    rec.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+    rec.write_text(json.dumps({"date": a.date, "media_id": mid, "permalink": info.get("permalink"), "timestamp": info.get("timestamp"),
+                               "slides": ready["slides"], "commit": sha,
+                               "published_at": dt.datetime.now(KST).isoformat(timespec="seconds")}, ensure_ascii=False, indent=1), encoding="utf-8")
     log(f"✓ 게시 완료 {info.get('permalink')}")
     return 0
 
