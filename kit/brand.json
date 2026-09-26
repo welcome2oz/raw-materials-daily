@@ -404,6 +404,11 @@
     "chrome_device_id": "c3fd1844-59e1-488d-8978-ccee1b1ec255",
     "chrome_device_name": "Browser 2 (세종 왼쪽)"
   },
+  "issue_numbering": {
+    "start_date": "2026-09-27",
+    "start_number": 1,
+    "_note": "호수는 start_date 부터 게시된 날 수로 매긴다(render.next_issue). 사용자가 인스타 게시물(9/24·9/26)을 지우고 브랜드 소개를 올린 뒤 2026-09-27 호부터 No.1 로 다시 시작하기로 결정(2026-09-26). 지난 호 기록은 중복 검열용으로 그대로 둔다."
+  },
   "theme_rotation": [
     "dark",
     "light"

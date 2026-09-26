@@ -224,7 +224,7 @@ def history_from_repo(repo: Path):
             pub = load_json(rec)
         except Exception:
             continue
-        if pub.get("withdrawn"):  # 인스타에서 지운 게시물 — 게시 이력에서 뺀다 (같은 날짜 재게시용)
+        if pub.get("withdrawn"):  # 게시 기록에 "withdrawn": true 가 있으면(인스타에서 지운 게시물) 이력에서 뺀다
             continue
         out.append({"date": d, "id": post.get("id"), "issue": post.get("issue"),
                     "sources": [{k: s.get(k) for k in ("id", "publisher", "via", "title", "date", "url")} for s in post.get("sources", [])],
@@ -249,6 +249,18 @@ def load_history(path=None):
     return None
 
 
+def next_issue(date: str, history=None, brand=None) -> int:
+    """포스트 날짜의 호수. brand.json > issue_numbering 의 start_date 이후 게시된 날(이 날짜 전까지)을 세어
+    start_number 부터 매긴다 (사용자 결정 2026-09-26: 2026-09-27 호부터 No.1 로 다시 시작)."""
+    brand = brand or load_json(ROOT / "brand.json")
+    cfg = brand.get("issue_numbering") or {}
+    start = str(cfg.get("start_date") or "0000-00-00")
+    n0 = int(cfg.get("start_number") or 1)
+    h = history if history is not None else load_history()
+    days = {i.get("date") for i in (h or {}).get("issues", []) if start <= str(i.get("date", "")) < date}
+    return n0 + len(days)
+
+
 def validate(post: dict, brand: dict, run_dir=None, history=None):
     """오류(errors)는 게시 불가 사항, 경고(warns)는 확인 권장 사항."""
     errors, warns = [], []
@@ -260,6 +272,10 @@ def validate(post: dict, brand: dict, run_dir=None, history=None):
         return errors, warns
     if post["category"] not in brand["categories"]:
         errors.append(f"알 수 없는 category: {post['category']} (허용: {', '.join(brand['categories'])})")
+    if history is not None and brand.get("issue_numbering") and post["date"] >= str(brand["issue_numbering"].get("start_date", "")):
+        want = next_issue(post["date"], history, brand)
+        if post.get("issue") != want:
+            errors.append(f"호수 {post.get('issue')} — 이 날짜는 No.{want} (brand.json > issue_numbering 기준, 게시된 날 수로 계산)")
     if post.get("topic") and post["topic"] not in brand["topics"]:
         errors.append(f"알 수 없는 topic: {post['topic']} (허용: {', '.join(brand['topics'])})")
 
