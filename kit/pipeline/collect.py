@@ -131,6 +131,26 @@ def outlet_by_name(name, outlets):
     return None
 
 
+def prefer_allowed_link(rec, outlets, readable_hosts):
+    """같은 기사로 묶인 링크 중 허용 매체 도메인(본문 읽기 가능하면 더 우선)을 대표 링크로 삼는다.
+    예: Bing이 준 aol.com 링크가 먼저 모였어도 mining.com/web/ 전재본을 대표로 (2026-09-26 페루 구리 기사 누락 사례)."""
+    alts = rec.pop("_alts", [])
+    if not alts:
+        return
+
+    def rank(a):
+        host = (urlparse(a["url"]).hostname or "").lower()
+        readable = any(host == h or host.endswith("." + h) for h in readable_hosts)
+        return (1 if outlet_by_url(a["url"], outlets) else 0, 1 if readable else 0)
+    cur = {k: rec[k] for k in ("url", "source", "published_raw", "snippet")}
+    best = max([cur] + alts, key=rank)  # 동점이면 먼저 모인 링크 유지
+    if best is cur:
+        return
+    rec.update({k: best[k] for k in ("url", "source", "published_raw")})
+    rec["snippet"] = rec["snippet"] or best["snippet"]
+    rec["alt_urls"] = [a["url"] for a in [cur] + alts if a["url"] != best["url"]]
+
+
 # ---------- 키워드 ----------
 def has(text, word):
     w = re.escape(word.lower())
@@ -279,12 +299,15 @@ def main():
             dup = next((s for s in seen.values() if len(tnorm & s["_tok"]) / max(1, len(tnorm | s["_tok"])) >= 0.7), None)
             rec["_tok"] = tnorm
             if dup:  # 같은 기사 다른 URL(전재본 등) → 대체 링크로 보관
-                dup.setdefault("alt_urls", []).append(url)
+                if url != dup["url"] and url not in dup.get("alt_urls", []):
+                    dup.setdefault("alt_urls", []).append(url)
+                    dup.setdefault("_alts", []).append({k: rec[k] for k in ("url", "source", "published_raw", "snippet")})
                 dup["channels"] = sorted(set(dup["channels"] + rec["channels"]))
                 continue
             seen[key] = rec
 
     for rec in seen.values():
+        prefer_allowed_link(rec, outlets, access.get("readable", []))
         reasons = []
         host = (urlparse(rec["url"]).hostname or "").lower()
         host_o = outlet_by_url(rec["url"], outlets)
@@ -356,7 +379,8 @@ def main():
     L = [f"# 후보 기사 — {a.date} (게재일 {oldest}~{post_day})", "", "## 채널", "", "| 채널 | 항목 수 | 오류 |", "|---|---:|---|"]
     L += [f"| {c['channel']} | {c['items']} | {c.get('error', '')} |" for c in channel_stats]
     L += ["", "## 여러 매체가 함께 다룬 뉴스 (중요도 순)", "",
-          "같은 사건을 다룬 허용 매체 수(coverage)가 많을수록 중요. 자동 묶음은 고유명사·사건 단어 기준이라 틀릴 수 있다 — 3단계에서 제목을 보고 확인·합산한다.", ""]
+          "같은 사건을 다룬 허용 매체 수(coverage)가 많을수록 중요. 자동 묶음은 고유명사·사건 단어 기준이라 틀릴 수 있다 — 3단계에서 제목을 보고 확인·합산한다.",
+          "이런 뉴스가 없는 카테고리는 아래 카테고리별 후보에서 3단계 '유용한 단독 보도' 기준에 맞는 기사로 채운다.", ""]
     multi = [c for c in clusters if c["coverage"] >= 2]
     if not multi:
         L.append("- 2곳 이상이 함께 다룬 뉴스 없음")
@@ -371,7 +395,7 @@ def main():
             L.append("- 후보 없음 → 이 카테고리는 오늘 생략")
         for r in rows:
             flag = " ⚠ 게재일 확인" if r.get("date_unknown") else ""
-            L.append(f"- **{r['title']}** — {r['outlet']} / 발행처: {r.get('publisher_hint', '')} / {r['published'][:16]} / 토픽 {r['topic']} / 함께 보도 {r.get('coverage', 1)}곳({r.get('cluster', '')}) / 점수 {r['score']} / 접근 {r['access']}{flag}")
+            L.append(f"- **{r['title']}** — {r['outlet']} / 발행처: {r.get('publisher_hint', '')} / {r['published'][:16]} / 토픽 {r['topic']} / 함께 보도 {max(1, r.get('coverage', 1))}곳({r.get('cluster', '')}){' — 단독' if r.get('coverage', 1) <= 1 else ''} / 점수 {r['score']} / 접근 {r['access']}{flag}")
             L.append(f"  - {r['url']}")
             if r.get("note"):
                 L.append(f"  - {r['note']}")
