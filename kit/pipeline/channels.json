@@ -210,6 +210,152 @@
       "id": "bing-ko-refrigerant",
       "url": "https://www.bing.com/news/search?q=%EB%83%89%EB%A7%A4&qft=sortbydate%3d%221%22&format=rss",
       "note": "국내 '냉매' (같은 형식, 미확인)"
+    },
+    {
+      "id": "bing-yahoo-copper",
+      "url": "https://www.bing.com/news/search?q=copper+site%3afinance.yahoo.com&qft=sortbydate%3d%221%22&format=rss",
+      "covers": [
+        "nonferrous"
+      ],
+      "note": "Yahoo Finance 구리 — Reuters 전재본(본문 읽힘)이 바로 잡힘 (확인 2026-09-26: 페루 구리 Reuters 전재 포함). 종목·ETF 페이지가 섞여 collect.py 가 거름"
+    },
+    {
+      "id": "bing-yahoo-petchem",
+      "url": "https://www.bing.com/news/search?q=petrochemical+site%3afinance.yahoo.com&qft=sortbydate%3d%221%22&format=rss",
+      "covers": [
+        "resin",
+        "chemical"
+      ],
+      "note": "Yahoo Finance 석유화학 (확인 2026-09-26: Vietnam BSR-ExxonMobil 원유 계약 등 본문 읽히는 기사 포함)"
+    },
+    {
+      "id": "bing-yahoo-steel",
+      "url": "https://www.bing.com/news/search?q=steel+site%3afinance.yahoo.com&qft=sortbydate%3d%221%22&format=rss",
+      "covers": [
+        "steel"
+      ],
+      "note": "Yahoo Finance 철강 (확인 2026-09-26, 무관 기사가 많음 — 후보 보충용)"
+    },
+    {
+      "id": "bing-reuters-refinery",
+      "url": "https://www.bing.com/news/search?q=refinery+site%3areuters.com&qft=sortbydate%3d%221%22&format=rss",
+      "covers": [
+        "chemical"
+      ],
+      "note": "Reuters 정유 (확인 2026-09-26: 정유소 가동 중단 기사 다수). 본문은 전재본(Yahoo·MINING.COM)을 찾아 읽는다"
+    },
+    {
+      "id": "bing-reuters-chemical",
+      "url": "https://www.bing.com/news/search?q=chemical+plant+site%3areuters.com&qft=sortbydate%3d%221%22&format=rss",
+      "covers": [
+        "resin",
+        "chemical"
+      ],
+      "note": "Reuters 화학 (확인 2026-09-26: 종목 페이지가 섞임, BASF-Evonik 같은 메이커 기사 포함)"
+    },
+    {
+      "id": "worldsteel-feed",
+      "kind": "rss",
+      "url": "https://worldsteel.org/feed/",
+      "covers": [
+        "steel"
+      ],
+      "note": "세계철강협회 발표(월간 조강 생산 등)·회원사 소식. WebFetch 확인 2026-09-27"
+    },
+    {
+      "id": "iai-feed",
+      "kind": "rss",
+      "url": "https://international-aluminium.org/feed/",
+      "covers": [
+        "nonferrous"
+      ],
+      "note": "국제알루미늄협회 발표·통계. WebFetch 확인 2026-09-27"
+    },
+    {
+      "id": "iea-news",
+      "url": "https://www.iea.org/news",
+      "covers": [
+        "chemical"
+      ],
+      "note": "IEA 뉴스·보고서(석유·에너지). WebFetch 확인 2026-09-27"
+    },
+    {
+      "id": "eia-gov-press",
+      "url": "https://www.eia.gov/pressroom/releases.php",
+      "covers": [
+        "chemical"
+      ],
+      "note": "미국 에너지정보청 보도자료(석유 수급). todayinenergy RSS 는 robots 차단"
+    },
+    {
+      "id": "wco-news",
+      "url": "https://www.wcoomd.org/en/media/newsroom.aspx",
+      "covers": [
+        "chemical",
+        "steel",
+        "nonferrous",
+        "resin"
+      ],
+      "note": "세계관세기구 뉴스(불법 냉매 적발 등). WebFetch 확인 2026-09-27"
+    },
+    {
+      "id": "unep-ozonaction",
+      "url": "https://www.unep.org/ozonaction/news",
+      "covers": [
+        "chemical"
+      ],
+      "note": "UNEP OzonAction(몬트리올 의정서·냉매 규제). WebFetch 확인 2026-09-27"
+    },
+    {
+      "id": "fedreg-ita-steel",
+      "kind": "rss",
+      "url": "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=international-trade-administration&conditions%5Bterm%5D=steel",
+      "covers": [
+        "steel"
+      ],
+      "note": "미국 연방관보 — 상무부 ITA 철강 반덤핑·상계관세 결정. 새우 등 무관 품목이 섞이니 카테고리 키워드로 거른다"
+    },
+    {
+      "id": "fedreg-ita-aluminum",
+      "kind": "rss",
+      "url": "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=international-trade-administration&conditions%5Bterm%5D=aluminum",
+      "covers": [
+        "nonferrous"
+      ],
+      "note": "미국 연방관보 — 상무부 ITA 알루미늄 반덤핑·상계관세 결정"
+    },
+    {
+      "id": "ustr-press",
+      "url": "https://ustr.gov/about-us/policy-offices/press-office/press-releases",
+      "covers": [
+        "steel",
+        "nonferrous",
+        "resin",
+        "chemical"
+      ],
+      "note": "미국 무역대표부 보도자료(관세·무역협정)"
+    },
+    {
+      "id": "ec-trade-news",
+      "url": "https://policy.trade.ec.europa.eu/news_en",
+      "covers": [
+        "steel",
+        "nonferrous",
+        "resin",
+        "chemical"
+      ],
+      "note": "EU 집행위 통상 뉴스(반덤핑·세이프가드). 링크가 ec.europa.eu/presscorner 로 갈 수 있음"
+    },
+    {
+      "id": "motir-press",
+      "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c",
+      "covers": [
+        "steel",
+        "nonferrous",
+        "resin",
+        "chemical"
+      ],
+      "note": "산업통상부 보도자료 (motie.go.kr 에서 motir.go.kr 로 이전, 2026-09-27 확인)"
     }
   ],
   "fallback": {
@@ -229,5 +375,40 @@
     "mining.com": "/web/ 경로는 전재(Reuters·Bloomberg). 본문 끝 '(By ... ; Editing by ...)' 또는 출처 문구 확인",
     "icis.com": "자체 기사. 무료 공개분만"
   },
-  "_note_2026_09_25": "사용자 지정 20개 매체 추가. 직접 읽히는 목록이 없는 매체(Reuters·Bloomberg·WSJ·FT·Argus·Nikkei·DIGITIMES·Wood Mackenzie)는 Bing 뉴스 RSS의 site: 필터로 제목·링크만 모은다 — Bing 링크(apiclick.aspx?url=…)는 collect.py 가 원문 주소로 풀고, site: 결과에는 주제와 무관한 기사도 섞여 카테고리 키워드로 거른다. Bing이 'title: Bing' 빈 페이지를 주면 &qft=… 를 빼고 한 번 더. 매일경제·연합인포맥스는 WebFetch 차단(SITE_BLOCKED), LME는 목록이 스크립트로만 떠서 채널 없음(허용 매체로만 등록). S&P Global RSS(metals.xml·chemicals.xml)는 6~10주 전 기사뿐이라 채널에서 뺌."
+  "_note_2026_09_25": "사용자 지정 20개 매체 추가. 직접 읽히는 목록이 없는 매체(Reuters·Bloomberg·WSJ·FT·Argus·Nikkei·DIGITIMES·Wood Mackenzie)는 Bing 뉴스 RSS의 site: 필터로 제목·링크만 모은다 — Bing 링크(apiclick.aspx?url=…)는 collect.py 가 원문 주소로 풀고, site: 결과에는 주제와 무관한 기사도 섞여 카테고리 키워드로 거른다. Bing이 'title: Bing' 빈 페이지를 주면 &qft=… 를 빼고 한 번 더. 매일경제·연합인포맥스는 WebFetch 차단(SITE_BLOCKED), LME는 목록이 스크립트로만 떠서 채널 없음(허용 매체로만 등록). S&P Global RSS(metals.xml·chemicals.xml)는 6~10주 전 기사뿐이라 채널에서 뺌.",
+  "_note_2026_09_27": "세계 주요 기관 발표 채널 11개 추가(worldsteel·IAI·IEA·미국 EIA·WCO·UNEP·연방관보 2·USTR·EU 집행위·산업통상부). 읽히지 않는 곳: OECD(자바스크립트 페이지), WTO·eia.gov RSS(robots 차단), OPEC 보도실(갱신 멈춤), BIS·EPA(404). 무역위원회·중국 상무부·ICSG 는 항목별 링크가 없어 채널에서 뺐고 허용 출처로만 둔다.",
+  "websearch": {
+    "_note": "RUNBOOK P1b·P2 의 WebSearch (사용자 결정 2026-09-26: 카드 소스를 최대한 확보). Commodity news briefing(07:00 카톡 예약)과 같은 주제를 수집 단계에서 직접 검색한다 — 검색 결과는 제목·링크만 후보로 쓰고, 본문은 반드시 WebFetch로 다시 읽는다. 점검 2026-09-26: allowed_domains 에 reuters.com·bloomberg.com·asia.nikkei.com 을 넣으면 검색 프록시가 거부(HTTP 400) → 넣지 않는다. 일반 검색은 날짜순이 아니라 오래된 설명 페이지가 섞이므로 날짜 문구를 붙이고, 결과는 허용 매체·게재일로 거른다. 새 기사 발견은 Bing RSS 채널이 더 강하고, WebSearch 는 전재본 찾기·함께 보도 매체 찾기에서 효과가 크다.",
+    "date_format": "{d0} = 포스트 날짜 전날, {d1} = 포스트 날짜 — 영어 'September 25, 2026' 형식. 일·월요일 호는 {d0} 을 직전 금요일로도 한 번 더 검색 (2026-09-27 추가)",
+    "discovery_queries": [
+      "steelmaker \"{d0}\"",
+      "steel tariff \"{d0}\"",
+      "steel plant shutdown \"{d0}\"",
+      "copper mine \"{d0}\"",
+      "copper smelter \"{d0}\"",
+      "aluminium smelter \"{d0}\"",
+      "petrochemical plant \"{d0}\"",
+      "polyethylene polypropylene capacity \"{d0}\"",
+      "cracker force majeure \"{d0}\"",
+      "refrigerant HFC regulation \"{d0}\"",
+      "OPEC+ output \"{d0}\"",
+      "refinery outage \"{d0}\""
+    ],
+    "syndication": {
+      "allowed_domains_try": [
+        [
+          "finance.yahoo.com"
+        ],
+        [
+          "mining.com"
+        ]
+      ],
+      "query": "원문 제목의 핵심 단어 (따옴표 없이)",
+      "accept": "제목이 같은 기사만. finance.yahoo.com 영어 지역판(ca.·uk.·sg.·au.)은 허용, 번역판(es.·fr.·de. 등) 불가. 본문 ATTRIBUTION 이 원 발행처여야 함"
+    },
+    "coverage": {
+      "query": "회사·설비·국가 이름 + 사건 단어 (예: JFE Steel Chiba output typhoon)",
+      "allowed_domains": "넣지 않음 — 결과에서 brand.json 허용 매체 도메인만 남긴다"
+    }
+  }
 }

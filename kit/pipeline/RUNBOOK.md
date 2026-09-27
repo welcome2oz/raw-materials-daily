@@ -7,8 +7,11 @@
 
 | 모드 | 언제 | 어디서 | 하는 일 |
 |---|---|---|---|
-| **P. Cowork 수집** | 매일 04:00 KST | Cowork 예약 작업 | **코드를 실행하지 않는다.** WebFetch로 채널 목록과 기사 원문을 읽어 파일로 쓰고 발행함에 올린다 (`feeds/<날짜>/`). 절차는 맨 아래 "P. Cowork 수집 절차" |
-| **A. 클라우드 루틴** | 매일 05:00 KST | Claude Code 루틴 (저장소 연결) | 발행함 수집 자료를 받아 0~8단계: 후보 정리·선정·카드 제작·검증 → 작업 브랜치(`claude/…`) push. 05:50까지 자료가 없으면 수집부터 직접 |
+| **P. Cowork 수집** | 매일 02:50 KST (04:40까지 발행함에 올림) | Cowork 예약 작업 | **코드를 실행하지 않는다.** WebFetch로 채널 목록과 기사 원문을 읽고, WebSearch로 보충 후보·전재본·함께 보도 매체를 찾아 파일로 쓰고 발행함에 올린다 (`feeds/<날짜>/`). 카드 소스를 최대한 많이 확보하는 것이 목표. 절차는 맨 아래 "P. Cowork 수집 절차" |
+| **A. 클라우드 루틴** | 매일 05:00 KST | Claude Code 루틴 (저장소 연결) | 발행함 수집 자료를 받아 0~8단계: 후보 정리·선정·카드 제작·검증 → 작업 브랜치(`claude/…`) push. 발행함 자료가 없으면 기다리지 않고(1분씩 최대 3번 확인) 수집부터 직접 |
+
+
+**게시 확인(감시)**: 매일 07:20 KST Cowork 예약 작업 '원재료 카드뉴스 게시 확인 (07:20)'이 `published/<날짜>.json` 을 확인하고, 게시가 안 됐을 때만 원인 단서(수집 자료·ready.json·두 작업 실행 시각)와 할 일을 휴대폰 알림으로 보낸다. 확인·알림만 하고 제작·실행은 하지 않는다 (2026-09-26 추가).
 
 역할을 나눈 이유: 루틴 환경의 WebFetch는 mining.com(403)·icis.com(빈 응답)을 읽지 못하고(2026-09-24 점검), Cowork 예약 작업은 인터넷에서 받은 스크립트를 실행하려 하면 자동 승인 안전 검사가 '외부 코드 실행'으로 막는다(2026-09-25·26 실제로 중단). 그래서 Cowork는 읽기만, 코드는 루틴만 실행한다.
 
@@ -20,8 +23,8 @@
 
 1. 기사 본문을 WebFetch로 직접 읽고 저장한 내용만 카드에 쓴다. 검색 스니펫·제목만으로 쓰지 않는다. 지어낸 숫자·인용·날짜는 한 글자도 넣지 않는다. 가상 데이터로는 카드를 만들지 않는다.
 2. 가격(시세·단가) 수치는 쓰지 않는다. 가격 등락이 주제인 기사는 고르지 않는다.
-3. 출처는 `brand.json > news_outlets` 허용 매체만. Yahoo Finance·MINING.COM 전재 기사는 원 발행처가 허용 매체일 때만, `via`로 표기. **영어·한국어 원문 페이지만** 쓴다 — 번역판(es.finance.yahoo.com 등)은 쓰지 않는다 (중복 검열·근거 대조가 영어·한국어 기준. 2026-09-26 스페인어판 오판정 사례)
-4. 게재일은 포스트 날짜 전날~당일(`news_max_age_days: 1`)만.
+3. 출처는 `brand.json > news_outlets` 허용 매체만. Yahoo Finance·MINING.COM 전재 기사는 원 발행처가 허용 매체일 때만, `via`로 표기. **세계 주요 기관·정부 발표**(`news_outlets.institutions`: OECD·IEA·IAI·ICSG·worldsteel·WTO·WCO·UNEP·OPEC·미국 EIA·연방관보·USTR·상무부·EPA·EU 집행위·산업통상부·무역위원회·중국 상무부)도 1차 출처로 쓴다 — 기관 누리집의 발표문·통계·결정문을 직접 읽은 것만 인정하고, 기관을 인용한 비허용 매체 기사(예: Sputnik 의 IAI 통계 보도)는 쓰지 않는다 (사용자 결정 2026-09-27). **영어·한국어 원문 페이지만** 쓴다 — 번역판(es.finance.yahoo.com 등)은 쓰지 않는다 (중복 검열·근거 대조가 영어·한국어 기준. 2026-09-26 스페인어판 오판정 사례)
+4. 게재일은 **한국시간(KST) 기준** 포스트 날짜 전날~당일(`news_max_age_days: 1`). 기사에 찍힌 현지 날짜만 보고 빼지 않는다 — 시각이 있으면 한국시간으로 바꿔 판단한다 (예: 미국 금요일 16:14 UTC 기사 = 한국 토요일 01:14 → 일요일 호 범위 안. 2026-09-27 페루 구리 기사를 현지 날짜로 빼서 0건이 된 사례). **일·월요일 호**는 해외 주말 공백 때문에 지난 7일(`rules.weekend_lookback_days`) 안의 아직 게시하지 않은 뉴스도 쓴다 (사용자 결정 2026-09-27). render.py·collect.py 가 같은 기준으로 검사한다 (`render.news_window_days`).
 5. 카드의 숫자는 모두 `sources[].evidence`(원문 문장 그대로)에 있어야 한다. 기사에 없는 계산값은 `calc: true`, 추정 구간은 `est`/`opt`.
 6. **중복 금지**: 이미 게시한 기사(URL)는 다시 쓰지 않는다. 이미 게시한 사건은 **새로 확인된 사실이 있을 때만** 후속(`update_of`)으로 쓰고, 다른 매체가 같은 내용을 다시 쓴 것(예: 전날 로이터 → 오늘 NYT)은 건너뛴다. render.py가 저장소 기록과 대조해 막는다.
 7. 검증 오류가 0이 될 때까지 고친다. 고칠 수 없는 뉴스는 뺀다. 게시할 뉴스가 0건이면 그날은 넘기지 않고 이유만 보고한다.
@@ -46,7 +49,8 @@ cd kit && bash pipeline/setup.sh         # 폰트(npm)·Playwright·Chromium 준
 
 ### 1A단계. 발행함에서 Cowork 수집 자료 받기
 1. Artifact `read` — url: 발행함, path: `feeds/$DATE/feed.json`
-   - 없으면(파일 없음 오류): `sleep 300` 후 다시 읽는다. **05:50 KST까지** 반복. 그때까지 없으면 → 1단계부터 직접 한다 (아래 "직접 수집 시 제한")
+   - 없으면(파일 없음 오류): 긴 `sleep` 으로 기다리지 않는다 (셸의 긴 sleep 은 막히거나 시간 초과가 난다). `sleep 55` 로 1분씩 **최대 3번만** 다시 읽고, 그래도 없으면 → 곧바로 1단계부터 직접 한다 (아래 "직접 수집 시 제한"). Artifact 도구로 발행함을 읽지 못하면(도구 없음·오류) 그 오류 문구를 run_log·보고에 그대로 적고 1단계부터 직접 한다
+   - **자료가 없다는 이유만으로 세션을 끝내지 않는다.** 세션은 7단계 push 성공, 또는 3단계 '게시할 뉴스 0건' 판정과 사유 보고 중 하나로만 끝낸다 (2026-09-25·26: 05:00 실행이 자료 없이 2분 만에 끝나 게시 누락)
 2. 있으면: feed.json 의 `raw_file`(보통 `raw.json`)과 `articles[].file` 앞에 `feeds/$DATE/` 를 붙인 목록을 `paths` 로 한 번에 Artifact `read`. 결과에 나온 저장 위치에서 `feeds/$DATE/` 폴더 경로를 FROM 으로 둔다 (feed.json 도 같은 폴더에 있어야 한다)
 3. 받아서 배치:
 ```bash
@@ -70,7 +74,7 @@ python3 pipeline/pickup.py $DATE --feed "$FROM"    # → runs/$DATE/raw/<채널>
 `runs/$DATE/raw/<id>.json` = `{"channel", "url", "fetched_at"(KST ISO), "error", "items": [{"title","url","published","source","snippet"}]}`
 - 실패(404·차단·빈 결과)면 `items: []`, `error`에 사유. 재시도는 1번만. Bing이 `title: Bing` 빈 페이지를 주면 URL에서 `&qft=…` 를 빼고 한 번 더.
 - 채널 절반 이상이 실패하면 `fallback.websearch_queries`로 WebSearch 보충 → `raw/websearch.json`
-- 채널은 사용자 지정 20개 매체(국내외)를 포함한다 (`channels.json` 각 채널의 note에 확인일·접근성). Bing `site:` 채널은 제목·링크만 모으는 용도다 — 유료·차단 매체의 본문은 열지 않는다.
+- 채널은 사용자 지정 20개 매체(국내외)와 **세계 주요 기관 발표 채널**(worldsteel·IAI·IEA·미국 EIA·WCO·UNEP·연방관보·USTR·EU 집행위·산업통상부)을 포함한다 (`channels.json` 각 채널의 note에 확인일·접근성). Bing `site:` 채널은 제목·링크만 모으는 용도다 — 유료·차단 매체의 본문은 열지 않는다.
 
 ## 2단계. 후보 정리
 
@@ -90,6 +94,7 @@ python3 pipeline/collect.py $DATE          # 저장소 게시 기록과 대조�
      - **구체성**: 본문에 회사·국가·설비 이름과 함께 숫자·날짜·결정 내용 중 하나 이상이 있다
      - 제외 유형이 아니다 (아래 "제외")
      - 예: 페루 정부 인허가 27개 폐지 추진·구리 증산 100만 톤 목표·중국·미국 기업 투자 관심 (2026-09-26 Reuters) → 비철 단독 보도로 적합
+     - 기관 발표도 같은 기준이다: 생산·수출입 통계(worldsteel 월간 조강 생산, IAI 월간 알루미늄 생산 등), 관세·반덤핑·세이프가드 결정(연방관보·EU 집행위·무역위원회), 규제 시행(냉매·몬트리올 의정서) → 새 사실. 기관의 전망·의견만 있는 발표는 제외
 - 같은 단계 안에서는 우선순위: ① 공급 차질·가동 중단·불가항력·파업 ② 관세·무역구제·규제 ③ 메이커 증설·감산·투자·M&A ④ 수급 전망·수요 변화. 같으면 `candidates.md` 점수 순
 - run_log 에 뉴스마다 "여러 매체 N곳" 또는 "단독 보도 — <위 새 사실 유형>"을 적는다
 - 카드 근거로 쓸 기사는 묶음 안에서 **본문을 읽을 수 있는 기사**(접근 readable, 또는 전재본)를 고른다. 묶음 전체가 읽을 수 없으면 그 뉴스는 버린다 — 제목·스니펫만으로 쓰지 않는다.
@@ -120,7 +125,8 @@ BODY: the full article body text verbatim, paragraph by paragraph, in order. If 
 - 후속 기사: `"update_of": "<이전 story_id>"` (render.py 오류 메시지에 id가 나온다). 헤드라인·시각화는 **새 사실 중심**으로. 카드에 "후속 보도"가 표시된다
 - `sources[]`: publisher, via, title(원문 제목 그대로), date, time, accessed=$DATE, url, **evidence**(발췌 파일에서 그대로 복사한 문장)
 - 뉴스 슬라이드마다 `"coverage"`: 같은 뉴스를 함께 다룬 허용 매체 목록 `[{"publisher", "title"(원문 제목 그대로), "url", "date"}]` — candidates.json 에서 그대로 옮긴다. **선정 근거 기록일 뿐 카드 근거가 아니다** (카드에 숫자·인용으로 쓰지 않는다). render.py 가 허용 매체·도메인을 확인한다
-- 캡션: 첫 줄 `M월 D일(현지) 국내외 보도 기준 원재료 뉴스 N건.` (해외 매체만이면 `외신 보도 기준`), 번호 목록, 마지막 줄 `구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.` 해시태그 5개 이하
+- 캡션: 첫 줄 `M월 D일(현지) 국내외 보도 기준 원재료 뉴스 N건.` (해외 매체만이면 `외신 보도 기준`, 기관 발표가 들어가면 `국내외 보도·기관 발표 기준`), 번호 목록, 마지막 줄 `구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.` 해시태그 5개 이하
+  - 일·월요일 호처럼 게재일이 여러 날이면 첫 줄을 `M월 D일~D일(현지) … 기준`으로 쓰고, 표지 `sub` 도 같은 기간으로 쓴다
 
 ## 6단계. 검증·렌더
 
@@ -153,14 +159,18 @@ python3 pipeline/gh_handoff.py $DATE --inplace
 
 ---
 
-## P. Cowork 수집 절차 (04:00 Cowork 예약 작업 — 코드 실행 없음)
+## P. Cowork 수집 절차 (02:50 Cowork 예약 작업 — 코드 실행 없음)
+
+**목표: 카드로 만들 수 있는 원문 발췌를 최대한 많이 확보한다** (사용자 결정 2026-09-26). 루틴은 카테고리당 1건·전체 4건만 쓰지만, 읽어 둔 후보가 많을수록 빈 카테고리가 줄고 '여러 매체 함께 보도'(coverage) 판단도 정확해진다.
 
 **Python·셸 스크립트를 실행하지 않는다** (인터넷에서 받은 코드 실행은 자동 승인 안전 검사가 막는다). 쓰는 도구: Bash는 날짜·상태 확인(`date`, `curl -s -o /dev/null -w "%{http_code}"`)만, 나머지는 Projects(프로젝트 문서 읽기)·WebFetch·WebSearch·Write(파일 쓰기)·Artifact(발행함 읽기·올리기)·SendUserMessage.
-위 **절대 규칙**은 모두 적용된다 (특히 1·2·3·4·9·10).
+위 **절대 규칙**은 모두 적용된다 (특히 1·2·3·4·9·10). WebSearch 결과(제목·링크)는 **후보를 찾는 용도**일 뿐이고, 카드 근거는 WebFetch로 읽은 본문뿐이다.
+
+**시간**: 02:50 KST에 시작해 **04:40 KST가 되면** 남은 검색·읽기를 멈추고 P3로 넘어간다 — 05:00 루틴이 시작할 때 발행함에 자료가 이미 있어야 한다 (루틴은 오래 기다리지 않는다).
 
 ### P0. 확인·준비
 1. `DATE=$(TZ=Asia/Seoul date +%F)`. `https://raw.githubusercontent.com/welcome2oz/raw-materials-daily/main/published/$DATE.json` 과 `.../issues/$DATE/ready.json` 의 HTTP 코드를 확인 — 하나라도 200이면 이미 처리됨 → 한 줄 보고하고 끝.
-2. Projects `project_read` 로 읽는다: `cardnews-kit/pipeline/channels.json`(채널·fetch_prompt), `cardnews-kit/brand.json`(허용 매체 `news_outlets`, `rules`), `cardnews-kit/pipeline/keywords.json`(카테고리·가격 기사 판정 단어).
+2. Projects `project_read` 로 읽는다: `cardnews-kit/pipeline/channels.json`(채널·fetch_prompt·`websearch`), `cardnews-kit/brand.json`(허용 매체 `news_outlets`, `rules`), `cardnews-kit/pipeline/keywords.json`(카테고리·가격 기사 판정 단어).
 3. 작업 폴더: 세션 시작 폴더 아래 `feeds/$DATE/` (파일은 Write 도구로 쓴다).
 
 ### P1. 채널 수집
@@ -171,19 +181,38 @@ channels.json 의 채널마다 WebFetch(url, prompt = `fetch_prompt`). 결과를
 - 실패(404·차단·빈 결과)면 `items: []`, `error` 에 사유. 재시도 1번. Bing이 `title: Bing` 빈 페이지면 `&qft=…` 빼고 한 번 더.
 - 올바른 JSON 이어야 한다 (제목 안의 큰따옴표는 `\"` 로). Bing 링크는 받은 그대로 둔다 (루틴의 collect.py 가 원문 주소로 푼다).
 
-### P2. 원문 발췌 (루틴이 못 읽는 곳 위주)
-P1 결과에서 아래를 모두 만족하는 기사를 고른다 — 허용 매체(또는 원 발행처가 허용 매체인 전재) / 게재일 전날~당일 / 가격 기사·종목·칼럼 아님 / 4개 카테고리 중 하나 / 영어·한국어 원문.
-- 여러 매체가 함께 다룬 사건을 먼저, 그다음 **구매에 유용한 단독 보도**(3단계 고르는 순서 2의 기준: 생산·설비·투자·수급 전망·규제·관세·공급 계약의 새 사실 + 구체적인 이름·숫자·결정)를 읽는다. 카테고리마다 최대 3건, **전체 최대 12건**. 같은 사건은 가장 본문이 온전한 1건(전재본 포함)만.
-- 같은 기사가 여러 링크로 보이면(예: Bing의 aol.com 링크와 mining.com/web/ 전재) **허용 매체 도메인 링크**를 연다.
-- 특히 루틴이 못 읽는 `mining.com`·`icis.com` 기사는 여기서 꼭 읽어 둔다. Reuters·Bloomberg 원문(reuters.com 등)은 차단이니 Yahoo Finance·MINING.COM `/web/` 전재본을 연다.
-- 기사마다 id 를 정하고(예 `reu-escondida-restart`) RUNBOOK 4단계의 WebFetch prompt 로 읽어, 받은 내용을 그대로 `feeds/$DATE/articles/<id>.md` 에 쓴다. 머리말 4줄: `source_id: <id>` / `url: <열어 본 URL>` / `fetched_at: <KST ISO>` / `method: WebFetch (Cowork)`.
-- 본문이 없거나(BODY NOT AVAILABLE만) ATTRIBUTION 이 허용 매체가 아니면 파일을 만들지 않는다.
+### P1b. WebSearch 보충 (매일 — 채널 결과와 상관없이)
+Commodity news briefing(07:00 카톡 예약)과 같은 주제를 여기서 직접 검색한다. 브리핑 문장·검색 스니펫은 쓰지 않고 **기사 링크만 후보로** 받는다.
+1. `channels.json > websearch.discovery_queries` 를 하나씩 WebSearch. `{d0}` 은 포스트 날짜 전날을 영어로(예 `September 25, 2026`). 일·월요일 호는 `{d0}` 을 직전 금요일로 한 번 더 검색한다. `allowed_domains` 는 넣지 않는다 (reuters.com·bloomberg.com·asia.nikkei.com 이 들어가면 검색이 거부된다).
+2. 결과 중 **brand.json 허용 매체 도메인**(하위 도메인 포함)만 남긴다. 번역판 도메인(es.·fr.·de. 등으로 시작)과 기사가 아닌 페이지(위키·회사 소개·시세·종목 페이지)는 버린다. URL에 날짜가 있고 게재일 범위 밖이면 버린다.
+3. raw.json 에 채널 `websearch` 로 넣는다: `{"channel": "websearch", "url": "WebSearch", "fetched_at": "<KST ISO>", "error": "", "queries": [실행한 검색어], "items": [{"title": 결과 제목 그대로, "url": 결과 링크 그대로, "published": URL에 날짜가 있으면 그 날짜(YYYY-MM-DD) 아니면 "", "source": "", "snippet": ""}]}`. 같은 URL은 한 번만.
+   - `published` 를 추측으로 채우지 않는다. 모르면 비워 둔다 — P2에서 읽으면 채우고, 안 읽은 것은 루틴이 '게재일 확인 필요'로 다룬다.
+
+### P2. 원문 발췌 — 최대한 많이
+후보 = P1 + P1b 결과. 아래를 모두 만족하는 기사: 허용 매체·기관(또는 원 발행처가 허용 매체인 전재) / 게재일이 범위 안(절대 규칙 4: **한국시간 기준**, 일·월요일 호는 지난 7일 — 현지 날짜만 보고 빼지 않는다) / 가격 기사·종목·칼럼·행사·인사 아님 / 4개 카테고리 중 하나 / 영어·한국어 원문.
+
+1. **읽을 목록**: 여러 매체가 함께 다룬 사건을 먼저, 그다음 **구매에 유용한 단독 보도**(3단계 고르는 순서 2의 기준: 생산·설비·투자·수급 전망·규제·관세·공급 계약의 새 사실 + 구체적인 이름·숫자·결정). **카테고리마다 최대 5건, 전체 최대 20건.** 같은 사건은 본문이 가장 온전한 1건만 읽고, 나머지 매체는 함께 보도로 기록한다.
+   - 한 카테고리가 비면 그 카테고리의 discovery 검색어를 `{d1}`(포스트 날짜)로 바꿔 한 번 더 찾는다.
+2. **본문을 못 읽는 매체 → 전재본 찾기**: 후보가 reuters.com·bloomberg.com·wsj.com·ft.com·asia.nikkei.com·argusmedia.com·spglobal.com·cnbc.com·apnews.com 등이면 WebSearch 로 전재본을 찾는다 — 검색어는 원문 제목의 핵심 단어, `allowed_domains: ["finance.yahoo.com"]`, 없으면 `["mining.com"]`.
+   - 제목이 같은 기사만 인정한다. finance.yahoo.com 영어 지역판(ca.·uk.·sg.·au.)은 되고, 번역판은 안 된다.
+   - 읽었을 때 ATTRIBUTION 이 원 발행처(예: Reuters)여야 한다. 같은 주제를 다른 발행처(Proactive·Motley Fool 등)가 쓴 기사는 전재본이 아니다.
+   - 찾은 전재본 링크는 raw.json 채널 `websearch-syndication` 에 넣는다 (형식은 P1b와 같고 `source` 는 원 발행처 이름) → 루틴의 collect.py 가 같은 기사로 묶고 읽을 수 있는 링크를 대표로 쓴다.
+   - 사례(2026-09-26): Escondida 노조 협상 중단 거부(Reuters)는 전재본을 못 찾아 버림. ArcelorMittal Kryvyi Rih 재가동 불가는 Yahoo Finance 에 있었지만 Proactive 기사라 불가.
+3. **함께 보도 매체 찾기 (coverage)**: 읽기로 한 사건마다 WebSearch 1번 — 회사·설비·국가 이름 + 사건 단어(예 `JFE Steel Chiba output typhoon`), `allowed_domains` 없이.
+   - 허용 매체 도메인이고, 제목이 분명히 같은 사건이며, 게재일이 범위 안인 것만 센다. 날짜는 URL 날짜로 확인하고, 없으면 읽을 수 있는 곳은 WebFetch 로 확인, 못 읽는 곳은 뺀다.
+   - 허용 매체가 아닌 곳(Kallanish·MarketScreener·investing.com·AOL 등)은 세지 않는다.
+   - 센 기사는 raw.json 채널 `websearch-coverage` 에 넣고(형식은 P1b와 같음), feed.json `also_covered_by` 에 매체 이름을 적는다.
+4. **읽기**: 기사마다 id 를 정하고(예 `reu-escondida-restart`) RUNBOOK 4단계의 WebFetch prompt 로 읽어, 받은 내용을 그대로 `feeds/$DATE/articles/<id>.md` 에 쓴다. 머리말 4줄: `source_id: <id>` / `url: <열어 본 URL>` / `fetched_at: <KST ISO>` / `method: WebFetch (Cowork)`.
+   - 같은 기사가 여러 링크로 보이면(예: Bing의 aol.com 링크와 mining.com/web/ 전재) **허용 매체 도메인 링크**를 연다. 루틴이 못 읽는 `mining.com`·`icis.com` 기사는 여기서 꼭 읽어 둔다.
+   - 본문이 없거나(BODY NOT AVAILABLE만), ATTRIBUTION 이 허용 매체가 아니거나, PUBLISHED 가 범위 밖이면 파일을 만들지 않는다 (raw.json 의 링크는 그대로 둔다).
+   - `websearch`·`websearch-syndication` 항목을 읽었으면 raw.json 의 그 항목 `published` 를 읽은 PUBLISHED 문자열로, `source` 를 ATTRIBUTION 의 발행처로 채운다.
 
 ### P3. feed.json
 `feeds/$DATE/feed.json`:
 ```json
 {"date": "<DATE>", "created_at": "<KST ISO>", "created_by": "cowork", "raw_file": "raw.json",
  "channels": [{"id": "", "items": 0, "error": ""}],
+ "websearch": {"discovery_queries": 0, "discovery_items": 0, "syndication_found": 0, "syndication_missed": ["<전재본을 못 찾은 제목>"], "coverage_items": 0},
  "articles": [{"id": "", "file": "articles/<id>.md", "url": "", "headline": "", "attribution": "", "published": "", "category": "", "also_covered_by": ["<다른 허용 매체>"]}],
  "notes": "고른 이유·뺀 후보 한두 줄"}
 ```
@@ -191,8 +220,8 @@ P1 결과에서 아래를 모두 만족하는 기사를 고른다 — 허용 매
 ### P4. 발행함에 올리기
 1. Artifact `read` — url: 발행함, path: `index.html` (페이지 파일을 받아 둔다). Artifact `list` scope `files` 로 올라가 있는 파일 목록도 본다.
 2. Artifact publish — `url`: 발행함, `file_path`: 받아 둔 index.html, `files`: `{"feeds/$DATE/feed.json": ..., "feeds/$DATE/raw.json": ..., "feeds/$DATE/articles/<id>.md": ...}` + 목록에 있는 **7일 지난 `feeds/<날짜>/…` 파일은 `null`**(삭제). `capabilities` 는 넘기지 않는다.
+   - "live version 을 보지 않았다"며 거부되면 그 응답이 최신본을 보여 준 것이다. 페이지 파일이 받아 둔 것과 같으면 같은 요청을 다시 보낸다(두 번째 거부 후 한 번 더 보내면 올라간다 — 2026-09-26 확인).
 3. Artifact `read` path `feeds/$DATE/feed.json` 으로 올라갔는지 확인.
 
 ### P5. 보고
-SendUserMessage (한국어, 3~5줄): 채널 성공·실패 수 / 읽어 둔 원문 발췌 수와 카테고리 / 발행함 올림 결과 / "05:00 루틴이 카드를 만들어 07:00 게시". 발췌할 기사가 0건이어도 raw.json·feed.json 은 올린다 (루틴이 이어서 판단).
-
+SendUserMessage (한국어, 3~6줄): 채널 성공·실패 수 / WebSearch 보충(검색어 수·남은 후보 수·찾은 전재본 수·함께 보도 매체 수) / 읽어 둔 원문 발췌 수와 카테고리 / 발행함 올림 결과 / "05:00 루틴이 카드를 만들어 07:00 게시". 발췌할 기사가 0건이어도 raw.json·feed.json 은 올린다 (루틴이 이어서 판단).

@@ -185,9 +185,17 @@ def classify(item, kw):
 
 
 # ---------- 같은 뉴스 묶기 (함께 보도한 허용 매체 수 = 중요도) ----------
+# 묶음 판정에서 뺄 흔한 단어 — 제목 첫 글자 대문자 때문에 고유명사로 잡히지만 사건을 가리키지 않는다
+# (2026-09-27: 'us'·'steel' 등으로 무관한 13건이 한 묶음·함께 보도 5곳으로 잘못 묶인 사례)
+CLUSTER_GENERIC = set("""us u.s uk eu china chinese india indian japan japanese korea korean europe european asia asian global world
+new early late delayed update market markets price prices outlook briefing inside watch energy steel copper aluminium aluminum
+oil diesel crude chem chemical chemicals metals metal mining mine miner miners iron ore plant plants group company firms
+report reports says said week weekly daily ahead amid after over under who what why how""".split())
+
+
 def _feat(rec):
     t = rec["title"] + " " + rec.get("snippet", "")
-    return set(dedup.entities(t)), set(dedup.events(t))
+    return {e for e in dedup.entities(t) if e not in CLUSTER_GENERIC}, set(dedup.events(t))
 
 
 def cluster_candidates(inc, outlets):
@@ -209,6 +217,9 @@ def cluster_candidates(inc, outlets):
             if not shared or len(shared) / max(1, min(len(ea), len(eb))) < 0.5:
                 continue
             if va and vb and not (va & vb):
+                continue
+            # 고유명사 1개만 겹치면 사건 단어도 같아야 같은 뉴스로 본다 (이어 붙기로 무관한 기사가 한 묶음이 되는 것 방지)
+            if len(shared) < 2 and not (va & vb):
                 continue
             parent[find(i)] = find(j)
     groups = {}
@@ -253,9 +264,11 @@ def main():
     brand = load(ROOT / "brand.json")
     kw = load(ROOT / "pipeline" / "keywords.json")
     outlets = outlets_of(brand)
-    max_age = brand.get("rules", {}).get("news_max_age_days", 1)
+    sys.path.insert(0, str(ROOT))
+    from render import news_window_days
+    max_age = news_window_days(a.date, brand.get("rules", {}))  # 평일 1일, 일·월요일 7일
     post_day = dt.date.fromisoformat(a.date)
-    oldest = post_day - dt.timedelta(days=max_age)
+    oldest = post_day - dt.timedelta(days=max_age)  # 한국시간 또는 현지(UTC) 날짜 중 하나가 범위 안이면 인정
 
     run = Path(a.runs) / a.date
     raws = sorted((run / "raw").glob("*.json"))

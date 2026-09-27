@@ -514,7 +514,18 @@
       "fastmarkets.com",
       "tradingeconomics.com",
       "lme.com",
-      "woodmac.com"
+      "woodmac.com",
+      "worldsteel.org",
+      "international-aluminium.org",
+      "iea.org",
+      "eia.gov",
+      "wcoomd.org",
+      "unep.org",
+      "federalregister.gov",
+      "ustr.gov",
+      "policy.trade.ec.europa.eu",
+      "ec.europa.eu",
+      "motir.go.kr"
     ],
     "blocked": [
       "reuters.com",
@@ -534,7 +545,9 @@
       "mk.co.kr",
       "einfomax.co.kr",
       "digitimes.com",
-      "chemlocus.co.kr"
+      "chemlocus.co.kr",
+      "oecd.org",
+      "wto.org"
     ]
   },
   "off_commodity": [
