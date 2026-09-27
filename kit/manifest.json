@@ -1,17 +1,17 @@
 {
  "name": "raw-materials-daily-kit",
- "sha": "0571cabf1e8c",
- "packed_at": "2026-09-27T10:22:31+09:00",
+ "sha": "a1fb7960466c",
+ "packed_at": "2026-09-27T23:41:42+09:00",
  "files": [
   {
    "path": "kit/render.py",
-   "bytes": 38620,
-   "sha256": "53b866ae2af21cd773b52605e3f2613121bbb6833f1b2907c1dc6599783f00e9"
+   "bytes": 39759,
+   "sha256": "393b811a8dbb964c6ad71e7ca82c40c14b3c46459aa3156ca2232f80558b9130"
   },
   {
    "path": "kit/brand.json",
-   "bytes": 16296,
-   "sha256": "6a0ee502f3d274cd460280e951e1e7c5a680127fe74cb8f9695a96742430ef42"
+   "bytes": 17559,
+   "sha256": "7bac3d109836c1364358b28f89f10b739cc9da246f4085753e0923be03a2064f"
   },
   {
    "path": "kit/README.md",
@@ -20,8 +20,8 @@
   },
   {
    "path": "kit/FORMAT_GUIDE.md",
-   "bytes": 16668,
-   "sha256": "3aa0a0ce956f47efe8bd4ecad8d4271874f197e5bab54001a739e9f559f78203"
+   "bytes": 17100,
+   "sha256": "0e07dfaa09f6920c8f675e69ae63ab7f4f5fd1e719ee75acf220af65fee85162"
   },
   {
    "path": "kit/DATA_SOURCES.md",
@@ -45,8 +45,8 @@
   },
   {
    "path": "kit/pipeline/collect.py",
-   "bytes": 22116,
-   "sha256": "15f1995a5a5b9922c6548118f5f0915a5681001b31a85d5010fe4ccbef7436c2"
+   "bytes": 22790,
+   "sha256": "6c895991b8632e717c5908339957888e98dddb8f7e83738c5cff34fa63320bcf"
   },
   {
    "path": "kit/pipeline/dedup.py",
@@ -85,18 +85,18 @@
   },
   {
    "path": "kit/pipeline/channels.json",
-   "bytes": 18118,
-   "sha256": "354a719b3340d1860dea83a6a87dbf453d1eb3da173a4741c4ce6f125bab1594"
+   "bytes": 20230,
+   "sha256": "bdbcf193b8c5be6d669ad6da66d6e8e28c3b4ad9602a341cb5041a6076f464db"
   },
   {
    "path": "kit/pipeline/keywords.json",
-   "bytes": 11933,
-   "sha256": "69fb2e571ee4ea212cdd703fdf2ec6e3592938288a5a6f1cf7665bce077af22a"
+   "bytes": 12090,
+   "sha256": "f65eec10bca7aeaf81a4f89ec4e7b8e58fb9cc8871920136e762f9cbbc01bf7c"
   },
   {
    "path": "kit/pipeline/RUNBOOK.md",
-   "bytes": 28838,
-   "sha256": "ad8a71bd03aeb35b121779bcf09a776ec18f37a63f716ff849bda40604a62eb4"
+   "bytes": 29919,
+   "sha256": "cc6df7ae04699dd9456318598bfeed96c48f9a772566639a3aa0193d4733fd7b"
   },
   {
    "path": "kit/posts/_template.json",

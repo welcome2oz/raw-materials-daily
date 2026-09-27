@@ -100,7 +100,7 @@
 
 | 구분 | 매체 | 도메인 |
 |---|---|---|
-| 핵심 | Reuters · The Wall Street Journal · The New York Times · Yahoo Finance | reuters.com · wsj.com · nytimes.com · finance.yahoo.com |
+| 핵심 | Reuters · The Wall Street Journal · The New York Times · Yahoo Finance · Investing.com(전재 전용) | reuters.com · wsj.com · nytimes.com · finance.yahoo.com · investing.com |
 | 글로벌 주요 외신 | Bloomberg · Financial Times · The Economist · AP · CNBC · Nikkei Asia · MarketWatch · Barron's | bloomberg.com · ft.com · economist.com · apnews.com · cnbc.com · asia.nikkei.com · marketwatch.com · barrons.com |
 | 전문지·거래소·리서치 | S&P Global Commodity Insights · Argus · Fastmarkets · ICIS · MINING.COM · C&EN · London Metal Exchange · Wood Mackenzie · Trading Economics · DIGITIMES | spglobal.com · argusmedia.com · fastmarkets.com · icis.com · mining.com · cen.acs.org · lme.com · woodmac.com · tradingeconomics.com · digitimes.com |
 | 국내 경제지·전문지 | 한국경제 · 매일경제 · 연합인포맥스 · 이데일리 · 철강금속신문 · 스틸데일리(스틸앤스틸) · 화학저널(ChemLOCUS) | hankyung.com · mk.co.kr · einfomax.co.kr · edaily.co.kr · snmnews.com · steeldaily.co.kr · chemlocus.co.kr |
@@ -109,8 +109,9 @@
 
 ### 전재(syndication) 규칙
 
-- Yahoo Finance와 MINING.COM에는 다른 매체의 기사가 전재된다. **원 발행처가 허용 매체일 때만** 쓴다. 예: Reuters 기사 → `publisher: "Reuters", via: "Yahoo Finance"`
+- Yahoo Finance·Investing.com·MINING.COM에는 다른 매체의 기사가 전재된다. **원 발행처가 허용 매체일 때만** 쓴다. 예: Reuters 기사 → `publisher: "Reuters", via: "Yahoo Finance"` / `via: "Investing.com"`
 - Yahoo Finance에 실린 Zacks, Motley Fool, Insider Monkey, GuruFocus, Investing.com, 보도자료 배포 기사는 쓰지 않는다 → 렌더 오류
+- Investing.com 은 **전재 호스트로만** 쓴다(2026-09-27 추가): 기사 상단 'By Reuters' 인 Reuters 전재본만. 인베스팅닷컴 자체 기사(Bloomberg 등 재인용 포함), URL에 `93CH-` 가 붙은 AI 작성 기사('generated with the support of AI'), kr.investing.com 같은 번역판은 쓰지 않는다 → 렌더 오류
 - 원 발행처와 전재 호스트가 다른데 `via`가 빠져 있으면 렌더 오류
 
 ### 읽을 수 있는 기사만 쓴다

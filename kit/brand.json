@@ -88,7 +88,7 @@
     "_note_window": "게재일은 한국시간(KST) 기준으로 포스트 날짜 전날~당일(news_max_age_days). 기사에 찍힌 현지 날짜는 KST보다 하루 늦을 수 있어 하루 여유를 둔다. 일·월요일(KST) 호는 해외 주말 공백 때문에 지난 weekend_lookback_days(7)일 중 아직 게시하지 않은 뉴스도 쓴다 (사용자 결정 2026-09-27). 중복 검열은 그대로."
   },
   "news_outlets": {
-    "_note": "뉴스 출처 허용 목록. 출처 URL의 도메인과 발행처(publisher)가 모두 이 목록에 있어야 한다. syndication=true인 호스트(Yahoo Finance 등)는 원 발행처가 목록에 있을 때만 허용. 2026-09-25 사용자 지정 20개 매체(블룸버그·로이터·FT·WSJ·S&P·패스트마켓츠·ICIS·아거스·LME·우드맥킨지·트레이딩이코노믹스·디지타임스·닛케이아시아·한국경제·매일경제·연합인포맥스·이데일리·철강금속신문·스틸앤스틸·화학저널)을 기본 매체로 포함. 유료·차단 매체는 본문을 읽을 수 없어 '함께 보도한 매체 수(중요도)' 신호로 쓰고, 카드 근거는 본문을 읽은 기사에서만 가져온다. 2026-09-27 사용자 요청으로 세계 주요 기관·정부 발표(institutions: OECD·IEA·IAI·ICSG·worldsteel·WTO·WCO·UNEP·OPEC·미국 EIA·연방관보·USTR·상무부·EPA·EU 집행위·산업통상부·무역위원회·중국 상무부)를 1차 출처로 추가 — 기관 누리집의 발표·통계·결정문 원문만 쓴다(기관을 인용한 비허용 매체 기사는 안 됨).",
+    "_note": "뉴스 출처 허용 목록. 출처 URL의 도메인과 발행처(publisher)가 모두 이 목록에 있어야 한다. syndication=true인 호스트(Yahoo Finance 등)는 원 발행처가 목록에 있을 때만 허용. 2026-09-25 사용자 지정 20개 매체(블룸버그·로이터·FT·WSJ·S&P·패스트마켓츠·ICIS·아거스·LME·우드맥킨지·트레이딩이코노믹스·디지타임스·닛케이아시아·한국경제·매일경제·연합인포맥스·이데일리·철강금속신문·스틸앤스틸·화학저널)을 기본 매체로 포함. 유료·차단 매체는 본문을 읽을 수 없어 '함께 보도한 매체 수(중요도)' 신호로 쓰고, 카드 근거는 본문을 읽은 기사에서만 가져온다. 2026-09-27 사용자 요청으로 세계 주요 기관·정부 발표(institutions: OECD·IEA·IAI·ICSG·worldsteel·WTO·WCO·UNEP·OPEC·미국 EIA·연방관보·USTR·상무부·EPA·EU 집행위·산업통상부·무역위원회·중국 상무부)를 1차 출처로 추가 — 기관 누리집의 발표·통계·결정문 원문만 쓴다(기관을 인용한 비허용 매체 기사는 안 됨). 2026-09-27 인베스팅닷컴(Investing.com)을 전재 전용 호스트로 추가 — Reuters 전재본만(자체·AI 작성 기사·한국어 AI 번역판 제외, syndication_only·hosts·exclude_url_re).",
     "core": [
       {
         "name": "Reuters",
@@ -130,6 +130,29 @@
           "finance.yahoo.com"
         ],
         "syndication": true
+      },
+      {
+        "name": "Investing.com",
+        "aliases": [
+          "인베스팅닷컴"
+        ],
+        "domains": [
+          "investing.com"
+        ],
+        "syndication": true,
+        "syndication_only": true,
+        "hosts": [
+          "www.investing.com",
+          "investing.com",
+          "uk.investing.com",
+          "ca.investing.com",
+          "au.investing.com",
+          "in.investing.com",
+          "za.investing.com",
+          "ng.investing.com"
+        ],
+        "exclude_url_re": "-93CH-",
+        "_note": "2026-09-27 사용자 요청으로 추가. Reuters 전재본(기사 상단 'By Reuters')만 쓴다 — 로이터 원문은 막혀 있지만 인베스팅닷컴 전재본은 본문이 읽힘(WebFetch 확인). 인베스팅닷컴 자체 기사(Bloomberg 등 재인용 포함)는 발행처로 안 됨(syndication_only). URL에 93CH- 가 붙은 기사는 'generated with the support of AI' 표기 AI 작성 기사라 제외. 영어판 호스트만(hosts) — kr.investing.com 은 AI 번역판이라 안 됨."
       }
     ],
     "global": [

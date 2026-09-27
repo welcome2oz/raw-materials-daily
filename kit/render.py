@@ -357,6 +357,14 @@ def validate(post: dict, brand: dict, run_dir=None, history=None):
                 errors.append(f"출처 '{k}': URL 도메인이 허용 매체가 아님 ({urlparse(str(x.get('url', ''))).hostname})")
             if not pub_o:
                 errors.append(f"출처 '{k}': 발행처 '{x.get('publisher')}'가 허용 매체 목록에 없음")
+            elif pub_o.get("syndication_only"):
+                errors.append(f"출처 '{k}': {pub_o['name']} 자체 기사는 쓰지 않음 — 전재 호스트로만 허용(원 발행처가 Reuters 등 허용 매체인 전재본만)")
+            if host_o:  # 전재 전용 호스트의 판·기사 유형 제한 (예: Investing.com — 영어판만, AI 작성 기사 제외)
+                h = (urlparse(str(x.get("url", ""))).hostname or "").lower()
+                if host_o.get("hosts") and h not in host_o["hosts"]:
+                    errors.append(f"출처 '{k}': {host_o['name']}의 {h} 판은 쓰지 않음 (허용: {', '.join(host_o['hosts'])})")
+                if host_o.get("exclude_url_re") and re.search(host_o["exclude_url_re"], str(x.get("url", ""))):
+                    errors.append(f"출처 '{k}': {host_o['name']} AI 작성 기사 유형(URL {host_o['exclude_url_re']}) — 쓰지 않음")
             if host_o and pub_o and host_o is not pub_o:
                 if not host_o.get("syndication"):
                     errors.append(f"출처 '{k}': {host_o['name']} 도메인에 {pub_o['name']} 발행처 — 전재 허용 호스트가 아님")
@@ -434,6 +442,9 @@ def check_coverage(post: dict, brand: dict, errors: list, warns: list):
                 o = outlet_by_name(c.get("publisher", ""), outlets)
                 if not o:
                     errors.append(f"slide {i}: coverage 발행처 '{c.get('publisher')}' 는 허용 매체가 아님")
+                    continue
+                if o.get("syndication_only"):
+                    errors.append(f"slide {i}: coverage 발행처 '{o['name']}' 는 전재 호스트 — 원 발행처(Reuters 등)로 적을 것")
                     continue
                 u = c.get("url", "")
                 if not str(u).startswith(("http://", "https://")) or not str(c.get("title", "")).strip():
