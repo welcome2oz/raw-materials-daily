@@ -1,0 +1,224 @@
+{
+  "id": "2026-09-28-brief",
+  "date": "2026-09-28",
+  "issue": 1,
+  "category": "brief",
+  "topic": "supply",
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "아르셀로미탈 우크라이나\n**제철소 가동 중단**",
+      "sub": "9월 24일~26일(현지) 외신 보도 기준 · 4건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "supply",
+      "src": "inv-arcelormittal-kryvyirih",
+      "headline": "아르셀로미탈 우크라이나\n**제철소 가동 중단**",
+      "toc": "아르셀로미탈, 크리비리흐 제철소 가동 중단 결정",
+      "orig": "ArcelorMittal to halt Ukraine plant after strikes",
+      "key": {
+        "value": "17",
+        "label": "부상 근로자 수(명)"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "ArcelorMittal Kryvyi Rih · Ukraine",
+          "items": [
+            { "k": "STATUS", "v": "가동 중단 결정", "tone": "alert" },
+            { "k": "CAUSE", "v": "5주간 미사일 4차례 피격", "tone": "warn" },
+            { "k": "PLAN", "v": "설비 보존, 재가동 여지는 남김" }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            { "value": "5", "unit": "명", "label": "사망한 근로자 수", "hi": true, "calc": true },
+            { "value": "17", "unit": "명", "label": "부상 근로자 수" }
+          ]
+        }
+      ],
+      "facts": [
+        { "t": "가장 최근 피격일은 21일이며, 이전에도 두 차례 미사일 공격을 받았다." }
+      ],
+      "why": "우크라이나산 철강 공급 차질 점검",
+      "coverage": [
+        { "publisher": "Reuters", "title": "ArcelorMittal to book $1 billion charge as Russian strikes shutter Ukraine plant", "url": "https://www.reuters.com/business/arcelormittal-book-1-billion-charge-after-missile-strikes-ukraine-2026-09-25", "date": "2026-09-25" },
+        { "publisher": "The Wall Street Journal", "title": "ArcelorMittal Drops Plan to Restart Ukrainian Operations After Missile Strikes", "url": "https://www.wsj.com/world/europe/arcelormittal-says-it-cant-restart-ukrainian-operations-after-missile-strikes-462821fa", "date": "2026-09-25" }
+      ]
+    },
+    {
+      "type": "news",
+      "category": "nonferrous",
+      "topic": "supply",
+      "src": "reu-escondida-union",
+      "headline": "에스콘디다 구리광산\n**점진적 재가동**",
+      "toc": "에스콘디다, 점진적 재가동·노조는 협상 중단요청 거부",
+      "orig": "Chile's Escondida mine gradually resumes operations after fatal accident",
+      "key": {
+        "value": "09.28",
+        "label": "감독직 노조 투표 시작일"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "Escondida · BHP · Chile",
+          "items": [
+            { "k": "STATUS", "v": "점진적 재개", "tone": "warn" },
+            { "k": "NEXT", "v": "노조 투표 09.28~09.30", "sub": "감독직 노조", "tone": "warn" },
+            { "k": "CAUSE", "v": "정비 중 사망 사고 이후 안전 확인" }
+          ]
+        }
+      ],
+      "facts": [
+        { "t": "BHP가 사망 사고 이후 협상 중단을 요청했으나 노조가 거부해 협상은 예정대로 진행된다." }
+      ],
+      "why": "칠레산 정광·전기동 선적 일정 재점검",
+      "update_of": "2026-09-24-s1",
+      "coverage": [
+        { "publisher": "MINING.COM", "title": "BHP's Escondida restart eases tight copper market", "url": "https://www.mining.com/bhps-escondida-restart-eases-tight-copper-market", "date": "2026-09-25" },
+        { "publisher": "MarketWatch", "title": "Mining Suspended at World's Largest Copper Operation After Worker Death, BHP Says", "url": "https://www.marketwatch.com/story/mining-suspended-at-world-s-largest-copper-operation-after-worker-death-bhp-says-c5f7113e", "date": "2026-09-23" }
+      ]
+    },
+    {
+      "type": "news",
+      "category": "resin",
+      "topic": "supply",
+      "src": "icis-braskem-idesa",
+      "headline": "브라스켐-이데사\n**미 회생자금 지원 차단**",
+      "toc": "브라스켐, 멕시코 자회사 미 회생계획 자금지원 법원이 차단",
+      "orig": "Brazil court blocks Braskem funding for Mexican unit's US bankruptcy plan",
+      "key": {
+        "value": "15",
+        "label": "법원, 세부 보고서 제출 기한(일)"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "Braskem Idesa · Mexico",
+          "items": [
+            { "k": "STATUS", "v": "송금·보증 즉시 중단 명령", "tone": "alert" },
+            { "k": "CAUSE", "v": "노트홀더 그룹 이의신청 인용", "tone": "warn" },
+            { "k": "NEXT", "v": "15일 내 세부 보고서 제출" }
+          ]
+        },
+        {
+          "type": "split",
+          "half": true,
+          "title": "지분 구조",
+          "unit": "%",
+          "parts": [
+            { "label": "Braskem", "value": 75 },
+            { "label": "Grupo Idesa", "value": 25 }
+          ]
+        }
+      ],
+      "why": "멕시코산 PE 공급망 리스크 점검",
+      "coverage": [
+        { "publisher": "Reuters", "title": "Brazilian court suspends new transfers from Braskem to Mexico's Idesa", "url": "https://www.reuters.com/legal/litigation/brazilian-court-suspends-new-transfers-braskem-mexicos-idesa-2026-09-24", "date": "2026-09-24" }
+      ]
+    },
+    {
+      "type": "news",
+      "category": "chemical",
+      "topic": "supply",
+      "src": "inv-ilsky-refinery",
+      "headline": "러시아 일스키 정유시설\n**공격으로 화재 발생**",
+      "toc": "우크라이나, 러시아 일스키 정유시설 공격",
+      "orig": "Ukraine says it struck Russian oil refinery as drone attacks intensify",
+      "key": {
+        "value": "6.6",
+        "label": "설계 처리능력(Mt/년)"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "Ilsky Refinery · Krasnodar · Russia",
+          "items": [
+            { "k": "STATUS", "v": "화재 발생", "tone": "alert" },
+            { "k": "CAUSE", "v": "우크라이나 드론 공격", "tone": "warn" },
+            { "k": "CASUALTY", "v": "3명 사망·2명 부상" }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            { "value": "6.6", "unit": "Mt/y", "label": "설계 처리능력(연간)", "hi": true }
+          ]
+        }
+      ],
+      "facts": [
+        { "t": "연료 공급 차질로 러시아 당국은 휘발유·경유·항공유 수출 대부분을 일시 제한했다." }
+      ],
+      "why": "러시아산 석유제품 수급 차질 점검"
+    },
+    { "type": "closing" }
+  ],
+  "sources": [
+    {
+      "id": "inv-arcelormittal-kryvyirih",
+      "publisher": "Investing.com",
+      "title": "ArcelorMittal to halt Ukraine plant after strikes",
+      "date": "2026-09-25",
+      "accessed": "2026-09-28",
+      "url": "https://www.investing.com/news/stock-market-news/arcelormittal-to-halt-ukraine-plant-flags-1-billion-impairment-after-strikes-93CH-4916857",
+      "evidence": [
+        "ArcelorMittal said on Friday it will halt operations at its Ukrainian plant after four missile strikes in five weeks killed five workers and injured 17, triggering a roughly $1 billion non-cash impairment charge.",
+        "The latest strike hit the plant on Sept. 21, following attacks on Aug. 17 and Sept. 14. One of the 17 injured employees remains in critical condition.",
+        "The company has provided more than $700 million to its Kryvyi Rih subsidiary since Russia's invasion of Ukraine began in February 2022.",
+        "ArcelorMittal said it was discussing the site's future with the Ukrainian government and would preserve the infrastructure to keep open the option of restarting production when conditions allow."
+      ]
+    },
+    {
+      "id": "reu-escondida-union",
+      "publisher": "Reuters",
+      "via": "Investing.com",
+      "title": "Unions at Chile's Escondida mine reject bid to pause contract talks after worker's death",
+      "date": "2026-09-25",
+      "accessed": "2026-09-28",
+      "url": "https://www.investing.com/news/stock-market-news/unions-at-chiles-escondida-mine-reject-bid-to-pause-contract-talks-after-workers-death-4917884",
+      "evidence": [
+        "Unions at Chile's Escondida copper mine, the world's largest, pushed back on Friday after management sought to pause contract talks with unionized supervisors and staff following a fatal accident earlier this week.",
+        "The unions rejected the request, meaning talks will continue on schedule.",
+        "Unionized supervisors are due to vote from September 28 to September 30 on the company's latest contract offer.",
+        "Operations at Escondida, in Chile's northern Atacama Desert, were halted after the accident, then gradually resumed on Thursday while the causes remained under investigation."
+      ]
+    },
+    {
+      "id": "icis-braskem-idesa",
+      "publisher": "ICIS",
+      "title": "Brazil court blocks Braskem funding for Mexican unit's US bankruptcy plan",
+      "date": "2026-09-25",
+      "accessed": "2026-09-28",
+      "url": "https://www.icis.com/explore/resources/news/2026/09/25/11234964/brazil-court-blocks-braskem-funding-for-mexican-unit-s-us-bankruptcy-plan",
+      "evidence": [
+        "A Sao Paulo bankruptcy judge ordered Brazilian petrochemicals major Braskem to immediately halt payments and guarantees supporting the US Chapter 11 restructuring of its Mexican subsidiary, polyethylene (PE) producer Braskem Idesa.",
+        "The support package involves commitments worth about $800 million.",
+        "Braskem Idesa is a joint venture between Braskem (75% stake) and Mexico's Grupo Idesa (with the remaining 25%).",
+        "The judge also gave Braskem 15 days to file a detailed report on the operation's origin, consideration and impact."
+      ]
+    },
+    {
+      "id": "inv-ilsky-refinery",
+      "publisher": "Investing.com",
+      "title": "Ukraine says it struck Russian oil refinery as drone attacks intensify",
+      "date": "2026-09-26",
+      "accessed": "2026-09-28",
+      "url": "https://www.investing.com/news/economy-news/ukraine-says-it-struck-russian-oil-refinery-as-drone-attacks-intensify-4918543",
+      "evidence": [
+        "Ukraine said it struck Russia's Ilsky oil refinery in the Black Sea region of Krasnodar overnight, setting the facility ablaze as both countries reported large-scale drone attacks, Bloomberg reported.",
+        "Three people were killed and two injured in the incident, according to the Krasnodar region's operational headquarters.",
+        "The Ilsky refinery is located about 850 kilometres southeast of Kyiv and has a design capacity of roughly 6.6 million tons annually.",
+        "Fuel supply disruptions have prompted Russian authorities to temporarily restrict most exports of gasoline, diesel and jet fuel."
+      ]
+    }
+  ],
+  "caption": "9월 24일~26일(현지) 외신 보도 기준 원재료 뉴스 4건.\n\n1) 아르셀로미탈, 우크라이나 크리비리흐 제철소 가동 중단 결정(미사일 피격 반복)\n2) 에스콘디다 구리광산, 점진적 재가동·노조는 협상 중단요청 거부\n3) 브라스켐, 멕시코 자회사 미 회생계획 자금지원 법원이 차단\n4) 러시아 일스키 정유시설, 우크라이나 공격으로 화재\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": ["원자재", "철강", "비철금속", "석유화학", "공급망"]
+}
