@@ -356,6 +356,41 @@
         "chemical"
       ],
       "note": "산업통상부 보도자료 (motie.go.kr 에서 motir.go.kr 로 이전, 2026-09-27 확인)"
+    },
+    {
+      "id": "investing-commodities",
+      "kind": "rss",
+      "url": "https://www.investing.com/rss/news_11.rss",
+      "covers": [
+        "nonferrous",
+        "chemical",
+        "steel"
+      ],
+      "note": "Investing.com 원자재·선물 뉴스 RSS(최근 10건, pubDate 는 UTC). author 가 'Reuters' 인 항목만 카드 근거 후보(Reuters 전재본, 본문 읽힘). author 'Investing.com' 은 자체·AI 작성 기사라 collect.py 가 거름. WebFetch 확인 2026-09-27"
+    },
+    {
+      "id": "investing-stocks",
+      "kind": "rss",
+      "url": "https://www.investing.com/rss/news_25.rss",
+      "covers": [
+        "steel",
+        "nonferrous",
+        "resin",
+        "chemical"
+      ],
+      "note": "Investing.com 증시 뉴스 RSS(최근 10건) — 광산·철강·화학 기업의 Reuters 기사가 여기 실림(예: 2026-09-25 Reuters 페루 구리 기사). 무관 기사는 카테고리 키워드로 거름. WebFetch 확인 2026-09-27"
+    },
+    {
+      "id": "investing-economy",
+      "kind": "rss",
+      "url": "https://www.investing.com/rss/news_14.rss",
+      "covers": [
+        "steel",
+        "nonferrous",
+        "resin",
+        "chemical"
+      ],
+      "note": "Investing.com 경제 뉴스 RSS(최근 10건) — 관세·무역 조치 Reuters 기사 보충용. WebFetch 확인 2026-09-27"
     }
   ],
   "fallback": {
@@ -373,7 +408,8 @@
     "_note": "본문 확인용. Reuters·Bloomberg 원문 대신 이 호스트의 전재본을 연다.",
     "finance.yahoo.com": "Reuters·Bloomberg·AP 전재. 기사 상단에 'Reuters' 등 원 발행처 표기 확인",
     "mining.com": "/web/ 경로는 전재(Reuters·Bloomberg). 본문 끝 '(By ... ; Editing by ...)' 또는 출처 문구 확인",
-    "icis.com": "자체 기사. 무료 공개분만"
+    "icis.com": "자체 기사. 무료 공개분만",
+    "investing.com": "Reuters 전재. 기사 상단 'By Reuters' 확인. 'By Investing.com'·URL 93CH-(AI 작성, 'generated with the support of AI')·kr.investing.com(AI 번역판)은 쓰지 않음"
   },
   "_note_2026_09_25": "사용자 지정 20개 매체 추가. 직접 읽히는 목록이 없는 매체(Reuters·Bloomberg·WSJ·FT·Argus·Nikkei·DIGITIMES·Wood Mackenzie)는 Bing 뉴스 RSS의 site: 필터로 제목·링크만 모은다 — Bing 링크(apiclick.aspx?url=…)는 collect.py 가 원문 주소로 풀고, site: 결과에는 주제와 무관한 기사도 섞여 카테고리 키워드로 거른다. Bing이 'title: Bing' 빈 페이지를 주면 &qft=… 를 빼고 한 번 더. 매일경제·연합인포맥스는 WebFetch 차단(SITE_BLOCKED), LME는 목록이 스크립트로만 떠서 채널 없음(허용 매체로만 등록). S&P Global RSS(metals.xml·chemicals.xml)는 6~10주 전 기사뿐이라 채널에서 뺌.",
   "_note_2026_09_27": "세계 주요 기관 발표 채널 11개 추가(worldsteel·IAI·IEA·미국 EIA·WCO·UNEP·연방관보 2·USTR·EU 집행위·산업통상부). 읽히지 않는 곳: OECD(자바스크립트 페이지), WTO·eia.gov RSS(robots 차단), OPEC 보도실(갱신 멈춤), BIS·EPA(404). 무역위원회·중국 상무부·ICSG 는 항목별 링크가 없어 채널에서 뺐고 허용 출처로만 둔다.",
@@ -410,5 +446,6 @@
       "query": "회사·설비·국가 이름 + 사건 단어 (예: JFE Steel Chiba output typhoon)",
       "allowed_domains": "넣지 않음 — 결과에서 brand.json 허용 매체 도메인만 남긴다"
     }
-  }
+  },
+  "_note_2026_09_27b": "사용자 요청으로 Investing.com 추가 — 로이터 원문(reuters.com)은 막혀 있지만 Investing.com 에 실린 Reuters 전재본은 본문이 읽힌다(WebFetch 확인 2026-09-27, robots.txt 가 /news/ 허용). RSS 3개(원자재·증시·경제)를 채널로, 전재본 찾기(RUNBOOK P2-2·3단계)에 investing.com 을 추가. RSS 는 최근 10건뿐이라 새 기사 발견보다 전재본 확보 효과가 크다. Bing site:investing.com 은 시세 페이지·다국어판이 대부분이라 채널로 쓰지 않음."
 }

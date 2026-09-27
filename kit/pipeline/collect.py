@@ -131,6 +131,16 @@ def outlet_by_name(name, outlets):
     return None
 
 
+def host_ok(url, o):
+    """전재 전용 호스트의 판·기사 유형 제한 (brand.json 매체 항목의 hosts·exclude_url_re — 예: Investing.com 영어판만, AI 작성 93CH- 기사 제외)."""
+    if not o:
+        return False
+    host = (urlparse(url).hostname or "").lower()
+    if o.get("hosts") and host not in o["hosts"]:
+        return False
+    return not (o.get("exclude_url_re") and re.search(o["exclude_url_re"], url))
+
+
 def prefer_allowed_link(rec, outlets, readable_hosts):
     """같은 기사로 묶인 링크 중 허용 매체 도메인(본문 읽기 가능하면 더 우선)을 대표 링크로 삼는다.
     예: Bing이 준 aol.com 링크가 먼저 모였어도 mining.com/web/ 전재본을 대표로 (2026-09-26 페루 구리 기사 누락 사례)."""
@@ -141,7 +151,7 @@ def prefer_allowed_link(rec, outlets, readable_hosts):
     def rank(a):
         host = (urlparse(a["url"]).hostname or "").lower()
         readable = any(host == h or host.endswith("." + h) for h in readable_hosts)
-        return (1 if outlet_by_url(a["url"], outlets) else 0, 1 if readable else 0)
+        return (1 if host_ok(a["url"], outlet_by_url(a["url"], outlets)) else 0, 1 if readable else 0)
     cur = {k: rec[k] for k in ("url", "source", "published_raw", "snippet")}
     best = max([cur] + alts, key=rank)  # 동점이면 먼저 모인 링크 유지
     if best is cur:
@@ -329,6 +339,8 @@ def main():
         rec["outlet"] = host_o["name"] if host_o else ""
         if not host_o:
             reasons.append(f"허용 매체 도메인 아님({host})")
+        elif not host_ok(rec["url"], host_o):
+            reasons.append(f"{host_o['name']} 제외 판·유형({host} — 비영어·번역판 또는 AI 작성 기사)")
         if _norm(rec["source"]) in bad_pubs or any(b and b in _norm(rec["source"]) for b in bad_pubs):
             reasons.append(f"제외 발행처({rec['source']})")
         if host.endswith("mining.com") and not urlparse(rec["url"]).path.startswith("/web/"):
@@ -361,7 +373,7 @@ def main():
         rec["access"] = "readable" if any(host == h or host.endswith("." + h) for h in access.get("readable", [])) else (
             "blocked" if any(host == h or host.endswith("." + h) for h in access.get("blocked", [])) else "unknown")
         if rec["access"] == "blocked":
-            rec["note"] = "본문 접근 불가 도메인 → 같은 기사의 Yahoo Finance·MINING.COM 전재본을 찾아서 사용"
+            rec["note"] = "본문 접근 불가 도메인 → 같은 기사의 Yahoo Finance·Investing.com·MINING.COM 전재본(원 발행처 Reuters 등)을 찾아서 사용"
         tw = sum(kw["topics"][t]["weight"] for t in tops)
         rec["score"] = sum(len(v) for v in cats.values()) + tw + (1 if rec["access"] == "readable" else 0) + (len(rec["channels"]) - 1)
         rec["category"] = max(cats, key=lambda c: len(cats[c])) if cats else ""
