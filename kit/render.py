@@ -249,6 +249,18 @@ def load_history(path=None):
     return None
 
 
+def news_window_days(date: str, rules: dict) -> int:
+    """포스트 날짜(KST)의 기사 게재일 범위(일). 평일 news_max_age_days(1), 일·월요일은 weekend_lookback_days(7) —
+    해외 매체가 주말에 거의 쓰지 않아 일·월요일 호가 비는 문제 (사용자 결정 2026-09-27)."""
+    base = int(rules.get("news_max_age_days", 1) or 1)
+    wk = rules.get("weekend_lookback_days")
+    try:
+        wd = datetime.date.fromisoformat(date).weekday()  # 월 0 … 일 6
+    except ValueError:
+        return base
+    return max(base, int(wk)) if wk and wd in (6, 0) else base
+
+
 def next_issue(date: str, history=None, brand=None) -> int:
     """포스트 날짜의 호수. brand.json > issue_numbering 의 start_date 이후 게시된 날(이 날짜 전까지)을 세어
     start_number 부터 매긴다 (사용자 결정 2026-09-26: 2026-09-27 호부터 No.1 로 다시 시작)."""
@@ -352,10 +364,13 @@ def validate(post: dict, brand: dict, run_dir=None, history=None):
                     errors.append(f"출처 '{k}': {host_o['name']}에 전재된 기사 → via: \"{host_o['name']}\" 표기 필요")
     max_age = rules.get("news_max_age_days")
     if max_age is not None and DATE_RE.match(str(post.get("date", ""))):
-        oldest = (datetime.date.fromisoformat(post["date"]) - datetime.timedelta(days=max_age)).isoformat()
+        days = news_window_days(post["date"], rules)
+        oldest_kst = datetime.date.fromisoformat(post["date"]) - datetime.timedelta(days=days)
+        # 출처의 date 는 기사에 찍힌 현지 날짜 — 한국시간보다 하루 늦을 수 있어 하루 여유를 둔다
+        oldest = (oldest_kst - datetime.timedelta(days=1)).isoformat()
         for k, x in known.items():
             if DATE_RE.match(str(x.get("date", ""))) and x["date"] < oldest:
-                errors.append(f"출처 '{k}': 게재일 {x['date']} — 최신 뉴스 기준({oldest} 이후) 밖")
+                errors.append(f"출처 '{k}': 게재일 {x['date']} — 최신 뉴스 기준(한국시간 {oldest_kst.isoformat()} 이후 · 현지 날짜로는 {oldest} 이후) 밖")
             if DATE_RE.match(str(x.get("date", ""))) and x["date"] > post["date"]:
                 errors.append(f"출처 '{k}': 게재일 {x['date']}이 포스트 날짜 {post['date']}보다 뒤")
 

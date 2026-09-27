@@ -83,10 +83,12 @@
     "dedup_required": true,
     "max_news": 4,
     "min_coverage": 2,
-    "_note_selection": "기사 선정: 같은 뉴스를 함께 다룬 허용 매체 수(coverage)가 많을수록 중요. 카테고리당 최대 1건, 전체 max_news건 이하. coverage min_coverage 이상을 먼저 고르고, 없는 카테고리는 원재료 구매에 유용한 단독 보도(생산·설비·투자·수급 전망·규제·관세·공급 계약의 새 사실 + 구체적 이름·숫자·결정)로 채운다 — 사용자 결정 2026-09-26 (RUNBOOK 3단계)."
+    "_note_selection": "기사 선정: 같은 뉴스를 함께 다룬 허용 매체 수(coverage)가 많을수록 중요. 카테고리당 최대 1건, 전체 max_news건 이하. coverage min_coverage 이상을 먼저 고르고, 없는 카테고리는 원재료 구매에 유용한 단독 보도(생산·설비·투자·수급 전망·규제·관세·공급 계약의 새 사실 + 구체적 이름·숫자·결정)로 채운다 — 사용자 결정 2026-09-26 (RUNBOOK 3단계).",
+    "weekend_lookback_days": 7,
+    "_note_window": "게재일은 한국시간(KST) 기준으로 포스트 날짜 전날~당일(news_max_age_days). 기사에 찍힌 현지 날짜는 KST보다 하루 늦을 수 있어 하루 여유를 둔다. 일·월요일(KST) 호는 해외 주말 공백 때문에 지난 weekend_lookback_days(7)일 중 아직 게시하지 않은 뉴스도 쓴다 (사용자 결정 2026-09-27). 중복 검열은 그대로."
   },
   "news_outlets": {
-    "_note": "뉴스 출처 허용 목록. 출처 URL의 도메인과 발행처(publisher)가 모두 이 목록에 있어야 한다. syndication=true인 호스트(Yahoo Finance 등)는 원 발행처가 목록에 있을 때만 허용. 2026-09-25 사용자 지정 20개 매체(블룸버그·로이터·FT·WSJ·S&P·패스트마켓츠·ICIS·아거스·LME·우드맥킨지·트레이딩이코노믹스·디지타임스·닛케이아시아·한국경제·매일경제·연합인포맥스·이데일리·철강금속신문·스틸앤스틸·화학저널)을 기본 매체로 포함. 유료·차단 매체는 본문을 읽을 수 없어 '함께 보도한 매체 수(중요도)' 신호로 쓰고, 카드 근거는 본문을 읽은 기사에서만 가져온다.",
+    "_note": "뉴스 출처 허용 목록. 출처 URL의 도메인과 발행처(publisher)가 모두 이 목록에 있어야 한다. syndication=true인 호스트(Yahoo Finance 등)는 원 발행처가 목록에 있을 때만 허용. 2026-09-25 사용자 지정 20개 매체(블룸버그·로이터·FT·WSJ·S&P·패스트마켓츠·ICIS·아거스·LME·우드맥킨지·트레이딩이코노믹스·디지타임스·닛케이아시아·한국경제·매일경제·연합인포맥스·이데일리·철강금속신문·스틸앤스틸·화학저널)을 기본 매체로 포함. 유료·차단 매체는 본문을 읽을 수 없어 '함께 보도한 매체 수(중요도)' 신호로 쓰고, 카드 근거는 본문을 읽은 기사에서만 가져온다. 2026-09-27 사용자 요청으로 세계 주요 기관·정부 발표(institutions: OECD·IEA·IAI·ICSG·worldsteel·WTO·WCO·UNEP·OPEC·미국 EIA·연방관보·USTR·상무부·EPA·EU 집행위·산업통상부·무역위원회·중국 상무부)를 1차 출처로 추가 — 기관 누리집의 발표·통계·결정문 원문만 쓴다(기관을 인용한 비허용 매체 기사는 안 됨).",
     "core": [
       {
         "name": "Reuters",
@@ -371,6 +373,212 @@
         "domains": [
           "chemlocus.co.kr"
         ]
+      }
+    ],
+    "institutions": [
+      {
+        "name": "OECD",
+        "aliases": [
+          "경제협력개발기구"
+        ],
+        "domains": [
+          "oecd.org"
+        ],
+        "type": "institution"
+      },
+      {
+        "name": "IEA",
+        "aliases": [
+          "International Energy Agency",
+          "국제에너지기구"
+        ],
+        "domains": [
+          "iea.org"
+        ],
+        "type": "institution"
+      },
+      {
+        "name": "International Aluminium Institute",
+        "aliases": [
+          "IAI",
+          "국제알루미늄협회"
+        ],
+        "domains": [
+          "international-aluminium.org"
+        ],
+        "type": "institution"
+      },
+      {
+        "name": "ICSG",
+        "aliases": [
+          "International Copper Study Group",
+          "국제구리연구그룹"
+        ],
+        "domains": [
+          "icsg.org"
+        ],
+        "type": "institution"
+      },
+      {
+        "name": "worldsteel",
+        "aliases": [
+          "World Steel Association",
+          "세계철강협회"
+        ],
+        "domains": [
+          "worldsteel.org"
+        ],
+        "type": "institution"
+      },
+      {
+        "name": "WTO",
+        "aliases": [
+          "World Trade Organization",
+          "세계무역기구"
+        ],
+        "domains": [
+          "wto.org"
+        ],
+        "type": "institution"
+      },
+      {
+        "name": "World Customs Organization",
+        "aliases": [
+          "WCO",
+          "세계관세기구"
+        ],
+        "domains": [
+          "wcoomd.org"
+        ],
+        "type": "institution"
+      },
+      {
+        "name": "UNEP",
+        "aliases": [
+          "UN Environment Programme",
+          "OzonAction",
+          "유엔환경계획"
+        ],
+        "domains": [
+          "unep.org"
+        ],
+        "type": "institution"
+      },
+      {
+        "name": "OPEC",
+        "aliases": [
+          "석유수출국기구"
+        ],
+        "domains": [
+          "opec.org"
+        ],
+        "type": "institution"
+      },
+      {
+        "name": "U.S. Energy Information Administration",
+        "aliases": [
+          "EIA (U.S.)",
+          "미국 에너지정보청"
+        ],
+        "domains": [
+          "eia.gov"
+        ],
+        "type": "institution"
+      },
+      {
+        "name": "Federal Register",
+        "aliases": [
+          "미국 연방관보"
+        ],
+        "domains": [
+          "federalregister.gov"
+        ],
+        "type": "institution"
+      },
+      {
+        "name": "USTR",
+        "aliases": [
+          "Office of the United States Trade Representative",
+          "미국 무역대표부"
+        ],
+        "domains": [
+          "ustr.gov"
+        ],
+        "type": "institution"
+      },
+      {
+        "name": "U.S. Department of Commerce",
+        "aliases": [
+          "Commerce Department",
+          "BIS",
+          "ITA",
+          "미국 상무부"
+        ],
+        "domains": [
+          "commerce.gov",
+          "trade.gov",
+          "bis.gov"
+        ],
+        "type": "institution"
+      },
+      {
+        "name": "U.S. EPA",
+        "aliases": [
+          "EPA",
+          "미국 환경보호청"
+        ],
+        "domains": [
+          "epa.gov"
+        ],
+        "type": "institution"
+      },
+      {
+        "name": "European Commission",
+        "aliases": [
+          "EU Commission",
+          "유럽연합 집행위원회",
+          "EU 집행위"
+        ],
+        "domains": [
+          "ec.europa.eu",
+          "policy.trade.ec.europa.eu",
+          "trade.ec.europa.eu"
+        ],
+        "type": "institution"
+      },
+      {
+        "name": "산업통상부",
+        "aliases": [
+          "Ministry of Industry, Trade and Resources",
+          "MOTIR"
+        ],
+        "domains": [
+          "motir.go.kr",
+          "motie.go.kr"
+        ],
+        "type": "institution"
+      },
+      {
+        "name": "무역위원회",
+        "aliases": [
+          "Korea Trade Commission",
+          "KTC"
+        ],
+        "domains": [
+          "ktc.go.kr"
+        ],
+        "type": "institution"
+      },
+      {
+        "name": "중국 상무부",
+        "aliases": [
+          "MOFCOM",
+          "Ministry of Commerce of China"
+        ],
+        "domains": [
+          "mofcom.gov.cn"
+        ],
+        "type": "institution"
       }
     ]
   },
