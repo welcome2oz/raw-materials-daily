@@ -359,12 +359,15 @@ def validate(post: dict, brand: dict, run_dir=None, history=None):
                 errors.append(f"출처 '{k}': 발행처 '{x.get('publisher')}'가 허용 매체 목록에 없음")
             elif pub_o.get("syndication_only"):
                 errors.append(f"출처 '{k}': {pub_o['name']} 자체 기사는 쓰지 않음 — 전재 호스트로만 허용(원 발행처가 Reuters 등 허용 매체인 전재본만)")
-            if host_o:  # 전재 전용 호스트의 판·기사 유형 제한 (예: Investing.com — 영어판만, AI 작성 기사 제외)
-                h = (urlparse(str(x.get("url", ""))).hostname or "").lower()
+            if host_o:  # 매체별 판·페이지 제한 (brand.json hosts·include_url_re·exclude_url_re — 예: Investing.com 영어판 뉴스 기사만, robots 제외 경로 빼기)
+                u = str(x.get("url", ""))
+                h = (urlparse(u).hostname or "").lower()
                 if host_o.get("hosts") and h not in host_o["hosts"]:
                     errors.append(f"출처 '{k}': {host_o['name']}의 {h} 판은 쓰지 않음 (허용: {', '.join(host_o['hosts'])})")
-                if host_o.get("exclude_url_re") and re.search(host_o["exclude_url_re"], str(x.get("url", ""))):
-                    errors.append(f"출처 '{k}': {host_o['name']} AI 작성 기사 유형(URL {host_o['exclude_url_re']}) — 쓰지 않음")
+                if host_o.get("include_url_re") and not re.search(host_o["include_url_re"], u):
+                    errors.append(f"출처 '{k}': {host_o['name']} 뉴스 기사 주소가 아님 (시세·종목 페이지 등)")
+                if host_o.get("exclude_url_re") and re.search(host_o["exclude_url_re"], u):
+                    errors.append(f"출처 '{k}': {host_o['name']} 제외 경로({host_o['exclude_url_re']}) — 유료·수집 금지 영역")
             if host_o and pub_o and host_o is not pub_o:
                 if not host_o.get("syndication"):
                     errors.append(f"출처 '{k}': {host_o['name']} 도메인에 {pub_o['name']} 발행처 — 전재 허용 호스트가 아님")
