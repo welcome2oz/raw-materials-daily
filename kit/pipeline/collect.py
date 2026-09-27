@@ -73,6 +73,29 @@ def parse_date(s: str, url: str = ""):
     return d.replace(tzinfo=tz0) if d is not None and d.tzinfo is None else d
 
 
+REL_RE = re.compile(r"(?:(\d+)|an?|one)\s*(minute|min|hour|hr|day)s?\s+ago|(\d+)\s*(분|시간|일)\s*전|\b(yesterday|just now)\b|(어제|방금)", re.I)
+
+
+def parse_relative(s: str, fetched_at: str):
+    """'9 hours ago'·'1 hour ago'·'3시간 전'·'yesterday' → 수집 시각(fetched_at) 기준 datetime(aware). 목록 페이지(예: Investing.com)의 상대 시각용."""
+    m = REL_RE.search(str(s or ""))
+    if not m or not fetched_at:
+        return None
+    try:
+        ref = dt.datetime.fromisoformat(str(fetched_at).replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if ref.tzinfo is None:
+        ref = ref.replace(tzinfo=KST)
+    if m.group(5) or m.group(6):
+        w = (m.group(5) or m.group(6)).lower()
+        return ref - dt.timedelta(days=1) if w in ("yesterday", "어제") else ref
+    n = int(m.group(1) or m.group(3) or 1)
+    unit = (m.group(2) or m.group(4)).lower()
+    step = {"minute": 60, "min": 60, "분": 60, "hour": 3600, "hr": 3600, "시간": 3600, "day": 86400, "일": 86400}[unit]
+    return ref - dt.timedelta(seconds=n * step)
+
+
 def _parse_date(s: str, url: str = ""):
     s = (s or "").strip()
     if s:
@@ -132,11 +155,13 @@ def outlet_by_name(name, outlets):
 
 
 def host_ok(url, o):
-    """전재 전용 호스트의 판·기사 유형 제한 (brand.json 매체 항목의 hosts·exclude_url_re — 예: Investing.com 영어판만, AI 작성 93CH- 기사 제외)."""
+    """매체별 판·페이지 제한 (brand.json 매체 항목의 hosts·include_url_re·exclude_url_re — 예: Investing.com 영어판 /news/ 기사만, robots 제외 경로 빼기)."""
     if not o:
         return False
     host = (urlparse(url).hostname or "").lower()
     if o.get("hosts") and host not in o["hosts"]:
+        return False
+    if o.get("include_url_re") and not re.search(o["include_url_re"], url):
         return False
     return not (o.get("exclude_url_re") and re.search(o["exclude_url_re"], url))
 
@@ -313,7 +338,7 @@ def main():
             if not title or not url:
                 continue
             rec = {"title": title, "url": url, "published_raw": it.get("published", ""), "source": (it.get("source") or "").strip(),
-                   "snippet": (it.get("snippet") or "").strip()[:300], "channels": [raw.get("channel", rp.stem)]}
+                   "snippet": (it.get("snippet") or "").strip()[:300], "channels": [raw.get("channel", rp.stem)], "_fetched": raw.get("fetched_at", "")}
             key = url
             if key in seen:  # 같은 URL
                 seen[key]["channels"] = sorted(set(seen[key]["channels"] + rec["channels"]))
@@ -340,16 +365,22 @@ def main():
         if not host_o:
             reasons.append(f"허용 매체 도메인 아님({host})")
         elif not host_ok(rec["url"], host_o):
-            reasons.append(f"{host_o['name']} 제외 판·유형({host} — 비영어·번역판 또는 AI 작성 기사)")
+            reasons.append(f"{host_o['name']} 제외 판·페이지({host} — 번역판·시세/종목 페이지·유료 영역)")
         if _norm(rec["source"]) in bad_pubs or any(b and b in _norm(rec["source"]) for b in bad_pubs):
             reasons.append(f"제외 발행처({rec['source']})")
         if host.endswith("mining.com") and not urlparse(rec["url"]).path.startswith("/web/"):
             rec["publisher_hint"] = "MINING.COM"  # 자체 기사
         elif host_o and host_o.get("syndication"):
-            rec["publisher_hint"] = src_o["name"] if src_o and src_o is not host_o else "확인 필요(본문에서 원 발행처 확인)"
+            if src_o and src_o is not host_o:
+                rec["publisher_hint"] = src_o["name"]  # 전재 기사 (예: Investing.com 의 Reuters 기사)
+            elif src_o is host_o and not host_o.get("syndication_only"):
+                rec["publisher_hint"] = host_o["name"]  # 호스트 자체 기사 (본문 ATTRIBUTION 으로 다시 확인)
+            else:
+                rec["publisher_hint"] = "확인 필요(본문에서 원 발행처 확인)"
         elif host_o:
             rec["publisher_hint"] = host_o["name"]
-        d = parse_date(rec["published_raw"], rec["url"])
+        d = parse_relative(rec["published_raw"], rec.get("_fetched")) if REL_RE.search(str(rec["published_raw"] or "")) else None
+        d = d or parse_date(rec["published_raw"], rec["url"])
         rec["published"] = d.isoformat() if d else ""
         if not d:
             reasons.append("게재일 불명(본문에서 확인 필요)")
@@ -379,6 +410,7 @@ def main():
         rec["category"] = max(cats, key=lambda c: len(cats[c])) if cats else ""
         rec["topic"] = max(tops, key=lambda t: kw["topics"][t]["weight"] * len(tops[t])) if tops else ""
         rec.pop("_tok", None)
+        rec.pop("_fetched", None)
         # 날짜 불명은 '확인 필요'로 후보에 남긴다(다른 사유가 없을 때)
         if rec["url"] in used or any(u in used for u in rec.get("alt_urls", [])):
             reasons.append("이미 발행한 기사(URL)")

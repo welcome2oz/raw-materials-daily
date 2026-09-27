@@ -373,7 +373,7 @@
     }
   },
   "price_headline": {
-    "_note": "제목이 이 표현을 담고, 아래 event 단어가 없으면 '가격 기사'로 보고 제외한다(원칙: 가격 등락이 주제인 기사는 쓰지 않음).",
+    "_note": "제목이 이 표현을 담고, 아래 event 단어가 없으면 '가격 기사'로 보고 제외한다(원칙: 가격 등락이 주제인 기사는 쓰지 않음). 2026-09-27: 생산·출하 통계('Global crude steel output falls 1.2%')는 수급 기사라 output·production 을 event 로 추가, Investing.com 시세 해설('Live levels/setups')은 제외 단어로.",
     "words": [
       "price",
       "prices",
@@ -444,7 +444,10 @@
       "사고",
       "제재",
       "쿼터",
-      "반덤핑"
+      "반덤핑",
+      "output",
+      "production",
+      "생산량"
     ]
   },
   "exclude": {
@@ -464,6 +467,9 @@
       "podcast",
       "video:",
       "live:",
+      "live setup",
+      "live setups",
+      "live levels",
       "opinion",
       "column",
       "sponsored",
@@ -488,7 +494,6 @@
       "Motley Fool",
       "Insider Monkey",
       "GuruFocus",
-      "Investing.com",
       "Simply Wall St",
       "Benzinga",
       "InvestorPlace",
@@ -502,7 +507,7 @@
     ]
   },
   "access": {
-    "_note": "본문을 WebFetch로 읽을 수 있는지. Cowork 환경 실측 2026-09-24~25. blocked(또는 유료) 도메인 기사는 같은 뉴스를 다룬 readable 매체 기사를 찾아 출처로 쓴다. 루틴(Claude Code) 환경에서는 mining.com·icis.com 도 읽히지 않음(RUNBOOK 1A 참고). investing.com 은 2026-09-27 WebFetch 확인(robots /news/ 허용, 기사 본문·RSS 읽힘) — Reuters 전재본만 카드 근거.",
+    "_note": "본문을 WebFetch로 읽을 수 있는지. Cowork 환경 실측 2026-09-24~25. blocked(또는 유료) 도메인 기사는 같은 뉴스를 다룬 readable 매체 기사를 찾아 출처로 쓴다. 루틴(Claude Code) 환경에서는 mining.com·icis.com 도 읽히지 않음(RUNBOOK 1A 참고). investing.com 은 2026-09-27 WebFetch 확인(robots /news/ 허용, 기사 본문·RSS 읽힘) — 자체 기사·Reuters 전재본 모두 카드 근거(사용자 결정).",
     "readable": [
       "finance.yahoo.com",
       "investing.com",
