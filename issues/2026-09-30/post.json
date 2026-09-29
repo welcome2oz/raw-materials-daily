@@ -1,0 +1,95 @@
+{
+  "id": "2026-09-30-brief",
+  "date": "2026-09-30",
+  "issue": 3,
+  "category": "brief",
+  "topic": "supply",
+  "slides": [
+    {"type": "cover", "kicker": "TODAY'S RAW MATERIALS NEWS",
+     "title": "스텔코 해밀턴 공장\n**냉연·코팅 가동 중단**",
+     "sub": "9월 28~29일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 3건", "toc": true},
+    {"type": "news", "category": "steel", "topic": "supply", "src": "reu-stelco-hamilton-idle",
+     "headline": "스텔코 해밀턴 공장\n**냉연·코팅 무기한 중단**",
+     "toc": "클리블랜드클리프스, 캐나다 해밀턴 냉연·코팅 설비 무기한 가동 중단",
+     "orig": "Cleveland-Cliffs to idle output at Canada steel plant, blames tariffs, says CBC",
+     "why": "캐나다산 강재 공급 변화 주시",
+     "key": {"value": "500명", "label": "해밀턴 공장 영향 인원(최대)"},
+     "viz": [
+       {"type": "status", "title": "스텔코 해밀턴 · 클리블랜드클리프스 · 캐나다",
+        "items": [
+          {"k": "STATUS", "v": "냉연·코팅 무기한 중단", "tone": "alert"},
+          {"k": "NEXT", "v": "10월 9일 축소 시작", "sub": "제강은 나노코크에 집중", "tone": "warn"},
+          {"k": "CAUSE", "v": "미국 관세 영향"}
+        ]},
+       {"type": "stats", "half": true, "items": [{"value": "500", "unit": "명", "label": "영향받는 직원(최대)", "hi": true}]},
+       {"type": "stats", "half": true, "items": [{"value": "50", "unit": "%", "label": "캐나다산 일부 철강·알루미늄 관세(최대)"}]}
+     ],
+     "coverage": []},
+    {"type": "news", "category": "nonferrous", "topic": "regulation", "src": "reu-congo-mining-audit",
+     "headline": "콩고 대형 광산사\n**2027년부터 연례 감사**",
+     "toc": "콩고, 2027년부터 대형 광산사 하도급·현지조달 연례 감사",
+     "orig": "Congo to audit major miners annually from 2027 as part of local content drive, regulator says",
+     "why": "콩고 구리·코발트 조달 규제 점검",
+     "key": {"value": "2027", "label": "연례 감사 시작·현지조달법 시행 해"},
+     "viz": [
+       {"type": "status", "title": "콩고민주공화국 · 하도급 규제기관(ARSP)",
+        "items": [
+          {"k": "STATUS", "v": "연례 감사 도입", "tone": "warn"},
+          {"k": "NEXT", "v": "2027년 1월 1일 시행", "sub": "현지조달법 발효 예정"},
+          {"k": "SCOPE", "v": "글렌코어·사이코마인스 등 시정 명령"}
+        ]},
+       {"type": "stats", "half": true, "items": [{"value": "83", "unit": "%", "label": "2025년 신고 하도급 중 콩고 자본 기업 비중", "hi": true}]},
+       {"type": "stats", "half": true, "items": [{"value": "3.7", "unit": "십억달러", "label": "2025년 신고 하도급 계약(167개사)"}]}
+     ],
+     "coverage": []},
+    {"type": "news", "category": "resin", "topic": "maker", "src": "chemlocus-oci-tdi-exit",
+     "headline": "OCI, TDI 사업\n**12월 18일 운영 중단**",
+     "toc": "OCI, TDI 제조·판매 종료 결정… 12월 18일부터 운영 중단",
+     "orig": "OCI, TDI \"한계사업\" 전격 철수 결정",
+     "why": "TDI 조달처 변화 대비",
+     "key": {"value": "5만t", "label": "OCI 군산 TDI 가동 규모"},
+     "viz": [
+       {"type": "status", "title": "OCI · TDI · 군산",
+        "items": [
+          {"k": "STATUS", "v": "TDI 사업 종료 결정", "tone": "alert"},
+          {"k": "NEXT", "v": "12월 18일 운영 중단", "tone": "warn"}
+        ]},
+       {"type": "stats", "half": true, "items": [{"value": "5", "unit": "만t", "label": "군산 TDI 가동 규모", "hi": true}]},
+       {"type": "stats", "half": true, "items": [{"value": "5.87", "unit": "%", "label": "2025년 연결 매출 중 TDI 비중"}]}
+     ],
+     "coverage": []},
+    {"type": "closing"}
+  ],
+  "sources": [
+    {"id": "reu-stelco-hamilton-idle", "publisher": "Reuters", "via": "MINING.COM",
+     "title": "Cleveland-Cliffs to idle output at Canada steel plant, blames tariffs, says CBC",
+     "date": "2026-09-28", "time": "1:39 pm", "accessed": "2026-09-30",
+     "url": "https://www.mining.com/web/cleveland-cliffs-to-idle-output-at-canada-steel-plant-blames-tariffs-says-cbc/",
+     "evidence": [
+       "Citing an internal memo, CBC said the company would indefinitely idle its cold-rolled and coated operations at the Stelco plant, with operations set to begin winding down on October 9. Up to 500 employees will be affected.",
+       "US President Donald Trump signed an executive order in June 2025 applying an up to 50% tariff to certain steel and aluminum imports from Canada.",
+       "In a media release, Stelco confirmed it was idling finishing operations in Hamilton, and said it would concentrate steel production at its Nanticoke, Ontario works."
+     ]},
+    {"id": "reu-congo-mining-audit", "publisher": "Reuters", "via": "MINING.COM",
+     "title": "Congo to audit major miners annually from 2027 as part of local content drive, regulator says",
+     "date": "2026-09-29", "time": "6:39 am", "accessed": "2026-09-30",
+     "url": "https://www.mining.com/web/congo-to-audit-major-miners-annually-from-2027-as-part-of-local-content-drive-regulator-says/",
+     "evidence": [
+       "Democratic Republic of Congo will subject major mining companies to annual audits of subcontracting practices and compliance with local-content requirements from 2027, as authorities step up efforts to increase business for Congolese-owned firms, the head of the country's subcontracting regulator told Reuters.",
+       "A new local-content law is due to take effect on January 1, 2027.",
+       "ARSP this month ordered Glencore, Ivanhoe's Kipushi zinc mine and Chinese-controlled copper miner Sicomines to end non-compliant subcontracting arrangements, submit corrective plans and expand opportunities for Congolese-owned suppliers.",
+       "Of the $3.7 billion in subcontracting contracts declared by 167 major companies in 2025, $3.1 billion, or 83%, went to majority Congolese-owned companies, including $2.9 billion in the mining sector alone, Beleshayi said."
+     ]},
+    {"id": "chemlocus-oci-tdi-exit", "publisher": "화학저널",
+     "title": "OCI, TDI \"한계사업\" 전격 철수 결정",
+     "date": "2026-09-29", "time": "17:35 KST", "accessed": "2026-09-30",
+     "url": "https://www.chemlocus.co.kr/news/view/145992",
+     "evidence": [
+       "OCI는 9월29일 이사회에서 TDI 제조 및 판매 사업을 종료하기로 결정했으며, 12월18일부터 관련 운영을 공식적으로 중단할 계획이라고 발표했다.",
+       "TDI 사업은 2025년 매출액이 약 1179억4700만원으로 전체 연결 매출액의 약 5.87%에 해당한다.",
+       "OCI는 군산에서 TDI 5만톤을 가동하고 있다."
+     ]}
+  ],
+  "caption": "9월 28~29일(현지) 국내외 보도 기준 원재료 뉴스 3건.\n\n1) 스텔코 해밀턴 공장, 냉연·코팅 설비 무기한 가동 중단\n2) 콩고, 2027년부터 대형 광산사 연례 감사\n3) OCI, TDI 사업 종료 결정… 12월 18일 운영 중단\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": ["원자재", "철강", "구리", "TDI", "콩고"]
+}
