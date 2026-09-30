@@ -1,0 +1,312 @@
+{
+  "id": "2026-10-01-brief",
+  "date": "2026-10-01",
+  "issue": 4,
+  "category": "brief",
+  "topic": "supply",
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "코브레파나마 광산\n**재가동 후 폐쇄 권고**",
+      "sub": "9월 30일(현지) 국내외 보도·기관 발표 기준\n오늘의 원재료 뉴스 4건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "nonferrous",
+      "topic": "regulation",
+      "src": "reu-cobre-panama-restart-study",
+      "headline": "파나마 위원회\n**코브레 재가동 후 폐쇄**",
+      "toc": "파나마 위원회, 코브레파나마 광산 재가동 협상 뒤 질서 있는 폐쇄 권고",
+      "orig": "Panama commission recommends reopening First Quantum mine in order to gradually close it",
+      "why": "코브레 재가동 여부 주시",
+      "key": {
+        "value": "1%",
+        "label": "폐쇄 전 세계 구리 생산 비중"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "코브레파나마 · 퍼스트퀀텀 · 파나마",
+          "items": [
+            {
+              "k": "STATUS",
+              "v": "재가동 협상 권고",
+              "tone": "warn"
+            },
+            {
+              "k": "NEXT",
+              "v": "대통령 최종 결정 대기",
+              "sub": "내용 검토 후 결정"
+            },
+            {
+              "k": "GOAL",
+              "v": "국가 비용 없는 질서 있는 폐쇄"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "1",
+              "unit": "%",
+              "label": "2023년 폐쇄 전 세계 구리 생산 비중",
+              "hi": true
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "t": "퍼스트퀀텀의 중재 청구도 모두 해결하도록 권고"
+        }
+      ],
+      "coverage": [
+        {
+          "publisher": "Reuters",
+          "title": "Panama commission recommends reopening First Quantum mine in order to gradually close it",
+          "url": "https://ca.finance.yahoo.com/news/panama-commission-recommends-reopening-first-163914597.html",
+          "date": "2026-09-30"
+        },
+        {
+          "publisher": "MINING.COM",
+          "title": "Panama commission urges orderly closure of First Quantum's Cobre mine",
+          "url": "https://www.mining.com/panama-commission-urges-orderly-closure-of-first-quantums-cobre-mine",
+          "date": "2026-09-30"
+        },
+        {
+          "publisher": "Bloomberg",
+          "title": "Panama Panel Backs First Quantum Mine Restart to Fund 'Closure' - Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-09-30/panama-panel-backs-first-quantum-mine-restart-to-fund-closure",
+          "date": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "tariff",
+      "src": "reu-milwaukee-steel-framework",
+      "headline": "철강 과잉설비\n**밀워키 공동대응 틀**",
+      "toc": "美 무역대표, 철강 과잉설비 공동 대응 '밀워키 프레임워크' G20서 공개",
+      "orig": "US trade chief Greer says new 'Milwaukee Framework' to combat global excess steel capacity",
+      "why": "중국산 철강 무역장벽 확산 대비",
+      "viz": [
+        {
+          "type": "status",
+          "title": "미국 · 철강 과잉설비 글로벌포럼(GFSEC)",
+          "items": [
+            {
+              "k": "STATUS",
+              "v": "공동 대응 틀 합의",
+              "tone": "warn"
+            },
+            {
+              "k": "NEXT",
+              "v": "G20 무역장관회의서 공개",
+              "sub": "이번 주"
+            },
+            {
+              "k": "TARGET",
+              "v": "중국 등 과잉설비국 수입 장벽",
+              "sub": "국가별 조치 조율"
+            }
+          ]
+        }
+      ],
+      "coverage": [
+        {
+          "publisher": "Reuters",
+          "title": "US trade chief Greer says new 'Milwaukee Framework' to combat global excess steel capacity",
+          "url": "https://www.investing.com/news/commodities-news/us-trade-chief-greer-says-new-milwaukee-framework-to-combat-global-excess-steel-capacity-4925593",
+          "date": "2026-09-30"
+        },
+        {
+          "publisher": "USTR",
+          "title": "Ambassador Greer Issues Statement Following the Ministerial Meeting of the Global Forum on Steel Excess Capacity",
+          "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/september/ambassador-greer-issues-statement-following-ministerial-meeting-global-forum-steel-excess-capacity",
+          "date": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "category": "resin",
+      "topic": "maker",
+      "src": "icis-thai-plastics-recyclers",
+      "headline": "태국 rPET 확대\n**인도라마 합작 2028**",
+      "toc": "태국 재활용 PET, 인도비다 프리폼 설비·HaadThip 펠릿 발주 확대",
+      "orig": "INSIGHT: Thai plastics recyclers expand across value chain as domestic usage grows",
+      "why": "태국 rPET 조달처 확대 참고",
+      "key": {
+        "value": "400백만 개",
+        "label": "인도비다 rPET 프리폼 연간 설비"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "태국 · 인도비다 · HaadThip",
+          "items": [
+            {
+              "k": "PROJECT",
+              "v": "플레이크→프리폼 직접 재활용",
+              "tone": "warn"
+            },
+            {
+              "k": "NEXT",
+              "v": "2028년 설비 가동 예상"
+            },
+            {
+              "k": "ORDER",
+              "v": "rPET 펠릿 1,000t 이상 발주"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "400",
+              "unit": "백만 개",
+              "label": "인도비다 rPET 프리폼 연간 설비",
+              "hi": true
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "1,000",
+              "unit": "t+",
+              "label": "HaadThip rPET 펠릿 발주량"
+            }
+          ]
+        }
+      ],
+      "coverage": []
+    },
+    {
+      "type": "news",
+      "category": "chemical",
+      "topic": "regulation",
+      "src": "inv-trump-diesel-export-ban",
+      "headline": "美, 디젤 수출 금지\n**검토… 결정은 아직**",
+      "toc": "트럼프, 디젤 수출 금지 등 연료 대책 검토 (FT 보도)",
+      "orig": "Trump weighs diesel export ban to contain U.S. fuel prices, FT reports",
+      "why": "미국산 디젤 수출 규제 동향 주시",
+      "viz": [
+        {
+          "type": "status",
+          "title": "미국 · 디젤 수출 · FT 보도",
+          "items": [
+            {
+              "k": "STATUS",
+              "v": "수출 금지 검토",
+              "tone": "warn"
+            },
+            {
+              "k": "DECISION",
+              "v": "결정 없음",
+              "sub": "백악관 관계자"
+            },
+            {
+              "k": "ALSO",
+              "v": "존스법 면제 추가·세금 감면 논의"
+            }
+          ]
+        }
+      ],
+      "coverage": [
+        {
+          "publisher": "Investing.com",
+          "title": "Trump weighs diesel export ban to contain U.S. fuel prices, FT reports",
+          "url": "https://www.investing.com/news/commodities-news/trump-weighs-diesel-export-ban-to-contain-us-fuel-prices-ft-reports-4924082",
+          "date": "2026-09-30"
+        },
+        {
+          "publisher": "Yahoo Finance",
+          "title": "Banning Diesel Exports Won't Solve Trump's Biggest Problem",
+          "url": "https://finance.yahoo.com/energy/articles/banning-diesel-exports-won-t-100000344.html",
+          "date": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "type": "closing"
+    }
+  ],
+  "sources": [
+    {
+      "id": "reu-cobre-panama-restart-study",
+      "publisher": "Reuters",
+      "via": "Yahoo Finance",
+      "title": "Panama commission recommends reopening First Quantum mine in order to gradually close it",
+      "date": "2026-09-30",
+      "time": "12:39 p.m. EDT",
+      "accessed": "2026-10-01",
+      "url": "https://ca.finance.yahoo.com/news/panama-commission-recommends-reopening-first-163914597.html",
+      "evidence": [
+        "The study marks another development in the long-running dispute over the mine, which was responsible for 1% ‌of copper production ⁠worldwide until the government shuttered it in 2023 following protests from local residents over ⁠tax contributions and its environmental impact.",
+        "Effectively, the commission recommends \"establishing the conditions for a restart that enables achieving an orderly ​closure at ​no cost to the ​nation.\"",
+        "It also recommends resolving ‌all arbitration claims filed by First Quantum against the government following the mine's closure.",
+        "Panama's President Jose Raul Mulino said at a press ‌conference on Wednesday that he ​would carefully analyze the contents ​of the study ​before making a firm decision on the ‌future of one of the ​world's largest open-pit ​copper deposits."
+      ]
+    },
+    {
+      "id": "reu-milwaukee-steel-framework",
+      "publisher": "Reuters",
+      "via": "Investing.com",
+      "title": "US trade chief Greer says new 'Milwaukee Framework' to combat global excess steel capacity",
+      "date": "2026-09-30",
+      "time": "12:07 PM",
+      "accessed": "2026-10-01",
+      "url": "https://www.investing.com/news/commodities-news/us-trade-chief-greer-says-new-milwaukee-framework-to-combat-global-excess-steel-capacity-4925593",
+      "evidence": [
+        "US Trade Representative Jamieson Greer said on Wednesday that a new framework for countries to take coordinated action to combat excess steel production capacity will be released at a Group of 20 trade ministers meeting this week.",
+        "Greer told reporters after a meeting of the Global Forum on Steel Excess Capacity that the so-called \"Milwaukee Framework\" will likely encourage countries taking stronger action to raise trade barriers to steel imports from countries with heavy excess capacity, such as China.",
+        "We want to coordinate those measures."
+      ]
+    },
+    {
+      "id": "icis-thai-plastics-recyclers",
+      "publisher": "ICIS",
+      "title": "INSIGHT: Thai plastics recyclers expand across value chain as domestic usage grows",
+      "date": "2026-09-30",
+      "accessed": "2026-10-01",
+      "url": "https://www.icis.com/explore/resources/news/2026/09/30/11235519/insight-thai-plastics-recyclers-expand-across-value-chain-as-domestic-usage-grows",
+      "evidence": [
+        "Indovida (Thailand) expects annual capacity of about 400 million recycled polyethylene terephthalate (rPET) preforms, using flakes mainly sourced through Indorama Ventures in 2028.",
+        "The process makes PET preforms from recycled flakes, mainly to be sourced through Indorama, which are then formed into bottles.",
+        "HaadThip said it had already ordered more than 1,000 tonnes of rPET pellets during discussions on expanding the alliance."
+      ]
+    },
+    {
+      "id": "inv-trump-diesel-export-ban",
+      "publisher": "Investing.com",
+      "title": "Trump weighs diesel export ban to contain U.S. fuel prices, FT reports",
+      "date": "2026-09-30",
+      "time": "01:23 AM",
+      "accessed": "2026-10-01",
+      "url": "https://www.investing.com/news/commodities-news/trump-weighs-diesel-export-ban-to-contain-us-fuel-prices-ft-reports-4924082",
+      "evidence": [
+        "U.S. President Donald Trump is considering a range of measures, including a possible diesel export ban, to curb surging domestic fuel prices as a worsening energy crisis raises political pressure on his administration, the Financial Times reported on Wednesday.",
+        "A White House official reportedly said Trump was evaluating options to lower fuel prices but had made no decision on exports.",
+        "Other measures under discussion include further Jones Act waivers, tax relief and easing rules governing lower-cost dyed diesel, the report added."
+      ]
+    }
+  ],
+  "caption": "9월 30일(현지) 국내외 보도·기관 발표 기준 원재료 뉴스 4건.\n\n1) 파나마 위원회, 코브레파나마 재가동 협상 뒤 질서 있는 폐쇄 권고\n2) 美 무역대표, 철강 과잉설비 공동 대응 '밀워키 프레임워크' 공개 예정\n3) 태국 재활용 PET, 인도비다 프리폼 설비·rPET 펠릿 발주 확대\n4) 美, 디젤 수출 금지 검토… 결정은 아직 (FT 보도)\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": [
+    "원자재",
+    "구리",
+    "철강",
+    "rPET",
+    "디젤"
+  ]
+}
