@@ -1,0 +1,22 @@
+{
+ "date": "2026-10-01",
+ "issue": 4,
+ "slides": [
+  "01.jpg",
+  "02.jpg",
+  "03.jpg",
+  "04.jpg",
+  "05.jpg",
+  "06.jpg"
+ ],
+ "caption_file": "caption.txt",
+ "validated": true,
+ "errors": 0,
+ "warnings": [
+  "slide 5: 가격 관련 단어 'price' — 수치 없이 맥락 설명인지 확인 (…n U.S. fuel prices, FT report…)",
+  "slide 4: 단독 보도(함께 보도한 허용 매체 1곳) — RUNBOOK 3단계 '유용한 단독 보도' 기준(새 사실 유형)을 run_log 에 남길 것"
+ ],
+ "handoff_at": "2026-10-01T05:06:48+09:00",
+ "handoff": "routine",
+ "publish_at_kst": "07:00"
+}

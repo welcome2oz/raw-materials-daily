@@ -1,0 +1,11 @@
+# run_log 2026-10-01 (No.4, 목요일 호)
+- 05:03 KST 시작. 0단계: 미게시·미전달 확인, setup 완료.
+- 1A: 발행함 feeds/2026-10-01/feed.json 받음 (Cowork 03:31 생성, 채널 70개·원문 발췌 14개) → pickup ✓
+- 2단계 collect: 후보 34건, 2곳 이상 함께 보도 2묶음.
+- 3단계 선정 (4건):
+  - 비철: Cobre Panama 재가동 후 폐쇄 권고 — 여러 매체 3곳(Reuters·MINING.COM·Bloomberg). 근거는 Reuters(Yahoo Finance 전재)
+  - 스틸: Milwaukee Framework — 여러 매체 2곳(Reuters·USTR). 근거는 Reuters(Investing.com 전재)
+  - 레진: ICIS INSIGHT 태국 rPET — 단독 보도 — 설비·투자(인도비다 프리폼 4억 개 설비, 2028)·공급 조달(HaadThip 펠릿 1,000t 발주). 분석 기사 성격이나 구체적 새 사실 있어 채택
+  - 화공: 美 디젤 수출 금지 검토 — 여러 매체 2곳(Investing.com·Yahoo Finance). 가격 수치(갤런당 가격)는 카드에 쓰지 않음. 결정 없음임을 헤드라인에 명시
+- 뺀 후보: Chile 8월 구리 생산(통계지만 카테고리 1건 한도), CoTec DRC 합작·SAIL 몽골 원료탄(한도 초과), 인도 횡재세 인하·Pemex·SPR·EU 디젤 비축(한도/가격 연관), 스틸데일리 유료 기사.
+- 6단계: render --check 오류 0 (경고 2: 'price' 문맥 확인 → 수치 없음, 단독 보도 기록 → 위에 기록). JPG 6장 육안 확인: 잘림·겹침 없음. 테마 light.
