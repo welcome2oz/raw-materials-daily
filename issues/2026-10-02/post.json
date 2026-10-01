@@ -1,0 +1,307 @@
+{
+ "id": "2026-10-02-brief",
+ "date": "2026-10-02",
+ "issue": 5,
+ "category": "brief",
+ "topic": "supply",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "TODAY'S RAW MATERIALS NEWS",
+   "title": "에스콘디다 감독자\n**협약안 부결·파업 경로**",
+   "sub": "9월 30일~10월 1일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 4건",
+   "toc": true
+  },
+  {
+   "type": "news",
+   "category": "nonferrous",
+   "topic": "supply",
+   "src": "reu-escondida-supervisors-strike",
+   "headline": "에스콘디다 감독자\n**협약안 부결**",
+   "toc": "칠레 에스콘디다 구리광산 감독자 노조, 단체협약안 부결… 파업 경로",
+   "orig": "Supervisors at BHP's Escondida mine in Chile reject offer, paving the way for a strike",
+   "why": "조정 5일 뒤 파업 여부 주시",
+   "key": {
+    "value": "95%",
+    "label": "파업 찬성 투표 비율"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "에스콘디다 · BHP · 칠레",
+     "items": [
+      {
+       "k": "STATUS",
+       "v": "협약안 부결",
+       "tone": "warn"
+      },
+      {
+       "k": "NEXT",
+       "v": "정부 주도 의무 조정 진행"
+      },
+      {
+       "k": "IF",
+       "v": "조정 종료 뒤 파업 가능"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "95",
+       "unit": "%",
+       "label": "참여 조합원 파업 찬성",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "1,020",
+       "unit": "명",
+       "label": "감독자 노조 규모"
+      }
+     ]
+    }
+   ],
+   "coverage": [
+    {
+     "publisher": "Reuters",
+     "title": "Supervisors at BHP's Escondida mine in Chile reject offer, paving the way for a strike",
+     "url": "https://www.mining.com/web/supervisors-at-bhps-escondida-mine-in-chile-reject-offer-paving-the-way-for-a-strike/",
+     "date": "2026-09-30"
+    },
+    {
+     "publisher": "Fastmarkets",
+     "title": "Unions at Escondida, Centinela, Philex's Padcal copper mines vote for strike action",
+     "url": "https://www.fastmarkets.com/insights/unions-at-escondida-centinela-philexs-padcal-copper-mines-vote-for-strike-action/",
+     "date": "2026-10-01"
+    }
+   ],
+   "update_of": "2026-09-24-s1"
+  },
+  {
+   "type": "news",
+   "category": "steel",
+   "topic": "supply",
+   "src": "sd-scrap-inventory-3wk-decline",
+   "headline": "제강사 스크랩 재고\n**3주 연속 감소**",
+   "toc": "제강사 철 스크랩 재고 3주 연속 감소, 100만 톤 턱걸이",
+   "orig": "제강사 철 스크랩 재고, 3주 연속 감소… 100만 톤 '턱걸이'",
+   "why": "스크랩 수급 빠듯해지는지 확인",
+   "key": {
+    "value": "100만 2,000 t",
+    "label": "11개 제강사 스크랩 재고"
+   },
+   "viz": [
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "100만 2,000",
+       "unit": "t",
+       "label": "11개 제강사 스크랩 재고",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "2.9",
+       "unit": "%↓",
+       "label": "전주 대비 재고 감소"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "70만 5,000",
+       "unit": "t",
+       "label": "봉형강 제강사 재고(전주 대비 1.8% 감소)"
+      }
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "news",
+   "category": "resin",
+   "topic": "supply",
+   "src": "icis-korea-sept-petchem-exports",
+   "headline": "韓 석화 수출물량\n**9월 19.1% 감소**",
+   "toc": "한국 9월 석유화학 수출물량 19.1% 감소, 280만 톤",
+   "orig": "S Korea Sept petrochemical export value up 5%; volumes down 19%",
+   "why": "국내 석화 공급 여력 축소 참고",
+   "key": {
+    "value": "-19.1%",
+    "label": "9월 석유화학 수출물량(전년 대비)"
+   },
+   "viz": [
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "19.1",
+       "unit": "%↓",
+       "label": "석유화학 수출물량 전년 대비",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "2.8",
+       "unit": "백만 t",
+       "label": "9월 석유화학 수출물량"
+      }
+     ]
+    }
+   ],
+   "coverage": [
+    {
+     "publisher": "ICIS",
+     "title": "S Korea Sept petrochemical export value up 5%; volumes down 19%",
+     "url": "https://www.icis.com/explore/resources/news/2026/10/01/11235750/s-korea-sept-petrochemical-export-value-up-5-volumes-down-19",
+     "date": "2026-10-01"
+    },
+    {
+     "publisher": "산업통상부",
+     "title": "2026년 9월 수출입 동향",
+     "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172254/view?mno=&pageIndex=1",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "category": "chemical",
+   "topic": "supply",
+   "src": "inv-pemex-crude-exports-aug",
+   "headline": "멕시코 페멕스\n**원유 수출 45% 감소**",
+   "toc": "페멕스 8월 원유 수출 45% 감소, 자국 정제 확대",
+   "orig": "Pemex crude oil exports fall 45% in August amid refining push",
+   "why": "멕시코 연료 수입 축소 영향 참고",
+   "key": {
+    "value": "-45%",
+    "label": "8월 원유 수출(전년 대비)"
+   },
+   "viz": [
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "45",
+       "unit": "%↓",
+       "label": "원유 수출(전년 동월 대비)",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "15",
+       "unit": "%↑",
+       "label": "정제 처리량 120만 b/d(전년 동월 대비)"
+      }
+     ]
+    }
+   ],
+   "facts": [
+    {
+     "t": "휘발유 수입 24%·디젤 수입 26% 감소"
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "closing"
+  }
+ ],
+ "sources": [
+  {
+   "id": "reu-escondida-supervisors-strike",
+   "publisher": "Reuters",
+   "title": "Supervisors at BHP's Escondida mine in Chile reject offer, paving the way for a strike",
+   "date": "2026-09-30",
+   "accessed": "2026-10-02",
+   "url": "https://www.mining.com/web/supervisors-at-bhps-escondida-mine-in-chile-reject-offer-paving-the-way-for-a-strike/",
+   "evidence": [
+    "Supervisors at Chile's Escondida copper mine, the world's largest, rejected a collective contract offer on Wednesday, paving the way for a potential strike at the site.",
+    "Last week, the 1,020-member union received the final proposal and urged its members to reject it in the vote.",
+    "Under Chilean law, the parties must now enter a mandatory five-day government-led mediation process, which can be extended by mutual agreement for another five days, before a work stoppage can legally begin.",
+    "\"The company's offer demonstrated a complete disregard for the contribution made by supervisors and staff to the production and multi-billion-dollar profits of the world's largest copper mine,\" the union said in a statement, adding that 95% of participating members voted in favor of strike action."
+   ],
+   "via": "MINING.COM",
+   "time": "1:01 pm"
+  },
+  {
+   "id": "sd-scrap-inventory-3wk-decline",
+   "publisher": "스틸데일리",
+   "title": "제강사 철 스크랩 재고, 3주 연속 감소… 100만 톤 '턱걸이'",
+   "date": "2026-10-01",
+   "accessed": "2026-10-02",
+   "url": "https://www.steeldaily.co.kr/news/articleView.html?idxno=203228",
+   "evidence": [
+    "이번 주 11개 제강사의 철 스크랩 재고는 100만 2,000톤으로, 전주보다 2.9% 감소했다.",
+    "재고가 100만 톤선에 턱걸이한 것은 지난 6월 24일 조사(100만 4,000톤) 이후 3개월 만이다.",
+    "업종별로 보면 현대제철을 포함한 봉형강 제강사의 재고는 70만 5,000톤으로 전주 대비 1.8% 감소했다."
+   ],
+   "time": "05:40"
+  },
+  {
+   "id": "icis-korea-sept-petchem-exports",
+   "publisher": "ICIS",
+   "title": "S Korea Sept petrochemical export value up 5%; volumes down 19%",
+   "date": "2026-10-01",
+   "accessed": "2026-10-02",
+   "url": "https://www.icis.com/explore/resources/news/2026/10/01/11235750/s-korea-sept-petrochemical-export-value-up-5-volumes-down-19",
+   "evidence": [
+    "By volume, petrochemical exports in September fell by 19.1% year on year to 2.8 million tonnes, according to data from the Ministry of Trade, Industry and Resources (MOTIR) on Thursday.",
+    "South Korea's petrochemical exports in September rose by 5.1% year on year to $3.9 billion on higher prices but volumes continued to fall amid low production."
+   ]
+  },
+  {
+   "id": "inv-pemex-crude-exports-aug",
+   "publisher": "Investing.com",
+   "title": "Pemex crude oil exports fall 45% in August amid refining push",
+   "date": "2026-09-30",
+   "accessed": "2026-10-02",
+   "url": "https://www.investing.com/news/commodities-news/pemex-crude-oil-exports-fall-45-in-august-amid-refining-push-93CH-4925674",
+   "evidence": [
+    "Petroleos Mexicanos reported a 45% decline in crude oil exports for August compared to the same month last year, with shipments dropping to 275,737 barrels per day.",
+    "The company processed 1.2 million barrels per day at its six refineries, marking a 15% increase from August 2025.",
+    "The higher domestic fuel production allowed Pemex to reduce gasoline imports by 24% and diesel imports by 26%."
+   ],
+   "time": "01:26 PM"
+  }
+ ],
+ "caption": "9월 30일~10월 1일(현지) 국내외 보도 기준 원재료 뉴스 4건.\n\n1) 칠레 에스콘디다 감독자 노조, 단체협약안 부결… 파업 경로\n2) 제강사 철 스크랩 재고 3주 연속 감소, 100만 톤 턱걸이\n3) 한국 9월 석유화학 수출물량 19.1% 감소\n4) 페멕스 8월 원유 수출 45% 감소, 자국 정제 확대\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+ "hashtags": [
+  "원자재",
+  "구리",
+  "철스크랩",
+  "석유화학",
+  "원유"
+ ]
+}
