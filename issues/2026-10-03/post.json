@@ -1,0 +1,325 @@
+{
+ "id": "2026-10-03-brief",
+ "date": "2026-10-03",
+ "issue": 6,
+ "category": "brief",
+ "topic": "supply",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "TODAY'S RAW MATERIALS NEWS",
+   "title": "앵글로·테크 합병\n**中 정광 공급 확약 요구**",
+   "sub": "10월 1일~2일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 4건",
+   "toc": true
+  },
+  {
+   "type": "news",
+   "category": "nonferrous",
+   "topic": "supply",
+   "src": "reu-anglo-teck-china-concentrate",
+   "headline": "中, 앵글로·테크\n**정광 공급 확약 요구**",
+   "toc": "중국 당국, 앵글로-테크 합병 승인 조건으로 구리 정광 공급 확약 요구",
+   "orig": "China demands copper supply commitments for Anglo Teck merger approval, sources say",
+   "why": "정광 수급·제련 환경 변화 주시",
+   "key": {
+    "value": "약 5%",
+    "label": "합병사의 세계 구리 공급 비중"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "앵글로 아메리칸 · 테크 · 중국 SAMR",
+     "items": [
+      {
+       "k": "STATUS",
+       "v": "정광 공급 확약 요구",
+       "tone": "warn"
+      },
+      {
+       "k": "SCOPE",
+       "v": "트레이더 경유 물량 포함"
+      },
+      {
+       "k": "CLOSE",
+       "v": "2027년 3월까지 종결 예상"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "5",
+       "unit": "%",
+       "label": "합병사의 세계 구리 공급 비중",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "60",
+       "unit": "%",
+       "label": "중국의 세계 구리 음극 정련 비중(최대)"
+      }
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "news",
+   "category": "steel",
+   "topic": "supply",
+   "src": "reu-shyam-metalics-maharashtra",
+   "headline": "시얌메탈릭스\n**연 900만 t 제철소**",
+   "toc": "인도 시얌메탈릭스, 마하라슈트라에 연 900만 t 제철소 투자 협약",
+   "why": "인도 증설 물량의 수급 영향 참고",
+   "key": {
+    "value": "9백만 t/년",
+    "label": "신규 일관제철 단지 규모"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "시얌메탈릭스 · 마하라슈트라 · 인도",
+     "items": [
+      {
+       "k": "STATUS",
+       "v": "주정부와 투자 협약 체결"
+      },
+      {
+       "k": "SITE",
+       "v": "찬드라푸르(비다르바)"
+      },
+      {
+       "k": "START",
+       "v": "승인 조건부, 올 회계연도 가동 목표",
+       "tone": "warn"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "9",
+       "unit": "백만 t/년",
+       "label": "그린필드 제철 단지 규모",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "500",
+       "unit": "십억 루피",
+       "label": "투자 규모"
+      }
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "news",
+   "category": "resin",
+   "topic": "policy",
+   "src": "icis-korea-petchem-cartel-indictment",
+   "headline": "석화 6개사 기소\n**PVC·가성소다 담합**",
+   "toc": "검찰, 석화 6개사 PVC·가소제 등 가격 담합 기소",
+   "orig": "South Korea indicts six petrochemical firms over W16.4 trillion price-fixing case – report",
+   "why": "담합 품목 납품가 협상 시 참고",
+   "key": {
+    "value": "16.4조 원",
+    "label": "담합 대상 8개 제품 규모"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "서울중앙지검 · 석유화학 6개사",
+     "items": [
+      {
+       "k": "STATUS",
+       "v": "임직원 37명 포함 기소",
+       "tone": "warn"
+      },
+      {
+       "k": "PERIOD",
+       "v": "2021년 1월~2026년 4월"
+      },
+      {
+       "k": "TRIAL",
+       "v": "재판 일정 미정"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "16.4",
+       "unit": "조 원",
+       "label": "담합 대상 제품 규모",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "37",
+       "unit": "명",
+       "label": "기소된 임직원"
+      }
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "news",
+   "category": "chemical",
+   "topic": "policy",
+   "src": "hk-us-diesel-export-ban-eu-reserve",
+   "headline": "美 디젤 수출금지 경고\n**유럽 비축 방출 압박**",
+   "toc": "미국, 유럽에 디젤 비축 방출 압박·불응 시 수출 금지 경고",
+   "orig": "美 디젤 수출금지 압박…유럽 비축유 방출 긴급협의",
+   "why": "디젤·중간유분 공급 정책 변화 주시",
+   "key": {
+    "value": "4억 배럴",
+    "label": "유럽 보유 디젤 추정 상한"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "미국 · EU 디젤 비축분",
+     "items": [
+      {
+       "k": "STATUS",
+       "v": "EU 방출 결정 아직 없음",
+       "tone": "warn"
+      },
+      {
+       "k": "IF",
+       "v": "불응 시 미국 디젤 수출 금지 가능"
+      },
+      {
+       "k": "NEXT",
+       "v": "유럽 각국 공동 대응 협의"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "4",
+       "unit": "억 배럴",
+       "label": "유럽 보유 디젤 추정(최대)",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "1억 2,000만",
+       "unit": "배럴",
+       "label": "미국이 EU에 6개월간 요구(로이터)"
+      }
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "closing"
+  }
+ ],
+ "sources": [
+  {
+   "id": "reu-anglo-teck-china-concentrate",
+   "publisher": "Reuters",
+   "via": "MINING.COM",
+   "title": "China demands copper supply commitments for Anglo Teck merger approval, sources say",
+   "date": "2026-10-02",
+   "time": "7:40 am",
+   "accessed": "2026-10-03",
+   "url": "https://www.mining.com/web/china-demands-copper-supply-commitments-for-anglo-teck-merger-approval-sources-say/",
+   "evidence": [
+    "China's antitrust regulator has asked Anglo American (LON: AAL) to commit to supply the country with a steady flow of copper concentrate as a condition for approving its proposed $54 billion merger with Canada's Teck Resources (TSX: TECK.B), three people aware of the development said.",
+    "The demand reflects China's struggle to feed its vast copper smelting industry, which refines up to 60% of the world's copper cathodes but faces its worst feedstock shortage in decades.",
+    "China's State Administration for Market Regulation has asked for assurances on copper concentrate supply, including volumes sold through traders, said the people, who declined to be named due to the confidential nature of discussions.",
+    "Both companies expect the deal to close by March 2027, within 18 months from the announcement.",
+    "A combination would control around 5% of global copper supply, below competition thresholds exceeding 10% to 15%."
+   ]
+  },
+  {
+   "id": "reu-shyam-metalics-maharashtra",
+   "publisher": "Reuters",
+   "via": "MINING.COM",
+   "title": "Shyam Metalics signs deal to invest over $5 billion in Maharashtra state",
+   "date": "2026-10-02",
+   "time": "7:03 am",
+   "accessed": "2026-10-03",
+   "url": "https://www.mining.com/web/shyam-metalics-signs-deal-to-invest-over-5-billion-in-maharashtra-state/",
+   "evidence": [
+    "India's Shyam Metalics and Energy (NSE: SHYAMMETL) on Friday said it has signed a deal with the Maharashtra government to invest 500 billion rupees ($5.19 billion) to set up a steel plant in the western state.",
+    "The integrated metal producer will build a 9 million-metric-tonnes-per-year greenfield steel complex in Chandrapur in the state's Vidarbha region, the company said in an exchange filing.",
+    "The steel plant is slated to begin operations in the ongoing financial year, subject to approvals, clearances and incentives."
+   ]
+  },
+  {
+   "id": "icis-korea-petchem-cartel-indictment",
+   "publisher": "ICIS",
+   "title": "South Korea indicts six petrochemical firms over W16.4 trillion price-fixing case – report",
+   "date": "2026-10-02",
+   "accessed": "2026-10-03",
+   "url": "https://www.icis.com/explore/resources/news/2026/10/02/11235923/south-korea-indicts-six-petrochemical-firms-over-w16-4-trillion-price-fixing-case-report",
+   "evidence": [
+    "SINGAPORE (ICIS)–South Korean prosecutors have indicted six petrochemical companies and 37 of their current and former executives and employees for allegedly fixing prices of products, including polyvinyl chloride (PVC) and plasticizers.",
+    "Prosecutors allege that the companies colluded on prices of eight petrochemical products, worth about won (W) 16.4 trillion ($12.2 billion), from January 2021 to April 2026, Yonhap said.",
+    "Besides PVC and plasticizers, the products include caustic soda and hydrochloric acid, Yonhap said.",
+    "Indicted cases by the office will be tried at the Seoul Central District Court. A trial date has not been announced."
+   ]
+  },
+  {
+   "id": "hk-us-diesel-export-ban-eu-reserve",
+   "publisher": "한국경제",
+   "title": "美 디젤 수출금지 압박…유럽 비축유 방출 긴급협의",
+   "date": "2026-10-02",
+   "time": "08:09",
+   "accessed": "2026-10-03",
+   "url": "https://www.hankyung.com/article/202610029140i",
+   "evidence": [
+    "2일 파이낸셜타임스(FT)에 따르면 관련 사안을 잘 아는 관계자 3명은 트럼프 행정부가 유럽 국가들에 디젤 전략비축분을 방출하도록 압박하면서 응하지 않으면 미국의 디젤 수출을 금지할 수 있다고 경고했다.",
+    "댄 요르겐센 유럽연합(EU) 에너지 담당 집행위원은 이날 프랑스와 독일, 영국, 이탈리아, 아일랜드 당국자들과 공동 대응 방안을 조율했지만, 비축분 방출에 대한 결정은 내려지지 않았다.",
+    "석유 업계 관계자는 유럽이 상업 재고와 비축분을 합쳐 최대 4억배럴의 디젤을 보유하고 있을 수 있으며 이를 시장에 풀면 세계 가격을 낮출 수 있다고 추산했다.",
+    "로이터는 앞서 미국 행정부가 EU에 6개월 동안 1억2000만배럴을 방출하기를 원한다고 보도했다."
+   ]
+  }
+ ],
+ "caption": "10월 1일~2일(현지) 국내외 보도 기준 원재료 뉴스 4건.\n\n1) 중국 당국, 앵글로-테크 합병 승인 조건으로 구리 정광 공급 확약 요구\n2) 인도 시얌메탈릭스, 마하라슈트라에 연 900만 t 제철소 투자 협약\n3) 검찰, 석화 6개사 PVC·가소제 등 가격 담합 기소\n4) 미국, 유럽에 디젤 비축 방출 압박·불응 시 수출 금지 경고\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+ "hashtags": [
+  "원자재",
+  "구리",
+  "철강",
+  "석유화학",
+  "디젤"
+ ]
+}
