@@ -1,0 +1,315 @@
+{
+ "id": "2026-10-04-brief",
+ "date": "2026-10-04",
+ "issue": 7,
+ "category": "brief",
+ "topic": "supply",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "TODAY'S RAW MATERIALS NEWS",
+   "title": "G7 비축유 방출\n**100백만 배럴 합의**",
+   "sub": "10월 1일~2일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 4건",
+   "toc": true
+  },
+  {
+   "type": "news",
+   "category": "nonferrous",
+   "topic": "supply",
+   "src": "reu-grasberg-rampup",
+   "headline": "그라스베르그 증산\n**2027 중반 80% 목표**",
+   "toc": "프리포트, 그라스베르그 구리광산 단계적 증산 순항 — 2027년 중반 가동률 80%",
+   "orig": "Freeport says Indonesia's Grasberg mine ramp-up on track after mudslide disruption",
+   "why": "인도네시아 정광 공급 회복 시점 참고",
+   "key": {
+    "value": "80%",
+    "label": "2027년 중반 도달 목표 가동률"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "프리포트 · 그라스베르그 · 인도네시아",
+     "items": [
+      {
+       "k": "STATUS",
+       "v": "단계적 증산 순항"
+      },
+      {
+       "k": "RESTART",
+       "v": "1S 블록 2027년 중반 재가동 목표",
+       "tone": "warn"
+      },
+      {
+       "k": "FULL",
+       "v": "2027년 말 완전 가동 근접"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "80",
+       "unit": "%",
+       "label": "2027년 중반 도달 목표 가동률",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "2027",
+       "unit": "초",
+       "label": "물류 시스템 업그레이드 완료 목표"
+      }
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "news",
+   "category": "steel",
+   "topic": "supply",
+   "src": "sd-koreasteel-changwon",
+   "headline": "한국철강 창원\n**제강설비 고장 가동 중단**",
+   "toc": "한국철강 창원공장 제강설비 고장, 복구 작업 진행",
+   "orig": "한국철강 창원공장 제강설비 고장...복구 작업 진행",
+   "why": "철근용 빌릿 재고 소진 시점 주시",
+   "key": {
+    "value": "2주 안팎",
+    "label": "제강라인 정상화 예상 기간"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "한국철강 · 창원공장",
+     "items": [
+      {
+       "k": "STATUS",
+       "v": "제강라인 가동 중단·복구 중",
+       "tone": "warn"
+      },
+      {
+       "k": "ROLLING",
+       "v": "압연라인 정상, 빌릿 재고로 철근 생산"
+      },
+      {
+       "k": "RISK",
+       "v": "복구 지연·재고 소진 시 생산 차질",
+       "tone": "warn"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "2",
+       "unit": "주 안팎",
+       "label": "정상화까지 예상 소요",
+       "hi": true
+      }
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "news",
+   "category": "resin",
+   "topic": "maker",
+   "src": "icis-trinseo-bankruptcy",
+   "headline": "트린세오 파산보호\n**졸업 지연 우려 커져**",
+   "toc": "미 트린세오, 파산보호 졸업 지연 가능성 커져",
+   "orig": "Signs grow that US Trinseo will need more time to exit bankruptcy",
+   "why": "트린세오 공급 차질·조달처 점검",
+   "key": {
+    "value": "2026년 말",
+    "label": "파산보호 졸업 목표 시점"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "트린세오 · 미국 챕터11",
+     "items": [
+      {
+       "k": "STATUS",
+       "v": "졸업 목표 위험",
+       "tone": "warn"
+      },
+      {
+       "k": "DISPUTE",
+       "v": "반대 채권자 소송 계류, 조정 개시"
+      },
+      {
+       "k": "ITEMS",
+       "v": "SB 라텍스·ABS·PMMA 생산"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "22",
+       "unit": "12월",
+       "label": "계획 제출 독점기간 연장 요청(기존 9월 23일)",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "22",
+       "unit": "2월",
+       "label": "지지 확보 독점기간 연장 요청(기존 11월 23일)"
+      }
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "news",
+   "category": "chemical",
+   "topic": "policy",
+   "src": "reu-g7-diesel-oil-release",
+   "headline": "G7 디젤·원유 비축\n**방출 합의**",
+   "toc": "G7, 디젤·원유 비축 1억 배럴 방출 합의 — 미국 디젤 수출금지 안 하기로",
+   "orig": "G7 countries agree on release of diesel and oil stocks after US pressure",
+   "why": "디젤·원유 공급 정책 후속 주시",
+   "key": {
+    "value": "100백만 배럴",
+    "label": "G7 비축 방출 합의 규모"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "G7 · IEA · 미국",
+     "items": [
+      {
+       "k": "STATUS",
+       "v": "비축 방출 합의",
+       "tone": "warn"
+      },
+      {
+       "k": "START",
+       "v": "즉시 시작, 4개월간"
+      },
+      {
+       "k": "BAN",
+       "v": "미국 디젤 수출금지 안 하기로"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "100",
+       "unit": "백만 배럴",
+       "label": "디젤·원유 비축 방출 합의",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "400",
+       "unit": "백만 배럴",
+       "label": "3월 IEA 조율 역대 최대 방출"
+      }
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "closing"
+  }
+ ],
+ "sources": [
+  {
+   "id": "reu-grasberg-rampup",
+   "publisher": "Reuters",
+   "title": "Freeport says Indonesia's Grasberg mine ramp-up on track after mudslide disruption",
+   "date": "2026-10-02",
+   "accessed": "2026-10-04",
+   "url": "https://www.mining.com/web/freeport-says-indonesias-grasberg-mine-ramp-up-on-track-after-mudslide-disruption/",
+   "evidence": [
+    "Freeport-McMoRan (NYSE: FCX) said on Friday progress at its Grasberg Block Cave underground mine in Indonesia is on track for a phased ramp-up, as the miner undertakes recovery efforts following a deadly mudslide that disrupted operations last year.",
+    "The company, whose shares rose 3.2% in morning trading, expects to reach 80% of capacity in mid-2027 and approach full capacity by year-end 2027.",
+    "Upgrades to the material handling system at the Grasberg Block Cave haulage level are progressing toward completion by early 2027, while preparations continue for the targeted restart of production from Production Block 1S by mid-2027, Freeport said."
+   ],
+   "time": "7:30 am",
+   "via": "MINING.COM"
+  },
+  {
+   "id": "sd-koreasteel-changwon",
+   "publisher": "스틸데일리",
+   "title": "한국철강 창원공장 제강설비 고장...복구 작업 진행",
+   "date": "2026-10-02",
+   "accessed": "2026-10-04",
+   "url": "https://www.steeldaily.co.kr/news/articleView.html?idxno=203293",
+   "evidence": [
+    "한국철강 창원공장 제강라인에 설비 고장으로 생산 차질이 불가피할 전망이다.",
+    "정상화까지는 2주 안팎이 소요될 것으로 예상된다.",
+    "제강라인 가동 중단으로 자체 빌릿 생산에는 차질이 발생했지만, 압연라인은 정상 가동 중이다. 기존에 확보한 빌릿 재고를 활용해 철근 생산을 이어갈 계획이다.",
+    "다만 설비 복구가 늦어지거나 보유 빌릿 재고가 소진될 경우 생산에도 차질이 발생할 가능성이 있다."
+   ],
+   "time": "14:54"
+  },
+  {
+   "id": "icis-trinseo-bankruptcy",
+   "publisher": "ICIS",
+   "title": "Signs grow that US Trinseo will need more time to exit bankruptcy",
+   "date": "2026-10-01",
+   "accessed": "2026-10-04",
+   "url": "https://www.icis.com/explore/resources/news/2026/10/01/11235839/signs-grow-that-us-trinseo-will-need-more-time-to-exit-bankruptcy",
+   "evidence": [
+    "HOUSTON (ICIS)– Trinseo's goal of emerging from bankruptcy protection by the end of 2026 is increasingly at risk as a dispute with dissenting creditors remains unresolved.",
+    "In the meantime, the judge instructed the two sides to start mediation to resolve their differences.",
+    "The company would like the court to extend the exclusivity period for filing a plan to 22 December from 23 September. For soliciting support for the plan, Trinseo would like the exclusivity period extended to 22 February from 23 November.",
+    "Trinseo makes styrene butadiene latex (SB), acrylonitrile butadiene styrene (ABS), polymethyl methacrylate (PMMA) and other engineered materials."
+   ]
+  },
+  {
+   "id": "reu-g7-diesel-oil-release",
+   "publisher": "Reuters",
+   "title": "G7 countries agree on release of diesel and oil stocks after US pressure",
+   "date": "2026-10-02",
+   "accessed": "2026-10-04",
+   "url": "https://www.investing.com/news/stock-market-news/europe-discussing-plan-for-diesel-stock-releases-after-us-pressure-source-says-4929100",
+   "evidence": [
+    "Group of Seven countries agreed on Friday to release 100 million barrels of diesel and crude oil from emergency reserves and pledged to refrain from energy export restrictions after pressure from US President Donald Trump.",
+    "The Iran war sparked the biggest emergency stock release ever of 400 million barrels in March, coordinated by the International Energy Agency.",
+    "The release will begin immediately and last four months, with a substantial amount of diesel to be released within 20 days by G7 members and partners, the statement said.",
+    "\"Europe has a lot of diesel, and they're going to be making a major world contribution, and so are we. And we're not going to be doing the export ban. We're going to be doing what we're supposed to do,\" Trump said."
+   ],
+   "time": "04:21 AM",
+   "via": "Investing.com"
+  }
+ ],
+ "caption": "10월 1일~2일(현지) 국내외 보도 기준 원재료 뉴스 4건.\n\n1) 프리포트, 그라스베르그 구리광산 단계적 증산 순항…2027년 중반 가동률 80% 목표\n2) 한국철강 창원공장 제강설비 고장…복구 2주 안팎 예상\n3) 미 트린세오, 파산보호 졸업 지연 가능성 커져\n4) G7, 디젤·원유 비축 1억 배럴 방출 합의…미국 디젤 수출금지 안 하기로\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+ "hashtags": [
+  "원자재",
+  "구리",
+  "철강",
+  "석유화학",
+  "디젤"
+ ]
+}

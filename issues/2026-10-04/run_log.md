@@ -1,0 +1,13 @@
+# run_log 2026-10-04 (일요일 호, No.7, A 모드)
+- 0단계: 미게시·미전달 확인, setup 완료
+- 1A: 발행함 feed.json 수신(Cowork 03:25 수집, 채널 64개·발췌 17건) → pickup 완료, 2단계로
+- 2단계: collect.py 후보 90건
+- 3단계 선정 (모두 단독 보도, 허용 매체 1곳 기준):
+  - 비철 Grasberg(Reuters via MINING.COM) — 단독 보도: 생산·가동 재개 일정(공급 차질 복구)
+  - 철강 한국철강 창원(스틸데일리) — 단독 보도: 제강설비 가동 중단(공급 차질)
+  - 레진 Trinseo(ICIS) — 단독 보도: 메이커 파산보호 절차 일정 변경(주요 메이커 변화)
+  - 화공 G7 비축유 방출(Reuters via Investing.com) — 전날 디젤 호의 후속 성격(새 사실: 1억 배럴 합의·수출금지 배제). dedup 이 같은 사건으로 인식하지 못해 update_of 는 쓰지 않음. 가격 수치 미사용
+- 뺀 후보: Anglo-Teck(10/03 게시), Escondida(10/02 게시), Milwaukee Framework(10/01 게시), Shyam(10/03 게시), 한국 석화 담합 이데일리·ICIS(10/03 게시), Mesabi 아이오와 제철소·인도 6억t·Bell Bay·Sierra Gorda(카테고리당 1건 한도), Asia 석화 수요(전망), OPEC 용량 검토·EIA 프로판(한도)
+- 4단계: Cowork 발췌 그대로 사용
+- 5~6단계: render --check 오류 0 (단독 보도 경고 4건은 위 사유), 렌더 6장, 카드 육안 확인 이상 없음, 테마 dark
+- 전날(10/03) 게시 기록: published/2026-10-03.json 있음 → 게시 실패 없음
