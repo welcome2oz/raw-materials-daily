@@ -1,0 +1,12 @@
+# run_log 2026-10-05 (월요일 호, 9/28~10/5 KST 범위)
+- 0단계 준비 완료, 미게시·미전달 확인
+- 1A: 발행함 feeds/2026-10-05 수신 (Cowork 수집, 채널 64개, 원문 발췌 18건) → pickup 성공
+- 2단계: collect.py 후보 96건. 호수 No.8
+- 3단계 선정 (저장소 게시 기록 대조): 이미 게시된 사건 제외 — Escondida·Centinela 파업(9/29·10/2), Iowa 제철소(9/29), Cliffs-Stelco(9/30), Panama(10/1), Milwaukee(10/1), Anglo-Teck·Shyam·한국 석화 기소(10/3), Grasberg·G7 비축유(10/4)
+  - 비철: 시에라 고르다 증설 — 단독 보도, 생산·설비 증설·투자 결정 (MINING.COM)
+  - 철강: 인도 신 철강정책 — 단독 보도, 정책·수급 전망(조강능력·원료 수요) (Reuters via MINING.COM)
+  - 레진: PTTGC·SCGC 합작 — 단독 보도, 인수·합작 설비 재편 (ICIS)
+  - 화공: 중국 정유사 석유제품 수출 중단 — 단독 보도, 공급 차질·수출 규제 (Reuters via Yahoo Finance)
+  - 뺀 후보: Fastmarkets 파업 투표(이미 게시 사건·새 사실은 Padcal뿐), Russia 디젤 수출금지 완화(가격 언급·의견성), OPEC+ 용량 검토 연기, Houthi Aramco 공격(공급 영향 수치 없음), Manaus 가뭄(운송비 전망 중심)
+- 5단계 post JSON 작성, key 숫자는 근거 문장에 맞춤, 가격 표현 회피(규칙 2)
+- 6단계 render --check 통과(경고: 단독 보도 4건 기록함)
