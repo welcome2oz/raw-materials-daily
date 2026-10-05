@@ -1,0 +1,179 @@
+{
+  "id": "2026-10-06-brief",
+  "date": "2026-10-06",
+  "issue": 9,
+  "category": "brief",
+  "topic": "supply",
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "포스코 노조 위원장 연임\n**임금교섭 압박 재개**",
+      "sub": "10월 5일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 2건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "supply",
+      "src": "edaily-steel-shipbuilding-wage-talks",
+      "headline": "포스코 노조 위원장 연임\n**임금교섭 압박 재개**",
+      "toc": "포스코 노조 위원장 3선, 임금교섭·쟁의 압박 재개 전망",
+      "why": "국내 철강 생산 차질 가능성 점검",
+      "key": {
+        "value": "7.1%",
+        "label": "노조 기본급 인상 요구"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "포스코 노조 · 임금교섭",
+          "items": [
+            {
+              "k": "UNION",
+              "v": "위원장 3선 연임, 득표율 73.53%"
+            },
+            {
+              "k": "DEMAND",
+              "v": "기본급 7.1% 인상·격려금 600%",
+              "tone": "warn"
+            },
+            {
+              "k": "STRIKE",
+              "v": "9월 9일 창사 이래 첫 파업",
+              "tone": "alert"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "7.1",
+              "unit": "%",
+              "label": "기본급 인상 요구",
+              "hi": true
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "1조4000",
+              "unit": "원",
+              "label": "사측 추산 소요 재원"
+            }
+          ]
+        }
+      ],
+      "coverage": []
+    },
+    {
+      "type": "news",
+      "category": "chemical",
+      "topic": "supply",
+      "src": "reu-mideast-crude-exports",
+      "headline": "중동 원유 수출\n**전쟁 전 수준 회복**",
+      "toc": "중동 원유 수출 9월 14일간 전쟁 전 수준 상회, 유조선 피격 증가",
+      "orig": "Middle East oil exports top pre-war levels for part of September but tanker attacks increase",
+      "why": "원료 수급 완화와 운송 리스크 병행",
+      "key": {
+        "value": "18.3백만bpd",
+        "label": "9월 30일 기준 7일 이동평균 수출"
+      },
+      "viz": [
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "18.3",
+              "unit": "백만 bpd",
+              "label": "9월 30일 기준 7일 이동평균 수출",
+              "hi": true
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "14",
+              "unit": "일",
+              "label": "9월 중 전쟁 전 수준 상회 일수"
+            }
+          ]
+        },
+        {
+          "type": "status",
+          "title": "호르무즈 해협 · 중동 산유국",
+          "items": [
+            {
+              "k": "BASE",
+              "v": "전쟁 전 12개월 평균 약 1,800만 bpd"
+            },
+            {
+              "k": "RISK",
+              "v": "최근 1주일 유조선 공격 최소 7건",
+              "tone": "alert"
+            },
+            {
+              "k": "DRIVER",
+              "v": "사우디, 홍해·걸프 양쪽 선적 확대"
+            }
+          ]
+        }
+      ],
+      "coverage": []
+    },
+    {
+      "type": "closing"
+    }
+  ],
+  "sources": [
+    {
+      "id": "edaily-steel-shipbuilding-wage-talks",
+      "publisher": "이데일리",
+      "title": "벌써 4분기인데…조선·철강 노사 임금 갈등 더 길어진다",
+      "date": "2026-10-05",
+      "time": "14:56",
+      "accessed": "2026-10-06",
+      "url": "https://www.edaily.co.kr/News/Read?newsId=02076246645609968&mediaCodeNo=257",
+      "evidence": [
+        "철강업계에서는 김성호 포스코 노동조합 위원장이 3선에 성공하면서 노조가 올해 임금교섭의 압박 수위를 다시 높일 것으로 보인다.",
+        "김 위원장은 지난 2일 제21대 위원장 선거에서 73.53%의 득표율로 노조원들의 강력한 지지를 받으며 연임에 성공했다.",
+        "노조는 기본급 7.1% 인상과 격려금 600%, 우리사주 50주, 5년치 자연승급분 적용, 명절상여금 200% 등을 요구하고 있다.",
+        "사측은 노조 요구안을 모두 반영할 경우 약 1조4000억원의 재원이 필요할 것이라고 주장하며 반대하고 있다.",
+        "노조가 지난달 9일 창사 이래 처음으로 파업을 진행한 만큼 교섭이 난항을 겪을 경우 향후 쟁의 강도를 높일 가능성이 크다."
+      ]
+    },
+    {
+      "id": "reu-mideast-crude-exports",
+      "publisher": "Reuters",
+      "via": "Investing.com",
+      "title": "Middle East oil exports top pre-war levels for part of September but tanker attacks increase",
+      "date": "2026-10-04",
+      "time": "09:17 PM",
+      "accessed": "2026-10-06",
+      "url": "https://www.investing.com/news/commodities-news/middle-east-crude-oil-exports-exceed-prewar-levels-but-tanker-attacks-increase-4930981",
+      "evidence": [
+        "The seven-day moving average for crude exports from the region was 18.3 million barrels per day on September 30, provisional data from Kpler showed, with volumes topping pre-war levels on 14 days in September.",
+        "Crude exports from the region averaged about 18 million bpd in the 12 months before the start of the US-Israeli war with Iran, according to Kpler.",
+        "The recent export surge has been driven by Saudi Arabia loading from both the Red Sea and the Gulf, three weeks after a September 10 attack on its East-West pipeline, Kpler said.",
+        "However, attacks on tankers continued, with at least seven incidents reported in the past week, Marisks said, noting the very large crude carrier (VLCC) Kazimah III was struck on October 1 by an unknown projectile while in the strait, causing a fire onboard."
+      ]
+    }
+  ],
+  "caption": "10월 5일(현지) 국내외 보도 기준 원재료 뉴스 2건.\n\n1) 포스코 노조 위원장 3선 연임, 임금교섭·쟁의 압박 재개 전망\n2) 중동 원유 수출 9월 14일간 전쟁 전 수준 상회, 유조선 피격은 증가\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": [
+    "원자재",
+    "철강",
+    "포스코",
+    "원유",
+    "석유화학"
+  ]
+}
