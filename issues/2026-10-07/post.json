@@ -1,0 +1,254 @@
+{
+ "id": "2026-10-07-brief",
+ "date": "2026-10-07",
+ "issue": 10,
+ "category": "brief",
+ "topic": "supply",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "TODAY'S RAW MATERIALS NEWS",
+   "title": "알루노르테 가스 차질\n**최대 2.1억 달러 타격**",
+   "sub": "10월 5일~6일(현지) 국내외 보도·기관 발표 기준\n오늘의 원재료 뉴스 4건",
+   "toc": true
+  },
+  {
+   "type": "news",
+   "category": "nonferrous",
+   "topic": "supply",
+   "src": "mcw-hydro-alunorte-gas",
+   "headline": "알루노르테 가스 차질\n**최대 2.1억 달러 타격**",
+   "toc": "노르스크 하이드로, 알루노르테 가스 공급 차질로 최대 2.1억 달러 타격 전망",
+   "why": "알루미나 공급처 가동 동향 점검",
+   "key": {
+    "value": "210백만 달러",
+    "label": "3·4분기 최대 재무 타격"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "알루노르테 정제소 · 브라질",
+     "items": [
+      {"k": "CAUSE", "v": "가스 공급사 CELBA 가스 공급 차질 통보 (8월)", "tone": "alert"},
+      {"k": "OUTPUT", "v": "8월 초 생산 설비의 50%로 감산 후 전면 증산 재개", "tone": "warn"},
+      {"k": "OUTLOOK", "v": "추가 공급 중단은 예상하지 않음"}
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {"value": "75~100", "unit": "백만 달러", "label": "3분기 보크사이트·알루미나 부문 영향", "hi": true}
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {"value": "90~110", "unit": "백만 달러", "label": "4분기 가스 차익거래 비용"}
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "news",
+   "category": "steel",
+   "topic": "tariff",
+   "src": "snm-australia-plate-ad",
+   "headline": "호주, 한국산 후판\n**반덤핑 관세 확정**",
+   "toc": "호주, 한국·중국산 후판 반덤핑 관세 부과 확정",
+   "why": "대호주 후판 수출 조건 변화 확인",
+   "key": {
+    "value": "4.75mm",
+    "label": "대상 후판 최소 두께"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "호주 · 후판 반덤핑",
+     "items": [
+      {"k": "DECISION", "v": "9월 24일 한국·중국산 후판 관세 부과 확정", "tone": "alert"},
+      {"k": "REASON", "v": "덤핑으로 자국 산업 실질적 피해 판단(판매 감소 등)"},
+      {"k": "SCOPE", "v": "코일 아님, 도금·코팅 안 된 비합금강·기타 합금강 후판"}
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {"value": "4.75", "unit": "mm 이상", "label": "대상 두께", "hi": true}
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {"value": "600", "unit": "mm 이상", "label": "대상 폭"}
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "news",
+   "category": "resin",
+   "topic": "supply",
+   "src": "icis-braskem-idesa-court",
+   "headline": "브라스켐-이데사\n**회생 탈출 자금 위험**",
+   "toc": "브라질 법원 금지명령이 브라스켐 이데사 4.86억 달러 지원과 회생 탈출 위협",
+   "orig": "INSIGHT: Brazil court ruling threatens Braskem Idesa's bankruptcy exit",
+   "why": "멕시코 PE 공급사 재무 안정성 확인",
+   "key": {
+    "value": "486백만 달러",
+    "label": "브라스켐 지원 계획 규모"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "브라스켐 이데사 · 멕시코 PE",
+     "items": [
+      {"k": "RISK", "v": "금지명령으로 4.86억 달러 전액 확보 불투명", "tone": "alert"},
+      {"k": "NEXT", "v": "브라스켐 항소 예정, 대체 자금 필요 시 지분 희석", "tone": "warn"},
+      {"k": "BLOCKED", "v": "회생 탈출 시 들어올 자기자본 7,100만 달러 지급 불가"}
+     ]
+    },
+    {
+     "type": "split",
+     "half": true,
+     "title": "지원 4.86억 달러 구성",
+     "unit": "백만 달러",
+     "parts": [
+      {"label": "DIP 금융", "value": 283},
+      {"label": "선행 금융 롤업", "value": 131},
+      {"label": "자기자본", "value": 71}
+     ]
+    },
+    {
+     "type": "split",
+     "half": true,
+     "title": "회생 후 지분 계획",
+     "unit": "%",
+     "parts": [
+      {"label": "브라스켐", "value": 58.3, "calc": true},
+      {"label": "선순위 채권단", "value": 33.3, "calc": true},
+      {"label": "그루포 이데사", "value": 8.3, "calc": true}
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "news",
+   "category": "chemical",
+   "topic": "regulation",
+   "src": "fedreg-epa-hfc-2027-allowances",
+   "headline": "미국 EPA 2027년\n**HFC 생산·소비 허용량**",
+   "toc": "EPA, 2027년 HFC 생산·소비 허용량 배분 공고",
+   "orig": "Phasedown of Hydrofluorocarbons: Notice of 2027 Allowance Allocations for Production and Consumption of Regulated Substances Under the American Innovation and Manufacturing Act of 2020, and Notice of Final Actions Establishing Administrative Consequences",
+   "why": "냉매 HFC 2027년 조달 한도 확인",
+   "key": {
+    "value": "229,521,263",
+    "label": "2027년 생산 허용량 상한(MTEVe)"
+   },
+   "viz": [
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {"value": "229,521,263", "unit": "MTEVe", "label": "2027년 생산 허용량 상한", "hi": true}
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {"value": "181,522,990", "unit": "MTEVe", "label": "2027년 소비 허용량 상한"}
+     ]
+    },
+    {
+     "type": "status",
+     "title": "미국 EPA · HFC 단계적 감축",
+     "items": [
+      {"k": "ISSUED", "v": "2027년 생산·소비 허용량 배분 완료"},
+      {"k": "SET-ASIDE", "v": "의료용 흡입기 비상용 100만 MTEVe 별도 확보"},
+      {"k": "ACTION", "v": "감사보고서 미제출 2곳 허용량 보류", "tone": "warn"}
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "closing"
+  }
+ ],
+ "sources": [
+  {
+   "id": "mcw-hydro-alunorte-gas",
+   "publisher": "Reuters",
+   "via": "MINING.COM",
+   "title": "Norsk Hydro sees up to $210 million hit from gas supply disruption at Alunorte",
+   "date": "2026-10-05",
+   "time": "11:21 am",
+   "accessed": "2026-10-07",
+   "url": "https://www.mining.com/web/norsk-hydro-sees-up-to-210-million-hit-from-gas-supply-disruption-at-alunorte/",
+   "evidence": [
+    "Norsk Hydro (OTCMKTS: NHYDY) said on Monday it could take a financial hit of up to $210 million as it continues to buy gas at spot-market prices following disruptions to natural gas deliveries at its Alunorte refinery in Brazil.",
+    "The Norwegian company estimates a $75 million to $100 million impact to its bauxite and alumina business in the third quarter due to lower production and purchase of gas above contracted prices.",
+    "It expects a further $90 million to $110 million hit in the fourth quarter from gas arbitrage costs at Alunorte.",
+    "Hydro said gas supplier CELBA notified Alunorte in August that gas availability had been disrupted.",
+    "The refinery, in Brazil's northern state of Para, had cut output to 50% of capacity earlier that month due to disruptions.",
+    "Alunorte had begun ramping up alumina production to full capacity after reaching a temporary agreement with CELBA in August.",
+    "Alunorte does not expect further supply interruptions stemming from the current situation, and is working closely with CELBA, Hydro said."
+   ]
+  },
+  {
+   "id": "snm-australia-plate-ad",
+   "publisher": "철강금속신문",
+   "title": "호주, 한국산 후판 반덤핑 관세 부과 확정",
+   "date": "2026-10-06",
+   "time": "11:32",
+   "accessed": "2026-10-07",
+   "url": "http://www.snmnews.com/news/articleView.html?idxno=575530",
+   "evidence": [
+    "한국무역협회에 따르면 호주 정부는 지난 9월 24일 한국과 중국에서 수출되는 일정 규격의 후판에 대한 반덤핑 관세 부과를 확정했다.",
+    "호주 정부는 \"일부 수입 후판의 덤핑으로 자국 산업에 판매 감소와 가격 하락 등 실질적인 피해가 발생했다\"고 판단했다.",
+    "대상은 두께 4.75mm 이상, 폭 600mm 이상의 비합금강 또는 기타 합금강 후판이다.",
+    "코일 형태가 아니면서 금속 피복·도금·코팅되지 않은 제품이 포함된다."
+   ]
+  },
+  {
+   "id": "icis-braskem-idesa-court",
+   "publisher": "ICIS",
+   "title": "INSIGHT: Brazil court ruling threatens Braskem Idesa's bankruptcy exit",
+   "date": "2026-10-06",
+   "accessed": "2026-10-07",
+   "url": "https://www.icis.com/explore/resources/news/2026/10/06/11236198/insight-brazil-court-ruling-threatens-braskem-idesa-s-bankruptcy-exit",
+   "evidence": [
+    "A court injunction in Brazil could prevent Braskem Idesa from securing all of the $486 million its majority shareholder would provide for its emergence from bankruptcy protection.",
+    "Braskem disagrees with the ruling and intends to appeal it, the company said in court documents.",
+    "Otherwise, Braskem Idesa may need to find replacement funds. If that happens, Braskem's stake in the joint venture could be diluted.",
+    "The roll-up of $131 million in prepetition financing.",
+    "$283 million in debtor-in-possession (DIP) financing.",
+    "$71 million in equity contributions to be made on Braskem Idesa's emergence from bankruptcy protection.",
+    "At the least, the order bars Braskem from contributing the $71 million that the joint venture would receive when it exits bankruptcy protection.",
+    "Altogether, Braskem would hold a 58 1/3% stake in the reorganized Braskem Idesa. Holders of senior secured notes would see their holdings converted into a 33 1/3% stake in the reorganized company. The remaining 8 1/3% stake would go to Grupo Idesa, the other legacy joint venture partner."
+   ]
+  },
+  {
+   "id": "fedreg-epa-hfc-2027-allowances",
+   "publisher": "Federal Register",
+   "title": "Phasedown of Hydrofluorocarbons: Notice of 2027 Allowance Allocations for Production and Consumption of Regulated Substances Under the American Innovation and Manufacturing Act of 2020, and Notice of Final Actions Establishing Administrative Consequences",
+   "date": "2026-10-06",
+   "accessed": "2026-10-07",
+   "url": "https://www.federalregister.gov/documents/2026/10/06/2026-20389/phasedown-of-hydrofluorocarbons-notice-of-2027-allowance-allocations-for-production-and-consumption",
+   "evidence": [
+    "Under the phasedown schedule, for 2027, total production allowances may not exceed 229,521,263 metric tons of exchange value equivalent (MTEVe) and total consumption allowances may not exceed 181,522,990 MTEVe.",
+    "The EPA has set aside 1,000,000 MTEVe allowances for that purpose from both the consumption and production pools.",
+    "These entities failed to submit their auditing reports as required in 40 CFR 84.33 and therefore the EPA has withheld a portion of their allowances (if allowances were allocated to the entity) and will continue withholding these allowances until the missing reports are submitted and subsequently verified by the Agency: University of California (UC) San Diego and Wolfspeed."
+   ]
+  }
+ ],
+ "caption": "10월 5일~6일(현지) 국내외 보도·기관 발표 기준 원재료 뉴스 4건.\n\n1) 노르스크 하이드로, 알루노르테 가스 공급 차질로 최대 2.1억 달러 타격 전망\n2) 호주, 한국·중국산 후판 반덤핑 관세 부과 확정\n3) 브라질 법원 금지명령이 브라스켐 이데사 회생 탈출 자금 위협\n4) 미 EPA, 2027년 HFC 생산·소비 허용량 배분 공고\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+ "hashtags": ["원자재", "알루미나", "철강", "폴리에틸렌", "냉매"]
+}

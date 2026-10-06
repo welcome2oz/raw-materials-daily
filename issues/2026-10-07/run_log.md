@@ -1,0 +1,11 @@
+# run_log 2026-10-07 (A 모드, 호수 No.10)
+- 발행함 feeds/2026-10-07 수집 자료 받음 (채널 65개, 원문 발췌 12개). 직접 수집 없음.
+- 환경: 기본 python3(3.11)에 playwright 없음, setup.sh 의 Chromium 설치 실패 → /usr/bin/python3(3.13) + 사전 설치 /opt/pw-browsers/chromium 으로 렌더 (키트 수정 없음).
+- 선정(전부 단독 보도, 2곳 이상 묶음 없음):
+  - 비철 Alunorte(Reuters via MINING.COM) — 단독: 생산·가동(가스 공급 차질로 감산·재가동, 재무 영향 추정)
+  - 스틸 호주 후판 반덤핑 확정(철강금속신문) — 단독: 무역구제 결정(9/24 확정, 대상 규격 명시)
+  - 레진 Braskem Idesa(ICIS) — 단독: 9/28 호(icis-braskem-idesa)와 같은 사건이나 지원금 구성·지분 구조·$71M 차단 등 새 사실. update_of 는 14일 기록 대조 실패로 못 붙임(render 가 통과). 애매하나 새 사실 기준으로 포함
+  - 화공 EPA HFC 2027 허용량(Federal Register) — 단독: 규제 시행(기관 1차 출처)
+- 뺀 후보: Cleveland-Cliffs Butler(10/5 게재, 범위 밖), Aramco 재고(유가·시황 성격), Trafigura 송전망(카테고리 키워드 없음), Tsingshan-NRZ 철도(우선순위 낮음), 철강 세액공제 법안(발의 단계), Huntsman 수요 전망(의견), Sumitomo LCP(카테고리 외), 유료 원문 못 읽는 스틸데일리·SNM 기사.
+- render --check 통과(경고: 단독 보도 4건, 위 사유). 테마 light. JPG 6장 육안 확인: 글자 잘림 없음(슬라이드 2·5 큰 숫자 줄바꿈만 있음).
+- 전날(10/06) 게시: published/2026-10-06.json 있음 → 게시 성공.
