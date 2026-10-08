@@ -1,0 +1,120 @@
+{
+ "id": "2026-10-09-brief",
+ "date": "2026-10-09",
+ "issue": 12,
+ "category": "brief",
+ "topic": "supply",
+ "slides": [
+  {"type": "cover", "kicker": "TODAY'S RAW MATERIALS NEWS",
+   "title": "허리케인 이사이아스\n**걸프 원유 25% 중단**",
+   "sub": "10월 8일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 4건", "toc": true},
+  {"type": "news", "category": "nonferrous", "topic": "tariff", "src": "fm-kcm-zambia-duty-waiver",
+   "headline": "KCM 잠비아\n**구리정광 수출세 면제 재신청**",
+   "toc": "KCM, 잠비아 구리정광 수출세 면제 재신청",
+   "orig": "KCM seeks new Zambian export duty waiver for hard-to-smelt copper concentrate",
+   "why": "잠비아 정광 수출세 면제 재개 여부 확인",
+   "key": {"value": "12,541톤", "label": "KCM이 소진한 무관세 수출 할당량"},
+   "viz": [
+    {"type": "status", "title": "콘콜라 구리(KCM) · 잠비아",
+     "items": [
+      {"k": "STATUS", "v": "정광 수출세 10% 면제 재신청 추진", "tone": "alert"},
+      {"k": "QUOTA", "v": "면제 종료(9월 30일) 전 무관세 할당량 전량 수출", "tone": "warn"},
+      {"k": "SMELTER", "v": "Nchanga 제련소 6월 1일 중단 후 9월 13일 재가동"}
+     ]},
+    {"type": "stats", "half": true, "items": [{"value": "10", "unit": "%", "label": "잠비아 구리정광 수출세", "hi": true}]},
+    {"type": "stats", "half": true, "items": [{"value": "12,541", "unit": "톤", "label": "무관세 수출 할당량"}]}
+   ],
+   "coverage": []},
+  {"type": "news", "category": "steel", "topic": "tariff", "src": "snm-china-galv-ad-extension",
+   "headline": "中 도금강판 잠정관세\n**내년 1월까지 연장**",
+   "toc": "중국산 도금강판 잠정관세 내년 1월까지 연장",
+   "why": "중국산 도금강판 수입 조달 비용 점검",
+   "key": {"value": "7개월", "label": "잠정관세 부과기간(내년 1월 11일까지)"},
+   "viz": [
+    {"type": "status", "title": "중국산 도금강판 · 잠정덤핑방지관세",
+     "items": [
+      {"k": "DECISION", "v": "재정경제부 8일 고시, 부과기간 연장 시행", "tone": "alert"},
+      {"k": "PERIOD", "v": "4개월에서 내년 1월 11일까지 7개월로 연장"},
+      {"k": "NEXT", "v": "무역위원회 최종판정은 아직 나오지 않음", "tone": "warn"}
+     ]},
+    {"type": "stats", "half": true, "items": [{"value": "33.67", "unit": "%", "label": "윈스톤디벨롭먼트 관세율(기존과 동일)", "hi": true}]},
+    {"type": "stats", "half": true, "items": [{"value": "25.75", "unit": "%", "label": "그 밖의 공급자 관세율"}]}
+   ],
+   "coverage": []},
+  {"type": "news", "category": "resin", "topic": "maker", "src": "edaily-soil-shaheen",
+   "headline": "에쓰오일 샤힌\n**다음 달 준공식**",
+   "toc": "에쓰오일 샤힌 다음 달 준공, 에틸렌 180만t 추가",
+   "why": "국내 에틸렌 공급능력·구조개편 영향 확인",
+   "key": {"value": "180만t", "label": "샤힌 가동 시 추가되는 연 에틸렌 생산능력"},
+   "viz": [
+    {"type": "status", "title": "에쓰오일 샤힌 프로젝트 · 울산",
+     "items": [
+      {"k": "STATUS", "v": "다음 달 준공식 계획, 현재 시운전 중", "tone": "alert"},
+      {"k": "START", "v": "이르면 내년 초 본격 상업가동 예정"},
+      {"k": "RESTRUCTURE", "v": "대산·여수 감축 249만t, 정부 최소 목표 270만t에 못 미침", "tone": "warn"}
+     ]},
+    {"type": "stats", "half": true, "items": [{"value": "180", "unit": "만t", "label": "연간 에틸렌 생산능력 추가", "hi": true}]},
+    {"type": "stats", "half": true, "items": [{"value": "320", "unit": "만t", "label": "연간 석유화학제품 생산능력 추가"}]}
+   ],
+   "coverage": []},
+  {"type": "news", "category": "chemical", "topic": "supply", "src": "reu-isaias-gulf-shutins", "update_of": "2026-10-08-s4",
+   "headline": "허리케인 이사이아스\n**걸프 원유 25% 중단**",
+   "toc": "이사이아스, 멕시코만 원유 25% 생산 중단",
+   "orig": "Isaias intensifies into first Atlantic hurricane of 2026",
+   "why": "미 걸프 정유·화학 설비 영향 점검",
+   "key": {"value": "25.08%", "label": "멕시코만 원유 생산 중단 비중"},
+   "viz": [
+    {"type": "status", "title": "허리케인 이사이아스 · 미국 멕시코만",
+     "items": [
+      {"k": "STATUS", "v": "올해 첫 대서양 허리케인으로 강화", "tone": "alert"},
+      {"k": "WIND", "v": "75mph(120km/h)"},
+      {"k": "OPERATORS", "v": "셸·셰브런, 걸프 해상 설비 조업 축소", "tone": "warn"}
+     ]},
+    {"type": "stats", "half": true, "items": [{"value": "25.08", "unit": "%", "label": "원유 생산 중단 비중", "hi": true}]},
+    {"type": "stats", "half": true, "items": [{"value": "16.37", "unit": "%", "label": "천연가스 생산 중단 비중"}]}
+   ],
+   "coverage": []},
+  {"type": "closing"}
+ ],
+ "sources": [
+  {"id": "fm-kcm-zambia-duty-waiver", "publisher": "Fastmarkets",
+   "title": "KCM seeks new Zambian export duty waiver for hard-to-smelt copper concentrate", "date": "2026-10-08", "time": "10:12 UTC", "accessed": "2026-10-09",
+   "url": "https://www.fastmarkets.com/insights/kcm-seeks-new-zambian-export-duty-waiver-for-hard-to-smelt-copper-concentrate/",
+   "evidence": [
+    "Konkola Copper Mines (KCM) was seeking a new waiver of Zambia's 10% copper concentrate export duty,",
+    "The company had exported its entire 12,541-tonne duty-free quota before the suspension ended on September 30",
+    "The shutdown of KCM’s Nchanga smelter began on June 1 and the smelter restarted on September 13, Kunda said."
+   ]},
+  {"id": "snm-china-galv-ad-extension", "publisher": "철강금속신문",
+   "title": "中 도금강판 잠정 반덤핑 관세 연장 확정…내년 1월까지", "date": "2026-10-08", "time": "08:28", "accessed": "2026-10-09",
+   "url": "https://www.snmnews.com/news/articleView.html?idxno=575634",
+   "evidence": [
+    "재정경제부는 8일 '중국산 아연 및 아연합금 표면처리 냉간압연제품에 대한 잠정덤핑방지관세 부과기간 연장'을 고시하고 이날부터 시행한다고 밝혔다.",
+    "이번 고시에 따라 잠정덤핑방지관세 부과기간은 당초 올해 6월 12일부터 10월 11일까지 4개월에서 내년 1월 11일까지 7개월로 연장됐다.",
+    "잠정덤핑방지관세율은 기존과 동일한 22.34~33.67%다.",
+    "윈스톤디벨롭먼트(Winstone Development)는 33.67%, 그 밖의 공급자는 25.75%다.",
+    "무역위원회의 최종판정이 아직 나오지 않은 가운데 국내 냉연·도금업계와 수입업계도 향후 조사 결과를 확인하고 있다."
+   ]},
+  {"id": "edaily-soil-shaheen", "publisher": "이데일리",
+   "title": "내달 샤힌 프로젝트 준공하지만…울산 석화 재편 '안갯속'", "date": "2026-10-08", "time": "16:10", "accessed": "2026-10-09",
+   "url": "https://www.edaily.co.kr/News/Read?newsId=04572326645610952&mediaCodeNo=257",
+   "evidence": [
+    "8일 업계에 따르면 에쓰오일은 다음 달 중 샤힌 프로젝트 준공식을 개최할 계획이다.",
+    "현재 시운전을 진행 중이며, 이르면 내년 초 본격적인 상업가동에 들어갈 예정이다.",
+    "샤힌 프로젝트가 본격 가동되면 에쓰오일은 연간 약 320만톤(t)의 석유화학제품 생산능력을 추가로 확보하게 된다.",
+    "샤힌 프로젝트가 가동되면 연간 에틸렌 생산능력 180만t이 새로 추가된다.",
+    "현재 충남 대산과 전남 여수에서는 사업재편을 통해 총 249만t 규모의 에틸렌 생산능력을 줄이기로 했다.",
+    "하지만 여전히 정부가 제시한 최소 감축 목표인 270만t에도 못 미치고 있다."
+   ]},
+  {"id": "reu-isaias-gulf-shutins", "publisher": "Reuters", "via": "Investing.com",
+   "title": "Isaias intensifies into first Atlantic hurricane of 2026", "date": "2026-10-07", "time": "11:58 PM", "accessed": "2026-10-09",
+   "url": "https://www.investing.com/news/commodities-news/us-nhc-says-isaias-has-become-a-hurricane-4937857",
+   "evidence": [
+    "packing maximum sustained winds of 75 mph (120 kph), the US National Hurricane Center said on Thursday.",
+    "US energy companies such as Shell and Chevron said they were curtailing offshore operations at their Gulf platforms.",
+    "had shut in about 25.08% of current oil production and 16.37% of current natural gas production"
+   ]}
+ ],
+ "caption": "10월 8일(현지) 국내외 보도 기준 원재료 뉴스 4건.\n\n1) KCM, 잠비아 구리정광 수출세 면제 재신청\n2) 정부, 중국산 도금강판 잠정덤핑방지관세 내년 1월까지 연장\n3) 에쓰오일 샤힌 프로젝트 다음 달 준공식, 연 에틸렌 180만t 추가\n4) 허리케인 이사이아스, 미 멕시코만 원유·가스 생산 중단\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+ "hashtags": ["원자재", "구리", "철강", "에틸렌", "정유"]
+}
