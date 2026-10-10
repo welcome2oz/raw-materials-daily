@@ -1,0 +1,381 @@
+{
+ "id": "2026-10-11-brief",
+ "date": "2026-10-11",
+ "issue": 14,
+ "category": "brief",
+ "topic": "supply",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "TODAY'S RAW MATERIALS NEWS",
+   "title": "EU 전략 원자재\n**프로젝트 46건 선정**",
+   "sub": "10월 7일~9일(현지) 국내외 보도·기관 발표 기준\n오늘의 원재료 뉴스 4건",
+   "toc": true
+  },
+  {
+   "type": "news",
+   "category": "nonferrous",
+   "topic": "regulation",
+   "src": [
+    "ec-crma-46-strategic-projects",
+    "reu-eu-46-strategic-projects"
+   ],
+   "headline": "EU 전략 원자재\n**프로젝트 46건 선정**",
+   "toc": "EU, 전략 원자재 프로젝트 46건 선정",
+   "orig": "Commission selects 46 new Strategic Projects to bolster the EU's supply of critical raw materials",
+   "why": "EU 내 구리·알루미늄 공급망 변화 확인",
+   "key": {
+    "value": "46건",
+    "label": "EU 신규 전략 프로젝트"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "EU 핵심원자재법(CRMA) · 신규 전략 프로젝트",
+     "items": [
+      {
+       "k": "SELECTED",
+       "v": "16개 회원국 46건 선정 (신청 102건)",
+       "tone": "alert"
+      },
+      {
+       "k": "BENEFIT",
+       "v": "인허가 신속 처리 대상",
+       "sub": "EU 자금이 자동 지원되지는 않음",
+       "tone": "warn"
+      },
+      {
+       "k": "NOTABLE",
+       "v": "핀란드 알루미늄 제련소·스웨덴 비스카리아 구리 프로젝트 포함"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "46",
+       "unit": "건",
+       "label": "신규 전략 프로젝트 (추출 8·가공 11·재활용 19)",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "21.1",
+       "unit": "십억 유로",
+       "label": "46건 필요 자본투자(약)"
+      }
+     ]
+    }
+   ],
+   "coverage": [
+    {
+     "publisher": "Reuters",
+     "title": "European Commission picks 46 new strategic critical mineral projects",
+     "url": "https://www.mining.com/web/european-commission-picks-46-new-strategic-critical-mineral-projects/",
+     "date": "2026-10-09"
+    },
+    {
+     "publisher": "MINING.COM",
+     "title": "EU puts KGHM’s $2.4B copper projects on fast track",
+     "url": "https://www.mining.com/eu-puts-kghms-2-4b-copper-projects-on-fast-track/",
+     "date": "2026-10-09"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "category": "steel",
+   "topic": "tariff",
+   "src": "fr-kr-hotrolled-cvd-final",
+   "headline": "미 상무부, 한국산 열연\n**상계관세율 확정**",
+   "toc": "미 상무부, 한국산 열연 상계관세 최종 결과",
+   "orig": "Certain Hot-Rolled Steel Flat Products From the Republic of Korea: Final Results of Countervailing Duty Administrative Review; 2023",
+   "why": "대미 열연 수출 관세 부담 점검",
+   "key": {
+    "value": "POSCO 3.68%",
+    "label": "포스코 상계관세율"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "한국산 열연강판 · 상계관세 연례재심(2023년)",
+     "items": [
+      {
+       "k": "RESULT",
+       "v": "현대제철·포스코 보조금 수혜 판정",
+       "tone": "alert"
+      },
+      {
+       "k": "EFFECTIVE",
+       "v": "2026년 10월 9일 적용"
+      },
+      {
+       "k": "NEXT",
+       "v": "CBP 부과 지침은 35일 이후 발급 예정",
+       "tone": "warn"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "1.28",
+       "unit": "%",
+       "label": "현대제철 상계관세율"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "3.68",
+       "unit": "%",
+       "label": "포스코 상계관세율",
+       "hi": true
+      }
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "news",
+   "category": "resin",
+   "topic": "regulation",
+   "src": "icis-uk-plastic-recycling-83pct",
+   "headline": "영국 환경청, 플라스틱\n**재활용 의무 83% 기준**",
+   "toc": "영국 환경청, 포장 플라스틱 재활용 83% 기준 설정",
+   "orig": "UK Environment Agency sets 83% threshold for 2026 plastic packaging recycling obligations",
+   "why": "영국 포장 플라스틱 규제 동향 확인",
+   "key": {
+    "value": "83%",
+    "label": "영국 2026년 재활용 의무 기준"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "영국 환경청(EA) · 2026 포장 플라스틱 재활용 의무",
+     "items": [
+      {
+       "k": "THRESHOLD",
+       "v": "의무의 최소 83% 이행 기준 설정",
+       "tone": "alert"
+      },
+      {
+       "k": "BACKGROUND",
+       "v": "영국이 연간 재활용 목표에 크게 못 미침",
+       "tone": "warn"
+      },
+      {
+       "k": "RULE",
+       "v": "2026년부터 PERN은 폐기물이 도착지에 수령된 뒤에만 발급"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "83",
+       "unit": "%",
+       "label": "EA가 정한 의무 이행 기준",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "49",
+       "unit": "%",
+       "label": "올해 의무 대비 이행(약, EA 8월 자료)"
+      }
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "news",
+   "category": "chemical",
+   "topic": "supply",
+   "src": [
+    "inv-germany-15mb-reserve-release",
+    "iea-oct7-stock-release-statement"
+   ],
+   "headline": "독일, 비축유 1,500만 배럴\n**G7 합의 따라 방출**",
+   "toc": "독일, 비축유 최대 1,500만 배럴 방출",
+   "orig": "Germany to release 15 million barrels from oil reserves",
+   "why": "디젤 우선 방출, 정유·화학 원료 수급 점검",
+   "key": {
+    "value": "15백만 배럴",
+    "label": "독일 비축 석유 방출 상한"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "독일 · G7·IEA 긴급 비축유 방출",
+     "items": [
+      {
+       "k": "ACTION",
+       "v": "독일, 석유·석유제품 최대 1,500만 배럴 방출",
+       "tone": "alert"
+      },
+      {
+       "k": "ORDER",
+       "v": "디젤·난방유 먼저, 원유는 이후"
+      },
+      {
+       "k": "IEA",
+       "v": "회원국, 디젤 비축 방출 우선·가속 지지",
+       "tone": "warn"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "15",
+       "unit": "백만 배럴",
+       "label": "독일 방출 상한",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "325",
+       "unit": "백만 배럴",
+       "label": "2026년 3월 공동 조치 이후 누적 방출(약)"
+      }
+     ]
+    }
+   ],
+   "coverage": [
+    {
+     "publisher": "IEA",
+     "title": "Statement by IEA Executive Director on meeting of IEA Member governments on 7 October 2026",
+     "url": "https://www.iea.org/news/statement-by-iea-executive-director-on-meeting-of-iea-member-governments-on-7-october-2026",
+     "date": "2026-10-07"
+    }
+   ]
+  },
+  {
+   "type": "closing"
+  }
+ ],
+ "sources": [
+  {
+   "id": "ec-crma-46-strategic-projects",
+   "publisher": "European Commission",
+   "title": "Commission selects 46 new Strategic Projects to bolster the EU's supply of critical raw materials",
+   "date": "2026-10-09",
+   "accessed": "2026-10-11",
+   "url": "https://luxembourg.representation.ec.europa.eu/actualites-et-evenements/actualites/commission-selects-46-new-strategic-projects-bolster-eus-supply-critical-raw-materials-2026-10-09_en",
+   "evidence": [
+    "the European Commission today announced that it has selected 46 new Strategic Projects across 16 Member States.",
+    "They were selected from 102 applications received in the call for applications that concluded earlier this year.",
+    "eight are on extraction, 11 on processing, and 19 are recycling projects"
+   ]
+  },
+  {
+   "id": "reu-eu-46-strategic-projects",
+   "publisher": "Reuters",
+   "title": "European Commission picks 46 new strategic critical mineral projects",
+   "date": "2026-10-09",
+   "accessed": "2026-10-11",
+   "url": "https://www.mining.com/web/european-commission-picks-46-new-strategic-critical-mineral-projects/",
+   "evidence": [
+    "The European Commission has chosen 46 strategic raw material projects to benefit from faster permitting",
+    "The 46 new projects are expected to require around €21.1 billion ($23.7 billion) in capital investment",
+    "Arctial’s planned aluminium smelter in Finland and the Viscaria copper project in Sweden",
+    "Strategic projects do not automatically receive EU funding."
+   ],
+   "time": "7:03 am",
+   "via": "MINING.COM"
+  },
+  {
+   "id": "fr-kr-hotrolled-cvd-final",
+   "publisher": "Federal Register",
+   "title": "Certain Hot-Rolled Steel Flat Products From the Republic of Korea: Final Results of Countervailing Duty Administrative Review; 2023",
+   "date": "2026-10-09",
+   "accessed": "2026-10-11",
+   "url": "https://www.federalregister.gov/documents/2026/10/09/2026-20778/certain-hot-rolled-steel-flat-products-from-the-republic-of-korea-final-results-of-countervailing",
+   "evidence": [
+    "received countervailable subsidies during the period of review (POR) January 1, 2023, through December 31, 2023.",
+    "Applicable October 9, 2026.",
+    "Commerce intends to issue assessment instructions to CBP no earlier than 35 days after the date",
+    "Hyundai Steel Company 7 | 1.28",
+    "POSCO 8 | 3.68"
+   ]
+  },
+  {
+   "id": "icis-uk-plastic-recycling-83pct",
+   "publisher": "ICIS",
+   "title": "UK Environment Agency sets 83% threshold for 2026 plastic packaging recycling obligations",
+   "date": "2026-10-09",
+   "accessed": "2026-10-11",
+   "url": "https://www.icis.com/explore/resources/news/2026/10/09/11236689/uk-environment-agency-sets-83-threshold-for-2026-plastic-recycling-obligations",
+   "evidence": [
+    "against producers in England that meet at least 83% of their plastics recycling obligations in 2026",
+    "data showing the UK is significantly behind its annual plastic recycling targets",
+    "around 49% of its total plastic packaging recycling obligations for the year so far up to",
+    "From 2026 onwards, PERNs can no longer be issued until the waste has been received at its destination."
+   ]
+  },
+  {
+   "id": "inv-germany-15mb-reserve-release",
+   "publisher": "Investing.com",
+   "title": "Germany to release 15 million barrels from oil reserves",
+   "date": "2026-10-09",
+   "accessed": "2026-10-11",
+   "url": "https://www.investing.com/news/commodities-news/germany-to-release-15-million-barrels-from-oil-reserves-93CH-4941051",
+   "evidence": [
+    "Germany will release up to 15 million barrels of oil and petroleum products, the economy ministry said Friday",
+    "as part of a Group of Seven agreement to release 100 million barrels of diesel and crude oil from emergency reserves.",
+    "diesel and heating oil will be released first, with crude oil to follow."
+   ],
+   "time": "08:16 AM"
+  },
+  {
+   "id": "iea-oct7-stock-release-statement",
+   "publisher": "IEA",
+   "title": "Statement by IEA Executive Director on meeting of IEA Member governments on 7 October 2026",
+   "date": "2026-10-07",
+   "accessed": "2026-10-11",
+   "url": "https://www.iea.org/news/statement-by-iea-executive-director-on-meeting-of-iea-member-governments-on-7-october-2026",
+   "evidence": [
+    "To date, approximately 325 million barrels of oil have been released under the March 2026 Collective Action",
+    "IEA Member governments expressed support for accelerating the oil stock releases",
+    "IEA Members also supported the prioritisation of the release of diesel stocks, to the extent possible"
+   ]
+  }
+ ],
+ "caption": "10월 7일~9일(현지) 국내외 보도·기관 발표 기준 원재료 뉴스 4건.\n\n1) EU, 전략 원자재 프로젝트 46건 선정\n2) 미 상무부, 한국산 열연 상계관세 최종 결과\n3) 영국 환경청, 포장 플라스틱 재활용 83% 기준 설정\n4) 독일, 비축유 최대 1,500만 배럴 방출\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+ "hashtags": [
+  "원자재",
+  "핵심광물",
+  "열연강판",
+  "플라스틱",
+  "비축유"
+ ]
+}
