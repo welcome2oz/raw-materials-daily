@@ -1,0 +1,259 @@
+{
+ "id": "2026-10-12-brief",
+ "date": "2026-10-12",
+ "issue": 15,
+ "category": "brief",
+ "topic": "supply",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "TODAY'S RAW MATERIALS NEWS",
+   "title": "센티넬라 구리 파업\n**단식투쟁으로 격화**",
+   "sub": "10월 6일~12일(현지) 국내외 보도·기관 발표 기준\n오늘의 원재료 뉴스 3건",
+   "toc": true
+  },
+  {
+   "type": "news",
+   "category": "nonferrous",
+   "topic": "supply",
+   "src": "mc-antofagasta-hunger-strike",
+   "update_of": "2026-09-29-s1",
+   "headline": "센티넬라 구리 파업\n**단식투쟁으로 격화**",
+   "toc": "칠레 센티넬라 구리 광산 파업, 단식투쟁으로 확대",
+   "orig": "Antofagasta miners escalate copper strike with hunger protest",
+   "why": "칠레 구리 조업 차질 장기화 여부 점검",
+   "key": {
+    "value": "709명",
+    "label": "센티넬라 파업 참여 노동자"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "센티넬라 구리 광산 · 칠레 파업 3일째",
+     "items": [
+      {
+       "k": "ESCALATION",
+       "v": "노조원 3명 단식투쟁 시작",
+       "tone": "alert"
+      },
+      {
+       "k": "OFFER",
+       "v": "회사, 기본급 실질 2% 인상과 1인당 현금 보너스 제시",
+       "tone": "warn"
+      },
+      {
+       "k": "OUTLOOK",
+       "v": "회사는 파업에도 생산 전망 유지"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "709",
+       "unit": "명",
+       "label": "파업 참여 노동자",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "22",
+       "unit": "%",
+       "label": "센티넬라 직접 고용 인력 대비(약)"
+      }
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "news",
+   "category": "steel",
+   "topic": "tariff",
+   "src": "sd-eaeu-octg-ad",
+   "headline": "EAEU, 중국산 유정용강관\n**반덤핑관세 5년 연장**",
+   "toc": "EAEU, 중국산 무계목 유정용 강관 반덤핑관세 연장",
+   "orig": "EAEU, 중국산 무계목 유정용 강관 반덤핑관세 5년 연장",
+   "why": "중국산 OCTG 무역구제 지속 여부 확인",
+   "key": {
+    "value": "2031년 10월 5일",
+    "label": "반덤핑관세 연장 시한"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "유라시아경제연합(EAEU) · 중국산 무계목 OCTG",
+     "items": [
+      {
+       "k": "DECISION",
+       "v": "반덤핑관세 부과기간 5년 연장",
+       "tone": "alert"
+      },
+      {
+       "k": "UNTIL",
+       "v": "2031년 10월 5일까지"
+      },
+      {
+       "k": "NOTE",
+       "v": "기존 관세 유지, 새 세율 일괄 부과는 아님",
+       "tone": "warn"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "5",
+       "unit": "년",
+       "label": "연장 기간",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "31.0",
+       "unit": "%",
+       "label": "제조업체별 최고 세율(최저 12.23%)"
+      }
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "news",
+   "category": "chemical",
+   "topic": "supply",
+   "src": "inv-russia-diesel-300k",
+   "headline": "트럼프 \"러시아, 디젤\n**30만 톤 즉시 공급**\"",
+   "toc": "트럼프, 러시아 디젤 30만t 즉시 공급 발표",
+   "orig": "Trump says Russia to immediately supply 300,000 tons of diesel fuel",
+   "why": "디젤·정유제품 수급 변화와 공급 약속 이행 여부 점검",
+   "key": {
+    "value": "300,000t",
+    "label": "러시아 디젤 즉시 공급 물량(트럼프 발표)"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "러시아산 디젤 · 트럼프 발표(10월 9일)",
+     "items": [
+      {
+       "k": "CLAIM",
+       "v": "러시아가 미국·세계 시장에 디젤 즉시 공급에 합의했다고 트럼프 발표",
+       "tone": "alert"
+      },
+      {
+       "k": "NEXT",
+       "v": "11월 추가 50만t, 이후 100만t 공급 언급",
+       "tone": "warn"
+      },
+      {
+       "k": "CAVEAT",
+       "v": "러시아 정유시설 상태에 따른다는 조건 언급"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "300,000",
+       "unit": "t",
+       "label": "즉시 공급(발표 기준)",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "3",
+       "unit": "백만t",
+       "label": "단기간 내 공급 언급 총량"
+      }
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "closing"
+  }
+ ],
+ "sources": [
+  {
+   "id": "mc-antofagasta-hunger-strike",
+   "publisher": "Bloomberg",
+   "via": "MINING.COM",
+   "title": "Antofagasta miners escalate copper strike with hunger protest",
+   "date": "2026-10-09",
+   "time": "12:45 pm",
+   "accessed": "2026-10-12",
+   "url": "https://www.mining.com/web/antofagasta-miners-escalate-copper-strike-with-hunger-protest/",
+   "evidence": [
+    "Workers at an Antofagasta Plc copper mine in Chile escalated a three-day strike Friday",
+    "with three union members starting a hunger strike",
+    "has offered a 2% real increase in base salaries and a cash bonus of almost $23,000 each.",
+    "The company has maintained its production expectations despite the walkout by 709 workers",
+    "representing about 22% of Centinela’s own workforce."
+   ]
+  },
+  {
+   "id": "sd-eaeu-octg-ad",
+   "publisher": "스틸데일리",
+   "title": "EAEU, 중국산 무계목 유정용 강관 반덤핑관세 5년 연장",
+   "date": "2026-10-12",
+   "time": "00:00",
+   "accessed": "2026-10-12",
+   "url": "https://www.steeldaily.co.kr/news/articleView.html?idxno=203426",
+   "evidence": [
+    "유라시아경제연합(EAEU)이 중국산 무계목 유정용 강관(OCTG)에 대한 반덤핑관세 부과기간을 5년 연장했다.",
+    "유라시아경제위원회(EEC)는 중국산 무계목 유정용 강관에 대한 반덤핑관세를 2031년 10월 5일까지 연장하기로 결정했다.",
+    "적용 세율은 제조업체에 따라 수입품 관세가격의 12.23~31.0%다.",
+    "이번 조치는 기존 관세를 유지하는 것으로, 새로운 관세율을 일괄적으로 부과하는 것은 아니다."
+   ]
+  },
+  {
+   "id": "inv-russia-diesel-300k",
+   "publisher": "Reuters",
+   "via": "Investing.com",
+   "title": "Trump says Russia to immediately supply 300,000 tons of diesel fuel",
+   "date": "2026-10-09",
+   "time": "03:01 PM",
+   "accessed": "2026-10-12",
+   "url": "https://www.investing.com/news/commodities-news/trump-says-russia-to-immediately-supply-300000-tons-of-diesel-fuel-4941599",
+   "evidence": [
+    "US President Donald Trump said on Friday that Russia had agreed to immediately supply",
+    "over 300,000 tons of diesel fuel to the American and global marketplace",
+    "Trump added that Russia would then deliver 3 million tons of diesel fuel within a short period of time,",
+    "based on the condition of its diesel refineries",
+    "would immediately supply another 500,000 tons in November and 1 million tons immediately thereafter."
+   ]
+  }
+ ],
+ "caption": "10월 6일~12일(현지) 국내외 보도·기관 발표 기준 원재료 뉴스 3건.\n\n1) 칠레 센티넬라 구리 광산 파업, 단식투쟁으로 확대\n2) EAEU, 중국산 무계목 유정용 강관 반덤핑관세 5년 연장\n3) 트럼프, 러시아 디젤 30만t 즉시 공급 발표\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+ "hashtags": [
+  "원자재",
+  "구리",
+  "강관",
+  "디젤",
+  "반덤핑"
+ ]
+}
