@@ -1,0 +1,172 @@
+{
+ "id": "2026-10-14-brief",
+ "date": "2026-10-14",
+ "issue": 17,
+ "category": "brief",
+ "topic": "supply",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "TODAY'S RAW MATERIALS NEWS",
+   "title": "한국철강 창원 화재\n**52시간 만에 초진**",
+   "sub": "10월 12일~13일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 2건",
+   "toc": true
+  },
+  {
+   "type": "news",
+   "category": "steel",
+   "topic": "supply",
+   "src": "snm-hankook-steel-fire-eaf-restart",
+   "headline": "한국철강 창원 화재\n**52시간 만에 초진**",
+   "toc": "한국철강 창원공장 스크랩 야드 화재 초진, 전기로 재가동 예정",
+   "orig": "한국철강 화재 52시간 만에 초진…전기로 재가동 예정",
+   "why": "국내 철근 생산·스크랩 수급 정상화 확인",
+   "key": {
+    "value": "52시간",
+    "label": "화재 초진까지 걸린 시간"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "한국철강 창원공장 · 철스크랩 야드",
+     "items": [
+      {
+       "k": "STATUS",
+       "v": "큰불 초기 진화, 완진은 시간 더 필요",
+       "tone": "alert"
+      },
+      {
+       "k": "NEXT",
+       "v": "13일부터 전기로 가동 재개 계획",
+       "tone": "warn"
+      },
+      {
+       "k": "SCRAP",
+       "v": "12일부터 철스크랩 입고 일시 중단"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "52",
+       "unit": "시간",
+       "label": "화재 발생~초기 진화",
+       "hi": true
+      }
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "news",
+   "category": "chemical",
+   "topic": "supply",
+   "update_of": "2026-10-10-s3",
+   "src": "icis-us-gulf-isaias-restore",
+   "headline": "허리케인 이사이아스\n**美 걸프 생산 복구 중**",
+   "toc": "허리케인 후 미 걸프 석유·가스 생산 복구, 화학 영향 평가 중",
+   "orig": "Oil majors restoring US Gulf output after Hurricane Isaias; chem impacts being assessed",
+   "why": "미 걸프 석유화학 가동 영향 확인",
+   "key": {
+    "value": "30%",
+    "label": "원유 생산 중단 잔량(미만)"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "미국 걸프 · 허리케인 이사이아스",
+     "items": [
+      {
+       "k": "STATUS",
+       "v": "해상 석유·가스 생산 순차 재개",
+       "tone": "alert"
+      },
+      {
+       "k": "CHEM",
+       "v": "화학 설비 영향 평가 중",
+       "tone": "warn"
+      },
+      {
+       "k": "LOGISTICS",
+       "v": "항만 토요일 재개, 철도 서비스 복구"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "30",
+       "unit": "%",
+       "label": "원유 생산 중단 잔량(미만)",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "25",
+       "unit": "%",
+       "label": "가스 생산 중단 잔량",
+       "hi": false
+      }
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "closing"
+  }
+ ],
+ "sources": [
+  {
+   "id": "snm-hankook-steel-fire-eaf-restart",
+   "publisher": "철강금속신문",
+   "title": "한국철강 화재 52시간 만에 초진…전기로 재가동 예정",
+   "date": "2026-10-13",
+   "time": "09:45",
+   "accessed": "2026-10-14",
+   "url": "http://www.snmnews.com/news/articleView.html?idxno=575803",
+   "evidence": [
+    "한국철강 창원공장 옥내 철스크랩 야드에서 발생한 화재가 52시간 만에 큰불이 잡혔다.",
+    "창원소방본부에 따르면 지난 10일 오후 6시 55분께 발생한 이 불은 12일 오후 11시 17분쯤 초기 진화됐다.",
+    "창고 안에 있는 철스크랩을 파헤치며 들어내야 해 완진까지는 시간이 더 걸릴 것으로 전해졌다.",
+    "이번 화재로 한국철강은 12일부터 철스크랩 입고도 일시 중단한 상태다.",
+    "다만 회사 측은 13일부터 전기로 가동을 재개한다는 계획이어서"
+   ]
+  },
+  {
+   "id": "icis-us-gulf-isaias-restore",
+   "publisher": "ICIS",
+   "title": "Oil majors restoring US Gulf output after Hurricane Isaias; chem impacts being assessed",
+   "date": "2026-10-12",
+   "time": "00:00",
+   "accessed": "2026-10-14",
+   "url": "https://www.icis.com/explore/resources/news/2026/10/12/11236928/oil-majors-restoring-us-gulf-output-after-hurricane-isaias-chem-impacts-being-assessed",
+   "evidence": [
+    "US Gulf producers continue to resume offshore operations in the aftermath of Hurricane Isaias",
+    "with less than 30% of oil production and 25% of gas production still shut in as of Monday",
+    "Ports from Gulfport, Mississippi, to Panama City, Florida, reopened on Saturday.",
+    "Rail company CSX said service along the impacted regions resumed this weekend",
+    "Huntsman has not responded about operations at its maleic anhydride (MA) plant in Pensacola."
+   ]
+  }
+ ],
+ "caption": "10월 12일~13일(현지) 국내외 보도 기준 원재료 뉴스 2건.\n\n1) 한국철강 창원공장 철스크랩 야드 화재 초진, 전기로 재가동 예정\n2) 허리케인 이사이아스 이후 미 걸프 석유·가스 생산 복구, 화학 영향 평가 중\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+ "hashtags": [
+  "원자재",
+  "철강",
+  "철스크랩",
+  "석유화학",
+  "허리케인"
+ ]
+}
