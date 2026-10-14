@@ -1,0 +1,104 @@
+{
+  "id": "2026-10-15-brief",
+  "date": "2026-10-15",
+  "issue": 18,
+  "category": "brief",
+  "topic": "supply",
+  "slides": [
+    {"type": "cover", "kicker": "TODAY'S RAW MATERIALS NEWS",
+     "title": "에스콘디다 감독자 노조\n**수요일 파업 예고**",
+     "sub": "10월 13일~14일(현지) 외신 보도 기준\n오늘의 원재료 뉴스 3건", "toc": true},
+    {"type": "news", "category": "nonferrous", "topic": "supply", "update_of": "2026-10-02-s1", "src": "reu-escondida-supervisors-strike",
+     "headline": "BHP 에스콘디다\n**감독자 노조 파업 예고**",
+     "toc": "BHP 에스콘디다 감독자 노조, 조정 결렬 후 파업 예고",
+     "orig": "Supervisors at BHP’s Escondida mine in Chile to strike after contract talks fail",
+     "facts": [{"t": "노조 주장: 회사가 핵심 복지 포기와 생체정보 공유를 요구"}],
+     "why": "칠레 구리 공급 차질 가능성 점검",
+     "key": {"value": "2,000+", "label": "시니어 노조(Sindicato 1) 조합원 수"},
+     "viz": [
+       {"type": "status", "title": "BHP 에스콘디다 · 칠레 구리",
+        "items": [
+          {"k": "STATUS", "v": "감독자 노조, 수요일 파업 개시 예고", "tone": "alert"},
+          {"k": "TALKS", "v": "BHP가 조정 협상 종료했다고 노조 주장", "tone": "warn"},
+          {"k": "OFFER", "v": "노조 최종안에 회사 제안 90% 반영"}
+        ]},
+       {"type": "stats", "half": true,
+        "items": [{"value": "2,000", "unit": "명 이상", "label": "Sindicato 1 소속 직원 수", "hi": true}]}
+     ],
+     "coverage": [
+       {"publisher": "Reuters", "title": "Supervisors at BHP’s Escondida mine in Chile to strike after contract talks fail", "url": "https://www.mining.com/web/supervisors-at-bhps-escondida-mine-in-chile-to-strike-after-contract-talks-fail", "date": "2026-10-14"},
+       {"publisher": "Investing.com", "title": "BHP’s Escondida copper mine in Chile set for worker strike", "url": "https://www.investing.com/news/stock-market-news/bhps-escondida-copper-mine-in-chile-set-for-worker-strike-4948001", "date": "2026-10-14"}
+     ]},
+    {"type": "news", "category": "steel", "topic": "supply", "src": "reu-ferrexpo-q3-output",
+     "headline": "페렉스포 3분기\n**펠릿 생산 19% 감소**",
+     "toc": "페렉스포 3분기 철광석 펠릿 생산 19% 감소",
+     "orig": "Ferrexpo’s quarterly output falls on production halt, export constraints",
+     "facts": [{"t": "무역금융 협상은 흑해 수출 차질로 지연"}],
+     "why": "우크라이나산 펠릿 조달 차질 점검",
+     "key": {"value": "-19%", "label": "페렉스포 3분기 생산 전 분기 대비"},
+     "viz": [
+       {"type": "status", "title": "페렉스포 · 우크라이나 철광석 펠릿",
+        "items": [
+          {"k": "OUTPUT", "v": "3분기 생산 전 분기 대비 19% 감소", "tone": "alert"},
+          {"k": "CAUSE", "v": "8월 생산 중단, 우크라이나 항만 접근 제한", "tone": "warn"},
+          {"k": "RESTART", "v": "9월 펠릿 1개 라인 재가동"}
+        ]},
+       {"type": "stats", "half": true,
+        "items": [{"value": "779,975", "unit": "t", "label": "3분기 상업 생산량 (2분기 963,409t)", "hi": true}]}
+     ],
+     "coverage": []},
+    {"type": "news", "category": "chemical", "topic": "supply", "src": "reu-iea-diesel-2027",
+     "headline": "IEA, 디젤 수급\n**2027년까지 빠듯**",
+     "toc": "IEA, 디젤 수급 긴장이 내년 상반기까지 이어질 수 있다",
+     "orig": "Global diesel shortages could persist well into 2027, IEA says",
+     "facts": [{"t": "중동·러시아 디젤 수출 손실, 전 세계 수요의 약 4.5%"}],
+     "why": "정제 연계 원료 수급 점검",
+     "key": {"value": "1.3", "label": "9월 중동·러시아 디젤 수출 손실(백만 b/d)"},
+     "viz": [
+       {"type": "status", "title": "IEA · 글로벌 디젤 수급",
+        "items": [
+          {"k": "OUTLOOK", "v": "2027년 상반기 타이트, 하반기 완화", "tone": "warn"},
+          {"k": "SUPPLY", "v": "9월 중동·러시아 디젤 수출 손실 발생", "tone": "alert"}
+        ]},
+       {"type": "stats", "half": true,
+        "items": [{"value": "1.3", "unit": "백만 b/d", "label": "9월 디젤 수출 손실 합계", "hi": true}]},
+       {"type": "stats", "half": true,
+        "items": [{"value": "4.5", "unit": "%", "label": "올해 전 세계 디젤·가스오일 수요 대비"}]}
+     ],
+     "coverage": []},
+    {"type": "closing"}
+  ],
+  "sources": [
+    {"id": "reu-escondida-supervisors-strike", "publisher": "Reuters", "via": "MINING.COM",
+     "title": "Supervisors at BHP’s Escondida mine in Chile to strike after contract talks fail",
+     "date": "2026-10-13", "time": "5:02 pm", "accessed": "2026-10-15",
+     "url": "https://www.mining.com/web/supervisors-at-bhps-escondida-mine-in-chile-to-strike-after-contract-talks-fail/",
+     "evidence": [
+       "The Sindicato 1 at Escondida mine represents more than 2,000 employees.",
+       "The supervisors’ union at BHP’s Escondida copper mine in Chile said they will begin a strike on Wednesday after mediatio",
+       "The union said it made a final offer incorporating 90% of company proposals plus key union demands including salary incr",
+       "BHP declined to respond and ended mediation talks, the union said in a statement late on Tuesday afternoon.",
+       "The union said the company demanded workers give up essential benefits and insisted on sharing private biometric data wi"]},
+    {"id": "reu-ferrexpo-q3-output", "publisher": "Reuters", "via": "MINING.COM",
+     "title": "Ferrexpo’s quarterly output falls on production halt, export constraints",
+     "date": "2026-10-14", "time": "7:49 am", "accessed": "2026-10-15",
+     "url": "https://www.mining.com/web/ferrexpos-quarterly-output-falls-on-production-halt-export-constraints/",
+     "evidence": [
+       "Iron ore pellet producer Ferrexpo (LON: FXPO) reported a 19% sequential drop in third-quarter output on Wednesday, pressured by a production halt and constrained export capacity as access to Ukrainian ports remained severely restricted.",
+       "Total commercial production fell to 779,975 tons in the three-month period ended September 30, from 963,409 tons in the second quarter.",
+       "In August, Ukraine-focused Ferrexpo temporarily suspended production due to liquidity issues and export disruptions in the Black Sea stemming from the Russian war in Ukraine.",
+       "The miner restarted one pellet line in September",
+       "Ferrexpo said it was in advanced talks for a secured trade finance facility, but finalising the deal has been delayed by disruptions to its Black Sea export route and its ability to deliver shipments."]},
+    {"id": "reu-iea-diesel-2027", "publisher": "Reuters", "via": "Investing.com",
+     "title": "Global diesel shortages could persist well into 2027, IEA says",
+     "date": "2026-10-14", "time": "08:02 AM", "accessed": "2026-10-15",
+     "url": "https://www.investing.com/news/commodities-news/diesel-shortages-could-persist-well-into-2027-iea-says-4949070",
+     "evidence": [
+       "Global diesel markets could remain tight well into next year",
+       "Combined losses of diesel exports from the Middle East and Russia totalled 1.3 million barrels per day in September",
+       "That represents about 4.5% of the global diesel and gas oil demand the agency forecasts for this year.",
+       "The global gasoil supply and demand balance will remain tight in the first half of 2027, and ease in the second half"]}
+  ],
+  "caption": "10월 13일~14일(현지) 외신 보도 기준 원재료 뉴스 3건.\n\n1) BHP 에스콘디다 감독자 노조, 조정 결렬 후 수요일 파업 개시 예고\n2) 페렉스포 3분기 철광석 펠릿 생산 전 분기 대비 19% 감소\n3) IEA, 글로벌 디젤 수급 긴장이 2027년 상반기까지 이어질 수 있다고 전망\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": ["원자재", "구리", "철광석", "디젤", "공급망"]
+}
