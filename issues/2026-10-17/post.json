@@ -1,0 +1,219 @@
+{
+ "id": "2026-10-17-brief",
+ "date": "2026-10-17",
+ "issue": 20,
+ "category": "brief",
+ "topic": "supply",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "TODAY'S RAW MATERIALS NEWS",
+   "title": "한국, 중국산 무계목 강관\n**반덤핑 조사 개시**",
+   "sub": "10월 15일~16일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 4건",
+   "toc": true
+  },
+  {
+   "type": "news",
+   "category": "steel",
+   "topic": "regulation",
+   "src": "sd-korea-ad-seamless-china",
+   "headline": "중국산 무계목 강관\n**한국 반덤핑 조사 개시**",
+   "toc": "무역위원회, 중국산 무계목 강관 덤핑 조사 개시",
+   "orig": "\"올 게 왔다\" 韓, 中 무계목 강관 AD 조사 개시",
+   "facts": [
+    {"t": "조사 신청인은 일진제강, 지난 8월 5일 신청"}
+   ],
+   "why": "중국산 강관 조달 영향 점검",
+   "key": {"value": "84%", "label": "2025년 무계목 강관 수입 중 중국 본토산 비중"},
+   "viz": [
+    {
+     "type": "status",
+     "title": "무계목 강관 · 한국 무역위원회",
+     "items": [
+      {"k": "STATUS", "v": "10월 8일 공고로 중국산 덤핑 조사 개시", "tone": "alert"},
+      {"k": "NEXT", "v": "예비조사: 관보 게재일부터 3개월 이내", "sub": "본조사: 예비조사 결과 제출 다음 날부터 3개월 이내", "tone": "warn"},
+      {"k": "SCOPE", "v": "합금 여부·규격과 관계없이 포함, 스테인리스·유정용 제외"}
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {"value": "84", "unit": "%", "label": "2025년 수입 중 중국 본토산 비중", "hi": true}
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "news",
+   "category": "nonferrous",
+   "topic": "supply",
+   "src": "snm-copper-concentrate-shortage",
+   "headline": "구리 정광\n**올해 20만 톤 부족 전망**",
+   "toc": "비철금속협회, 구리 정광 올해 약 20만 톤 공급 부족 전망",
+   "orig": "구리업계, 정광 공급 부족·중국산 수입 확대 대응 과제 부상",
+   "facts": [
+    {"t": "정광 공급 부족은 2030년까지 이어질 전망"}
+   ],
+   "why": "정광 수급 부담 확인",
+   "key": {"value": "20만t", "label": "2026년 구리 정광 공급 부족 전망(약)"},
+   "viz": [
+    {
+     "type": "status",
+     "title": "구리 정광 · 비철금속협회 구리위원회",
+     "items": [
+      {"k": "MINE", "v": "광산 생산량 약 1,850만 톤"},
+      {"k": "SMELTER", "v": "제련소 수요 약 1,870만 톤", "tone": "warn"},
+      {"k": "CAUSE", "v": "광산 노후화·품위 저하, 사고·기후 영향 생산 차질"}
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {"value": "20", "unit": "만t", "label": "2026년 정광 공급 부족 전망(약)", "hi": true}
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "news",
+   "category": "resin",
+   "topic": "supply",
+   "src": "icis-singapore-petchem-exports-sept",
+   "headline": "싱가포르 9월 석유화학\n**수출 8.3% 감소**",
+   "toc": "싱가포르 9월 석유화학 수출 전년 대비 8.3% 감소",
+   "orig": "Singapore Sept petrochemical exports fall anew; feedstock risks weigh on outlook",
+   "facts": [
+    {"t": "호르무즈 해협 선적 차질이 향후 생산 위험 요인"}
+   ],
+   "why": "아시아 석화 공급 흐름 점검",
+   "key": {"value": "-8.3%", "label": "싱가포르 9월 석유화학 수출 전년 대비"},
+   "viz": [
+    {
+     "type": "status",
+     "title": "석유화학 수출 · 싱가포르",
+     "items": [
+      {"k": "EXPORT", "v": "9월 수출 전년 대비 8.3% 감소", "tone": "warn"},
+      {"k": "TREND", "v": "19개월 연속 전년 대비 감소", "tone": "alert"},
+      {"k": "AUG", "v": "8월 21.9% 감소에서 감소폭 완화"},
+      {"k": "RISK", "v": "호르무즈 해협 선적 차질로 향후 생산 위험"}
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {"value": "19", "unit": "개월", "label": "연속 전년 대비 감소", "hi": true}
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "news",
+   "category": "chemical",
+   "topic": "supply",
+   "src": "inv-iran-lpg-jetfuel-blockade",
+   "headline": "미 봉쇄에도\n**이란 LPG·제트유 일부 수출**",
+   "toc": "미국 봉쇄에도 이란산 LPG·제트유 일부 선적, 9월 원유 수출은 0",
+   "orig": "Exclusive-Iran ships some LPG, jet fuel despite US blockade, data shows",
+   "facts": [
+    {"t": "LPG 물량 대부분은 말레이시아 인근 해상으로 이동"}
+   ],
+   "why": "중동 에너지 공급 변수 확인",
+   "key": {"value": "4.1", "label": "이란산 LPG 선적 추정량(백만 배럴)"},
+   "viz": [
+    {
+     "type": "status",
+     "title": "이란 · 미국 해상 봉쇄",
+     "items": [
+      {"k": "LPG", "v": "7월 중순 이후 이란산 LPG 탱커 최소 8척 이탈", "tone": "warn"},
+      {"k": "JET", "v": "9월 제트유 탱커 1척 미얀마 도착"},
+      {"k": "CRUDE", "v": "9월 이란 원유 수출 0 (Kpler)", "tone": "alert"}
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {"value": "4.1", "unit": "백만 배럴", "label": "이란산 LPG 선적 추정량", "hi": true}
+     ]
+    }
+   ],
+   "coverage": []
+  },
+  {
+   "type": "closing"
+  }
+ ],
+ "sources": [
+  {
+   "id": "sd-korea-ad-seamless-china",
+   "publisher": "스틸데일리",
+   "title": "\"올 게 왔다\" 韓, 中 무계목 강관 AD 조사 개시",
+   "date": "2026-10-16",
+   "time": "00:00 KST",
+   "accessed": "2026-10-17",
+   "url": "https://www.steeldaily.co.kr/news/articleView.html?idxno=203558",
+   "evidence": [
+    "무역위원회는 지난 10월 8일 공고 제2026-16호를 통해 '중국산 무계목 강관의 덤핑사실 및 국내산업피해 유무 조사'를 개시한다고 밝혔다.",
+    "조사 신청인은 무계목 강관 제조 기업 일진제강으로, 지난 8월 5일 조사를 신청했다.",
+    "합금 여부와 외경·두께·길이·인장강도·연신율 등에 관계없이 조사 범위에 포함된다.",
+    "스테인리스 강관과 원유·천연가스 생산에 사용하는 유정용·가스정용 케이싱, 튜빙, 드릴파이프 등 공고에 명시된 제품은 제외된다.",
+    "예비조사는 조사개시결정 관보 게재일부터 3개월 이내에 진행된다.",
+    "본조사는 예비조사 결과 제출일 다음 날부터 3개월 이내에 실시하며, 관련 규정에 따라 조사 기간이 연장될 수 있다.",
+    "이 가운데 중국 본토산은 24만 7,448톤으로 전체 수입의 84% 비중을 차지했다."
+   ]
+  },
+  {
+   "id": "snm-copper-concentrate-shortage",
+   "publisher": "철강금속신문",
+   "title": "구리업계, 정광 공급 부족·중국산 수입 확대 대응 과제 부상",
+   "date": "2026-10-16",
+   "time": "16:28 KST",
+   "accessed": "2026-10-17",
+   "url": "http://www.snmnews.com/news/articleView.html?idxno=576007",
+   "evidence": [
+    "2026년 광산 생산량은 약 1,850만톤, 제련소 수요는 약 1,870만톤으로 약 20만톤의 공급 부족이 예상된다.",
+    "기존 광산의 노후화와 광석 품위 저하, 사고 및 기후 영향에 따른 생산 차질이 주요 원인으로 꼽혔다.",
+    "정광 공급 부족은 2030년까지 이어지고"
+   ]
+  },
+  {
+   "id": "icis-singapore-petchem-exports-sept",
+   "publisher": "ICIS",
+   "title": "Singapore Sept petrochemical exports fall anew; feedstock risks weigh on outlook",
+   "date": "2026-10-16",
+   "accessed": "2026-10-17",
+   "url": "https://www.icis.com/explore/resources/news/2026/10/16/11237490/singapore-sept-petrochemical-exports-fall-anew-feedstock-risks-weigh-on-outlook",
+   "evidence": [
+    "Singapore’s petrochemical exports in September declined by 8.3% year on year",
+    "with future production facing risks amid prolonged shipping disruptions in the Strait of Hormuz",
+    "September marked a 19th consecutive month of year-on-year declines in petrochemical exports,",
+    "The decline in petrochemical shipments last month, however, eased from a 21.9% contraction recorded in August."
+   ]
+  },
+  {
+   "id": "inv-iran-lpg-jetfuel-blockade",
+   "publisher": "Reuters",
+   "via": "Investing.com",
+   "title": "Exclusive-Iran ships some LPG, jet fuel despite US blockade, data shows",
+   "date": "2026-10-16",
+   "time": "06:51 AM",
+   "accessed": "2026-10-17",
+   "url": "https://www.investing.com/news/commodities-news/exclusiveiran-ships-some-lpg-jet-fuel-despite-us-blockade-data-shows-4953711",
+   "evidence": [
+    "shows at least eight gas tankers carrying Iranian LPG have left the Gulf of Oman since mid-July.",
+    "Another tanker carrying Iranian jet fuel reached Myanmar in September",
+    "The total amount of these LPG cargoes was estimated at 4.1 million barrels, Shelley said.",
+    "Most of the cargoes sailed to Malaysia’s Eastern Outer Port Limits",
+    "Iranian crude exports fell to zero in September, according to Kpler,"
+   ]
+  }
+ ],
+ "caption": "10월 15일~16일(현지) 국내외 보도 기준 원재료 뉴스 4건.\n\n1) 한국 무역위원회, 중국산 무계목 강관 덤핑 조사 개시\n2) 비철금속협회, 2026년 구리 정광 약 20만 톤 공급 부족 전망\n3) 싱가포르 9월 석유화학 수출 전년 대비 8.3% 감소, 19개월 연속\n4) 미국 봉쇄에도 이란산 LPG·제트유 일부 선적, 9월 원유 수출은 0\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+ "hashtags": ["원자재", "철강", "구리", "석유화학", "공급망"]
+}
