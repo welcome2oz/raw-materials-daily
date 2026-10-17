@@ -1,0 +1,230 @@
+{
+  "id": "2026-10-18-brief",
+  "date": "2026-10-18",
+  "issue": 21,
+  "category": "brief",
+  "topic": "supply",
+  "caption": "10월 12일~18일(현지) 국내외 보도·기관 발표 기준 원재료 뉴스 3건.\n\n1) 칠레 센티넬라 구리 광산 노조, 파업 종료 예비 합의\n2) 미·멕시코 관세 협상 정체, 철강·알루미늄 50% 관세 인하 놓고 이견\n3) IEA 이사회, 비축유 방출 가속과 디젤 우선 공급 합의\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": [
+    "원자재",
+    "구리",
+    "철강",
+    "관세",
+    "디젤"
+  ],
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "센티넬라 구리 파업\n**예비 합의로 종료**",
+      "sub": "10월 12일~18일(현지) 국내외 보도·기관 발표 기준\n오늘의 원재료 뉴스 3건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "nonferrous",
+      "topic": "supply",
+      "src": "reu-centinela-deal",
+      "update_of": "2026-10-12-s1",
+      "headline": "센티넬라 구리 파업\n**예비 합의로 종료**",
+      "toc": "칠레 센티넬라 구리 광산 노조, 파업 종료 예비 합의",
+      "orig": "Striking unions at Antofagasta’s Centinela copper mine reach preliminary deal, ending strike",
+      "why": "토요일 비준 투표 결과 확인",
+      "key": {
+        "value": "예비 합의",
+        "label": "센티넬라 파업 노조, 파업 종료 동의"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "센티넬라 구리 광산 · 칠레",
+          "items": [
+            {
+              "k": "DEAL",
+              "v": "새 단체협약 예비 합의, 파업 종료 동의",
+              "tone": "warn"
+            },
+            {
+              "k": "NEXT",
+              "v": "토요일 조합원 비준 투표",
+              "tone": "warn"
+            },
+            {
+              "k": "STRIKE",
+              "v": "파업은 일주일 넘게 지속",
+              "tone": "alert"
+            }
+          ]
+        }
+      ],
+      "coverage": []
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "tariff",
+      "src": "reu-us-mexico-tariff",
+      "headline": "미·멕시코 관세 협상\n**철강 50% 인하 이견**",
+      "toc": "미·멕시코 관세 협상 정체, 철강·알루미늄 관세 인하 놓고 이견",
+      "orig": "Progress toward a US-Mexico tariff deal has stalled, WSJ reports",
+      "why": "멕시코산 철강 관세 변동 가능성 점검",
+      "key": {
+        "value": "50%",
+        "label": "철강·알루미늄 미국 관세"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "미국–멕시코 관세 협상",
+          "items": [
+            {
+              "k": "STATUS",
+              "v": "협상 진전 정체 (WSJ 보도)",
+              "tone": "alert"
+            },
+            {
+              "k": "ISSUE",
+              "v": "러트닉 상무장관이 철강·알루미늄 관세 대폭 인하에 반대",
+              "tone": "warn"
+            },
+            {
+              "k": "MEXICO",
+              "v": "멕시코 측은 협상에 진전이 있다고 밝힘"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "50",
+              "unit": "%",
+              "label": "철강·알루미늄 관세",
+              "hi": true
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "25",
+              "unit": "%",
+              "label": "멕시코산 자동차 관세"
+            }
+          ]
+        }
+      ],
+      "coverage": []
+    },
+    {
+      "type": "news",
+      "category": "chemical",
+      "topic": "supply",
+      "src": "iea-gb-statement",
+      "headline": "IEA 이사회\n**비축유 방출 가속**",
+      "toc": "IEA 이사회, 비축유 방출 가속과 디젤 20백만 배럴 우선 공급",
+      "orig": "IEA Governing Board statement on energy markets and security",
+      "why": "정제 연계 원료 수급 점검",
+      "key": {
+        "value": "330",
+        "label": "지금까지 방출된 비축유(백만 배럴)"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "IEA 이사회 · 3월 공동 대응",
+          "items": [
+            {
+              "k": "RELEASE",
+              "v": "남은 약 1억 배럴 방출 완료 조치 합의",
+              "tone": "warn"
+            },
+            {
+              "k": "DIESEL",
+              "v": "디젤 2천만 배럴 이상 가능한 한 빨리 방출",
+              "tone": "alert"
+            },
+            {
+              "k": "TOTAL",
+              "v": "총 방출량, 당초 4억 배럴 초과 전망"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "330",
+              "unit": "백만 배럴",
+              "label": "지금까지 방출",
+              "hi": true
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "100",
+              "unit": "백만 배럴",
+              "label": "남은 방출량(약)"
+            }
+          ]
+        }
+      ],
+      "coverage": []
+    },
+    {
+      "type": "closing"
+    }
+  ],
+  "sources": [
+    {
+      "id": "reu-centinela-deal",
+      "publisher": "Reuters",
+      "via": "Investing.com",
+      "title": "Striking unions at Antofagasta’s Centinela copper mine reach preliminary deal, ending strike",
+      "date": "2026-10-16",
+      "time": "10:42 PM",
+      "accessed": "2026-10-18",
+      "url": "https://www.investing.com/news/economic-indicators/striking-unions-at-antofagastas-centinela-copper-mine-reach-preliminary-deal-ending-strike-4955155",
+      "evidence": [
+        "Workers from two striking unions at Antofagasta’s Centinela copper mine in Chile reached a preliminary agreement for a new collective contract agreement, agreeing to end a strike that has lasted more than a week at the mine",
+        "which will then be put to a ratifying vote on Saturday."
+      ]
+    },
+    {
+      "id": "reu-us-mexico-tariff",
+      "publisher": "Reuters",
+      "via": "Investing.com",
+      "title": "Progress toward a US-Mexico tariff deal has stalled, WSJ reports",
+      "date": "2026-10-15",
+      "time": "08:11 PM",
+      "accessed": "2026-10-18",
+      "url": "https://www.investing.com/news/commodities-news/progress-toward-a-usmexico-tariff-deal-has-stalled-wsj-reports-4952880",
+      "evidence": [
+        "Progress toward a US-Mexico tariff deal has stalled after opposition from Commerce Secretary Howard Lutnick, the Wall Street Journal reported on Thursday",
+        "Lutnick has opposed significant reductions in the 25% tariff on Mexican automobiles and the 50% levies on steel and aluminum",
+        "Mexico’s deputy trade minister Luis Rosendo Gutierrez told the Journal there was progress in the negotiations"
+      ]
+    },
+    {
+      "id": "iea-gb-statement",
+      "publisher": "IEA",
+      "title": "IEA Governing Board statement on energy markets and security",
+      "date": "2026-10-15",
+      "accessed": "2026-10-18",
+      "url": "https://www.iea.org/news/iea-governing-board-statement-on-energy-markets-and-security",
+      "evidence": [
+        "Acknowledged that approximately 330 million barrels have so far been released and agreed to take all necessary steps to complete the remaining releases of around 100 million barrels in a timely manner consistent with national circumstances.",
+        "making the total amount of stocks to be released exceed the original total of 400 million barrels.",
+        "Agreed to accelerate the release of the remaining volumes, with specific plans already in place including over 20 million barrels of diesel as soon as possible."
+      ]
+    }
+  ]
+}
