@@ -1,0 +1,6 @@
+- 05:06 발행함 feeds/2026-10-19/feed.json 없음(3회 확인, 오류: not found through artifact mount) → 직접 수집. Playwright: 파이썬 3.13(/usr/bin/python3) 사용, chromium shell 경로 심볼릭 링크
+- 후보 선정(단독 보도 4건): Centinela 비준(후속)·미 상무부 대만산 도금강판 AD 예비(스틸데일리)·웨스트레이크 쾰른 PVC 폐쇄(화학저널)·미원화학 황산 증설(화학저널). 제외: 가격·주가·행사 기사, 유료 본문(EU 철강 34억 유로), Anglo Asian(AI 작성 요약 본문 verbatim 불가), 이미 게시한 Iran LPG/구리 정광/무계목 강관 등
+- 단독 보도 근거: ① Centinela 비준 — 생산·가동(파업 종료, 후속 update_of 2026-10-12-s1) ② 미 상무부 대만산 도금강판 AD 예비판정 — 무역구제 결정(숫자·회사 포함) ③ 웨스트레이크 쾰른 PVC 16.5만 톤 2027년 1Q 폐쇄 — 설비 가동 중단 ④ 미원화학 황산 518.95억 증설 — 증설 투자 결정
+- 원문 확보 방식: WebFetch 도구가 원문 전체를 주지 않고 짧은 인용만 줘서, 인용된 문장만 articles/ 에 저장하고 evidence 로 썼다 (요약문은 쓰지 않음)
+- render --check 통과(경고: 단독 보도 4건)
+- 05:09 렌더 6장 육안 확인(잘림·겹침 없음), dedup 통과 → gh_handoff
