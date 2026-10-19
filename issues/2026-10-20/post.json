@@ -1,0 +1,293 @@
+{
+  "id": "2026-10-20-brief",
+  "date": "2026-10-20",
+  "issue": 23,
+  "category": "brief",
+  "topic": "supply",
+  "caption": "10월 19일(현지) 국내외 보도 기준 원재료 뉴스 4건.\n\n1) LS MnM, 구리 제련 감산 검토\n2) 한국철강, 20일부 철스크랩 입고제한 해제\n3) 코베스트로, 앤트워프 PC 생산라인 4개에서 1개로 통합\n4) 중국 9월 정유 처리량 3개월 연속 증가\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": [
+    "원자재",
+    "구리",
+    "철스크랩",
+    "폴리카보네이트",
+    "정유"
+  ],
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "LS MnM 구리 제련\n**감산 검토**",
+      "sub": "10월 19일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 4건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "nonferrous",
+      "topic": "maker",
+      "src": "reu-ls-mnm-copper-cut",
+      "headline": "LS MnM 구리 제련\n**감산 검토**",
+      "toc": "LS MnM, 구리 정광 구매 조정 통한 제련 감산 검토",
+      "orig": "LS considers cut to copper processing capacity",
+      "why": "국내 구리 제련 가동 변화 점검",
+      "key": {
+        "value": "680,000톤",
+        "label": "LS MnM 정련소 연간 생산능력"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "LS MnM · 한국 구리 제련",
+          "items": [
+            {
+              "k": "REVIEW",
+              "v": "생산량 감축 가능성 검토",
+              "tone": "warn"
+            },
+            {
+              "k": "HOW",
+              "v": "구리 정광 구매를 탄력적으로 조정"
+            },
+            {
+              "k": "NOTE",
+              "v": "구매 조건에 따라 감축 여부 결정"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "680,000",
+              "unit": "톤",
+              "label": "정련소 연간 생산능력",
+              "hi": true
+            }
+          ]
+        }
+      ],
+      "coverage": []
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "supply",
+      "src": "snm-koreasteel-scrap-restart",
+      "update_of": "2026-10-14-s1",
+      "headline": "한국철강 스크랩\n**입고제한 해제**",
+      "toc": "한국철강, 20일부 철스크랩 입고제한 해제",
+      "orig": "한국철강, 20일부 철스크랩 입고통제 해제…화재 발생 열흘만",
+      "why": "철스크랩 납품 재개 시점 확인",
+      "key": {
+        "value": "20일",
+        "label": "입고 제한 해제 시작일"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "한국철강 · 창원공장",
+          "items": [
+            {
+              "k": "FROM",
+              "v": "20일부터 입고 대수 제한 해제",
+              "tone": "warn"
+            },
+            {
+              "k": "ITEMS",
+              "v": "와이어·강선 등 제한 품목도 해제"
+            },
+            {
+              "k": "EXCEPT",
+              "v": "철사는 입고 제한 유지",
+              "tone": "alert"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "20",
+              "unit": "일",
+              "label": "입고 제한 해제 시작",
+              "hi": true
+            }
+          ]
+        }
+      ],
+      "coverage": [
+        {
+          "publisher": "스틸데일리",
+          "title": "한국철강, 20일 스크랩 정상구매 시작",
+          "url": "https://www.steeldaily.co.kr/news/articleView.html?idxno=203626",
+          "date": "2026-10-19"
+        },
+        {
+          "publisher": "철강금속신문",
+          "title": "한국철강, 20일부 철스크랩 입고통제 해제…화재 발생 열흘만",
+          "url": "http://www.snmnews.com/news/articleView.html?idxno=576078",
+          "date": "2026-10-19"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "category": "resin",
+      "topic": "maker",
+      "src": "cl-covestro-antwerp-pc",
+      "headline": "코베스트로 앤트워프\n**PC 라인 4→1개**",
+      "toc": "코베스트로, 앤트워프 PC 생산라인 4개에서 1개로 통합",
+      "orig": "코베스트로, 앤트워프 PC 생산라인 4→1개",
+      "why": "유럽산 PC 공급처 변화 점검",
+      "key": {
+        "value": "4→1개",
+        "label": "앤트워프 PC 생산라인"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "코베스트로 · 벨기에 앤트워프",
+          "items": [
+            {
+              "k": "LINES",
+              "v": "PC 생산라인 4개를 1개로 통합",
+              "tone": "alert"
+            },
+            {
+              "k": "BPA",
+              "v": "전구체 BPA 생산 중단 계획",
+              "tone": "warn"
+            },
+            {
+              "k": "DATE",
+              "v": "10월 15일 발표"
+            }
+          ]
+        }
+      ],
+      "coverage": []
+    },
+    {
+      "type": "news",
+      "category": "chemical",
+      "topic": "supply",
+      "src": "inv-china-refinery-throughput-sep",
+      "headline": "중국 9월 정유 처리량\n**3개월 연속 증가**",
+      "toc": "중국 9월 정유 처리량 3개월 연속 증가, 연료 수출 확대",
+      "orig": "China oil refinery throughput rises in September on fuel exports",
+      "why": "석유화학 원료 공급 여건 점검",
+      "key": {
+        "value": "57.48Mt",
+        "label": "중국 9월 원유 처리량"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "중국 정유 · 9월",
+          "items": [
+            {
+              "k": "TREND",
+              "v": "처리량 3개월 연속 증가",
+              "tone": "warn"
+            },
+            {
+              "k": "LEVEL",
+              "v": "3월 이후 최고 수준"
+            },
+            {
+              "k": "CAUSE",
+              "v": "7월 중순 수출 제한 완화 후 연료 수출 확대"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "57.48",
+              "unit": "Mt",
+              "label": "9월 원유 처리량",
+              "hi": true
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "4.41",
+              "unit": "Mt",
+              "label": "휘발유·경유·항공유 수출"
+            }
+          ]
+        }
+      ],
+      "coverage": []
+    },
+    {
+      "type": "closing"
+    }
+  ],
+  "sources": [
+    {
+      "id": "reu-ls-mnm-copper-cut",
+      "publisher": "Reuters",
+      "via": "MINING.COM",
+      "title": "LS considers cut to copper processing capacity",
+      "date": "2026-10-19",
+      "time": "9:47 am",
+      "accessed": "2026-10-20",
+      "url": "https://www.mining.com/web/ls-considers-cut-to-copper-processing-capacity",
+      "evidence": [
+        "South Korean copper smelter LS MnM is reviewing a potential reduction in output",
+        "The company, which operates a refinery with annual capacity of 680,000 metric tons,",
+        "said it was considering “flexible adjustments” to copper concentrate purchases",
+        "Depending on purchase terms, reducing the purchase might help minimise the impact on profitability"
+      ]
+    },
+    {
+      "id": "snm-koreasteel-scrap-restart",
+      "publisher": "철강금속신문",
+      "title": "한국철강, 20일부 철스크랩 입고통제 해제…화재 발생 열흘만",
+      "date": "2026-10-19",
+      "time": "13:00",
+      "accessed": "2026-10-20",
+      "url": "http://www.snmnews.com/news/articleView.html?idxno=576078",
+      "evidence": [
+        "최근 옥내 야드 화재 발생으로 철스크랩 입고통제를 실시했던 한국철강이 20일부터 정상화에 나선다.",
+        "한국철강은 이날부터 철스크랩 입고 대수 제한을 해제한다고 밝혔다.",
+        "아울러 와이어, 강선 등 입고 제한 품목도 해제한다.",
+        "다만 철사의 경우 입고 제한을 유지한다는 방침이다."
+      ]
+    },
+    {
+      "id": "cl-covestro-antwerp-pc",
+      "publisher": "화학저널",
+      "title": "코베스트로, 앤트워프 PC 생산라인 4→1개",
+      "date": "2026-10-19",
+      "time": "09:28",
+      "accessed": "2026-10-20",
+      "url": "https://www.chemlocus.co.kr/news/view/146203",
+      "evidence": [
+        "코베스트로는 10월15일 벨기에 앤트워프(Antwerp)의 PC 생산라인을 기존 4개에서 1개로 통합하고 전구체 BPA(Bisphenol-A) 생산은 중단할 계획이라고 밝혔다."
+      ]
+    },
+    {
+      "id": "inv-china-refinery-throughput-sep",
+      "publisher": "Investing.com",
+      "title": "China oil refinery throughput rises in September on fuel exports",
+      "date": "2026-10-19",
+      "time": "02:37 AM",
+      "accessed": "2026-10-20",
+      "url": "https://www.investing.com/news/stock-market-news/china-oil-refinery-throughput-rises-in-september-on-fuel-exports-93CH-4956438",
+      "evidence": [
+        "Chinese oil refinery throughput rates grew for a third straight month in September",
+        "China processed 57.48 million metric tons of crude in September, equal to 13.99 million barrels per day,",
+        "The September throughput reached the highest level since March.",
+        "Beijing eased export restrictions in mid-July, which supported fuel demand at refineries.",
+        "The increase came as China’s combined exports of gasoline, diesel and jet fuel totaled 4.41 million tons in September,"
+      ]
+    }
+  ]
+}
