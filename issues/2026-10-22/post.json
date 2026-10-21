@@ -1,0 +1,104 @@
+{
+  "id": "2026-10-22-brief",
+  "date": "2026-10-22",
+  "issue": 25,
+  "category": "brief",
+  "topic": "supply",
+  "caption": "10월 21일(현지) 국내외 보도 기준 원재료 뉴스 2건.\n\n1) CMRG, 리오틴토와 철광석 연간 공급계약 합의\n2) First Quantum Kansanshi 확장, 설계 처리능력 초과\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": ["원자재", "철광석", "구리", "리오틴토", "FirstQuantum"],
+  "sources": [
+    {
+      "id": "reu-cmrg-rio-supply",
+      "publisher": "Reuters",
+      "via": "MINING.COM",
+      "title": "CMRG agrees to new annual supply contract with Rio Tinto, sources say",
+      "date": "2026-10-21",
+      "time": "7:18 am",
+      "accessed": "2026-10-22",
+      "url": "https://www.mining.com/web/cmrg-agrees-to-new-annual-supply-contract-with-rio-tinto-sources-say/",
+      "evidence": [
+        "China's state iron ore buyer has agreed a new supply deal for the key steelmaking ingredient with Rio Tinto",
+        "China Mineral Resources Group (CMRG) verbally notified some steel mills of the agreement on Wednesday",
+        "CMRG will start on Thursday to collect information on volumes that each mill needs to buy from the miner",
+        "It was not immediately clear how much Rio Tinto iron ore would be allocated under the contract."
+      ]
+    },
+    {
+      "id": "mc-kansanshi-expansion",
+      "publisher": "MINING.COM",
+      "title": "First Quantum’s Kansanshi expansion beats design capacity",
+      "date": "2026-10-21",
+      "time": "3:50 am",
+      "accessed": "2026-10-22",
+      "url": "https://www.mining.com/first-quantums-kansanshi-expansion-beats-design-capacity/",
+      "evidence": [
+        "First Quantum Minerals’ (TSX: FM) $1.2 billion Kansanshi expansion in Zambia is on track to process 8% more ore",
+        "The operation is expected to process about 27 million tonnes of ore this year,",
+        "exceeding the new plant’s annual design capacity of 25 million tonnes, the company said Wednesday.",
+        "First Quantum has forecast Kansanshi copper production of 175,000 to 205,000 tonnes in 2026,"
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "CMRG·리오틴토\n**철광석 공급 합의**",
+      "sub": "10월 21일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 2건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "supply",
+      "src": "reu-cmrg-rio-supply",
+      "headline": "CMRG·리오틴토\n**철광석 공급 합의**",
+      "toc": "CMRG, 리오틴토와 철광석 연간 공급계약 합의",
+      "orig": "CMRG agrees to new annual supply contract with Rio Tinto, sources say",
+      "why": "철광석 배분 물량 공개 여부 확인",
+      "key": {"value": "신규 계약", "label": "CMRG·리오틴토 철광석 공급"},
+      "viz": [
+        {
+          "type": "status",
+          "title": "CMRG · Rio Tinto 철광석",
+          "items": [
+            {"k": "DEAL", "v": "신규 철광석 공급계약 합의"},
+            {"k": "NEXT", "v": "목요일부터 제철소별 필요 물량 취합", "tone": "warn"},
+            {"k": "OPEN", "v": "배정 물량은 아직 불분명", "tone": "warn"}
+          ]
+        }
+      ],
+      "coverage": []
+    },
+    {
+      "type": "news",
+      "category": "nonferrous",
+      "topic": "maker",
+      "src": "mc-kansanshi-expansion",
+      "headline": "Kansanshi 확장\n**설계 처리능력 초과**",
+      "toc": "First Quantum Kansanshi 확장, 설계 처리능력 초과",
+      "orig": "First Quantum’s Kansanshi expansion beats design capacity",
+      "why": "잠비아 구리 공급 전망 점검",
+      "key": {"value": "27Mt", "label": "올해 광석 처리 예상량"},
+      "viz": [
+        {
+          "type": "stats",
+          "items": [
+            {"value": "27", "unit": "Mt", "label": "올해 광석 처리 예상 (설계 25Mt)", "hi": true},
+            {"value": "8", "unit": "%", "label": "설계 대비 추가 처리"}
+          ]
+        },
+        {
+          "type": "status",
+          "title": "First Quantum · 잠비아 Kansanshi",
+          "items": [
+            {"k": "PROJECT", "v": "12억 달러 확장, 처리 목표 초과 전망"},
+            {"k": "GUIDE", "v": "2026년 구리 175,000~205,000톤 전망"}
+          ]
+        }
+      ],
+      "coverage": []
+    },
+    {"type": "closing"}
+  ]
+}
