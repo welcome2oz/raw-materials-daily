@@ -196,7 +196,15 @@ def main():
                 wait_finished(k, token, f"항목 {i}")
             cid = call("POST", f"{ig}/media", {"media_type": "CAROUSEL", "children": ",".join(kids), "caption": caption}, token)["id"]
         wait_finished(cid, token, "캐러셀")
-        mid = call("POST", f"{ig}/media_publish", {"creation_id": cid}, token)["id"]
+        for attempt in range(1, 7):  # '아직 준비 안 됨'(2207027)이면 최대 6번, 10초 간격으로 재시도
+            try:
+                mid = call("POST", f"{ig}/media_publish", {"creation_id": cid}, token)["id"]
+                break
+            except RuntimeError as e:
+                if "2207027" not in str(e) or attempt == 6:
+                    raise
+                log(f"  게시 준비 대기 ({attempt}/6) — 10초 후 재시도")
+                time.sleep(10)
         info = call("GET", mid, {"fields": "permalink,timestamp"}, token)
     except RuntimeError as e:
         log("✗", e)
