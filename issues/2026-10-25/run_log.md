@@ -1,0 +1,11 @@
+# run_log 2026-10-25 (일요일 호, No.28)
+- 0단계: 이미 게시/넘김 없음. setup.sh 의 Chromium 설치 실패 → 사전 설치 Chromium(1243)을 /opt/pw-browsers 심볼릭 링크로 연결, python3.13(/usr/bin) 사용 (저장소 파일 변경 없음).
+- 1A: 발행함 feeds/2026-10-25 받음 (채널 64개, 원문 발췌 21건, pickup.py ✓). 발췌는 WebFetch 인용 문장 단위(전문 아님)임.
+- 2단계: collect.py 완료.
+- 3단계 선정 (일요일 → 지난 7일 범위):
+  - 스틸: 포스코 임금협상 결렬·11/2 파업 예고(이데일리) — 여러 매체 2곳(철강금속신문 보도 확인 못 해 카드 coverage 에는 미기재) / 우선순위 ① 공급 차질. 단독 보도 취급 — 생산 차질 가능(파업 예고)
+  - 비철: Hudbay·Mitsubishi Copper World 건설 승인(MINING.COM) — 단독 보도: 신규 프로젝트 투자 결정
+  - 레진: ZPC 120만 톤/년 PDH, Lummus 라이선스(ICIS) — 단독 보도: 설비·기술 계약. INSIGHT 분석 형식이나 새 사실(계약·설비 규모) 근거
+  - 화공: EIA 정유소 가동률 5~9월 95% 초과 — 단독 보도(기관 통계): 정제 수급 통계
+- 뺀 후보: 中 아연도금강판 반덤핑 최종판정(스틸 카테고리 1건 한도, 포스코 파업 우선), Nippon Steel Mon Valley(10/23 호 게시됨), Teck HVC 파업 통지(10/23 호 게시됨), Grupo Mexico Asarco·Trump DPA(10/24 호 게시됨), Taca Taca·Rio Weipa·Hydro(비철 1건 한도·실적 혼재), Cleveland-Cliffs·캐나다 지원책(스틸 한도), Aramco·인도/사우디 원유 수입·수출(가격 문장 혼재·한도), ICIS 아시아·스페인 기사(전망/업계 주장), worldsteel 9월 조강(스틸 한도), MMG-Anglo(본문 차단).
+- 5~6단계: render --check 오류 0 (경고: 단독 보도 4건 — 위 사유), 렌더 6장 확인(잘림·겹침 없음), 테마 light.

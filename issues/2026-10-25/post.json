@@ -1,0 +1,202 @@
+{
+  "id": "2026-10-25-brief",
+  "date": "2026-10-25",
+  "issue": 28,
+  "category": "brief",
+  "topic": "supply",
+  "caption": "10월 21일~24일(현지) 국내외 보도·기관 발표 기준 원재료 뉴스 4건.\n\n1) 포스코 노사 임금협상 결렬, 노조 11월 2일 무기한 파업 예고\n2) Hudbay·Mitsubishi, 美 애리조나 Copper World 구리 광산 건설 승인\n3) ZPC 120만 톤/년 PDH 설비, Lummus 기술 라이선스 수주\n4) 美 EIA, 올해 정유소 가동률 5~9월 평균 95% 초과\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": ["원자재", "철강", "구리", "프로필렌", "정유"],
+  "sources": [
+    {
+      "id": "edaily-posco-strike",
+      "publisher": "이데일리",
+      "title": "포스코 노사 임금협상 결렬…노조, 내달 2일 무기한 파업 예고",
+      "date": "2026-10-24",
+      "time": "오전 9:49",
+      "accessed": "2026-10-25",
+      "url": "https://www.edaily.co.kr/News/Read?newsId=01886006645616200&mediaCodeNo=257",
+      "evidence": [
+        "노조는 다음 달 2일 무기한 파업 돌입을 예고하며 “핵심 쟁점에 대한 사측 입장에 변화가 없어 합의가 무산됐다”고 주장했다.",
+        "또한 전면 파업에 앞서 26일부터 퇴근 이후 돌발 업무 대응을 제한하는 등 쟁의 수위도 높여나갈 예정이다.",
+        "이번 임금 교섭에서 노조는 기본급 7.1% 인상과 격려금 600%, 우리사주 50주, 명절상여금 200% 지급을 요구하고 있다.",
+        "반면 사측은 기본급 2.5% 인상, 일시금 500만원 지급, 명절 상여금 100만원+10%(2028년 이후 15%로 상향)을 제시한 것으로 알려졌다.",
+        "포스코 측은 파업이 현실화하면 생산계획을 조정하고 비상조업체계를 가동해 생산 차질을 최소화할 계획이다."
+      ]
+    },
+    {
+      "id": "mc-copper-world-approval",
+      "publisher": "MINING.COM",
+      "title": "Hudbay, Mitsubishi approve Copper World construction",
+      "date": "2026-10-21",
+      "time": "7:23 am",
+      "accessed": "2026-10-25",
+      "url": "https://www.mining.com/hudbay-mitsubishi-approve-copper-world-construction/",
+      "evidence": [
+        "have approved construction of the $2.1-billion Copper World project in southern Arizona",
+        "Hudbay expects to contribute about $500 million, less than one-quarter of the initial investment",
+        "The base case for Copper World contemplates a 15-year mine life",
+        "Annual copper production would average 102,000 tonnes during the first decade of operations",
+        "Mitsubishi acquired a 30% stake in the project through a $600-million investment completed in January 2026."
+      ]
+    },
+    {
+      "id": "icis-zpc-pdh-lummus",
+      "publisher": "ICIS",
+      "title": "INSIGHT: Why build the world’s largest PDH unit in a propylene glut?",
+      "date": "2026-10-22",
+      "accessed": "2026-10-25",
+      "url": "https://www.icis.com/explore/resources/news/2026/10/22/11238378/insight-why-build-the-world-s-largest-pdh-unit-in-a-propylene-glut",
+      "evidence": [
+        "Lummus Technology has won the license to provide technology for the world’s largest",
+        "Zhejiang Petroleum & Chemical (ZPC), which is majority owned by Rongsheng Petrochemical.",
+        "ZPC is developing a 1.2 million tonne/year PDH unit, which will surpass the previous record holder",
+        "Startup dates for ZPC’s PDH plant have not been announced",
+        "chronic overcapacity threatens to keep global propylene markets depressed for years."
+      ]
+    },
+    {
+      "id": "eia-us-refinery-runs-2026",
+      "publisher": "U.S. Energy Information Administration",
+      "title": "U.S. refineries have been running at very high rates in 2026",
+      "date": "2026-10-22",
+      "accessed": "2026-10-25",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68344",
+      "evidence": [
+        "averaging more than 95% of capacity between May and September, the highest for those months since 1998.",
+        "Since 1991, U.S. refinery utilization has averaged 92% from May to September",
+        "This year the refinery runs were driven largely by tight global supplies for distillate fuel oil,",
+        "because refining capacity has decreased by 4% since then.",
+        "In the first 3 weeks of October, U.S. refinery utilization decreased from its summer highs",
+        "remained above the five-year (2021–2025) seasonal average."
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "포스코 임금협상 결렬\n**11월 2일 파업 예고**",
+      "sub": "10월 21일~24일(현지) 국내외 보도·기관 발표 기준\n오늘의 원재료 뉴스 4건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "supply",
+      "src": "edaily-posco-strike",
+      "headline": "포스코 임금협상\n**결렬, 파업 예고**",
+      "toc": "포스코 노사 임금협상 결렬, 노조 11월 2일 무기한 파업 예고",
+      "key": {"value": "11/2", "label": "노조 무기한 파업 예고일"},
+      "viz": [
+        {
+          "type": "status",
+          "title": "포스코 · 임금교섭",
+          "items": [
+            {"k": "STATUS", "v": "임금 협상 결렬", "tone": "alert"},
+            {"k": "NEXT", "v": "다음 달 2일 무기한 파업 돌입 예고", "sub": "26일부터 퇴근 이후 돌발 업무 대응 제한", "tone": "warn"},
+            {"k": "RESPONSE", "v": "생산계획 조정·비상조업체계 가동 계획"}
+          ]
+        },
+        {
+          "type": "stats",
+          "items": [
+            {"value": "7.1", "unit": "%", "label": "노조 요구 기본급 인상률", "hi": true},
+            {"value": "2.5", "unit": "%", "label": "사측 제시 기본급 인상률"}
+          ]
+        }
+      ],
+      "why": "포스코 출하 일정 점검",
+      "coverage": []
+    },
+    {
+      "type": "news",
+      "category": "nonferrous",
+      "topic": "maker",
+      "src": "mc-copper-world-approval",
+      "headline": "Copper World\n**건설 승인**",
+      "toc": "Hudbay·Mitsubishi, 美 애리조나 Copper World 건설 승인",
+      "orig": "Hudbay, Mitsubishi approve Copper World construction",
+      "key": {"value": "2.1", "label": "Copper World 투자(십억 달러)"},
+      "viz": [
+        {
+          "type": "stats",
+          "items": [
+            {"value": "2.1", "unit": "B USD", "label": "Copper World 건설 승인 투자액", "hi": true},
+            {"value": "102,000", "unit": "t", "label": "첫 10년 연평균 구리 생산(기본 시나리오)"}
+          ]
+        },
+        {
+          "type": "status",
+          "title": "Hudbay · Mitsubishi · 美 애리조나 남부",
+          "items": [
+            {"k": "STATUS", "v": "건설 승인"},
+            {"k": "MINE LIFE", "v": "기본 시나리오 15년"},
+            {"k": "MITSUBISHI", "v": "프로젝트 지분 30% (6억 달러 투자, 2026년 1월 완료)"}
+          ]
+        }
+      ],
+      "why": "미국 내 신규 구리 공급원 일정 확인",
+      "coverage": []
+    },
+    {
+      "type": "news",
+      "category": "resin",
+      "topic": "maker",
+      "src": "icis-zpc-pdh-lummus",
+      "headline": "ZPC PDH 설비\n**세계 최대 규모**",
+      "toc": "ZPC 120만 톤/년 PDH, Lummus 기술 라이선스 수주",
+      "orig": "INSIGHT: Why build the world’s largest PDH unit in a propylene glut?",
+      "key": {"value": "1.2", "label": "ZPC PDH 규모(백만 톤/년)"},
+      "viz": [
+        {
+          "type": "stats",
+          "items": [
+            {"value": "1.2", "unit": "Mt/년", "label": "ZPC PDH 설비 규모", "hi": true}
+          ]
+        },
+        {
+          "type": "status",
+          "title": "Zhejiang Petroleum & Chemical (ZPC)",
+          "items": [
+            {"k": "LICENSE", "v": "Lummus Technology 기술 라이선스 수주"},
+            {"k": "OWNER", "v": "Rongsheng Petrochemical 최대 지분"},
+            {"k": "STARTUP", "v": "가동 시기 미발표", "tone": "warn"}
+          ]
+        }
+      ],
+      "why": "프로필렌 공급 과잉 흐름 점검",
+      "coverage": []
+    },
+    {
+      "type": "news",
+      "category": "chemical",
+      "topic": "supply",
+      "src": "eia-us-refinery-runs-2026",
+      "headline": "美 정유소 가동\n**5~9월 95% 초과**",
+      "toc": "美 EIA, 5~9월 정유소 가동률 1998년 이후 최고",
+      "orig": "U.S. refineries have been running at very high rates in 2026",
+      "key": {"value": "95%+", "label": "5~9월 평균 가동률"},
+      "viz": [
+        {
+          "type": "stats",
+          "items": [
+            {"value": "95", "unit": "% 초과", "label": "5~9월 평균 가동률 (1998년 이후 최고)", "hi": true},
+            {"value": "92", "unit": "%", "label": "1991년 이후 5~9월 평균"}
+          ]
+        },
+        {
+          "type": "status",
+          "title": "미국 정유 · EIA",
+          "items": [
+            {"k": "DRIVER", "v": "증류유 글로벌 공급 부족이 가동 견인"},
+            {"k": "CAPACITY", "v": "정제능력 4% 감소"},
+            {"k": "OCTOBER", "v": "10월 첫 3주 가동률은 여름 고점보다 낮아졌으나 5년 평균 상회"}
+          ]
+        }
+      ],
+      "why": "정제 제품 수급 여력 확인",
+      "coverage": []
+    },
+    {"type": "closing"}
+  ]
+}
