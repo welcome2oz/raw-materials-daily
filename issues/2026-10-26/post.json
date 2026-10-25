@@ -1,0 +1,240 @@
+{
+ "id": "2026-10-26-brief",
+ "date": "2026-10-26",
+ "issue": 29,
+ "category": "brief",
+ "topic": "supply",
+ "caption": "10월 22일~23일(현지) 국내외 보도 기준 원재료 뉴스 3건.\n\n1) 무역위, 中 아연도금강판 덤핑 최종 판정…5년간 22.34~33.67% 관세 건의\n2) Rio Tinto, 퀸즐랜드 Kangwinan 보크사이트 사업에 19억 달러 투자\n3) 中南美 재활용 플라스틱, 의무 사용 규제로 수요 부진 만회 기대 (ICIS)\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+ "hashtags": [
+  "원자재",
+  "철강",
+  "알루미늄",
+  "보크사이트",
+  "재활용수지"
+ ],
+ "sources": [
+  {
+   "id": "steeldaily-cn-galv-ad-final",
+   "publisher": "스틸데일리",
+   "title": "中 아연도금강판 반덤핑 최종 판정…5년간 최대 33.67% 관세",
+   "date": "2026-10-23",
+   "time": "17:21",
+   "accessed": "2026-10-26",
+   "url": "https://www.steeldaily.co.kr/news/articleView.html?idxno=203762",
+   "evidence": [
+    "중국산 아연도금강판에 최대 33.67%의 덤핑방지관세가 5년간 부과될 전망이다.",
+    "무역위는 중국산 제품의 저가 수입으로 국내 산업이 피해를 입었다고 판단하고, 향후 5년간 22.34~33.67%의 덤핑방지관세를 부과하도록 재정경제부에 건의하기로 했다.",
+    "업체별 관세율은 내몽골 바오터우강철 22.34%, 서우강징탕 26.28%, 윈스톤디벨롭먼트 33.67%로 결정됐다.",
+    "바오산강철과 우한강철, 산둥강철 등 그 밖의 공급업체에는 25.75%가 적용된다.",
+    "재정경제부가 관세 부과와 가격약속 수락 여부를 최종 결정한다."
+   ]
+  },
+  {
+   "id": "reu-rio-kangwinan-bauxite",
+   "publisher": "Reuters",
+   "via": "MINING.COM",
+   "title": "Rio Tinto to invest $1.9 billion in Queensland bauxite project",
+   "date": "2026-10-22",
+   "time": "4:05 pm",
+   "accessed": "2026-10-26",
+   "url": "https://www.mining.com/web/rio-tinto-to-invest-1-9-billion-in-queensland-bauxite-project/",
+   "evidence": [
+    "Rio Tinto (ASX: RIO) said on Friday it will invest $1.9 billion to develop the Kangwinan bauxite project in Queensland",
+    "The miner said the investment would add 20 million tonnes of annual bauxite production in Weipa",
+    "with first output targeted in 2029 and full production expected by 2032.",
+    "while increasing Weipa’s annual production capacity to about 44 million tonnes from around 38 million tonnes currently.",
+    "The development will also help offset the planned 2029 closure of Rio’s Gove bauxite mine in the Northern Territory."
+   ]
+  },
+  {
+   "id": "icis-latam-recycled-mandates",
+   "publisher": "ICIS",
+   "title": "APLA ‘26: LatAm recycled plastics bank on mandates to offset weak demand",
+   "date": "2026-10-24",
+   "accessed": "2026-10-26",
+   "url": "https://www.icis.com/explore/resources/news/2026/10/24/11238654/apla-26-latam-recycled-plastics-bank-on-mandates-to-offset-weak-demand",
+   "evidence": [
+    "Demand for most recycled resin grades has remained subdued throughout 2026",
+    "established minimum recycled-content targets beginning in 2026.",
+    "upcoming regulations expected to establish mandatory post-consumer recycled (PCR) content requirements in 2027.",
+    "compliance with recycled-content obligations will only be allowed through domestically collected waste feedstock.",
+    "Regulation is increasingly viewed as the primary catalyst for future market growth."
+   ]
+  }
+ ],
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "TODAY'S RAW MATERIALS NEWS",
+   "title": "中 아연도금강판\n**덤핑관세 최종 판정**",
+   "sub": "10월 22일~23일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 3건",
+   "toc": true
+  },
+  {
+   "type": "news",
+   "category": "steel",
+   "topic": "tariff",
+   "src": "steeldaily-cn-galv-ad-final",
+   "headline": "中 아연도금강판\n**덤핑관세 5년 건의**",
+   "toc": "무역위, 中 아연도금강판 덤핑 최종 판정…관세 22.34~33.67% 건의",
+   "orig": "中 아연도금강판 반덤핑 최종 판정…5년간 최대 33.67% 관세",
+   "key": {
+    "value": "33.67",
+    "label": "최고 덤핑방지관세율(%)"
+   },
+   "viz": [
+    {
+     "type": "stats",
+     "items": [
+      {
+       "value": "33.67",
+       "unit": "%",
+       "label": "최고 건의 세율(윈스톤디벨롭먼트)"
+      },
+      {
+       "value": "22.34",
+       "unit": "%",
+       "label": "최저 건의 세율(바오터우강철)"
+      },
+      {
+       "value": "25.75",
+       "unit": "%",
+       "label": "그 밖의 공급업체"
+      }
+     ]
+    },
+    {
+     "type": "status",
+     "title": "무역위 · 중국산 아연도금강판",
+     "items": [
+      {
+       "k": "STATUS",
+       "v": "덤핑 최종 판정 의결"
+      },
+      {
+       "k": "NEXT",
+       "v": "재정경제부 관세 부과 최종 결정"
+      },
+      {
+       "k": "OFFER",
+       "v": "일부 업체 가격약속 수락 건의"
+      }
+     ]
+    }
+   ],
+   "why": "중국산 도금강판 조달 원가 영향 점검",
+   "coverage": [
+    {
+     "publisher": "산업통상부",
+     "title": "무역위, 중국산 아연도금냉연, 옵셋인쇄판 덤핑조사 최종판정",
+     "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172325/view?pageIndex=1",
+     "date": "2026-10-23"
+    },
+    {
+     "publisher": "철강금속신문",
+     "title": "무역위, 中 아연도금 반덤핑 최종판정…최대 33.67% 관세·가격약속 건의",
+     "url": "http://www.snmnews.com/news/articleView.html?idxno=576347",
+     "date": "2026-10-23"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "category": "nonferrous",
+   "topic": "supply",
+   "src": "reu-rio-kangwinan-bauxite",
+   "headline": "Rio Tinto\n**보크사이트 19억 달러**",
+   "toc": "Rio Tinto, 퀸즐랜드 Kangwinan 보크사이트 사업에 19억 달러 투자",
+   "key": {
+    "value": "1.9",
+    "label": "Kangwinan 투자(십억 달러)"
+   },
+   "viz": [
+    {
+     "type": "stats",
+     "items": [
+      {
+       "value": "1.9",
+       "unit": "B USD",
+       "label": "Kangwinan 투자액",
+       "hi": true
+      },
+      {
+       "value": "20",
+       "unit": "Mt/년",
+       "label": "Weipa 보크사이트 추가 생산"
+      }
+     ]
+    },
+    {
+     "type": "status",
+     "title": "Rio Tinto · 호주 퀸즐랜드 Weipa",
+     "items": [
+      {
+       "k": "FIRST OUTPUT",
+       "v": "2029년 목표"
+      },
+      {
+       "k": "FULL",
+       "v": "2032년 완전 생산 예상"
+      },
+      {
+       "k": "CAPACITY",
+       "v": "Weipa 연 생산능력 약 3,800만 → 4,400만 톤"
+      }
+     ]
+    }
+   ],
+   "why": "알루미늄 원료 장기 공급 여력 확인",
+   "coverage": []
+  },
+  {
+   "type": "news",
+   "category": "resin",
+   "topic": "regulation",
+   "src": "icis-latam-recycled-mandates",
+   "headline": "中南美 재활용 수지\n**의무 사용에 기대**",
+   "toc": "中南美 재활용 플라스틱, 의무 사용 규제로 부진 수요 만회 기대",
+   "orig": "APLA ‘26: LatAm recycled plastics bank on mandates to offset weak demand",
+   "key": {
+    "value": "2027",
+    "label": "PCR 의무 사용 규제 예상 시점"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "ICIS · 중남미 재활용 수지 시장",
+     "items": [
+      {
+       "k": "DEMAND",
+       "v": "대부분 재활용 수지 등급 2026년 내내 부진"
+      },
+      {
+       "k": "2026",
+       "v": "최소 재활용 함량 목표 시행"
+      },
+      {
+       "k": "2027",
+       "v": "PCR 의무 사용 규제 예상"
+      }
+     ]
+    },
+    {
+     "type": "status",
+     "title": "규제 조건",
+     "items": [
+      {
+       "k": "FEEDSTOCK",
+       "v": "자국 내 수거 폐기물 원료로만 인정"
+      }
+     ]
+    }
+   ],
+   "why": "재활용 수지 조달 시 규제 요건 확인",
+   "coverage": []
+  },
+  {
+   "type": "closing"
+  }
+ ]
+}
