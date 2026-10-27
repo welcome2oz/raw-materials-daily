@@ -1,0 +1,155 @@
+{
+  "id": "2026-10-28-brief",
+  "date": "2026-10-28",
+  "issue": 31,
+  "category": "brief",
+  "topic": "supply",
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "Codelco 구리광산\n**진입로 봉쇄**",
+      "sub": "10월 26일~27일(현지) 외신 보도 기준\n오늘의 원재료 뉴스 3건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "nonferrous",
+      "topic": "supply",
+      "src": "mcom-codelco-hales-blockade",
+      "headline": "Codelco 구리광산\n**진입로 봉쇄**",
+      "toc": "Codelco Ministro Hales 구리광산 진입로 봉쇄",
+      "orig": "Codelco copper mine blockade adds to supply concerns",
+      "why": "타 사업장 확산 여부 점검",
+      "key": {"value": "6", "label": "점거 시작 시각(오전 시)"},
+      "viz": [
+        {
+          "type": "status",
+          "title": "Codelco · Ministro Hales (칠레)",
+          "items": [
+            {"k": "STATUS", "v": "노조·직원이 진입로 봉쇄·점거", "tone": "alert"},
+            {"k": "START", "v": "오전 6시부터 사업장 출입구 점거", "tone": "warn"},
+            {"k": "RISK", "v": "Chuquicamata·Radomiro Tomic·Gabriela Mistral로 확산 경고"}
+          ]
+        }
+      ],
+      "coverage": [
+        {"publisher": "MINING.COM", "title": "Codelco copper mine blockade adds to supply concerns", "url": "https://www.mining.com/codelco-copper-mine-blockade-adds-to-supply-concerns/", "date": "2026-10-27"}
+      ]
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "tariff",
+      "src": "reu-us-canada-steel-tariff",
+      "headline": "美·캐나다\n**철강 관세 완화 협상**",
+      "toc": "美·캐나다, 철강·자동차 관세 완화 협상 중",
+      "orig": "Exclusive-US, Canada working on deal to ease steel, auto tariffs, sources say",
+      "why": "캐나다산 철강 관세 변동 가능성 점검",
+      "key": {"value": "50%", "label": "캐나다산 철강 관세율(최대)"},
+      "viz": [
+        {
+          "type": "status",
+          "title": "미국 · 캐나다 (소식통)",
+          "items": [
+            {"k": "STATUS", "v": "철강·자동차 관세 완화 협상 중", "tone": "warn"},
+            {"k": "TARGET", "v": "11월 3일 선거 전 타결 가능성"},
+            {"k": "BACKGROUND", "v": "8월 무역 협상 결렬"}
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {"value": "50", "unit": "%", "label": "캐나다산 철강 관세(최대)", "hi": true}
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {"value": "25", "unit": "%", "label": "캐나다산 자동차 관세"}
+          ]
+        }
+      ],
+      "coverage": [
+        {"publisher": "Reuters", "title": "Exclusive-US, Canada working on deal to ease steel, auto tariffs, sources say", "url": "https://www.investing.com/news/economy-news/exclusiveus-canada-working-on-deal-to-ease-steel-auto-tariffs-sources-say-4973470", "date": "2026-10-26"}
+      ]
+    },
+    {
+      "type": "news",
+      "category": "chemical",
+      "topic": "supply",
+      "src": "reu-opecplus-dec-steady",
+      "headline": "OPEC+ 12월\n**생산목표 동결 전망**",
+      "toc": "OPEC+, 12월 생산목표 동결 가능성(소식통)",
+      "orig": "OPEC+ oil producers set to keep output targets steady at Sunday meeting, sources say",
+      "why": "원유 공급 목표 변동 없음 전제 점검",
+      "viz": [
+        {
+          "type": "status",
+          "title": "OPEC+ 핵심 7개 회원국",
+          "items": [
+            {"k": "OUTLOOK", "v": "12월 생산목표 동결 가능성 (소식통)", "tone": "warn"},
+            {"k": "DECISION", "v": "최종 결정은 아직 없음"},
+            {"k": "FOCUS", "v": "2027년 쿼터 협상으로 초점 이동"}
+          ]
+        }
+      ],
+      "coverage": [
+        {"publisher": "Reuters", "title": "OPEC+ oil producers set to keep output targets steady at Sunday meeting, sources say", "url": "https://www.investing.com/news/commodities-news/opec-oil-producers-set-to-keep-output-targets-steady-at-sunday-meeting-sources-say-4974571", "date": "2026-10-27"}
+      ]
+    },
+    {"type": "closing"}
+  ],
+  "sources": [
+    {
+      "id": "mcom-codelco-hales-blockade",
+      "publisher": "MINING.COM",
+      "title": "Codelco copper mine blockade adds to supply concerns",
+      "date": "2026-10-27",
+      "time": "5:29 am",
+      "accessed": "2026-10-28",
+      "url": "https://www.mining.com/codelco-copper-mine-blockade-adds-to-supply-concerns/",
+      "evidence": [
+        "Workers at Codelco’s Ministro Hales copper mine in northern Chile blocked access",
+        "Union leaders and employees erected barricades and occupied the main entrances",
+        "Muñoz said union leaders began occupying the division’s gates at 6 a.m.",
+        "He warned that protests could spread to Codelco’s Chuquicamata, Radomiro Tomic and Gabriela Mistral operations"
+      ]
+    },
+    {
+      "id": "reu-us-canada-steel-tariff",
+      "publisher": "Reuters",
+      "via": "Investing.com",
+      "title": "Exclusive-US, Canada working on deal to ease steel, auto tariffs, sources say",
+      "date": "2026-10-26",
+      "time": "03:31 PM",
+      "accessed": "2026-10-28",
+      "url": "https://www.investing.com/news/economy-news/exclusiveus-canada-working-on-deal-to-ease-steel-auto-tariffs-sources-say-4973470",
+      "evidence": [
+        "The United States and Canada are working on a deal to ease US tariffs on Canadian steel and autos",
+        "including up to 50% tariff on Canadian steel and a 25% tariff on autos",
+        "a deal on steel and auto tariffs was possible before the November 3 elections",
+        "US and Canadian trade talks collapsed in August over issues such as whether to cut duties"
+      ]
+    },
+    {
+      "id": "reu-opecplus-dec-steady",
+      "publisher": "Reuters",
+      "via": "Investing.com",
+      "title": "OPEC+ oil producers set to keep output targets steady at Sunday meeting, sources say",
+      "date": "2026-10-27",
+      "time": "05:27 AM",
+      "accessed": "2026-10-28",
+      "url": "https://www.investing.com/news/commodities-news/opec-oil-producers-set-to-keep-output-targets-steady-at-sunday-meeting-sources-say-4974571",
+      "evidence": [
+        "OPEC+ oil-producing countries are likely to keep their oil production targets steady for December",
+        "as the producer group turns its focus to 2027 quota negotiations.",
+        "All three people declined to be named and said no final decision had been made."
+      ]
+    }
+  ],
+  "caption": "10월 26일~27일(현지) 외신 보도 기준 원재료 뉴스 3건.\n\n1) Codelco Ministro Hales 구리광산 진입로 봉쇄\n2) 美·캐나다, 철강·자동차 관세 완화 협상 중(소식통)\n3) OPEC+, 12월 생산목표 동결 가능성(소식통)\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": ["원자재", "구리", "철강", "관세", "원유"]
+}
