@@ -1,0 +1,192 @@
+{
+  "id": "2026-10-29-brief",
+  "date": "2026-10-29",
+  "issue": 32,
+  "category": "brief",
+  "topic": "supply",
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "중국 알루미늄 업계\n**해외 제련소 확대**",
+      "sub": "10월 28일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 2건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "nonferrous",
+      "topic": "supply",
+      "src": "reu-china-aluminium-smelters-abroad",
+      "headline": "중국 알루미늄 업계\n**해외 제련소 확대**",
+      "toc": "중국 알루미늄 업체, 해외 제련소 확대 추진",
+      "orig": "China’s aluminium producers push abroad as domestic growth hits ceiling",
+      "why": "신규 공급원 가동 시점 점검",
+      "key": {
+        "value": "15",
+        "label": "계획·발표 제련 능력(백만 톤/년, 최소)"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "중국 업체 해외 알루미늄 제련",
+          "items": [
+            {
+              "k": "INDONESIA",
+              "v": "2026년 연 86.6만 톤 증설 전망"
+            },
+            {
+              "k": "CONSTRAINT",
+              "v": "7월 시행 해외투자 규정으로 심사 강화",
+              "tone": "warn"
+            },
+            {
+              "k": "OUTLOOK",
+              "v": "최종 건설은 900만~1,000만 톤 수준"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "15",
+              "unit": "Mt/년",
+              "label": "계획·발표 제련 능력(최소)",
+              "hi": true
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "2.85",
+              "unit": "Mt/년",
+              "label": "가동 중·건설 중"
+            }
+          ]
+        }
+      ],
+      "coverage": [
+        {
+          "publisher": "Reuters",
+          "title": "China’s aluminium producers push abroad as domestic growth hits ceiling",
+          "url": "https://www.mining.com/web/chinas-aluminium-producers-push-abroad-as-domestic-growth-hits-ceiling/",
+          "date": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "tariff",
+      "src": "snm-us-steel-nails-ad-review",
+      "headline": "美 한국산 강철 못\n**반덤핑 재심 예비판정**",
+      "toc": "美 상무부, 한국산 강철 못 반덤핑 연례재심 예비판정",
+      "orig": "美 상무부, 한국산 강철 못 반덤핑 연례재심 결과 발표",
+      "why": "대미 강철 못 수출 마진율 점검",
+      "key": {
+        "value": "3.07%",
+        "label": "5개사 가중평균 덤핑마진율"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "미국 상무부 · 한국산 강철 못",
+          "items": [
+            {
+              "k": "STATUS",
+              "v": "연례재심 예비판정 발표",
+              "tone": "warn"
+            },
+            {
+              "k": "PERIOD",
+              "v": "2024년 7월~2025년 6월"
+            },
+            {
+              "k": "WITHDRAWN",
+              "v": "3개사 수입기록 없어 재심 철회"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "3.07",
+              "unit": "%",
+              "label": "5개사 가중평균 덤핑마진율",
+              "hi": true
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "0.00",
+              "unit": "%",
+              "label": "코와이어 덤핑마진율"
+            }
+          ]
+        }
+      ],
+      "coverage": [
+        {
+          "publisher": "철강금속신문",
+          "title": "美 상무부, 한국산 강철 못 반덤핑 연례재심 결과 발표",
+          "url": "http://www.snmnews.com/news/articleView.html?idxno=576506",
+          "date": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "type": "closing"
+    }
+  ],
+  "sources": [
+    {
+      "id": "reu-china-aluminium-smelters-abroad",
+      "publisher": "Reuters",
+      "via": "MINING.COM",
+      "title": "China’s aluminium producers push abroad as domestic growth hits ceiling",
+      "date": "2026-10-28",
+      "time": "7:19 am",
+      "accessed": "2026-10-29",
+      "url": "https://www.mining.com/web/chinas-aluminium-producers-push-abroad-as-domestic-growth-hits-ceiling/",
+      "evidence": [
+        "At least 15 million metric tons a year of primary aluminium smelting capacity is planned or has been announced",
+        "About 2.85 million tons a year of that is ramping up or under construction",
+        "expects Indonesia to add 866,000 tons of annual smelting capacity in 2026",
+        "Overseas aluminium deals face stricter regulatory scrutiny under new outbound investment rules that started in July",
+        "only between 9 million and 10 million tons will eventually be built"
+      ]
+    },
+    {
+      "id": "snm-us-steel-nails-ad-review",
+      "publisher": "철강금속신문",
+      "title": "美 상무부, 한국산 강철 못 반덤핑 연례재심 결과 발표",
+      "date": "2026-10-28",
+      "time": "08:10",
+      "accessed": "2026-10-29",
+      "url": "http://www.snmnews.com/news/articleView.html?idxno=576506",
+      "evidence": [
+        "미국 상무부는 한국산 강철 못(Certain Steel Nails)에 대한 반덤핑 연례재심 예비판정 결과 및 일부 기업에 대한 반덤핑 재심 철회를 발표했다.",
+        "이번 반덤핑 조사의 심사기간은 2024년 7월 1일부터 2025년 6월 30일까지이며",
+        "제일선재와 대진철강, 한미스태플, 코람, 네일테크의 가중평균 덤핑마진율은 3.07%, 코와이어는 0.00%로 산정했다.",
+        "미국 세관에 심사 가능한 수입기록이 없어 재심 대상에서 철회했다."
+      ]
+    }
+  ],
+  "caption": "10월 28일(현지) 국내외 보도 기준 원재료 뉴스 2건.\n\n1) 중국 알루미늄 업체, 해외 제련소 확대 추진\n2) 美 상무부, 한국산 강철 못 반덤핑 연례재심 예비판정\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": [
+    "원자재",
+    "알루미늄",
+    "철강",
+    "반덤핑"
+  ]
+}
