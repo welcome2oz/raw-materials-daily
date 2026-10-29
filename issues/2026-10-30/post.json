@@ -1,0 +1,209 @@
+{
+  "id": "2026-10-30-brief",
+  "date": "2026-10-30",
+  "issue": 33,
+  "category": "brief",
+  "topic": "supply",
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "루살 가나 보크사이트\n**알루미나 합작 합의**",
+      "sub": "10월 29일(현지) 국내외 보도·기관 발표 기준\n오늘의 원재료 뉴스 3건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "nonferrous",
+      "topic": "supply",
+      "src": "reu-rusal-ghana-bauxite",
+      "headline": "루살 가나 보크사이트\n**알루미나 합작 합의**",
+      "toc": "루살, 가나 보크사이트·알루미나 합작사업 합의",
+      "orig": "Rusal agrees bauxite, alumina joint ventures to tap big deposit in Ghana",
+      "why": "알루미나 신규 공급원 추이 점검",
+      "key": {
+        "value": "5",
+        "label": "가나 보크사이트 연 생산 최대(백만 톤)"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "루살 · 가나 합작사업",
+          "items": [
+            {"k": "STATUS", "v": "GIADEC와 보크사이트 채굴 개발 합의", "tone": "warn"},
+            {"k": "STRUCTURE", "v": "합작사 2곳, 루살이 과반 지분"},
+            {"k": "DEPOSIT", "v": "니이나힌 매장량 1억 톤 이상"}
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {"value": "5", "unit": "Mt/년", "label": "보크사이트 연 생산 최대", "hi": true}
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {"value": "1.2", "unit": "Mt/년", "label": "알루미나 정제소 능력"}
+          ]
+        }
+      ],
+      "coverage": [
+        {
+          "publisher": "Reuters",
+          "title": "Rusal agrees bauxite, alumina joint ventures to tap big deposit in Ghana",
+          "url": "https://www.mining.com/web/rusal-agrees-bauxite-alumina-joint-ventures-to-tap-big-deposit-in-ghana/",
+          "date": "2026-10-29"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "tariff",
+      "src": "snm-japan-sts-ad",
+      "headline": "일본 中·臺 STS 냉연\n**반덤핑 관세 5년**",
+      "toc": "일본, 중국·대만산 STS 냉연에 5년간 반덤핑 관세 확정",
+      "orig": "일본, 중국·대만산 STS 냉연 수입 족쇄…5년간 AD 관세 부과",
+      "why": "일본향 STS 냉연 수출 여건 점검",
+      "key": {
+        "value": "3.6~42.1%",
+        "label": "반덤핑 세율"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "일본 · 중국·대만산 STS 냉연",
+          "items": [
+            {"k": "STATUS", "v": "반덤핑 관세 부과 확정", "tone": "alert"},
+            {"k": "PERIOD", "v": "10월 31일~2031년 10월 30일", "sub": "5년간"},
+            {"k": "SCOPE", "v": "HS 22개 품목"}
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {"value": "3.6~42.1", "unit": "%", "label": "반덤핑 세율(잠정조치와 동일)", "hi": true}
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {"value": "22", "unit": "개", "label": "대상 HS 품목"}
+          ]
+        }
+      ],
+      "coverage": [
+        {
+          "publisher": "철강금속신문",
+          "title": "일본, 중국·대만산 STS 냉연 수입 족쇄…5년간 AD 관세 부과",
+          "url": "http://www.snmnews.com/news/articleView.html?idxno=576592",
+          "date": "2026-10-29"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "category": "chemical",
+      "topic": "regulation",
+      "src": "motir-diesel-export",
+      "headline": "경유 수출제한\n**조건부 완화 시행**",
+      "toc": "산업통상부, 11월 수출분부터 경유 수출제한 조건부 완화",
+      "orig": "(참고자료)국내 수급에 차질 없는 범위 내에서 경유 수출제한 조건부 완화 시행",
+      "why": "석유제품 수출 물량 변화 점검",
+      "key": {
+        "value": "110%",
+        "label": "전년 동월 대비 수출 허용 상한"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "산업통상부 · 경유 수출",
+          "items": [
+            {"k": "STATUS", "v": "11월 수출 물량부터 조건부 완화", "tone": "warn"},
+            {"k": "BEFORE", "v": "수출량 전년 동월의 100% 이내 제한", "sub": "3월 13일부터"},
+            {"k": "CONDITION", "v": "내수 공급 의무 이행·재고 확보 시"}
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {"value": "110", "unit": "%", "label": "전년 동월 대비 수출 허용 상한", "hi": true}
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {"value": "7.2", "unit": "%", "label": "누적 경유 소비량 감소"}
+          ]
+        }
+      ],
+      "coverage": [
+        {
+          "publisher": "산업통상부",
+          "title": "(참고자료)국내 수급에 차질 없는 범위 내에서 경유 수출제한 조건부 완화 시행",
+          "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172353/view?mno=&pageIndex=1",
+          "date": "2026-10-29"
+        }
+      ]
+    },
+    {
+      "type": "closing"
+    }
+  ],
+  "sources": [
+    {
+      "id": "reu-rusal-ghana-bauxite",
+      "publisher": "Reuters",
+      "via": "MINING.COM",
+      "title": "Rusal agrees bauxite, alumina joint ventures to tap big deposit in Ghana",
+      "date": "2026-10-29",
+      "time": "10:27 am",
+      "accessed": "2026-10-30",
+      "url": "https://www.mining.com/web/rusal-agrees-bauxite-alumina-joint-ventures-to-tap-big-deposit-in-ghana/",
+      "evidence": [
+        "Rusal and GIADEC have agreed to develop bauxite mining operations in Ghana with annual output of up to 5 million tons",
+        "the projects would be implemented through two joint ventures in which it would hold majority stakes",
+        "to build an alumina refinery with an annual capacity of 1.2 million tons",
+        "at the Nyinahin deposit in southwest Ghana are more than 100 million tons of bauxite"
+      ]
+    },
+    {
+      "id": "snm-japan-sts-ad",
+      "publisher": "철강금속신문",
+      "title": "일본, 중국·대만산 STS 냉연 수입 족쇄…5년간 AD 관세 부과",
+      "date": "2026-10-29",
+      "time": "10:53",
+      "accessed": "2026-10-30",
+      "url": "http://www.snmnews.com/news/articleView.html?idxno=576592",
+      "evidence": [
+        "일본 정부가 중국산과 대만산 스테인리스(STS) 냉연강대·냉연강판에 반덤핑 관세를 물리기로 확정했다.",
+        "부과 기간은 10월 31일부터 2031년 10월 30일까지 5년이다.",
+        "세율은 7월 9일부터 적용해 온 잠정조치와 같은 3.6~42.1%다.",
+        "HS 7219.31~35호와 90호, 7220.20호와 90호 가운데 22개 품목이 해당한다."
+      ]
+    },
+    {
+      "id": "motir-diesel-export",
+      "publisher": "산업통상부",
+      "title": "(참고자료)국내 수급에 차질 없는 범위 내에서 경유 수출제한 조건부 완화 시행",
+      "date": "2026-10-29",
+      "accessed": "2026-10-30",
+      "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172353/view?mno=&pageIndex=1",
+      "evidence": [
+        "11월 수출 물량부터 경유 수출제한 조건부 완화를 시행할 예정이다.",
+        "수출량을 전년 동월의 100% 이내로 제한해 왔다.",
+        "정유사가 내수 공급 의무를 이행하고 적정 수준의 재고를 확보하는 경우에 한해 전년 동월 대비 110% 내에서 추가 수출을 허용하되",
+        "최고가격제 시행 이후 최근까지(3.2주~10.3주) 누적 경유 소비량 7.2% 감소"
+      ]
+    }
+  ],
+  "caption": "10월 29일(현지) 국내외 보도·기관 발표 기준 원재료 뉴스 3건.\n\n1) 루살, 가나 보크사이트·알루미나 합작사업 합의\n2) 일본, 중국·대만산 STS 냉연에 5년간 반덤핑 관세 확정\n3) 산업통상부, 11월 수출분부터 경유 수출제한 조건부 완화\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": ["원자재", "알루미늄", "스테인리스", "반덤핑", "경유"]
+}
