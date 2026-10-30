@@ -1,0 +1,255 @@
+{
+  "id": "2026-10-31-brief",
+  "date": "2026-10-31",
+  "issue": 34,
+  "category": "brief",
+  "topic": "supply",
+  "hashtags": [
+    "원자재",
+    "구리",
+    "철강",
+    "PET",
+    "세이프가드"
+  ],
+  "caption": "10월 30일(현지) 국내외 보도 기준 원재료 뉴스 3건.\n\n1) 리오틴토, 지진 후 오유톨고이 지하 조업 단계적 재개\n2) 포스코 노사 임단협 잠정합의, 11월 7일 찬반투표\n3) 영국 PET 세이프가드 제안, 쿼터 초과분 65% 관세\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "오유톨고이 구리광산\n**지하 조업 단계적 재개**",
+      "sub": "10월 30일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 3건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "nonferrous",
+      "topic": "supply",
+      "src": "reu-oyu-tolgoi-restart",
+      "headline": "오유톨고이 구리광산\n**지하 조업 단계적 재개**",
+      "toc": "리오틴토, 지진 후 오유톨고이 지하 조업 단계적 재개",
+      "orig": "Rio Tinto begins restarting Oyu Tolgoi underground operations after seismic event",
+      "why": "몽골발 구리정광 물류 지연 점검",
+      "key": {
+        "value": "66",
+        "label": "리오틴토 오유톨고이 지분(%)"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "리오틴토 · 오유톨고이 · 몽골",
+          "items": [
+            {
+              "k": "STATUS",
+              "v": "안전 점검 후 지하 조업 단계적 재개",
+              "tone": "warn"
+            },
+            {
+              "k": "CAUSE",
+              "v": "10월 29일 지진 사건, 국지적 낙석 발생"
+            },
+            {
+              "k": "LOGISTICS",
+              "v": "간치마오두 국경 통과 지연, 정광 운송 트럭 감소",
+              "tone": "alert"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "66",
+              "unit": "%",
+              "label": "리오틴토 보유 지분",
+              "hi": true
+            }
+          ]
+        }
+      ],
+      "coverage": [
+        {
+          "publisher": "Reuters",
+          "title": "Rio Tinto begins restarting Oyu Tolgoi underground operations after seismic event",
+          "url": "https://www.mining.com/web/rio-tinto-begins-restarting-oyu-tolgoi-underground-operations-after-seismic-event/",
+          "date": "2026-10-30"
+        },
+        {
+          "publisher": "Yahoo Finance",
+          "title": "Rio Tinto Mine in Mongolia Struck by Earthquake, No Fatalities",
+          "url": "https://finance.yahoo.com/energy/articles/rio-tinto-mine-mongolia-struck-072143643.html",
+          "date": "2026-10-30"
+        },
+        {
+          "publisher": "MarketWatch",
+          "title": "Rio Tinto to Restart Underground Operations at Oyu Tolgoi Copper Mine -- 2nd Update",
+          "url": "https://www.marketwatch.com/story/rio-tinto-to-restart-underground-operations-at-oyu-tolgoi-copper-mine-2nd-update-8f76c8d4",
+          "date": "2026-10-30"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "supply",
+      "src": "edaily-posco-tentative-deal",
+      "headline": "포스코 임단협\n**잠정합의 도출**",
+      "toc": "포스코 노사 임단협 잠정합의, 11월 7일 찬반투표",
+      "why": "포스코 출하 정상화 여부 확인",
+      "key": {
+        "value": "11/7",
+        "label": "노조 찬반투표일"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "포스코 · 임단협",
+          "items": [
+            {
+              "k": "STATUS",
+              "v": "노사 잠정합의안 마련",
+              "tone": "warn"
+            },
+            {
+              "k": "NEXT",
+              "v": "11월 7일 조합원 찬반투표",
+              "sub": "노조 무제한 파업 예고일 11월 2일 직전 합의"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "2.6",
+              "unit": "%",
+              "label": "기본급 인상",
+              "hi": true
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "600",
+              "unit": "만원",
+              "label": "일시금"
+            }
+          ]
+        }
+      ],
+      "coverage": []
+    },
+    {
+      "type": "news",
+      "category": "resin",
+      "topic": "tariff",
+      "src": "icis-uk-pet-safeguard-65",
+      "headline": "영국 PET 세이프가드\n**쿼터 초과분 65% 관세**",
+      "toc": "영국 PET 세이프가드 제안, 쿼터 초과분 65% 관세",
+      "orig": "Mixed reactions to UK’s proposed 65% out-of-quota PET safeguard duty",
+      "why": "영국향 PET 분기 쿼터 점검",
+      "key": {
+        "value": "65",
+        "label": "쿼터 초과 수입분 관세(%)"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "영국 TRA · PET·rPET 세이프가드",
+          "items": [
+            {
+              "k": "STATUS",
+              "v": "잠정 조치 제안, 업계 반응 엇갈림",
+              "tone": "warn"
+            },
+            {
+              "k": "NEXT",
+              "v": "11월 22일 의견 제출 마감",
+              "sub": "시행 시 200일 이내 또는 확정 조치 시행 시까지 적용"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "65",
+              "unit": "%",
+              "label": "분기 쿼터 초과 시 관세",
+              "hi": true
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "36,926.83",
+              "unit": "t",
+              "label": "EU 분기 쿼터(표 L1 첫 열)"
+            }
+          ]
+        }
+      ],
+      "coverage": []
+    },
+    {
+      "type": "closing"
+    }
+  ],
+  "sources": [
+    {
+      "id": "reu-oyu-tolgoi-restart",
+      "publisher": "Reuters",
+      "via": "MINING.COM",
+      "title": "Rio Tinto begins restarting Oyu Tolgoi underground operations after seismic event",
+      "date": "2026-10-30",
+      "time": "6:35 am",
+      "accessed": "2026-10-31",
+      "url": "https://www.mining.com/web/rio-tinto-begins-restarting-oyu-tolgoi-underground-operations-after-seismic-event/",
+      "evidence": [
+        "following a seismic event that temporarily halted mining activities.",
+        "The miner said a seismic event on October 29 triggered a localised rockfall",
+        "The miner owns 66% of the project, with the Mongolian government holding the remainder.",
+        "The miner said three employees sustained injuries, and no fatalities were reported,",
+        "Rio Tinto also flagged delays affecting all vehicles passing through the Ganqimaodu border crossing",
+        "between China and Mongolia, which have reduced the availability of trucks",
+        "to transport copper concentrate from Oyu Tolgoi."
+      ]
+    },
+    {
+      "id": "edaily-posco-tentative-deal",
+      "publisher": "이데일리",
+      "title": "포스코 노사 임단협 잠정합의…기본급 2.6% 인상, 일시금 600만원",
+      "date": "2026-10-30",
+      "time": "오후 6:43",
+      "accessed": "2026-10-31",
+      "url": "https://www.edaily.co.kr/News/Read?newsId=05877766645618168&mediaCodeNo=257",
+      "evidence": [
+        "노조가 밝힌 잠정합의안에 따르면 기본급 2.6% 상승, 일시금 600만원에 특별승호 3호봉을 확보했다.",
+        "특히 노조가 무제한 파업을 예고한 11월 2일 직전에 잠정 합의안을 마련하며 분쟁 장기화를 막아세웠다.",
+        "노조는 노동조합 규약에 따라 이날부터 일주일 뒤인 11월 7일 조합원 찬반투표를 실시한다."
+      ]
+    },
+    {
+      "id": "icis-uk-pet-safeguard-65",
+      "publisher": "ICIS",
+      "title": "Mixed reactions to UK’s proposed 65% out-of-quota PET safeguard duty",
+      "date": "2026-10-30",
+      "accessed": "2026-10-31",
+      "url": "https://www.icis.com/explore/resources/news/2026/10/30/11239731/mixed-reactions-to-uk-s-proposed-65-out-of-quota-pet-safeguard-duty",
+      "evidence": [
+        "and recycled PET (rPET) have received mixed reactions from market participants following the announcement on 23 October.",
+        "Under the proposed measures, imports of PET and rPET with a viscosity of 74ml/g and higher will be subject to a 65% duty",
+        "by 23:59 GMT on 22 November 2026 via the TRA website.",
+        "European Union | 36,926.83 | 37,747.43",
+        "The measure would apply for no more than 200 days, or until a definitive measure is implemented, whichever comes first."
+      ]
+    }
+  ]
+}
