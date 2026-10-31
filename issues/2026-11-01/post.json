@@ -1,0 +1,358 @@
+{
+ "id": "2026-11-01-brief",
+ "date": "2026-11-01",
+ "issue": 35,
+ "category": "brief",
+ "topic": "supply",
+ "sources": [
+  {
+   "id": "bbg-chile-copper-cochilco",
+   "publisher": "Bloomberg",
+   "via": "MINING.COM",
+   "title": "Chile signals slow copper recovery from historic output slump",
+   "date": "2026-10-30",
+   "time": "12:40 pm",
+   "accessed": "2026-11-01",
+   "url": "https://www.mining.com/web/chile-signals-slow-copper-recovery-from-historic-output-slump/",
+   "evidence": [
+    "State copper commission Cochilco cut its 2027 production forecast to 5.08 million metric tons, implying a 3% rebound.",
+    "It also slashed this year’s estimate to 4.94 million tons from 5.27 million amid accidents and wild weather",
+    "It forecasts a surplus next year equivalent to just 0.8% of consumption, leaving little cushion"
+   ]
+  },
+  {
+   "id": "reu-ilva-court-shutdown",
+   "publisher": "Reuters",
+   "via": "MINING.COM",
+   "title": "Italy’s top court upholds shutdown of former Ilva steelworks, in setback to Meloni",
+   "date": "2026-10-29",
+   "time": "12:46 pm",
+   "accessed": "2026-11-01",
+   "url": "https://www.mining.com/web/italys-top-court-upholds-shutdown-of-former-ilva-steelworks-in-setback-to-meloni/",
+   "evidence": [
+    "Italy’s Supreme Court upheld a lower court ruling ordering the shutdown of blast furnaces at the former Ilva steelworks",
+    "adding uncertainty for the plant and its roughly 8,000 direct employees",
+    "She has said Rome has committed around €5 billion ($5.6 billion) to the steelmaker since taking office in 2022.",
+    "The company had previously warned that closing the blast furnaces could lead to the permanent shutdown of the plant",
+    "The government recently extended the deadline for binding bids to November 9"
+   ]
+  },
+  {
+   "id": "icis-us-pet-canada-tariff",
+   "publisher": "ICIS",
+   "title": "US to impose 50% tariffs on PET imports from Canada on Friday",
+   "date": "2026-10-29",
+   "accessed": "2026-11-01",
+   "url": "https://www.icis.com/explore/resources/news/2026/10/29/11239467/us-to-impose-50-tariffs-on-pet-imports-from-canada-on-friday",
+   "evidence": [
+    "The US is on track to impose on Friday tariffs of 50% on imports of polyester from Canada under Section 338.",
+    "The US added polyethylene terephthalate (PET) and elastomeric polyurethanes to the imports covered by the new tariffs",
+    "The Section 338 tariffs provide no exceptions for imports that comply with the nations’ trade deal",
+    "In 2024, Canada exported 71.7 million kg of PET under HTS code 3907.61.00, which was worth nearly $128 million",
+    "In 2025, the figures were 64.0 million kg worth nearly $110.6 million"
+   ]
+  },
+  {
+   "id": "reu-russia-diesel-output",
+   "publisher": "Reuters",
+   "via": "Investing.com",
+   "title": "Russian refiners ramp up diesel output after US deal, sources say",
+   "date": "2026-10-26",
+   "time": "09:12 AM",
+   "accessed": "2026-11-01",
+   "url": "https://www.investing.com/news/commodities-news/russian-refiners-ramp-up-diesel-output-after-us-deal-sources-say-4972849",
+   "evidence": [
+    "Russian refiners are raising diesel production in October after the government granted export quotas",
+    "Since Russia’s diesel export ban took effect in August, its oil companies have had to cut production",
+    "diesel output in Russia fell in the first half of October to about 160,000 tons per day",
+    "After the new export quotas arrived mid-month, production began to rise towards 180,000 tons per day.",
+    "That would leave at least 40,000 tons per day, or more than 1 million tons a month, available for export."
+   ]
+  }
+ ],
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "TODAY'S RAW MATERIALS NEWS",
+   "title": "칠레 구리 생산\n**내년 완만한 회복**",
+   "sub": "10월 26일~30일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 4건",
+   "toc": true
+  },
+  {
+   "type": "news",
+   "category": "nonferrous",
+   "topic": "supply",
+   "src": "bbg-chile-copper-cochilco",
+   "headline": "칠레 구리 생산\n**내년 완만한 회복**",
+   "toc": "칠레 코칠코, 2027년 구리 생산 전망 508만 톤으로 하향",
+   "orig": "Chile signals slow copper recovery from historic output slump",
+   "why": "칠레발 구리 공급 회복 속도 점검",
+   "key": {
+    "value": "5.08",
+    "label": "칠레 2027 구리 생산 전망(백만 톤)"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "칠레 · 코칠코 전망",
+     "items": [
+      {
+       "k": "OUTLOOK",
+       "v": "2027년 생산 3% 반등에 그칠 전망",
+       "tone": "warn"
+      },
+      {
+       "k": "CAUSE",
+       "v": "사고와 악천후로 올해 전망 하향"
+      },
+      {
+       "k": "BALANCE",
+       "v": "내년 잉여는 소비의 0.8%, 여유 적음"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "5.08",
+       "unit": "Mt",
+       "label": "2027년 생산 전망",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "4.94",
+       "unit": "Mt",
+       "label": "올해 전망(기존 5.27)"
+      }
+     ]
+    }
+   ],
+   "coverage": [
+    {
+     "publisher": "Bloomberg",
+     "title": "Chile signals slow copper recovery from historic output slump",
+     "url": "https://www.mining.com/web/chile-signals-slow-copper-recovery-from-historic-output-slump/",
+     "date": "2026-10-30"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "category": "steel",
+   "topic": "supply",
+   "src": "reu-ilva-court-shutdown",
+   "headline": "이탈리아 옛 일바 제철소\n**고로 중단 명령 유지**",
+   "toc": "이탈리아 대법원, 옛 일바 제철소 고로 가동중단 판결 유지",
+   "orig": "Italy’s top court upholds shutdown of former Ilva steelworks, in setback to Meloni",
+   "why": "이탈리아 강재 공급 불확실성 점검",
+   "key": {
+    "value": "8,000",
+    "label": "일바 직접 고용 인원(명)"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "옛 일바 제철소 · 이탈리아",
+     "items": [
+      {
+       "k": "RULING",
+       "v": "대법원, 고로 가동중단 명령 유지",
+       "tone": "alert"
+      },
+      {
+       "k": "RISK",
+       "v": "고로 폐쇄 시 공장 영구 폐쇄 가능성 경고",
+       "tone": "warn"
+      },
+      {
+       "k": "SALE",
+       "v": "구속력 입찰 마감 11월 9일로 연장"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "8,000",
+       "unit": "명",
+       "label": "직접 고용 인원(약)",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "5",
+       "unit": "십억 유로",
+       "label": "2022년 이후 정부 투입(약)"
+      }
+     ]
+    }
+   ],
+   "coverage": [
+    {
+     "publisher": "Reuters",
+     "title": "Italy’s top court upholds shutdown of former Ilva steelworks, in setback to Meloni",
+     "url": "https://www.mining.com/web/italys-top-court-upholds-shutdown-of-former-ilva-steelworks-in-setback-to-meloni/",
+     "date": "2026-10-29"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "category": "resin",
+   "topic": "tariff",
+   "src": "icis-us-pet-canada-tariff",
+   "headline": "미국 캐나다산 PET\n**50% 관세 부과 예정**",
+   "toc": "미국, 캐나다산 PET에 섹션 338 50% 관세 부과 예정",
+   "orig": "US to impose 50% tariffs on PET imports from Canada on Friday",
+   "why": "북미 PET 조달 경로 영향 점검",
+   "key": {
+    "value": "50",
+    "label": "캐나다산 PET 관세율(%)"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "미국 · 캐나다산 PET",
+     "items": [
+      {
+       "k": "STATUS",
+       "v": "금요일 섹션 338 관세 50% 부과 예정",
+       "tone": "alert"
+      },
+      {
+       "k": "SCOPE",
+       "v": "PET와 탄성 폴리우레탄이 대상에 추가"
+      },
+      {
+       "k": "EXCEPTION",
+       "v": "무역협정 준수 수입품도 예외 없음",
+       "tone": "warn"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "71.7",
+       "unit": "백만 kg",
+       "label": "2024년 캐나다 PET 대미 수출"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "64.0",
+       "unit": "백만 kg",
+       "label": "2025년 캐나다 PET 대미 수출",
+       "hi": true
+      }
+     ]
+    }
+   ],
+   "coverage": [
+    {
+     "publisher": "ICIS",
+     "title": "US to impose 50% tariffs on PET imports from Canada on Friday",
+     "url": "https://www.icis.com/explore/resources/news/2026/10/29/11239467/us-to-impose-50-tariffs-on-pet-imports-from-canada-on-friday",
+     "date": "2026-10-29"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "category": "chemical",
+   "topic": "supply",
+   "src": "reu-russia-diesel-output",
+   "headline": "러시아 정유사 경유\n**수출 쿼터에 증산**",
+   "toc": "러시아 정유사, 수출 쿼터 허용 후 경유 증산",
+   "orig": "Russian refiners ramp up diesel output after US deal, sources say",
+   "why": "러시아산 경유 수출 물량 추이 점검",
+   "key": {
+    "value": "180,000",
+    "label": "쿼터 후 러시아 경유 일 생산(톤)"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "러시아 · 경유",
+     "items": [
+      {
+       "k": "STATUS",
+       "v": "10월 중순 수출 쿼터 후 생산 상승",
+       "tone": "warn"
+      },
+      {
+       "k": "CAUSE",
+       "v": "8월 수출 금지로 감산했다가 면제 허용"
+      },
+      {
+       "k": "EXPORT",
+       "v": "월 100만 톤 이상 수출 여력"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "160,000",
+       "unit": "t/일",
+       "label": "10월 상반기 생산(약)"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "180,000",
+       "unit": "t/일",
+       "label": "쿼터 후 생산 상승 수준"
+      }
+     ]
+    }
+   ],
+   "coverage": [
+    {
+     "publisher": "Reuters",
+     "title": "Russian refiners ramp up diesel output after US deal, sources say",
+     "url": "https://www.investing.com/news/commodities-news/russian-refiners-ramp-up-diesel-output-after-us-deal-sources-say-4972849",
+     "date": "2026-10-26"
+    }
+   ]
+  },
+  {
+   "type": "closing"
+  }
+ ],
+ "caption": "10월 26일~30일(현지) 국내외 보도 기준 원재료 뉴스 4건.\n\n1) 칠레 코칠코, 2027년 구리 생산 전망 508만 톤(3% 반등)\n2) 이탈리아 대법원, 옛 일바 제철소 고로 가동중단 판결 유지\n3) 미국, 캐나다산 PET에 50% 관세 부과 예정\n4) 러시아 정유사, 수출 쿼터 허용 후 경유 증산\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+ "hashtags": [
+  "원자재",
+  "구리",
+  "철강",
+  "PET",
+  "경유"
+ ]
+}

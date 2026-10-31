@@ -1,0 +1,11 @@
+# run_log 2026-11-01 (일요일 호, No.35)
+- 05:03 KST 루틴 시작. 0단계: 미게시·미넘김 확인. Chromium 은 setup.sh 가 못 찾아 playwright 브라우저 경로를 심볼릭 링크로 맞춰 실행 확인(환경 우회, 키트 무변경).
+- 1A: 발행함 feeds/2026-11-01 수신 (채널 63개·원문 발췌 17개). 발췌는 WebFetch 저작권 한도로 원문 문장(QUOTES) 모음. 카드 근거는 QUOTES 문장만 사용.
+- 2단계 collect.py: 후보 104건.
+- 3단계 선정(모두 단독 보도, 사유):
+  - 비철 Chile Cochilco(Bloomberg via MINING.COM) — 단독 보도: 수급 전망(2027 생산 5.08Mt, 올해 4.94Mt 하향). 가격 전망은 카드에 쓰지 않음
+  - 스틸 Ilva(Reuters via MINING.COM) — 단독 보도: 가동 중단 판결(정책·규제 결정), 매각 입찰 11/9
+  - 레진 US PET Canada 50% 관세(ICIS) — 단독 보도: 관세 결정·시행
+  - 화공 Russia diesel(Reuters via Investing.com) — 단독 보도: 수출 쿼터 후 생산·수출 여력
+- 뺀 후보: 이미 게시(10/30~31): Oyu Tolgoi 재개, POSCO 잠정합의(이데일리·철강금속신문·스틸데일리 3곳이나 10/31 게시), UK PET 세이프가드, Rusal 가나, China 알루미늄 해외, 산업부 경유 수출 완화. Mongolia 구리 수출(AP)은 Oyu Tolgoi 같은 사건 계열이라 보류. Jindal CGL(유료 본문 일부), 중국산 아연도금 AD(영상 안내뿐), OPEC+(본문 1문장), Ras Tanura·Saudi 저장(가격·지정학 위주/단독 한도), 현대제철 IR(실적).
+- 6단계: render --check 통과(경고=단독 보도 안내만), 렌더 6장, JPG 육안 확인(05번 숫자 줄바꿈 수정 후 재렌더). 테마 dark.
