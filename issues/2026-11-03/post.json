@@ -1,0 +1,255 @@
+{
+ "id": "2026-11-03-brief",
+ "date": "2026-11-03",
+ "issue": 37,
+ "category": "brief",
+ "topic": "supply",
+ "sources": [
+  {
+   "id": "snm-posco-pohang-2hsm-furnace",
+   "publisher": "철강금속신문",
+   "title": "[단독] 포스코 포항 2열연, 가열로 한 기 더…연산 500만 톤 생산체계 다진다",
+   "date": "2026-11-02",
+   "time": "05:00",
+   "accessed": "2026-11-03",
+   "url": "http://www.snmnews.com/news/articleView.html?idxno=576734",
+   "evidence": [
+    "포스코가 포항제철소 2열연공장의 가열로를 기존 4기에서 5기로 늘리고 본격적인 운영에 들어간 것으로 확인됐다.",
+    "신규 가열로는 지난 3월 시운전을 마치고 현재 정상 조업 중이다.",
+    "포항제철소 2열연공장은 연간 500만 톤의 열연강판 생산능력을 갖추고 있다.",
+    "이번 5가열로 신설로 가열로 운영 대수는 늘어났지만 공장 전체의 생산능력에는 변화가 없다."
+   ]
+  },
+  {
+   "id": "edaily-soil-shaheen-startup",
+   "publisher": "이데일리",
+   "title": "\"샤힌 프로젝트,내년 1월 순차 스타트업, 정상가동 2~3개월 소요\"-에쓰오일 컨콜",
+   "date": "2026-11-02",
+   "time": "14:32",
+   "accessed": "2026-11-03",
+   "url": "https://www.edaily.co.kr/News/Read?newsId=03417766645641784&mediaCodeNo=257",
+   "evidence": [
+    "(샤힌 프로젝트는) 현재 진행 중인 시운전이 완료되는 내년 1월부터 설비별로 순차적인 스타트업을 진행할 계획이다.",
+    "전체 시설의 가동 절차에 따라서 PE 설비가 가장 먼저 스타트업을 진행을 하고, 이후 스팀 크래커 및 TC2C의 순서로 스타트업을 진행할 계획이다.",
+    "전 공정의 스타트업 완료 이후에는 정상 가동 도달 및 상업 가동으로 전환되기에는 약 한 2, 3개월이 소요될 것으로 예상한다."
+   ]
+  },
+  {
+   "id": "edaily-soil-base-oil-shortage",
+   "publisher": "이데일리",
+   "title": "\"윤활기유, 미국·유럽 중심 공급 부족 지속...프리미엄 확대\"-에쓰오일 컨콜",
+   "date": "2026-11-02",
+   "time": "14:41",
+   "accessed": "2026-11-03",
+   "url": "https://www.edaily.co.kr/News/Read?newsId=03463686645641784&mediaCodeNo=257",
+   "evidence": [
+    "글로벌 공급의 약 30%에 해당하는 물량이 차질을 겪고 있다.",
+    "이에 따라서 미국과 유럽을 중심으로 공급 부족이 지속되고 있다.",
+    "중동 생산 시설 복구와 물류 정상화에 시간이 상당히 소요될 것으로 예상이 된다.",
+    "수급 타이트는 내년까지 지속될 것으로 전망된다."
+   ]
+  }
+ ],
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "TODAY'S RAW MATERIALS NEWS",
+   "title": "윤활기유 공급 부족\n**글로벌 30% 차질**",
+   "sub": "11월 2일(현지) 국내 보도 기준\n오늘의 원재료 뉴스 3건",
+   "toc": true
+  },
+  {
+   "type": "news",
+   "category": "steel",
+   "topic": "supply",
+   "src": "snm-posco-pohang-2hsm-furnace",
+   "headline": "포스코 포항 2열연\n**가열로 4기에서 5기로**",
+   "toc": "포스코 포항 2열연, 가열로 5기 체제 정상 조업",
+   "orig": "[단독] 포스코 포항 2열연, 가열로 한 기 더…연산 500만 톤 생산체계 다진다",
+   "why": "열연 생산능력 변화 없음 확인",
+   "key": {
+    "value": "500",
+    "label": "포항 2열연 연간 열연강판 생산능력(만 톤)"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "포스코 · 포항제철소 2열연공장",
+     "items": [
+      {
+       "k": "STATUS",
+       "v": "5가열로 정상 조업 중",
+       "sub": "3월 시운전 완료",
+       "tone": "warn"
+      },
+      {
+       "k": "FURNACE",
+       "v": "가열로 4기에서 5기로 증가"
+      },
+      {
+       "k": "CAPA",
+       "v": "공장 전체 생산능력 변화 없음"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "500",
+       "unit": "만 톤",
+       "label": "연간 열연강판 생산능력",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "5",
+       "unit": "기",
+       "label": "가열로 운영 대수"
+      }
+     ]
+    }
+   ],
+   "coverage": [
+    {
+     "publisher": "철강금속신문",
+     "title": "[단독] 포스코 포항 2열연, 가열로 한 기 더…연산 500만 톤 생산체계 다진다",
+     "url": "http://www.snmnews.com/news/articleView.html?idxno=576734",
+     "date": "2026-11-02"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "category": "resin",
+   "topic": "maker",
+   "src": "edaily-soil-shaheen-startup",
+   "headline": "에쓰오일 샤힌\n**내년 1월 PE부터 가동**",
+   "toc": "에쓰오일 샤힌, 내년 1월 PE 설비부터 순차 가동",
+   "orig": "\"샤힌 프로젝트,내년 1월 순차 스타트업, 정상가동 2~3개월 소요\"-에쓰오일 컨콜",
+   "why": "국내 PE 신규 공급 시점 점검",
+   "key": {
+    "value": "2~3",
+    "label": "스타트업 완료 후 정상 가동까지(개월)"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "에쓰오일 · 샤힌 프로젝트",
+     "items": [
+      {
+       "k": "STATUS",
+       "v": "시운전 진행 중",
+       "tone": "warn"
+      },
+      {
+       "k": "ORDER",
+       "v": "PE 설비 먼저, 이후 스팀 크래커·TC2C",
+       "sub": "내년 1월부터 설비별 순차"
+      },
+      {
+       "k": "RAMP",
+       "v": "정상 가동까지 약 2~3개월 소요 예상"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "1",
+       "unit": "월",
+       "label": "내년 순차 스타트업 시작",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "2~3",
+       "unit": "개월",
+       "label": "정상 가동 도달까지"
+      }
+     ]
+    }
+   ],
+   "coverage": [
+    {
+     "publisher": "이데일리",
+     "title": "\"샤힌 프로젝트,내년 1월 순차 스타트업, 정상가동 2~3개월 소요\"-에쓰오일 컨콜",
+     "url": "https://www.edaily.co.kr/News/Read?newsId=03417766645641784&mediaCodeNo=257",
+     "date": "2026-11-02"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "category": "chemical",
+   "topic": "supply",
+   "src": "edaily-soil-base-oil-shortage",
+   "headline": "윤활기유 공급 부족\n**글로벌 30% 차질**",
+   "toc": "윤활기유 글로벌 공급 약 30% 차질, 수급 내년까지",
+   "orig": "\"윤활기유, 미국·유럽 중심 공급 부족 지속...프리미엄 확대\"-에쓰오일 컨콜",
+   "why": "윤활기유 조달 여력 점검",
+   "key": {
+    "value": "30",
+    "label": "공급 차질 글로벌 윤활기유 물량(약 %)"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "윤활기유 · 글로벌 공급",
+     "items": [
+      {
+       "k": "STATUS",
+       "v": "미국·유럽 중심 공급 부족 지속",
+       "tone": "alert"
+      },
+      {
+       "k": "RECOVERY",
+       "v": "중동 설비 복구·물류 정상화에 상당한 시간"
+      },
+      {
+       "k": "OUTLOOK",
+       "v": "수급 타이트 내년까지 지속 전망"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "30",
+       "unit": "%",
+       "label": "글로벌 공급 중 차질 물량(약)",
+       "hi": true
+      }
+     ]
+    }
+   ],
+   "coverage": [
+    {
+     "publisher": "이데일리",
+     "title": "\"윤활기유, 미국·유럽 중심 공급 부족 지속...프리미엄 확대\"-에쓰오일 컨콜",
+     "url": "https://www.edaily.co.kr/News/Read?newsId=03463686645641784&mediaCodeNo=257",
+     "date": "2026-11-02"
+    }
+   ]
+  },
+  {
+   "type": "closing"
+  }
+ ],
+ "caption": "11월 2일(현지) 국내 보도 기준 원재료 뉴스 3건.\n\n1) 포스코 포항 2열연, 가열로 4기에서 5기로…공장 생산능력은 변화 없음\n2) 에쓰오일 샤힌, 내년 1월부터 PE 설비 먼저 순차 스타트업\n3) 윤활기유 글로벌 공급 약 30% 차질, 수급 타이트 내년까지 전망\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.\n\n출처\n[1] 철강금속신문 — [단독] 포스코 포항 2열연, 가열로 한 기 더…연산 500만 톤 생산체계 다진다 (2026-11-02) http://www.snmnews.com/news/articleView.html?idxno=576734\n[2] 이데일리 — \"샤힌 프로젝트,내년 1월 순차 스타트업, 정상가동 2~3개월 소요\"-에쓰오일 컨콜 (2026-11-02) https://www.edaily.co.kr/News/Read?newsId=03417766645641784&mediaCodeNo=257\n[3] 이데일리 — \"윤활기유, 미국·유럽 중심 공급 부족 지속...프리미엄 확대\"-에쓰오일 컨콜 (2026-11-02) https://www.edaily.co.kr/News/Read?newsId=03463686645641784&mediaCodeNo=257\n\n#원자재 #철강 #폴리에틸렌 #윤활기유 #에쓰오일"
+}
