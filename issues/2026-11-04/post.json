@@ -1,0 +1,82 @@
+{
+ "id": "2026-11-04-brief",
+ "date": "2026-11-04",
+ "issue": 38,
+ "category": "brief",
+ "topic": "supply",
+ "slides": [
+  {"type": "cover", "kicker": "TODAY'S RAW MATERIALS NEWS", "title": "콩고 구리·코발트\n**불법채굴 단속 확대**", "sub": "11월 3일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 3건", "toc": true},
+  {"type": "news", "category": "nonferrous", "topic": "supply", "src": "mcom-congo-illegal-mining-seizures",
+   "headline": "콩고 구리·코발트\n**불법채굴 단속 확대**",
+   "toc": "콩고, 구리·코발트 압수 후 불법채굴 조사 명령",
+   "orig": "Congo seizes copper, cobalt in illegal mining crackdown",
+   "why": "콩고 구리·코발트 공급 변수 점검",
+   "key": {"value": "500", "label": "압수 트럭·차량·장비(대 이상)"},
+   "viz": [
+    {"type": "status", "title": "콩고민주공화국 · 남동부", "items": [
+      {"k": "ACTION", "v": "법무장관, 불법채굴 의혹 조사 명령", "tone": "alert"},
+      {"k": "AREA", "v": "루알라바·오트카탕가 주 단속 진행", "tone": "warn"},
+      {"k": "SITE", "v": "ERG 채굴권 보유 멘다 등 여러 현장"}]},
+    {"type": "stats", "half": true, "items": [{"value": "500", "unit": "대 이상", "label": "압수 트럭·차량·장비", "hi": true}]},
+    {"type": "stats", "half": true, "items": [{"value": "300", "unit": "명 이상", "label": "구금 외국인(주로 중국인)"}]}
+   ],
+   "coverage": [{"publisher": "MINING.COM", "title": "Congo seizes copper, cobalt in illegal mining crackdown", "url": "https://www.mining.com/congo-seizes-copper-cobalt-in-illegal-mining-crackdown", "date": "2026-11-03"}]},
+  {"type": "news", "category": "steel", "topic": "tariff", "src": "snm-hyundai-steel-fullhard-anticircumvention",
+   "headline": "현대제철 풀하드\n**우회덤핑 방지 검토**",
+   "toc": "현대제철, 풀하드 우회덤핑 방지제도 신청 검토",
+   "orig": "[단독] 현대제철, 풀하드 우회덤핑 방지제도 신청 검토…열연강판 반덤핑 후속 대응",
+   "why": "중국산 냉연 유입 흐름 점검",
+   "key": {"value": "74.65", "label": "올해 1~10월 중국산 냉연 수입(만 톤)"},
+   "viz": [
+    {"type": "status", "title": "현대제철 · 풀하드(미소둔강판)", "items": [
+      {"k": "STATUS", "v": "우회덤핑 방지제도 신청 내부 검토", "tone": "warn"},
+      {"k": "BASIS", "v": "중국·일본산 열연 반덤핑 관세 6월 확정"},
+      {"k": "NOTE", "v": "신청 여부는 확정되지 않은 단계"}]},
+    {"type": "stats", "half": true, "items": [{"value": "74만6,500", "unit": "톤", "label": "중국산 냉연 수입(1~10월)"}]},
+    {"type": "stats", "half": true, "items": [{"value": "65만8,123", "unit": "톤", "label": "중국산 냉연 수입(지난해 연간)"}]}
+   ],
+   "coverage": [{"publisher": "철강금속신문", "title": "[단독] 현대제철, 풀하드 우회덤핑 방지제도 신청 검토…열연강판 반덤핑 후속 대응", "url": "http://www.snmnews.com/news/articleView.html?idxno=576805", "date": "2026-11-03"}]},
+  {"type": "news", "category": "chemical", "topic": "maker", "src": "reu-marathon-cvr-refineries-sale",
+   "headline": "마라톤, 정유소 2곳\n**CVR에 42억 달러 매각**",
+   "toc": "마라톤 페트롤리엄, 정유소 2곳 CVR에 매각",
+   "orig": "Marathon beats quarterly estimates, to sell two refineries to CVR Energy",
+   "why": "미국 정유 설비 소유 변화 점검",
+   "key": {"value": "177,000", "label": "매각 정유소 합산 처리능력(bpd)"},
+   "viz": [
+    {"type": "status", "title": "마라톤 페트롤리엄 · CVR 에너지", "items": [
+      {"k": "DEAL", "v": "미네소타·노스다코타 정유소 2곳 매각", "tone": "alert"},
+      {"k": "BUYER", "v": "트라피구라가 8억 달러 CVR 지분 투자"},
+      {"k": "CLOSE", "v": "2026년 말까지 마무리 예정", "tone": "warn"}]},
+    {"type": "stats", "half": true, "items": [{"value": "177,000", "unit": "bpd", "label": "합산 원유 처리능력"}]},
+    {"type": "stats", "half": true, "items": [{"value": "4.2", "unit": "십억 달러", "label": "정유소·미드스트림 매각 규모"}]}
+   ],
+   "coverage": [{"publisher": "Reuters", "title": "Marathon beats quarterly estimates, to sell two refineries to CVR Energy", "url": "https://investing.com/news/stock-market-news/marathon-beats-quarterly-estimates-to-sell-two-refineries-to-cvr-energy-4995111", "date": "2026-11-03"}]},
+  {"type": "closing"}
+ ],
+ "sources": [
+  {"id": "mcom-congo-illegal-mining-seizures", "publisher": "MINING.COM", "title": "Congo seizes copper, cobalt in illegal mining crackdown", "date": "2026-11-03", "time": "5:03 am", "accessed": "2026-11-04", "url": "https://www.mining.com/congo-seizes-copper-cobalt-in-illegal-mining-crackdown",
+   "evidence": [
+    "\"The Democratic Republic of Congo has ordered an investigation into suspected illegal mining after authorities seized\"",
+    "A commission comprising police, military and mines ministry officials confiscated more than 500 trucks and other",
+    "vehicles and machinery during operations in Lualaba and Haut-Katanga provinces",
+    "The seizures took place at several sites, including Menda in Lualaba province, where Eurasian Resources Group (ERG)",
+    "Authorities have also detained more than 300 foreign nationals, mainly Chinese citizens"
+   ]},
+  {"id": "snm-hyundai-steel-fullhard-anticircumvention", "publisher": "철강금속신문", "title": "[단독] 현대제철, 풀하드 우회덤핑 방지제도 신청 검토…열연강판 반덤핑 후속 대응", "date": "2026-11-03", "time": "05:00", "accessed": "2026-11-04", "url": "http://www.snmnews.com/news/articleView.html?idxno=576805",
+   "evidence": [
+    "현대제철이 열연강판 반덤핑 관세를 우회하는 수입 품목으로 지목받는 풀하드(Full Hard·미소둔강판)에 대해 우회덤핑 방지제도 신청을 내부적으로 검토하고 있는 것으로 확인됐다.",
+    "올해 1~10월 중국산 냉연강판 수입량은 74만6,500톤으로, 불과 10개월 만에 지난해 연간 수입량인 65만8,123톤을 8만8,377톤이나 넘어섰다.",
+    "정부는 올해 6월 중국산과 일본산 열연강판에 대한 덤핑방지관세 부과를 최종 확정하고"
+   ]},
+  {"id": "reu-marathon-cvr-refineries-sale", "publisher": "Reuters", "via": "Investing.com", "title": "Marathon beats quarterly estimates, to sell two refineries to CVR Energy", "date": "2026-11-03", "time": "08:15 AM", "accessed": "2026-11-04", "url": "https://investing.com/news/stock-market-news/marathon-beats-quarterly-estimates-to-sell-two-refineries-to-cvr-energy-4995111",
+   "evidence": [
+    "struck a $4.2 billion deal to sell two refineries and related midstream assets",
+    "Marathon will receive $3.45 billion for the St. Paul Park refinery in Minnesota and the Mandan refinery in North Dakota,",
+    "The refineries have a combined crude processing capacity of 177,000 bpd.",
+    "Commodities trader Trafigura has agreed to invest $800 million in newly issued CVR shares for a minority stake.",
+    "The deal is expected to close by the end of 2026."
+   ]}
+ ],
+ "caption": "11월 3일(현지) 국내외 보도 기준 원재료 뉴스 3건.\n\n1) 콩고, 구리·코발트 압수 후 불법채굴 조사 명령\n2) 현대제철, 풀하드 우회덤핑 방지제도 신청 검토\n3) 마라톤 페트롤리엄, 정유소 2곳 CVR에 매각\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+ "hashtags": ["원자재", "구리", "코발트", "철강", "정유"]
+}
