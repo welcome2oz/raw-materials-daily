@@ -1,0 +1,249 @@
+{
+ "id": "2026-11-06-brief",
+ "date": "2026-11-06",
+ "issue": 40,
+ "category": "brief",
+ "topic": "supply",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "TODAY'S RAW MATERIALS NEWS",
+   "title": "루신 마이닝\n**카세로네스 전망 하향**",
+   "sub": "11월 5일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 3건",
+   "toc": true
+  },
+  {
+   "type": "news",
+   "category": "steel",
+   "topic": "maker",
+   "src": "sd-ussteel-dri-plant",
+   "headline": "US스틸 아칸소\n**DRI 플랜트 착공**",
+   "toc": "US스틸, 아칸소 DRI 플랜트 착공",
+   "why": "미국 스크랩 수급 영향 점검",
+   "key": {
+    "value": "250",
+    "label": "DRI 연간 생산능력(만 톤)"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "US스틸 · 빅리버 2 공장",
+     "items": [
+      {
+       "k": "STATUS",
+       "v": "10월 30일 DRI 플랜트 기공식",
+       "tone": "alert"
+      },
+      {
+       "k": "SITE",
+       "v": "아칸소주 오세올라, 전기로 인접 부지"
+      },
+      {
+       "k": "GOAL",
+       "v": "스크랩 의존도 감축",
+       "tone": "warn"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "250",
+       "unit": "만 톤/년",
+       "label": "DRI 플랜트 생산능력",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "19",
+       "unit": "억 달러",
+       "label": "투자 규모"
+      }
+     ]
+    }
+   ],
+   "coverage": [
+    {
+     "publisher": "스틸데일리",
+     "title": "US스틸, DRI 플랜트 착공 ... 스크랩 의존도 감축",
+     "url": "https://www.steeldaily.co.kr/news/articleView.html?idxno=204083",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "category": "nonferrous",
+   "topic": "supply",
+   "src": "mc-lundin-copper-outlook",
+   "headline": "루신 마이닝\n**구리 전망 또 하향**",
+   "toc": "루신, 칠레 폭풍에 구리 전망 하향",
+   "orig": "Lundin cuts copper outlook again as wild Chile weather bites",
+   "why": "칠레 구리 공급 차질 점검",
+   "key": {
+    "value": "105,000–115,000",
+    "label": "카세로네스 연간 가이던스(톤)"
+   },
+   "viz": [
+    {
+     "type": "status",
+     "title": "루신 마이닝 · 카세로네스(칠레)",
+     "items": [
+      {
+       "k": "GUIDANCE",
+       "v": "2026 구리 생산 전망 하향",
+       "tone": "alert"
+      },
+      {
+       "k": "CAUSE",
+       "v": "겨울 폭풍으로 3분기 약 30일 조업 중단",
+       "tone": "warn"
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "105,000–115,000",
+       "unit": "톤",
+       "label": "카세로네스 연간 전망(기존 120,000–130,000)",
+       "hi": true
+      }
+     ]
+    },
+    {
+     "type": "stats",
+     "half": true,
+     "items": [
+      {
+       "value": "62,610",
+       "unit": "톤",
+       "label": "3분기 구리 생산"
+      }
+     ]
+    }
+   ],
+   "coverage": [
+    {
+     "publisher": "MINING.COM",
+     "title": "Lundin cuts copper outlook again as wild Chile weather bites",
+     "url": "https://www.mining.com/lundin-cuts-copper-outlook-again-as-wild-chile-weather-bites/",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "type": "news",
+   "category": "chemical",
+   "topic": "supply",
+   "src": "reu-tankers-hormuz-us-vote",
+   "headline": "호르무즈 해협\n**유조선 3척 추가 피해**",
+   "toc": "호르무즈 유조선 3척 추가 피해",
+   "orig": "Tankers hit in Hormuz as Iran keeps up pressure after US vote",
+   "why": "중동 물류 차질 여부 점검",
+   "viz": [
+    {
+     "type": "status",
+     "title": "호르무즈 해협 · 이란",
+     "items": [
+      {
+       "k": "INCIDENT",
+       "v": "이란 발표: 유조선 3척 추가 피해",
+       "tone": "alert"
+      },
+      {
+       "k": "DETAIL",
+       "v": "2척 기뢰 충돌, 1척 화재",
+       "tone": "warn"
+      },
+      {
+       "k": "UKMTO",
+       "v": "일요일 이후 최소 5척 사고 보고",
+       "tone": "warn"
+      },
+      {
+       "k": "TALKS",
+       "v": "카타르 중재 속 양측 입장차 여전"
+      }
+     ]
+    }
+   ],
+   "coverage": [
+    {
+     "publisher": "Investing.com",
+     "title": "Tankers hit in Hormuz as Iran keeps up pressure after US vote",
+     "url": "https://www.investing.com/news/commodities-news/tankers-hit-in-hormuz-as-iran-keeps-up-pressure-after-us-vote-5005038",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "type": "closing"
+  }
+ ],
+ "sources": [
+  {
+   "id": "sd-ussteel-dri-plant",
+   "publisher": "스틸데일리",
+   "title": "US스틸, DRI 플랜트 착공 ... 스크랩 의존도 감축",
+   "date": "2026-11-05",
+   "time": "05:30",
+   "accessed": "2026-11-06",
+   "url": "https://www.steeldaily.co.kr/news/articleView.html?idxno=204083",
+   "evidence": [
+    "US스틸은 10월 30일, 아칸소주 오세올라의 전기로 사업장인 빅리버 2 공장에서 직접환원철(DRI) 플랜트 기공식을 가졌다.",
+    "연간 생산능력 250만 톤 규모의 DRI 플랜트 신설은 지난 4월에 결정된 것이다.",
+    "19억 달러에 달하는 이번 투자를 통해 US스틸이 그 야심찬 목표의 실현을 뒷받침해 줄 것",
+    "스크랩에 대한 의존도를 낮출 예정이다."
+   ]
+  },
+  {
+   "id": "mc-lundin-copper-outlook",
+   "publisher": "MINING.COM",
+   "title": "Lundin cuts copper outlook again as wild Chile weather bites",
+   "date": "2026-11-05",
+   "time": "5:57 am",
+   "accessed": "2026-11-06",
+   "url": "https://www.mining.com/lundin-cuts-copper-outlook-again-as-wild-chile-weather-bites/",
+   "evidence": [
+    "Lundin Mining (TSX: LUN) has lowered its 2026 copper production forecast",
+    "The Canadian miner cut Caserones’ full-year guidance to 105,000–115,000 tonnes from 120,000–130,000 tonnes",
+    "Severe winter storms suspended operations at Caserones for about 30 days during the third quarter",
+    "Lundin produced 62,610 tonnes of copper in the three months ended Sept. 30"
+   ]
+  },
+  {
+   "id": "reu-tankers-hormuz-us-vote",
+   "publisher": "Reuters",
+   "via": "Investing.com",
+   "title": "Tankers hit in Hormuz as Iran keeps up pressure after US vote",
+   "date": "2026-11-05",
+   "time": "10:17 AM",
+   "accessed": "2026-11-06",
+   "url": "https://www.investing.com/news/commodities-news/tankers-hit-in-hormuz-as-iran-keeps-up-pressure-after-us-vote-5005038",
+   "evidence": [
+    "Iran reported three more tankers had been damaged in the Strait of Hormuz on Thursday",
+    "At least five vessels have reported incidents since Sunday, according to UK maritime security agency UKMTO",
+    "said two tankers had struck naval mines and another had caught fire on Thursday.",
+    "A senior Iranian official said this week that the two sides remain far apart.",
+    "Qatar said on Tuesday that the United States and Iran were committed to mediation efforts and were reviewing proposals"
+   ]
+  }
+ ],
+ "caption": "11월 5일(현지) 국내외 보도 기준 원재료 뉴스 3건.\n\n1) US스틸, 아칸소 DRI 플랜트 착공\n2) 루신, 칠레 폭풍에 구리 전망 하향\n3) 호르무즈 유조선 3척 추가 피해\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+ "hashtags": [
+  "원자재",
+  "철강",
+  "구리",
+  "원유"
+ ]
+}
