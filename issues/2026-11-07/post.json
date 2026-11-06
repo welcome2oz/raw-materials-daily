@@ -1,0 +1,153 @@
+{
+  "id": "2026-11-07-brief",
+  "date": "2026-11-07",
+  "issue": 41,
+  "category": "brief",
+  "topic": "supply",
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "코델코 안디나 광산\n**가동 중단**",
+      "sub": "11월 6일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 3건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "tariff",
+      "src": "snm-hbeam-ad-extend",
+      "headline": "중국산 H형강\n**반덤핑 5년 연장**",
+      "toc": "중국산 H형강 반덤핑 5년 연장 입법예고",
+      "why": "H형강 수입처·관세율 점검",
+      "key": {"value": "32.72", "label": "최대 반덤핑 관세율(%)"},
+      "viz": [
+        {
+          "type": "status",
+          "title": "중국산 H형강 · 한국 정부",
+          "items": [
+            {"k": "STATUS", "v": "반덤핑 관세 5년 추가 연장 입법예고", "tone": "alert"},
+            {"k": "DEADLINE", "v": "20일까지 입법예고", "tone": "warn"},
+            {"k": "SINCE", "v": "2015년부터 관세 부과 중"}
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [{"value": "32.72", "unit": "%", "label": "안타이스틸 등 6개사 관세율", "hi": true}]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [{"value": "28.23", "unit": "%", "label": "그 밖의 공급사 관세율"}]
+        }
+      ],
+      "coverage": [
+        {"publisher": "철강금속신문", "title": "중국산 H형강 반덤핑 5년 연장 입법예고", "url": "http://www.snmnews.com/news/articleView.html?idxno=577062", "date": "2026-11-06"},
+        {"publisher": "스틸데일리", "title": "중국산 H형강 덤핑방지관세 부과 규칙 제정안 입법예고", "url": "https://www.steeldaily.co.kr/news/articleView.html?idxno=204128", "date": "2026-11-06"}
+      ]
+    },
+    {
+      "type": "news",
+      "category": "nonferrous",
+      "topic": "supply",
+      "src": "mcom-codelco-andina-halt",
+      "headline": "코델코 안디나\n**광산 가동 중단**",
+      "toc": "코델코, 광미 유출로 안디나 광산 중단",
+      "orig": "Codelco halts Andina mine as tailings spill threatens river",
+      "why": "칠레 구리 공급 차질 점검",
+      "viz": [
+        {
+          "type": "status",
+          "title": "코델코 · 안디나 광산(칠레)",
+          "items": [
+            {"k": "STATUS", "v": "안디나 광산 가동 중단", "tone": "alert"},
+            {"k": "CAUSE", "v": "광미 유출, 강 위협", "tone": "warn"},
+            {"k": "RESTART", "v": "처리 재개 시점 미정", "tone": "warn"},
+            {"k": "RESPONSE", "v": "비상 프로토콜 즉시 가동"}
+          ]
+        }
+      ],
+      "coverage": [
+        {"publisher": "MINING.COM", "title": "Codelco halts Andina mine as tailings spill threatens river", "url": "https://www.mining.com/codelco-halts-andina-mine-as-tailings-spill-threatens-river/", "date": "2026-11-05"}
+      ]
+    },
+    {
+      "type": "news",
+      "category": "resin",
+      "topic": "regulation",
+      "src": "icis-eu-safeguard-pet",
+      "headline": "EU, PET·TA·MEG\n**세이프가드 조사**",
+      "toc": "EU, PET·TA·MEG 등 수입 세이프가드 조사",
+      "orig": "EU launches safeguard investigation into PET, rPET, TA, MEG and PIA imports",
+      "why": "EU향 PET 계열 수출 점검",
+      "key": {"value": "21", "label": "이해관계자 의견 제출 기한(일)"},
+      "viz": [
+        {
+          "type": "status",
+          "title": "EU · PET·rPET·TA·MEG·PIA 수입",
+          "items": [
+            {"k": "STATUS", "v": "세이프가드 조사 개시", "tone": "alert"},
+            {"k": "MEASURES", "v": "조치 미부과, 형태 미정", "tone": "warn"}
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [{"value": "21", "unit": "일", "label": "공고 후 의견·증거 제출 기한", "hi": true}]
+        }
+      ],
+      "coverage": [
+        {"publisher": "ICIS", "title": "EU launches safeguard investigation into PET, rPET, TA, MEG and PIA imports", "url": "https://www.icis.com/explore/resources/news/2026/11/06/11240714/eu-launches-safeguard-investigation-into-pet-rpet-ta-meg-and-pia-imports", "date": "2026-11-06"}
+      ]
+    },
+    {"type": "closing"}
+  ],
+  "sources": [
+    {
+      "id": "snm-hbeam-ad-extend",
+      "publisher": "철강금속신문",
+      "title": "중국산 H형강 반덤핑 5년 연장 입법예고",
+      "date": "2026-11-06",
+      "time": "16:30",
+      "accessed": "2026-11-07",
+      "url": "http://www.snmnews.com/news/articleView.html?idxno=577062",
+      "evidence": [
+        "오는 20일까지 입법 예고한다고 6일 밝혔다.",
+        "정부는 반덤핑 관세 부과를 종료할 경우 국내 산업의 피해가 지속되거나 재발될 우려가 있다고 판단해 5년간 추가 연장을 결정했다.",
+        "2015년부터 최대 32.72%의 반덤핑 관세를 부과해오고 있다.",
+        "안타이스틸과 마안산스틸, 진시스틸, 바오토우스틸, 티엔싱스틸, 홍룬스틸 등 6개사에는 최대치인 32.72%의 반덤핑 관세가 부과된다.",
+        "그 밖의 공급사는 28.23%의 반덤핑 관세가 적용된다."
+      ]
+    },
+    {
+      "id": "mcom-codelco-andina-halt",
+      "publisher": "MINING.COM",
+      "title": "Codelco halts Andina mine as tailings spill threatens river",
+      "date": "2026-11-05",
+      "time": "9:09 am",
+      "accessed": "2026-11-07",
+      "url": "https://www.mining.com/codelco-halts-andina-mine-as-tailings-spill-threatens-river/",
+      "evidence": [
+        "Codelco halts Andina mine as tailings spill threatens river",
+        "In response to this situation, all emergency protocols were immediately activated,\" Codelco said in a statement.",
+        "The company has not indicated when processing operations might resume."
+      ]
+    },
+    {
+      "id": "icis-eu-safeguard-pet",
+      "publisher": "ICIS",
+      "title": "EU launches safeguard investigation into PET, rPET, TA, MEG and PIA imports",
+      "date": "2026-11-06",
+      "accessed": "2026-11-07",
+      "url": "https://www.icis.com/explore/resources/news/2026/11/06/11240714/eu-launches-safeguard-investigation-into-pet-rpet-ta-meg-and-pia-imports",
+      "evidence": [
+        "EU launches safeguard investigation into PET, rPET, TA, MEG and PIA imports",
+        "No safeguard measures have been imposed, and the form of any potential measures has yet to be determined.",
+        "Interested parties have 21 days from publication of the notice to submit information and supporting evidence."
+      ]
+    }
+  ],
+  "caption": "11월 6일(현지) 국내외 보도 기준 원재료 뉴스 3건.\n\n1) 중국산 H형강 반덤핑 5년 연장 입법예고\n2) 코델코, 광미 유출로 안디나 광산 중단\n3) EU, PET·TA·MEG 등 수입 세이프가드 조사\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": ["원자재", "철강", "구리", "수지"]
+}
