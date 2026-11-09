@@ -1,0 +1,118 @@
+{
+  "id": "2026-11-10-brief",
+  "date": "2026-11-10",
+  "issue": 43,
+  "category": "brief",
+  "topic": "tariff",
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "중국산 봉강\n**잠정관세 예고**",
+      "sub": "11월 9일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 2건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "tariff",
+      "src": "sd-china-bar-provisional-duty",
+      "headline": "중국산 특수강봉강\n**잠정관세 행정예고**",
+      "toc": "중국산 특수강봉강 잠정관세, 13일 행정예고",
+      "why": "중국산 봉강 조달 계획 점검",
+      "key": {"value": "11/13", "label": "잠정관세 행정예고 예정일"},
+      "viz": [
+        {
+          "type": "status",
+          "title": "중국산 특수강봉강 · 재정경제부",
+          "items": [
+            {"k": "STATUS", "v": "잠정덤핑방지관세 부과 여부 검토", "tone": "alert"},
+            {"k": "NEXT", "v": "11월 13일 전자관보 행정예고 예정", "tone": "warn"},
+            {"k": "AFTER", "v": "의견 수렴 후 부과 여부·세율·기간 확정"}
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [{"value": "25.08", "unit": "%", "label": "9월 예비판정 하한", "hi": true}]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [{"value": "27.96", "unit": "%", "label": "9월 예비판정 상한"}]
+        }
+      ],
+      "coverage": [
+        {"publisher": "스틸데일리", "title": "중국산 특수강봉강 잠정관세 부과 검토...재경부, 13일 행정예고 계획", "url": "https://www.steeldaily.co.kr/news/articleView.html?idxno=204125", "date": "2026-11-09"}
+      ]
+    },
+    {
+      "type": "news",
+      "category": "nonferrous",
+      "topic": "supply",
+      "src": "mc-codelco-pucobre-permit",
+      "headline": "Codelco·Pucobre\n**구리광산 환경승인**",
+      "toc": "Codelco·Pucobre 칠레 구리광산 환경승인 확보",
+      "why": "중장기 칠레 구리 공급 증가 요인",
+      "key": {"value": "46,000", "label": "예상 구리 캐소드 생산(톤)"},
+      "viz": [
+        {
+          "type": "status",
+          "title": "칠레 안토파가스타 구리 프로젝트",
+          "items": [
+            {"k": "STATUS", "v": "환경평가청 환경승인(RCA) 확보", "tone": "alert"},
+            {"k": "BUILD", "v": "2027년 하반기 착공 예정", "tone": "warn"},
+            {"k": "METHOD", "v": "노천 채굴 후 침출·용매추출·전해채취"}
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [{"value": "2027", "unit": "년", "label": "하반기 착공 예정", "hi": true}]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [{"value": "984", "unit": "명", "label": "건설 최대 인력"}]
+        }
+      ],
+      "coverage": [
+        {"publisher": "MINING.COM", "title": "Codelco, Pucobre clear key hurdle for $870 million copper mine", "url": "https://www.mining.com/codelco-pucobre-clear-key-hurdle-for-870-million-copper-mine/", "date": "2026-11-09"}
+      ]
+    },
+    {"type": "closing"}
+  ],
+  "sources": [
+    {
+      "id": "sd-china-bar-provisional-duty",
+      "publisher": "스틸데일리",
+      "title": "중국산 특수강봉강 잠정관세 부과 검토...재경부, 13일 행정예고 계획",
+      "date": "2026-11-09",
+      "time": "05:00",
+      "accessed": "2026-11-10",
+      "url": "https://www.steeldaily.co.kr/news/articleView.html?idxno=204125",
+      "evidence": [
+        "중국산 특수강봉강에 대한 잠정덤핑방지관세 부과 여부를 검토 중인 재정경제부가 오는 11월 13일 전자관보를 통해 부과안을 행정예고할 예정이다.",
+        "이후 이해관계자 의견 수렴과 검토를 거쳐 부과 여부와 세율, 적용 기간 등을 확정할 예정이다.",
+        "앞서 산업통상부 무역위원회는 지난 9월 17일 중국산 봉강의 덤핑으로 국내 산업이 실질적 피해를 받은 것으로 예비 판정하고, 25.08~27.96%의 잠정덤핑방지관세…"
+      ]
+    },
+    {
+      "id": "mc-codelco-pucobre-permit",
+      "publisher": "MINING.COM",
+      "title": "Codelco, Pucobre clear key hurdle for $870 million copper mine",
+      "date": "2026-11-09",
+      "time": "05:53",
+      "accessed": "2026-11-10",
+      "url": "https://www.mining.com/codelco-pucobre-clear-key-hurdle-for-870-million-copper-mine/",
+      "evidence": [
+        "Chile’s state-owned copper giant Codelco and smaller partner Pucobre have secured environmental approval …",
+        "The project in northern Chile’s Antofagasta region is expected to produce 46,000 tonnes of copper cathodes …",
+        "Construction is scheduled to begin in the second half of 2027 and take three years, with a peak workforce of 984 people.",
+        "Processing will involve crushing and acid curing, followed by leaching, solvent extraction and electrowinning …"
+      ]
+    }
+  ],
+  "caption": "11월 9일(현지) 국내외 보도 기준 원재료 뉴스 2건.\n\n1) 중국산 특수강봉강 잠정관세, 13일 행정예고\n2) Codelco·Pucobre 칠레 구리광산 환경승인 확보\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": ["원자재", "철강", "구리"]
+}
