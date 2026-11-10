@@ -1,0 +1,88 @@
+{
+  "id": "2026-11-11-brief",
+  "date": "2026-11-11",
+  "issue": 44,
+  "category": "brief",
+  "topic": "maker",
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "현대제철 美 제철소\n**첫 파일 항타 완료**",
+      "sub": "11월 10일(현지) 국내 보도 기준\n오늘의 원재료 뉴스 1건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "maker",
+      "src": "snm-hyundai-us-eaf-staff",
+      "headline": "현대제철 美 제철소\n**첫 파일 항타 완료**",
+      "toc": "현대제철 루이지애나 전기로 제철소, 첫 파일 항타 완료",
+      "orig": "[단독] 현대제철 美 전기로 제철소, 파견인력 40% 배치…현지 사업 추진 박차",
+      "key": {"value": "270", "label": "연간 생산능력(만 톤)"},
+      "viz": [
+        {
+          "type": "status",
+          "title": "HPLS · 美 루이지애나 어센션 패리시",
+          "items": [
+            {"k": "STATUS", "v": "제철소 부지 첫 파일 항타 완료", "tone": "alert"},
+            {"k": "TARGET", "v": "2029년 상업생산 목표", "tone": "warn"},
+            {"k": "PROCESS", "v": "직접환원철(DRI)·전기로 연계"}
+          ]
+        },
+        {
+          "type": "split",
+          "half": true,
+          "title": "생산 목표 구성",
+          "unit": "만 톤",
+          "parts": [
+            {"label": "자동차강판", "value": 180},
+            {"label": "일반강", "value": 90}
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {"value": "40", "unit": "%", "label": "파견 계획 인원 중 현장 배치", "hi": true}
+          ]
+        }
+      ],
+      "facts": [
+        {"t": "포스코도 지분 20% 확보·제품 인수권(Offtake) 방식으로 참여 계획"}
+      ],
+      "why": "북미 자동차강판 현지 공급선 변화 점검",
+      "coverage": [
+        {
+          "publisher": "철강금속신문",
+          "title": "[단독] 현대제철 美 전기로 제철소, 파견인력 40% 배치…현지 사업 추진 박차",
+          "url": "http://www.snmnews.com/news/articleView.html?idxno=577161",
+          "date": "2026-11-10"
+        }
+      ]
+    },
+    {"type": "closing"}
+  ],
+  "sources": [
+    {
+      "id": "snm-hyundai-us-eaf-staff",
+      "publisher": "철강금속신문",
+      "title": "[단독] 현대제철 美 전기로 제철소, 파견인력 40% 배치…현지 사업 추진 박차",
+      "date": "2026-11-10",
+      "time": "05:00",
+      "accessed": "2026-11-11",
+      "url": "http://www.snmnews.com/news/articleView.html?idxno=577161",
+      "evidence": [
+        "현대제철에 따르면 현재 임원과 실무진을 포함한 전체 파견 계획 인원의 약 40%가 루이지애나 제철소 현장에 배치된 상태다.",
+        "HPLS는 최근 미국 루이지애나주 어센션 패리시(Ascension Parish)에 들어설 제철소 부지에서 첫 파일 항타 작업을 완료했다고 밝혔다.",
+        "자동차강판 180만 톤과 일반강 90만 톤 생산을 목표로 하며, 직접환원철(DRI)과 전기로를 연계한 생산공정을 도입할 예정이다.",
+        "포스코도 지분 20%를 확보하고 생산 제품에 대한 인수권(Offtake)을 갖는 방식으로 사업에 참여할 계획이다.",
+        "현대제철은 오는 2029년 상업생산을 목표로 북미 자동차산업에 필요한 고급 철강재를 현지에서 생산·공급할 기반을 구축한다는 방침이다.",
+        "루이지애나 제철소 프로젝트는 총 58억 달러를 투자해 연간 270만 톤 규모의 철강 생산능력을 확보하는 사업이다."
+      ]
+    }
+  ],
+  "caption": "11월 10일(현지) 국내 보도 기준 원재료 뉴스 1건.\n\n1) 현대제철 루이지애나 전기로 제철소, 첫 파일 항타 완료\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": ["원자재", "철강", "현대제철", "전기로"]
+}
