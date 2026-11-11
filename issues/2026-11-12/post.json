@@ -1,0 +1,239 @@
+{
+  "id": "2026-11-12-brief",
+  "date": "2026-11-12",
+  "issue": 45,
+  "category": "brief",
+  "topic": "supply",
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "中 10월 구리정광\n**수입 11% 감소**",
+      "sub": "11월 10일~11일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 3건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "nonferrous",
+      "topic": "supply",
+      "src": "reu-china-cu-conc-oct",
+      "headline": "中 10월 구리정광\n**수입 11% 감소**",
+      "toc": "중국 10월 구리정광 수입 전년比 11% 감소, 1~10월 누적 3.8% 감소",
+      "orig": "China's copper concentrate imports slump 11% in October as smelter woes deepen",
+      "key": {
+        "value": "11",
+        "label": "10월 정광 수입 감소율(%)"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "중국 · 구리정광 수입 (세관 통계)",
+          "items": [
+            {
+              "k": "OCTOBER",
+              "v": "전년 동월比 11% 감소",
+              "tone": "alert"
+            },
+            {
+              "k": "DATA",
+              "v": "중국 세관 통계"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "24.14",
+              "unit": "Mt",
+              "label": "1~10월 누적 수입",
+              "hi": true
+            },
+            {
+              "value": "3.8",
+              "unit": "%",
+              "label": "1~10월 누적 감소율"
+            }
+          ]
+        }
+      ],
+      "why": "중국 전기동 생산 감소 가능성 점검",
+      "coverage": [
+        {
+          "publisher": "Reuters",
+          "title": "China's copper concentrate imports slump 11% in October as smelter woes deepen",
+          "url": "https://www.mining.com/web/chinas-copper-concentrate-imports-slump-11-in-october-as-smelter-woes-deepen/",
+          "date": "2026-11-10"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "supply",
+      "src": "snm-plate-oct-output",
+      "headline": "후판 3사 10월 생산\n**전월比 17.4% 감소**",
+      "toc": "포스코·현대제철 대보수 집중, 후판 3사 10월 생산 62만3천 톤",
+      "orig": "후판 생산, 10월 대보수에 큰 폭 감소…내수 판매는 전년比 증가",
+      "key": {
+        "value": "17.4",
+        "label": "10월 후판 생산 전월比 감소(%)"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "포스코 · 현대제철 · 동국제강 후판",
+          "items": [
+            {
+              "k": "CAUSE",
+              "v": "포스코·현대제철 후판 설비 정비 집중",
+              "tone": "alert"
+            },
+            {
+              "k": "DOMESTIC",
+              "v": "내수 판매 전년 동월比 증가",
+              "tone": "ok"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "62만3천",
+              "unit": "톤",
+              "label": "10월 생산",
+              "hi": true
+            },
+            {
+              "value": "19.5",
+              "unit": "%",
+              "label": "전년 동월比 감소"
+            }
+          ]
+        }
+      ],
+      "why": "정비 종료 후 후판 출하 회복 시점 확인",
+      "coverage": [
+        {
+          "publisher": "철강금속신문",
+          "title": "후판 생산, 10월 대보수에 큰 폭 감소…내수 판매는 전년比 증가",
+          "url": "http://www.snmnews.com/news/articleView.html?idxno=577219",
+          "date": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "category": "resin",
+      "topic": "maker",
+      "src": "icis-lotte-yncc",
+      "headline": "롯데케미칼·YNCC\n**내년 상반기 통합**",
+      "toc": "롯데케미칼 여수공장 분할 후 YNCC와 통합, YNCC 크래커 2기 영구 폐쇄",
+      "orig": "S Korea Lotte Chem swings to Q3 operating loss; YNCC integration in H1 2027",
+      "key": {
+        "value": "1.39",
+        "label": "폐쇄 크래커 에틸렌 능력(Mt/년)"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "롯데케미칼 · YNCC (여수)",
+          "items": [
+            {
+              "k": "PLAN",
+              "v": "여수공장 분할 후 YNCC와 통합 법인",
+              "sub": "2027년 상반기",
+              "tone": "warn"
+            },
+            {
+              "k": "SHUTDOWN",
+              "v": "YNCC 크래커 2기 영구 폐쇄",
+              "tone": "alert"
+            },
+            {
+              "k": "STARTUP",
+              "v": "율촌 컴파운딩 공장 9월 전 라인 가동",
+              "tone": "ok"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "1.39",
+              "unit": "Mt/년",
+              "label": "폐쇄 크래커 2기 합산 에틸렌 능력",
+              "hi": true
+            }
+          ]
+        }
+      ],
+      "why": "국내 에틸렌 계열 공급 축소 대비 조달선 점검",
+      "coverage": [
+        {
+          "publisher": "ICIS",
+          "title": "S Korea Lotte Chem swings to Q3 operating loss; YNCC integration in H1 2027",
+          "url": "https://www.icis.com/explore/resources/news/2026/11/11/11241361/s-korea-lotte-chem-swings-to-q3-operating-loss-yncc-integration-in-h1-2027",
+          "date": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "type": "closing"
+    }
+  ],
+  "sources": [
+    {
+      "id": "reu-china-cu-conc-oct",
+      "publisher": "Reuters",
+      "via": "MINING.COM",
+      "title": "China's copper concentrate imports slump 11% in October as smelter woes deepen",
+      "date": "2026-11-10",
+      "time": "16:59 UTC",
+      "accessed": "2026-11-12",
+      "url": "https://www.mining.com/web/chinas-copper-concentrate-imports-slump-11-in-october-as-smelter-woes-deepen/",
+      "evidence": [
+        "China's October copper concentrate imports slumped 11% from a year earlier, customs data showed on Tuesday,",
+        "Shipments in the January-to-October period fell 3.8% to 24.14 million tons from 25.09 million tons a year earlier."
+      ]
+    },
+    {
+      "id": "snm-plate-oct-output",
+      "publisher": "철강금속신문",
+      "title": "후판 생산, 10월 대보수에 큰 폭 감소…내수 판매는 전년比 증가",
+      "date": "2026-11-11",
+      "time": "05:00",
+      "accessed": "2026-11-12",
+      "url": "http://www.snmnews.com/news/articleView.html?idxno=577219",
+      "evidence": [
+        "포스코와 현대제철의 후판 생산설비 정비 일정이 집중되면서 전체 생산량이 60만 톤 초반까지 줄어든 것이다.",
+        "다만 내수 판매량은 지난해 같은 달보다 증가했으며, 올해 누적 생산과 내수 판매 실적도 전년 동기를 웃돌았다.",
+        "본지가 집계한 자료에 따르면 포스코, 현대제철, 동국제강 등 국내 후판 제조 3사의 10월 생산량은 62만3천 톤으로 전월 75만4천 톤보다 17.4% 감소했다.",
+        "지난해 같은 달 77만4천 톤과 비교하면 19.5% 줄었다."
+      ]
+    },
+    {
+      "id": "icis-lotte-yncc",
+      "publisher": "ICIS",
+      "title": "S Korea Lotte Chem swings to Q3 operating loss; YNCC integration in H1 2027",
+      "date": "2026-11-11",
+      "accessed": "2026-11-12",
+      "url": "https://www.icis.com/explore/resources/news/2026/11/11/11241361/s-korea-lotte-chem-swings-to-q3-operating-loss-yncc-integration-in-h1-2027",
+      "evidence": [
+        "Lotte Chemical plans to form an integrated entity with YNCC in the first half of next year after spinning off its Yeosu plant",
+        "YNCC will also permanently shut two of its crackers, which have a combined ethylene capacity of 1.39 million tonnes/year.",
+        "Lotte Chemical said all production lines at the Yulchon compounding plant had started up in September."
+      ]
+    }
+  ],
+  "caption": "11월 10일~11일(현지) 국내외 보도 기준 원재료 뉴스 3건.\n\n1) 중국 10월 구리정광 수입 전년比 11% 감소, 1~10월 누적 3.8% 감소\n2) 후판 3사 10월 생산 62만3천 톤, 대보수로 전월比 17.4% 감소\n3) 롯데케미칼 여수공장 분할 후 내년 상반기 YNCC와 통합, YNCC 크래커 2기 영구 폐쇄\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": [
+    "원자재",
+    "구리",
+    "후판",
+    "에틸렌",
+    "석유화학"
+  ]
+}
