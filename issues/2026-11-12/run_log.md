@@ -1,0 +1,15 @@
+- 05:04 [루틴] 발행함 수집 자료 받음 (Cowork 2026-11-12T03:05:00+09:00): 채널 65개·항목 162건, 원문 발췌 6개
+- 05:04 0단계: 미게시·미전달 확인, setup 완료(PATH=/usr/bin 우선 — /usr/local/bin/python3 에 playwright 없음), 다음 호수 No.45
+- 05:04 1A: 발행함 feeds/2026-11-12 수집 자료 받음(발췌 6건), pickup·collect 실행
+- 05:20 2단계: collect.py — 여러 매체 함께 보도 묶음 없음(2곳 이상 0건). Cowork 발췌 6건이 모두 125자 이하 부분 발췌(본문 일부만)
+- 05:25 3단계 선정 (모두 단독 보도, coverage 1곳):
+  - 비철 reu-china-cu-conc-oct (Reuters via MINING.COM, 11/10 16:59 UTC = KST 11/11 01:59) — 단독 보도: 수급(중국 세관 정광 수입 물량). 수입 물량 기사이며 가격 기사 아님(collect.py 'slump' 가격 추정 표시는 오판)
+  - 스틸 snm-plate-oct-output (철강금속신문 11/11 05:00) — 단독 보도: 생산·설비 가동(대보수로 후판 3사 10월 생산 감소, 수치)
+  - 레진 icis-lotte-yncc (ICIS 11/11) — 단독 보도: 설비 결정(YNCC 크래커 2기 영구 폐쇄 1.39Mt/년, 롯데케미칼 여수공장 분할·YNCC 통합 2027 상반기). 실적 수치는 카드에 쓰지 않음
+  - 화공: 범위 안 읽을 수 있는 기사 0건 → 비움
+- 뺀 후보: Ternium 반덤핑(발췌에 새 사실·숫자 부족), ArcelorMittal Pecem(스틸 1건 한도 — 국내 후판 생산 우선), Italian steelmakers halt(발췌 2문장뿐, 근거 부족), US Steel Illinois(2025-09-09 AP, 범위 밖), Moscow refinery(2026-09-21, 범위 밖), Norsk Hydro·Magnitude 7·Century(MINING.COM 루틴 접근 불가·게재일 확인 불가), Investing.com 원유 3건(Cowork 확인 PUBLISHED Oct 26)
+- 전재본 재검색(WebSearch investing.com·finance.yahoo.com): 중국 구리정광·이탈리아 철강 — 같은 제목 전재본 없음
+- 05:35 6단계: render --check — dedup.py 가 구리정광 기사를 10/29 '중국 알루미늄 업체, 해외 제련소 확대 추진'과 같은 사건으로 오판(공통 china/중국 + capacity). 다른 금속·다른 사건이므로 보수적으로 '제련소 감산 예고' 문장(capacity 사건어)을 카드·근거에서 빼서 해소. 이후 오류 0, 경고 3(단독 보도 기록 요청 — 위에 기록)
+- 렌더 5장(테마 dark, No.45). JPG 5장 확인 — 숫자 줄바꿈 문제 있어 stats 블록을 2개 항목 전폭으로 바꿔 해결. 잘림·겹침·깨진 한글 없음
+- 전날(11/11) 호: published/2026-11-11.json 있음 — 게시 실패 없음
+- 보고: 받은 곳 Cowork 수집 자료 / 뉴스 3건(Reuters via MINING.COM·철강금속신문·ICIS) / 검증 오류 0
