@@ -1,0 +1,179 @@
+{
+  "id": "2026-11-13-brief",
+  "date": "2026-11-13",
+  "issue": 46,
+  "category": "brief",
+  "topic": "tariff",
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "日, 韓 도금강판 반덤핑\n**잠정관세 12월 7일까지**",
+      "sub": "11월 12일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 2건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "tariff",
+      "src": "snm-jp-coated-steel-ad",
+      "headline": "日, 韓 도금강판 반덤핑\n**잠정관세 12월 7일까지**",
+      "toc": "일본, 한국·중국산 용융아연도금강판 고내식 제품도 도금층 성분 따라 과세 판단",
+      "orig": "[단독] 日 \"韓 고내식 도금강판, 성분 따라 반덤핑 적용\"…최종판정 없어도 12월 7일 잠정관세 종료",
+      "key": {
+        "value": "29.2~38.0",
+        "label": "한국산 업체별 잠정관세율(%)"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "일본 · 한국·중국산 용융아연도금강판",
+          "items": [
+            {
+              "k": "NOW",
+              "v": "잠정 반덤핑관세 부과 중",
+              "sub": "8월 8일부터 · 12월 7일까지",
+              "tone": "alert"
+            },
+            {
+              "k": "NEXT",
+              "v": "최종 조사기한 12월 12일",
+              "tone": "warn"
+            },
+            {
+              "k": "RULE",
+              "v": "고내식 제품도 도금층 합금 성분으로 과세 판단"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "38.0",
+              "unit": "%",
+              "label": "한국산 업체별 잠정관세율 상한 (하한 29.2%)",
+              "hi": true
+            },
+            {
+              "value": "2 / 5",
+              "unit": "%",
+              "label": "제외 조건: 마그네슘·알루미늄 함량 이상"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "t": "도금층 철 함량 7% 이상 합금화 용융도금강판은 조사대상 제외"
+        }
+      ],
+      "why": "대일 수출 도금재 성분별 과세 여부 확인",
+      "coverage": [
+        {
+          "publisher": "철강금속신문",
+          "title": "[단독] 日 \"韓 고내식 도금강판, 성분 따라 반덤핑 적용\"…최종판정 없어도 12월 7일 잠정관세 종료",
+          "url": "http://www.snmnews.com/news/articleView.html?idxno=577276",
+          "date": "2026-11-12"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "category": "nonferrous",
+      "topic": "maker",
+      "src": "mcom-ivanhoe-pakistan-copper",
+      "headline": "Ivanhoe, 파키스탄\n**구리 탐사 MoU 체결**",
+      "toc": "Ivanhoe Mines, Mari Energies와 파키스탄 구리·금 탐사 협력 MoU",
+      "orig": "Ivanhoe Mines targets Pakistan copper with Mari Energies deal",
+      "viz": [
+        {
+          "type": "status",
+          "title": "Ivanhoe Mines · Mari Energies (파키스탄)",
+          "items": [
+            {
+              "k": "DEAL",
+              "v": "Mari Energies와 협약 발표",
+              "sub": "파키스탄 광물투자포럼",
+              "tone": "ok"
+            },
+            {
+              "k": "TARGET",
+              "v": "Mari Minerals 구리·금 탐사 프로젝트"
+            },
+            {
+              "k": "NEXT",
+              "v": "현지 사무소 설립 초기 단계, 추가 협약 예정",
+              "tone": "warn"
+            },
+            {
+              "k": "RISK",
+              "v": "보안·인프라 문제가 투자 걸림돌",
+              "tone": "alert"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "t": "Friedland 회장: 동등 지분 파트너십 구성"
+        }
+      ],
+      "why": "중장기 신규 구리 광원 후보로 추적",
+      "coverage": [
+        {
+          "publisher": "MINING.COM",
+          "title": "Ivanhoe Mines targets Pakistan copper with Mari Energies deal",
+          "url": "https://www.mining.com/ivanhoe-mines-targets-pakistan-copper-with-mari-energies-deal/",
+          "date": "2026-11-12"
+        }
+      ]
+    },
+    {
+      "type": "closing"
+    }
+  ],
+  "sources": [
+    {
+      "id": "snm-jp-coated-steel-ad",
+      "publisher": "철강금속신문",
+      "title": "[단독] 日 \"韓 고내식 도금강판, 성분 따라 반덤핑 적용\"…최종판정 없어도 12월 7일 잠정관세 종료",
+      "date": "2026-11-12",
+      "time": "05:00 KST",
+      "accessed": "2026-11-13",
+      "url": "http://www.snmnews.com/news/articleView.html?idxno=577276",
+      "evidence": [
+        "일본 정부가 한국·중국산 용융아연도금강판에 대한 반덤핑 조사에서 고내식 제품도 도금층의 합금 성분에 따라 과세 여부를 판단한다는 입장을 밝혔다.",
+        "현행 규정에 따르면 도금층의 마그네슘 함량이 2% 이상이면서 알루미늄 함량이 5% 이상인 제품은 제외 대상이다.",
+        "도금층의 철(Fe) 함량이 7% 이상인 합금화 용융도금강판 역시 조사대상에서 제외된다.",
+        "일본 정부는 지난해 8월 한국·중국산 용융아연도금강판에 대한 반덤핑 조사를 시작했으며, 올해 7월 예비판정을 거쳐 8월 8일부터 잠정관세를 부과하고 있다.",
+        "한국산 제품에는 업체별로 29.2~38.0%의 잠정관세율이 적용되고 있다.",
+        "잠정관세 적용기간은 오는 12월 7일까지이며, 최종 조사기한은 12월 12일까지다."
+      ]
+    },
+    {
+      "id": "mcom-ivanhoe-pakistan-copper",
+      "publisher": "MINING.COM",
+      "title": "Ivanhoe Mines targets Pakistan copper with Mari Energies deal",
+      "date": "2026-11-12",
+      "time": "04:21",
+      "accessed": "2026-11-13",
+      "url": "https://www.mining.com/ivanhoe-mines-targets-pakistan-copper-with-mari-energies-deal/",
+      "evidence": [
+        "Chairman Robert Friedland announced the agreement Thursday on the sidelines of the Pakistan Minerals Investment Forum.",
+        "He said Ivanhoe was in the early stages of establishing a local office and expects to sign another agreement Friday.",
+        "Mari Energies’ mining subsidiary, Mari Minerals, has several exploration projects targeting copper and gold in Pakistan.",
+        "“We’re forming equal partnerships,” Friedland told reporters when asked about the MoU’s structure and timeline.",
+        "Security concerns and infrastructure challenges remain significant obstacles to attracting international investment."
+      ]
+    }
+  ],
+  "caption": "11월 12일(현지) 국내외 보도 기준 원재료 뉴스 2건.\n\n1) 일본, 한국·중국산 용융아연도금강판 반덤핑 — 고내식 제품도 도금층 성분 따라 과세 판단, 한국산 잠정관세 29.2~38.0%는 12월 7일까지·최종 조사기한 12월 12일\n2) Ivanhoe Mines, 파키스탄 Mari Energies와 구리·금 탐사 협력 MoU — 현지 사무소 설립 초기 단계\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": [
+    "원자재",
+    "철강",
+    "반덤핑",
+    "구리",
+    "원재료구매"
+  ]
+}
