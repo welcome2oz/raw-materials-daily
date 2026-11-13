@@ -1,0 +1,13 @@
+- 05:04 [0단계] 2026-11-14 미게시·미넘김 확인. 전날(11-13) published 있음 → 게시 실패 없음. setup.sh: python3(3.11)에 playwright 1.63.0·pillow·openpyxl 설치 후 ✓
+- 05:04 [루틴] 발행함 수집 자료 받음 (Cowork 2026-11-14T04:05:00+09:00): 채널 64개·항목 794건, 원문 발췌 8개
+- 05:06 [1A] 발행함 feeds/2026-11-14 받음 (feed.json·raw.json·발췌 8건, Cowork exact-quotes 부분 발췌) → pickup.py ✓ (채널 64개, 항목 794건). 1단계 생략
+- 05:07 [2단계] collect.py — 게재일 범위 2026-11-13~11-14 (토요일 호). 자동 묶음 2곳 이상 0건, 레진 후보 0건(ICIS 발췌는 Cowork 원문으로 확인)
+- [3단계] 선정 3건 (호수 No.47)
+  - 비철: Bloomberg 'A shortage of ore is causing a pricing revolution in copper' — 여러 매체 2곳 (Bloomberg·Reuters 'Miner-smelter tug-of-war rocks long-standing copper benchmark' 같은 사건으로 수동 합산). 카드 근거는 Bloomberg 발췌만 (Reuters 를 함께 인용하면 출처 줄이 잘려 coverage 로만 기록)
+  - 레진: ICIS EU MEG 반덤핑 일몰 재심 — 단독 보도 — 무역구제 결정·시행(재심 개시, 기존 관세 유지). 11-07 EU 세이프가드 조사의 후속(update_of 2026-11-07-s3), 새 사실: 재심 개시·만료일·기한·관세율
+  - 화공: Reuters(via Investing.com) IEA 4분기 원유 공급 과잉 전환 — 단독 보도 — 수급 전망(공급·수요 물량). Brent 가격 문장은 쓰지 않음
+  - 스틸: 비움. 스틸데일리 하바쉬 폭발·美 수입허가·中 수출 선적 등 WebFetch 결과 '유료회원 전용기사'(본문 없음). 하바쉬 폭발은 11/9 사건으로 범위 밖. BHP 철광석 조직 개편(Bloomberg)은 구조조정·인력 감축으로 새 사실 유형(생산·설비·가동 등)에 해당하지 않아 제외
+  - 뺀 후보: CFTC 알루미늄 가격 체계 개편(가격 중심 기사), MINING.COM 구리 2027 전망(은행 전망·가격 전망 위주), Hengyi-Shaoxing Hengming 인수(폴리에스터 섬유, 레진 1건 한도), Hudbay·Gunnison·Steel Dynamics(실적)
+- [6단계] render.py --check 오류 0 (경고: 단독 보도 2건 기록 요청 → 위에 기록). 테마 dark. 5장(표지+뉴스 3+출처) JPG 전부 열어 확인 — 잘림·겹침 없음. dedup: MEG 는 11-07 과 같은 사건 판정, 새 사실 4건
+- 재검증 환경: PIL(시스템) 로드 실패 → pillow 재설치 후 렌더
+- 전날 호(11-13) published 있음 → 게시 실패 없음

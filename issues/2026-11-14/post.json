@@ -1,0 +1,273 @@
+{
+  "id": "2026-11-14-brief",
+  "date": "2026-11-14",
+  "issue": 47,
+  "category": "brief",
+  "topic": "supply",
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "구리정광 벤치마크\n**연계 거래 축소**",
+      "sub": "11월 12일~13일(현지) 외신 보도 기준\n오늘의 원재료 뉴스 3건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "nonferrous",
+      "topic": "supply",
+      "src": "bbg-copper-ore-shortage-pricing",
+      "headline": "구리정광 벤치마크\n**연계 거래 축소**",
+      "toc": "정광 부족에 구리정광 TC/RC 벤치마크 연계 거래 급감, 내년 추가 감소 예상",
+      "orig": "A shortage of ore is causing a pricing revolution in copper",
+      "key": {
+        "value": "45",
+        "label": "CRU 예상 세계 정광 판매 중 벤치마크 연계(%)"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "구리정광 TC/RC 연간 벤치마크",
+          "items": [
+            {
+              "k": "NOW",
+              "v": "정광 부족으로 벤치마크 연계 거래 급감",
+              "tone": "alert"
+            },
+            {
+              "k": "NEXT YEAR",
+              "v": "벤치마크 연계 거래 추가 감소 예상",
+              "tone": "warn"
+            },
+            {
+              "k": "NEXT",
+              "v": "다음 주 상하이에서 광산·제련소 협상"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "30",
+              "unit": "% 미만",
+              "label": "올해 중국 정광 거래 중 벤치마크 연계",
+              "hi": true
+            },
+            {
+              "value": "45",
+              "unit": "%",
+              "label": "CRU 예상 세계 정광 판매 중 벤치마크 유지"
+            }
+          ]
+        }
+      ],
+      "why": "정광 조달 조건 변화가 전기동 공급에 미칠 영향 점검",
+      "coverage": [
+        {
+          "publisher": "Bloomberg",
+          "title": "A shortage of ore is causing a pricing revolution in copper",
+          "url": "https://www.mining.com/web/a-shortage-of-ore-is-causing-a-pricing-revolution-in-copper/",
+          "date": "2026-11-12"
+        },
+        {
+          "publisher": "Reuters",
+          "title": "Miner-smelter tug-of-war rocks long-standing copper benchmark",
+          "url": "https://www.mining.com/web/miner-smelter-tug-of-war-rocks-long-standing-copper-benchmark/",
+          "date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "category": "resin",
+      "topic": "tariff",
+      "src": "icis-eu-meg-add-review",
+      "headline": "EU, 美·사우디 MEG\n**반덤핑 일몰 재심**",
+      "toc": "EU, 미국·사우디산 MEG 반덤핑관세 일몰 재심 개시…재심 중 기존 관세 유지",
+      "orig": "EU launches expiry review of anti-dumping duties on MEG imports from US and Saudi Arabia",
+      "key": {
+        "value": "7.7",
+        "label": "사우디산 MEG 반덤핑관세(%)"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "EU 집행위 · 미국·사우디산 MEG",
+          "items": [
+            {
+              "k": "NOW",
+              "v": "반덤핑관세 일몰 재심 개시",
+              "sub": "11월 13일 발표 · 원래 11월 16일 만료 예정",
+              "tone": "alert"
+            },
+            {
+              "k": "DUTY",
+              "v": "재심 결과 나올 때까지 기존 관세 유지",
+              "tone": "warn"
+            },
+            {
+              "k": "NEXT",
+              "v": "개시 후 12개월 내 종료 (최대 15개월)"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "7.7",
+              "unit": "%",
+              "label": "사우디산 단일 관세 (2021년부터)",
+              "hi": true
+            },
+            {
+              "value": "3~60",
+              "unit": "%",
+              "label": "미국 업체별 관세 (롯데케미칼 3%)"
+            }
+          ]
+        }
+      ],
+      "why": "PET·폴리에스터 원료 MEG 유럽 조달 관세 유지 확인",
+      "coverage": [
+        {
+          "publisher": "ICIS",
+          "title": "EU launches expiry review of anti-dumping duties on MEG imports from US and Saudi Arabia",
+          "url": "https://www.icis.com/explore/resources/news/2026/11/13/11241780/eu-launches-expiry-review-of-anti-dumping-duties-on-meg-imports-from-us-and-saudi-arabia",
+          "date": "2026-11-13"
+        }
+      ],
+      "update_of": "2026-11-07-s3"
+    },
+    {
+      "type": "news",
+      "category": "chemical",
+      "topic": "supply",
+      "src": "inv-iea-oil-surplus",
+      "headline": "IEA, 4분기 원유\n**공급 과잉 전환**",
+      "toc": "IEA, 걸프 수출 회복으로 4분기 세계 원유 공급이 수요를 웃돌 것",
+      "orig": "World oil market is returning to surplus as Gulf exports recover, IEA says",
+      "key": {
+        "value": "1.7",
+        "label": "4분기 공급의 수요 초과분(백만 b/d)"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "IEA · 세계 원유 수급",
+          "items": [
+            {
+              "k": "CHANGE",
+              "v": "4분기 공급 부족 전망 → 공급 과잉",
+              "tone": "ok"
+            },
+            {
+              "k": "CAUSE",
+              "v": "중동 수출이 수요보다 빠르게 회복",
+              "tone": "warn"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "105",
+              "unit": "백만 b/d",
+              "label": "4분기 평균 공급",
+              "hi": true
+            },
+            {
+              "value": "3.8",
+              "unit": "백만 b/d",
+              "label": "2027년 공급 과잉 전망"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "t": "2026년 세계 수요 2.7백만 b/d 감소한 102.3백만 b/d 전망"
+        }
+      ],
+      "why": "나프타 등 석유계 원료 수급 완화 여부 점검",
+      "coverage": [
+        {
+          "publisher": "Reuters",
+          "title": "World oil market is returning to surplus as Gulf exports recover, IEA says",
+          "url": "https://www.investing.com/news/commodities-news/world-oil-market-is-returning-to-surplus-as-gulf-exports-recoveriea-says-5024885",
+          "date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "type": "closing"
+    }
+  ],
+  "sources": [
+    {
+      "id": "bbg-copper-ore-shortage-pricing",
+      "publisher": "Bloomberg",
+      "via": "MINING.COM",
+      "title": "A shortage of ore is causing a pricing revolution in copper",
+      "date": "2026-11-12",
+      "time": "23:09 UTC",
+      "accessed": "2026-11-14",
+      "url": "https://www.mining.com/web/a-shortage-of-ore-is-causing-a-pricing-revolution-in-copper/",
+      "evidence": [
+        "The decades-old system that the copper industry uses to price mined ores is fracturing in the face of an acute shortage.",
+        "the number of deals linked to the benchmark price has already fallen sharply, and is set to drop further next year",
+        "Less than 30% of China’s copper concentrates trade has been linked to the benchmark this year",
+        "On a global scale, CRU expects some 45% of concentrate sales to remain linked to the benchmark",
+        "Miners and smelters are set to meet again for crunch talks during a major industry gathering in Shanghai next week"
+      ]
+    },
+    {
+      "id": "icis-eu-meg-add-review",
+      "publisher": "ICIS",
+      "title": "EU launches expiry review of anti-dumping duties on MEG imports from US and Saudi Arabia",
+      "date": "2026-11-13",
+      "accessed": "2026-11-14",
+      "url": "https://www.icis.com/explore/resources/news/2026/11/13/11241780/eu-launches-expiry-review-of-anti-dumping-duties-on-meg-imports-from-us-and-saudi-arabia",
+      "evidence": [
+        "The European Comission has launched an expiry review of anti-dumping duties on monoethylene glycol (MEG) imports",
+        "from the US and Saudi Arabia which were originally set to expire on 16 November.",
+        "The investigation, which was announced on 13 November, will consider whether the situation of companies producing",
+        "The investigation should be concluded within 12 months of initiation",
+        "the deadline may be extended up to 15 months.",
+        "Existing anti-dumping measures shall remain in force, pending the outcome of the review.",
+        "MEG has been subject to ADDs since 2021 when the EU imposed a flat duty of 7.7% on imports from Saudi Arabia",
+        "a range of 3% to 60% on US companies, with the lowest rate of 3% applied to major producer Lotte Chemical.",
+        "MEG is primarily used in the production of polyethylene terephthalate (PET) resin polyester fibers and films."
+      ]
+    },
+    {
+      "id": "inv-iea-oil-surplus",
+      "publisher": "Reuters",
+      "via": "Investing.com",
+      "title": "World oil market is returning to surplus as Gulf exports recover, IEA says",
+      "date": "2026-11-13",
+      "time": "06:34 AM",
+      "accessed": "2026-11-14",
+      "url": "https://www.investing.com/news/commodities-news/world-oil-market-is-returning-to-surplus-as-gulf-exports-recoveriea-says-5024885",
+      "evidence": [
+        "The world oil market will return to a surplus in the fourth quarter of this year",
+        "as Middle East exports recover faster than global oil demand despite continued attacks on shipping.",
+        "Oil supply will average 105 million barrels per day in the fourth quarter",
+        "1.7 million bpd higher than forecast demand.",
+        "The IEA had previously forecast a fourth-quarter supply deficit.",
+        "World oil demand is forecast to fall by 2.7 million bpd in 2026 to 102.3 million bpd",
+        "For 2027, the IEA sees the supply surplus at about 3.8 million bpd"
+      ]
+    }
+  ],
+  "caption": "11월 12일~13일(현지) 외신 보도 기준 원재료 뉴스 3건.\n\n1) 구리정광 부족에 TC/RC 벤치마크 연계 거래 급감, 내년 추가 감소 예상…다음 주 상하이에서 광산·제련소 협상\n2) EU, 미국·사우디산 MEG 반덤핑관세 일몰 재심 개시…재심 기간 기존 관세 유지\n3) IEA, 걸프 수출 회복으로 4분기 세계 원유 공급 과잉 전환 전망\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": [
+    "원자재",
+    "구리",
+    "MEG",
+    "반덤핑",
+    "원유"
+  ]
+}
