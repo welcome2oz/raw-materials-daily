@@ -1,0 +1,268 @@
+{
+  "id": "2026-11-16-brief",
+  "date": "2026-11-16",
+  "issue": 49,
+  "category": "brief",
+  "topic": "supply",
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "튀르키예 하바쉬 제철소\n**폭발로 생산 중단**",
+      "sub": "11월 13일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 3건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "supply",
+      "src": "sd-habas-explosion",
+      "headline": "튀르키예 하바쉬 제철소\n**폭발로 생산 중단**",
+      "toc": "튀르키예 하바쉬 제철소 폭발·화재…생산 중단에 열연 공급 차질 우려",
+      "orig": "튀르키예 하바쉬 제철소 폭발…열연 공급 차질 우려",
+      "key": {
+        "value": "18명",
+        "label": "폭발 사고 사망자(최소)"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "하바쉬(HABAŞ) · 튀르키예 이즈미르주 알리아가",
+          "items": [
+            {
+              "k": "INCIDENT",
+              "v": "11월 9일 폭발과 대형 화재",
+              "tone": "alert"
+            },
+            {
+              "k": "IMPACT",
+              "v": "생산 중단에 따른 철강재 공급 차질 우려",
+              "tone": "warn"
+            },
+            {
+              "k": "WATCH",
+              "v": "열연코일 공급 감소 예상"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "18",
+              "unit": "명",
+              "label": "사망자 (최소)",
+              "hi": true
+            },
+            {
+              "value": "12",
+              "unit": "명 이상",
+              "label": "부상자"
+            }
+          ]
+        }
+      ],
+      "why": "튀르키예·유럽 열연 조달처 공급 차질 점검",
+      "coverage": [
+        {
+          "publisher": "스틸데일리",
+          "title": "튀르키예 하바쉬 제철소 폭발…열연 공급 차질 우려",
+          "url": "https://www.steeldaily.co.kr/news/articleView.html?idxno=204334",
+          "date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "category": "nonferrous",
+      "topic": "maker",
+      "src": "snm-mingtai-gwangyang-aluminium",
+      "headline": "광양알루미늄 판재설비\n**200억 원 증설 투자**",
+      "toc": "中 밍타이, 광양알루미늄에 200억 원 투자…알루미늄 판재 가공설비 확충",
+      "orig": "中 밍타이, 광양알루미늄에 200억 원 투자",
+      "key": {
+        "value": "200억 원",
+        "label": "밍타이 광양알루미늄 증설 투자"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "광양알루미늄 · 광양 세풍산업단지",
+          "items": [
+            {
+              "k": "DEAL",
+              "v": "11월 12일 광양경자청과 증설 투자협약",
+              "tone": "alert"
+            },
+            {
+              "k": "PLAN",
+              "v": "기존 생산 기반에 판재 가공설비 추가",
+              "tone": "warn"
+            },
+            {
+              "k": "OWNER",
+              "v": "중국 밍타이알루미늄 (허난성 정저우)"
+            }
+          ]
+        },
+        {
+          "type": "status",
+          "title": "광양알루미늄 설비 가동 이력",
+          "items": [
+            {
+              "k": "2019",
+              "v": "공장 착공"
+            },
+            {
+              "k": "2021",
+              "v": "냉간압연기 가동"
+            },
+            {
+              "k": "2022",
+              "v": "열간압연 설비 가동"
+            },
+            {
+              "k": "2024",
+              "v": "용해·주조라인 가동"
+            }
+          ]
+        }
+      ],
+      "why": "국내 알루미늄 판재 조달처 생산능력 변화 확인",
+      "coverage": [
+        {
+          "publisher": "철강금속신문",
+          "title": "中 밍타이, 광양알루미늄에 200억 원 투자",
+          "url": "http://www.snmnews.com/news/articleView.html?idxno=577396",
+          "date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "category": "resin",
+      "topic": "maker",
+      "src": "icis-hengyi-hengming",
+      "headline": "中 헝이석유화학\n**폴리에스터社 51% 인수**",
+      "toc": "中 헝이석유화학, 연 185만t 폴리에스터 생산업체 사오싱 헝밍 지분 51% 인수",
+      "orig": "China’s Hengyi Petrochemical to buy 51% of Shaoxing Hengming for CNY1.2bn",
+      "key": {
+        "value": "1.85",
+        "label": "사오싱 헝밍 폴리에스터 설비(백만 t/년)"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "Hengyi Petrochemical · Shaoxing Hengming (저장성)",
+          "items": [
+            {
+              "k": "DEAL",
+              "v": "사오싱 헝밍 지분 51% 현금 인수",
+              "sub": "약 12억 위안",
+              "tone": "alert"
+            },
+            {
+              "k": "APPROVED",
+              "v": "11월 11일 이사회 승인",
+              "tone": "warn"
+            },
+            {
+              "k": "NEXT",
+              "v": "12월 2일까지 지분 대금 전액 지급"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "1.85",
+              "unit": "백만 t/년",
+              "label": "사오싱 헝밍 폴리에스터 설비",
+              "hi": true
+            },
+            {
+              "value": "51",
+              "unit": "%",
+              "label": "인수 지분"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "t": "DTY·FDY·POY 등 폴리에스터 원사 생산"
+        }
+      ],
+      "why": "중국 폴리에스터 체인 수직계열화 동향 점검",
+      "coverage": [
+        {
+          "publisher": "ICIS",
+          "title": "China’s Hengyi Petrochemical to buy 51% of Shaoxing Hengming for CNY1.2bn",
+          "url": "https://www.icis.com/explore/resources/news/2026/11/13/11241687/china-s-hengyi-petrochemical-to-buy-51-of-shaoxing-hengming-for-cny1-2bn",
+          "date": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "type": "closing"
+    }
+  ],
+  "sources": [
+    {
+      "id": "sd-habas-explosion",
+      "publisher": "스틸데일리",
+      "title": "튀르키예 하바쉬 제철소 폭발…열연 공급 차질 우려",
+      "date": "2026-11-13",
+      "time": "13:33 KST",
+      "accessed": "2026-11-16",
+      "url": "https://www.steeldaily.co.kr/news/articleView.html?idxno=204334",
+      "evidence": [
+        "튀르키예 주요 철강업체인 하바쉬(HABAŞ) 제철소에서 발생한 대규모 폭발 사고로 최소 18명의 근로자가 사망한 가운데 생산 중단에 따른 철강재 공급 차질 우려가 나오고 있다.",
+        "특히 열연코일 공급 감소가 예상되면서",
+        "현지 언론에 따르면 지난 9일 튀르키예 이즈미르주 알리아가에 위치한 하바쉬 제철소에서 폭발과 함께 대형 화재가 발생했다.",
+        "이번 사고로 최소 18명의 근로자가 사망하고 12명 이상이 부상했다."
+      ]
+    },
+    {
+      "id": "snm-mingtai-gwangyang-aluminium",
+      "publisher": "철강금속신문",
+      "title": "中 밍타이, 광양알루미늄에 200억 원 투자",
+      "date": "2026-11-13",
+      "time": "17:40 KST",
+      "accessed": "2026-11-16",
+      "url": "http://www.snmnews.com/news/articleView.html?idxno=577396",
+      "evidence": [
+        "중국 밍타이알루미늄이 광양알루미늄에 200억 원을 투자해 알루미늄 판재 가공설비를 확충한다.",
+        "광양만권경제자유구역청은 지난 12일 중국 허난성 정저우에 위치한 밍타이알루미늄 본사를 방문해 증설 투자협약을 체결했다.",
+        "밍타이알루미늄은 광양 세풍산업단지에 입주한 광양알루미늄의 중국 본사다.",
+        "광양알루미늄은 이번 투자를 통해 기존 생산 기반에 판재 가공설비를 추가하고 제품 경쟁력을 높일 계획이다.",
+        "광양알루미늄은 세풍산단 외국인투자지역 1호 기업으로, 지난 2019년 공장을 착공했다.",
+        "이후 광양알루미늄은 2021년 냉간압연기, 2022년 열간압연 설비를 가동했으며 2024년에는 용해·주조라인을 가동했다."
+      ]
+    },
+    {
+      "id": "icis-hengyi-hengming",
+      "publisher": "ICIS",
+      "title": "China’s Hengyi Petrochemical to buy 51% of Shaoxing Hengming for CNY1.2bn",
+      "date": "2026-11-13",
+      "accessed": "2026-11-16",
+      "url": "https://www.icis.com/explore/resources/news/2026/11/13/11241687/china-s-hengyi-petrochemical-to-buy-51-of-shaoxing-hengming-for-cny1-2bn",
+      "evidence": [
+        "China’s Hengyi Petrochemical said it plans to buy 51% of polyester fiber producer",
+        "for around Chinese yuan (CNY) 1.2 billion ($180 million) in cash.",
+        "Shaoxing Hengming operates a 1.85 million tonne/year polyester facility in Shaoxing city in eastern Zhejiang province",
+        "producing drawn texturized yarn (DTY), fully drawn yarn (FDY), partially oriented yarn (POY),",
+        "Hengyi Petrochemical’s Board of Directors approved the agreement on 11 November,",
+        "the buyer must pay the full equity transfer amount within 15 working days, or by 2 December."
+      ]
+    }
+  ],
+  "caption": "11월 13일(현지) 국내외 보도 기준 원재료 뉴스 3건.\n\n1) 튀르키예 하바쉬 제철소 폭발·화재로 생산 중단 우려…열연코일 공급 감소 예상\n2) 中 밍타이, 광양알루미늄에 200억 원 투자…알루미늄 판재 가공설비 확충\n3) 中 헝이석유화학, 연 185만t 폴리에스터 생산업체 사오싱 헝밍 지분 51% 인수\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": [
+    "#원자재",
+    "#열연",
+    "#알루미늄",
+    "#폴리에스터"
+  ]
+}
