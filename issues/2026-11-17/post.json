@@ -1,0 +1,111 @@
+{
+  "id": "2026-11-17-brief",
+  "date": "2026-11-17",
+  "issue": 50,
+  "category": "brief",
+  "topic": "tariff",
+  "caption": "11월 16일(현지) 기관 발표 기준 원재료 뉴스 1건.\n\n1) EU 집행위, 인도·일본·대만·튀르키예·베트남산 냉연강판에 확정 반덤핑관세 부과…일본 27.9%, 대만 20.7~27%\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": [
+    "#원자재",
+    "#냉연강판",
+    "#반덤핑",
+    "#EU"
+  ],
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "EU 냉연강판\n**확정 반덤핑관세**",
+      "sub": "11월 16일(현지) 기관 발표 기준\n오늘의 원재료 뉴스 1건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "tariff",
+      "src": "ec-coldrolled-ad-duties",
+      "headline": "EU 냉연강판 5개국\n**확정 반덤핑관세**",
+      "toc": "EU, 5개국산 냉연강판 확정 반덤핑관세",
+      "orig": "Commission imposes anti-dumping duties on certain cold-rolled flat steel products",
+      "facts": [
+        {
+          "t": "인도·대만은 '특정시장상황(PMS)' 첫 인정 사례"
+        }
+      ],
+      "why": "EU향 냉연 수출·대체 물량 흐름 점검",
+      "key": {
+        "value": "27.9%",
+        "label": "일본산 확정 반덤핑관세"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "EU 집행위 · 냉연강판 반덤핑",
+          "items": [
+            {
+              "k": "DECISION",
+              "v": "확정 반덤핑관세 부과",
+              "tone": "alert"
+            },
+            {
+              "k": "TARGET",
+              "v": "인도·일본·대만·튀르키예·베트남산",
+              "tone": "warn",
+              "sub": "인도 9.5% · 베트남 16% · 튀르키예 3–7.8%"
+            },
+            {
+              "k": "MARKET",
+              "v": "EU 냉연강판 시장 약 232억 유로",
+              "sub": "EU 12개국 생산, 8,600명 이상 고용"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "27.9",
+              "unit": "%",
+              "label": "일본산 확정 반덤핑관세",
+              "hi": true
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "20.7–27",
+              "unit": "%",
+              "label": "대만산 확정 반덤핑관세"
+            }
+          ]
+        }
+      ],
+      "coverage": []
+    },
+    {
+      "type": "closing"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ec-coldrolled-ad-duties",
+      "publisher": "European Commission",
+      "title": "Commission imposes anti-dumping duties on certain cold-rolled flat steel products",
+      "date": "2026-11-16",
+      "accessed": "2026-11-17",
+      "url": "https://policy.trade.ec.europa.eu/news/commission-imposes-anti-dumping-duties-certain-cold-rolled-flat-steel-products-2026-11-16_en",
+      "evidence": [
+        "The definitive anti-dumping duties imposed are 9.5% for India, 27.9% for Japan,",
+        "20.7-27% for Taiwan, 3-7.8% for Türkiye, and 16% for Vietnam",
+        "The EU market for cold-rolled flat steel products is worth some €23.2 billion.",
+        "The EU’s domestic production is based in 12 EU countries and employs over 8,600 people.",
+        "This probe is the first in which the Commission has established the existence of Particular Market Situations",
+        "In this investigation, the Commission established Particular Market Situations in India and Taiwan."
+      ]
+    }
+  ]
+}
