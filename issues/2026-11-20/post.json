@@ -1,0 +1,119 @@
+{
+  "id": "2026-11-20-brief",
+  "date": "2026-11-20",
+  "issue": 53,
+  "category": "brief",
+  "topic": "tariff",
+  "caption": "11월 19일(현지) 국내외 보도·기관 발표 기준 원재료 뉴스 2건.\n\n1) 영국 정부, 한국산 열연후판 최종 반덤핑관세 부과 결정 발표(Trade Remedies Notice 2026/32)…2,100㎜ 초과 광폭재는 무관세\n2) 美 EIA, 3분기 중동 주요 해상 길목 원유 물동량 19% 증가…10월 중동 원유 생산 하루 2,310만 배럴로 분쟁 이후 최대\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": ["#원자재", "#후판", "#반덤핑", "#원유", "#호르무즈"],
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "英, 한국산 후판 반덤핑\n**중동 원유 물동량 증가**",
+      "sub": "11월 19일(현지) 국내외 보도·기관 발표 기준\n오늘의 원재료 뉴스 2건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "tariff",
+      "src": "snm-uk-plate-ad-final",
+      "headline": "英, 한국산 후판\n**반덤핑 최종 확정**",
+      "toc": "영국, 한국산 열연후판 반덤핑관세 최종 확정",
+      "orig": "英, 한국산 후판 반덤핑 최종 확정…2,100㎜ 초과 광폭재 ‘무관세’",
+      "why": "영국향 후판 수출 규격·물량 점검",
+      "key": {"value": "2,100㎜", "label": "초과 광폭재는 무관세"},
+      "viz": [
+        {
+          "type": "status",
+          "title": "영국 정부 · 한국산 열연후판",
+          "items": [
+            {"k": "DECISION", "v": "최종 반덤핑관세 부과 결정 발표", "tone": "alert", "sub": "18일(현지시간)"},
+            {"k": "NOTICE", "v": "Trade Remedies Notice 2026/32"},
+            {"k": "EXCLUDED", "v": "2,100㎜ 초과 광폭재 ‘무관세’", "tone": "warn"}
+          ]
+        },
+        {
+          "type": "stats",
+          "items": [
+            {"value": "2,100", "unit": "㎜ 초과", "label": "광폭재 무관세", "hi": true}
+          ]
+        }
+      ],
+      "coverage": []
+    },
+    {
+      "type": "news",
+      "category": "chemical",
+      "topic": "supply",
+      "src": "eia-mideast-chokepoints-q3",
+      "headline": "중동 원유 물동량\n**3분기 19% 증가**",
+      "toc": "美 EIA, 3분기 중동 해상 길목 원유 물동량 19% 증가",
+      "orig": "Oil flows through Middle East chokepoints increased in the third quarter",
+      "facts": [
+        {"t": "최근 선적량도 3분기 수준 유지(Vortexa 초기 자료)"}
+      ],
+      "why": "원유·나프타 조달 여건 개선 여부 점검",
+      "key": {"value": "19%", "label": "3분기 중동 길목 원유 물동량 증가"},
+      "viz": [
+        {
+          "type": "stats",
+          "items": [
+            {"value": "19", "unit": "%", "label": "3분기 중동 주요 길목 원유 물동량 증가(2분기 대비)", "hi": true},
+            {"value": "23.1", "unit": "백만 b/d", "label": "10월 중동 원유 생산(분쟁 이후 최대)"},
+            {"value": "76", "unit": "%", "label": "10월 중국 원유·콘덴세이트 수입 증가(2분기 대비)"}
+          ]
+        },
+        {
+          "type": "status",
+          "title": "중동 해상 길목 · EIA",
+          "items": [
+            {"k": "UP", "v": "호르무즈 해협·수에즈 운하 물동량 증가"},
+            {"k": "DOWN", "v": "바브엘만데브 해협 물동량 감소", "tone": "warn"},
+            {"k": "STOCKS", "v": "세계 원유 재고 증가 시작 추정", "sub": "10월 말 재고는 4월 초보다 4억 배럴 적음"}
+          ]
+        }
+      ],
+      "coverage": []
+    },
+    {"type": "closing"}
+  ],
+  "sources": [
+    {
+      "id": "snm-uk-plate-ad-final",
+      "publisher": "철강금속신문",
+      "title": "英, 한국산 후판 반덤핑 최종 확정…2,100㎜ 초과 광폭재 ‘무관세’",
+      "date": "2026-11-19",
+      "time": "08:30 KST",
+      "accessed": "2026-11-20",
+      "url": "http://www.snmnews.com/news/articleView.html?idxno=577642",
+      "evidence": [
+        "英, 한국산 후판 반덤핑 최종 확정…2,100㎜ 초과 광폭재 ‘무관세’",
+        "영국 정부는 18일(현지시간) 한국산 열연후판에 대한 최종 반덤핑관세 부과 결정(Trade Remedies Notice 2026/32)을 발표했다."
+      ]
+    },
+    {
+      "id": "eia-mideast-chokepoints-q3",
+      "publisher": "U.S. Energy Information Administration",
+      "title": "Oil flows through Middle East chokepoints increased in the third quarter",
+      "date": "2026-11-19",
+      "accessed": "2026-11-20",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68485",
+      "evidence": [
+        "Collective oil shipments through key chokepoints around the Middle East increased by 19%",
+        "in the third quarter of 2026 (3Q26)",
+        "Oil shipments through the Strait of Hormuz and Suez Canal each increased",
+        "while those through the Bab el-Mandeb decreased compared with the second quarter",
+        "Initial shipping data from Vortexa show that shipments remained close to 3Q26 levels in October.",
+        "We estimate that countries around the Middle East produced 23.1 million barrels per day (b/d) of crude oil in October,",
+        "the most since the beginning of the conflict.",
+        "In addition, shipping data from Vortexa show China imported 76% (4.7 million b/d) more crude oil and condensates",
+        "in October than it did in 2Q26.",
+        "We estimate that global oil inventories were 400 million barrels lower at the end of October",
+        "than they were at the beginning of April.",
+        "Given the recent increase in exports and production from the Middle East, we estimate global oil inventories have begun to increase."
+      ]
+    }
+  ]
+}
