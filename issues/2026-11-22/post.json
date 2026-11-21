@@ -1,0 +1,185 @@
+{
+  "id": "2026-11-22-brief",
+  "date": "2026-11-22",
+  "issue": 55,
+  "category": "brief",
+  "topic": "supply",
+  "caption": "11월 19일~20일(현지) 국내외 보도 기준 원재료 뉴스 2건.\n\n1) 포스코 노사, 2026년 임금교섭 2차 잠정합의안 마련…1차안 조합원 투표 부결(반대 51.7%) 뒤 재합의, 노조 찬반투표 예정\n2) BASF, 에보닉 인수 추진 중단…비구속 전액 현금 제안 2건 모두 거절돼\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": [
+    "#원자재",
+    "#철강",
+    "#포스코",
+    "#화학",
+    "#BASF"
+  ],
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "포스코 임금교섭 재합의\n**BASF 에보닉 인수 중단**",
+      "sub": "11월 19일~20일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 2건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "steel",
+      "topic": "supply",
+      "src": "sd-posco-wage-deal-2nd",
+      "headline": "포스코 임금교섭\n**2차 잠정합의**",
+      "toc": "포스코 노사, 1차안 부결 뒤 임금교섭 잠정합의안 다시 마련",
+      "orig": "포스코 노사, 임금협상 잠정합의 재도출…격려금 추가 지급",
+      "why": "찬반투표 결과 전까지 포스코 조달 일정 점검",
+      "key": {
+        "value": "2.6%",
+        "label": "포스코 2차 잠정합의 기본임금 인상"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "포스코 · 2026년 임금교섭",
+          "items": [
+            {
+              "k": "AGREED",
+              "v": "20일 본교섭에서 잠정합의안 다시 마련",
+              "tone": "alert",
+              "sub": "포항 본사"
+            },
+            {
+              "k": "BEFORE",
+              "v": "1차 잠정합의안, 11월 7일 조합원 투표 부결"
+            },
+            {
+              "k": "NEXT",
+              "v": "노조, 조만간 조합원 찬반투표 실시",
+              "sub": "과반수 찬성 시 최종 타결",
+              "tone": "warn"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "51.7",
+              "unit": "%",
+              "label": "1차안 투표 반대"
+            },
+            {
+              "value": "2.6",
+              "unit": "%",
+              "label": "2차안 기본임금 인상",
+              "hi": true
+            }
+          ]
+        }
+      ],
+      "coverage": [
+        {
+          "publisher": "철강금속신문",
+          "title": "포스코 노사, 2차 잠정합의 도출…28일 찬반투표",
+          "url": "http://www.snmnews.com/news/articleView.html?idxno=577750",
+          "date": "2026-11-20"
+        },
+        {
+          "publisher": "스틸데일리",
+          "title": "포스코 노사, 임금협상 잠정합의 재도출…격려금 추가 지급",
+          "url": "https://www.steeldaily.co.kr/news/articleView.html?idxno=204560",
+          "date": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "type": "news",
+      "category": "chemical",
+      "topic": "maker",
+      "src": "inv-basf-ends-evonik-pursuit",
+      "headline": "BASF, 에보닉\n**인수 추진 중단**",
+      "toc": "BASF, 제안 2건 거절당한 뒤 에보닉 인수 추진 중단",
+      "orig": "BASF ends pursuit of Evonik after two offers rejected",
+      "facts": [
+        {
+          "t": "에보닉의 입장은 BASF 발표에 포함되지 않음"
+        }
+      ],
+      "why": "유럽 화학 메이커 재편 흐름 점검",
+      "key": {
+        "value": "인수 중단",
+        "label": "BASF, 에보닉 인수 추진 종료"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "BASF · Evonik 인수",
+          "items": [
+            {
+              "k": "DECISION",
+              "v": "BASF, 에보닉 인수 노력 종료",
+              "tone": "alert"
+            },
+            {
+              "k": "CAUSE",
+              "v": "에보닉, 비구속 전액 현금 제안 2건 거절"
+            },
+            {
+              "k": "TALKS",
+              "v": "에보닉 경영이사회와 의미 있는 협의 없었다",
+              "sub": "BASF 발표",
+              "tone": "warn"
+            }
+          ]
+        }
+      ],
+      "coverage": [
+        {
+          "publisher": "ICIS",
+          "title": "BASF ends efforts to acquire Evonik",
+          "url": "https://www.icis.com/explore/resources/news/2026/11/19/11242451/basf-ends-efforts-to-acquire-evonik",
+          "date": "2026-11-19"
+        },
+        {
+          "publisher": "Investing.com",
+          "title": "BASF ends pursuit of Evonik after two offers rejected",
+          "url": "https://za.investing.com/news/stock-market-news/basf-ends-pursuit-of-evonik-after-two-offers-rejected-4586635",
+          "date": "2026-11-19"
+        }
+      ]
+    },
+    {
+      "type": "closing"
+    }
+  ],
+  "sources": [
+    {
+      "id": "sd-posco-wage-deal-2nd",
+      "publisher": "스틸데일리",
+      "title": "포스코 노사, 임금협상 잠정합의 재도출…격려금 추가 지급",
+      "date": "2026-11-20",
+      "time": "18:45 KST",
+      "accessed": "2026-11-22",
+      "url": "https://www.steeldaily.co.kr/news/articleView.html?idxno=204560",
+      "evidence": [
+        "포스코는 20일 포항 본사에서 노동조합과 본교섭을 열고 2026년 임금교섭 잠정합의안을 마련했다고 밝혔다.",
+        "이번 잠정합의안에는 기본임금 2.6% 인상과 함께 목표달성 격려금 350만 원, 타결축하·노사화합장려금 220만 원, 지역사랑상품권 50만 원 등 총 620만 원 지급이 포함됐다.",
+        "그러나 11월 7일 실시된 조합원 찬반투표에서 찬성 48.3%, 반대 51.7%로 부결되면서 추가 교섭에 나섰다.",
+        "노조는 조만간 잠정합의안에 대한 조합원 찬반투표를 실시할 예정이다.",
+        "투표에서 과반수 찬성을 얻으면 포스코의 2026년 임금교섭은 최종 타결된다."
+      ]
+    },
+    {
+      "id": "inv-basf-ends-evonik-pursuit",
+      "publisher": "Investing.com",
+      "title": "BASF ends pursuit of Evonik after two offers rejected",
+      "date": "2026-11-19",
+      "time": "16:34",
+      "accessed": "2026-11-22",
+      "url": "https://za.investing.com/news/stock-market-news/basf-ends-pursuit-of-evonik-after-two-offers-rejected-4586635",
+      "evidence": [
+        "Investing.com -- BASF SE has ended its efforts to acquire Evonik Industries AG",
+        "after the specialty chemicals company rejected two non-binding, all-cash offers",
+        "BASF said it had indicated a willingness to consider a further moderate increase to its offer",
+        "but had not received meaningful engagement from Evonik’s Executive Board.",
+        "It also did not include a response from Evonik."
+      ]
+    }
+  ]
+}
