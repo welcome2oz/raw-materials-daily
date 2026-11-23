@@ -1,0 +1,14 @@
+# run_log 2026-11-24 (No.57, A. 클라우드 루틴)
+- 05:03 0단계: 미게시·미넘김 확인. setup.sh — python3(3.11)에 playwright 없어 python3 -m pip 로 설치 후 준비 완료. 전날(11/23) 게시 완료 확인
+- 05:10 1A 발행함 feeds/2026-11-24 받음 → pickup: 채널 64개(항목 33건), 원문 발췌 0개 (Cowork 노트: 이 세션 WebFetch 대체 도구가 원문을 그대로 주지 않아 발췌를 못 만듦. Bing·Investing 채널 대부분 11/21 이전 항목)
+- 05:15 원문 직접 읽기: Yahoo 'Trump to reduce…derivative'(Reuters, 2026-04-02)·'US Steel Granite City'(AP, 2025-09-09) — 게재일 범위 밖 → 제외
+- 05:20 WebSearch 보충 7건(steelmaker·copper·cracker·aluminium·investing.com·yahoo·OPEC): 범위 안 후보 2건(타타스틸-APL Apollo, Cobre Panama 조건 수용)
+- 05:22 스틸데일리 RSS 직접 수집(raw/steeldaily.json 37건). 11/23~24 기사(말레이시아 STS 냉연 우회덤핑 신청·타타스틸 강관사 인수·인니 광업수익 70%·中 니켈광 수입·유럽 페로니켈) 모두 유료회원 전용 → 본문 없음, 근거로 못 씀
+- 참고: 이 환경 WebFetch 는 전문 원문을 주지 않아 '문장/조각 단위 원문 인용(120자 이하)' 방식으로 받음 (11/23 Cowork 발췌와 같은 방식)
+- 3단계 선정:
+  - [스틸] 타타스틸, APL Apollo Tubes 지분 26.38% 인수 합의 — 여러 매체 2곳(Investing.com via Yahoo 11/22 21:43 CST=11/23 12:43 KST, 스틸데일리 11/24 유료)
+  - [비철] 파나마 "Minera Panama, Cobre Panama 재가동 협상 조건 5개 수용"(Reuters via Investing.com, 11/24 06:04 AEDT) — 단독 보도 — 인허가·공급 재개 협상의 상태 변화(조건 수용). 11/18 '재가동 협의 착수'(2026-11-18-s2) 후속(update_of)
+- 뺀 후보: 한경 '김정관 장관 석유화학 재편 연내 매듭 촉구'(11/23) — 장관 촉구·지원 약속뿐 새 결정 없음(의견 성격, 애매하면 뺌) / ICIS 인도 석유화학 1300억달러 투자 필요·GPCA GCC 전망 — 전망·의견 / Copper 반등·급락 기사 — 가격 / mining.com Cobre 패널·칠레 예산 — 루틴에서 mining.com 읽기 불가 / Argus Nucor 전망 — 차단·전망 / 레진·화공 — 범위 안 읽을 수 있는 새 사실 기사 없음 → 비움
+- 카드 수치는 지분율(26.38%·52.38%·53%)만 사용, 인수 금액·주당 가격은 가격 검사 기준에 맞춰 카드·캡션에서 뺌. 원문 제목의 '$1.67 billion' 은 표시 제목(orig)에서 말줄임(출처 장에는 원 제목 그대로)
+- 6단계 render --check 통과(오류 0, 경고: slide3 단독 보도), 렌더 4장(테마 dark, No.57), JPG 4장 육안 확인 이상 없음. dedup: slide3 새 사실 status:approved ("accepted the government's conditions")
+- 받은 곳: Cowork 수집 자료(발췌 0) + 직접 수집 보충
