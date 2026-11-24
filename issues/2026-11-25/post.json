@@ -1,0 +1,77 @@
+{
+ "id": "2026-11-25-brief",
+ "date": "2026-11-25",
+ "issue": 58,
+ "category": "brief",
+ "topic": "maker",
+ "caption": "11월 24일(현지) 외신 보도 기준 원재료 뉴스 1건.\n\n1) 멕시코 Tyasa, 신규 특수강봉강(SBQ) 제강 설비 상업 생산 개시…이달 약 5,000~6,000톤 출하, 6개월 내 월 10,000~12,000톤, 2028년 말 월 20,000톤 목표. 멕시코 SBQ 생산능력 연 약 70만 톤 vs 소비 약 200만 톤\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+ "hashtags": ["#원자재", "#철강", "#특수강", "#멕시코", "#USMCA"],
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "TODAY'S RAW MATERIALS NEWS",
+   "title": "멕시코 Tyasa\n**특수강봉강 상업 생산**",
+   "sub": "11월 24일(현지) 외신 보도 기준\n오늘의 원재료 뉴스 1건",
+   "toc": true
+  },
+  {
+   "type": "news",
+   "category": "steel",
+   "topic": "maker",
+   "src": "fm-tyasa-sbq-mexico",
+   "headline": "멕시코 Tyasa\n**특수강봉강 상업 생산**",
+   "toc": "멕시코 Tyasa, 신규 SBQ 제강 설비 상업 생산 개시…2028년 말 월 2만 톤 목표",
+   "orig": "Tyasa starts commercial SBQ production in Mexico, executive says: Alacero Summit 2026",
+   "facts": [
+    {"t": "설비 공급은 이탈리아 Danieli, 시험 생산 거쳐 당초 계획보다 늦게 상업 가동"}
+   ],
+   "why": "북미 SBQ 역내 조달처 변화, USMCA 원산지 요건과 함께 점검",
+   "key": {"value": "20,000톤", "label": "2028년 말 월 출하 목표"},
+   "viz": [
+    {
+     "type": "status",
+     "title": "Tyasa · 신규 SBQ 제강 설비",
+     "items": [
+      {"k": "NEW", "v": "11월 상업 생산 개시", "sub": "이달 약 5,000~6,000톤 출하 예상", "tone": "alert"},
+      {"k": "6M", "v": "월 10,000~12,000톤", "sub": "향후 6개월 출하 확대 목표", "tone": "warn"},
+      {"k": "2028", "v": "2028년 말 월 20,000톤 목표"}
+     ]
+    },
+    {
+     "type": "stats",
+     "items": [
+      {"value": "700,000", "unit": "톤", "label": "멕시코 SBQ 생산능력(연, Tyasa 포함)"},
+      {"value": "2", "unit": "백만 톤", "label": "멕시코 연간 SBQ 소비(약)", "hi": true}
+     ]
+    }
+   ],
+   "coverage": [
+    {"publisher": "Fastmarkets", "title": "Tyasa starts commercial SBQ production in Mexico, executive says: Alacero Summit 2026", "url": "https://www.fastmarkets.com/insights/tyasa-starts-commercial-sbq-production-in-mexico-executive-says-alacero-summit-2026/", "date": "2026-11-24"}
+   ]
+  },
+  {"type": "closing"}
+ ],
+ "sources": [
+  {
+   "id": "fm-tyasa-sbq-mexico",
+   "publisher": "Fastmarkets",
+   "title": "Tyasa starts commercial SBQ production in Mexico, executive says: Alacero Summit 2026",
+   "date": "2026-11-24",
+   "time": "10:25 UTC",
+   "accessed": "2026-11-25",
+   "url": "https://www.fastmarkets.com/insights/tyasa-starts-commercial-sbq-production-in-mexico-executive-says-alacero-summit-2026/",
+   "evidence": [
+    "Tyasa started commercial production at its new special bar quality (SBQ) steelmaking facility in November",
+    "“We’re going to be delivering close to 5,000 tonnes, hopefully 6,000 tonnes this month,” Chahin said.",
+    "The company expects to increase monthly deliveries to 10,000-12,000 tonnes over the following six months,",
+    "with a longer-term target of reaching 20,000 tonnes per month by the end of 2028.",
+    "Tyasa had originally planned to bring the facility online earlier in 2026, but the commercial launch was postponed.",
+    "The company has been conducting production trials since June and has already delivered some material,",
+    "The new facility was supplied by Italian equipment manufacturer Danieli",
+    "estimating that the country’s combined SBQ production capacity, including Tyasa’s new facility,",
+    "will reach around 700,000 tonnes per year, compared with annual consumption of close to 2 million tonnes.",
+    "origin requirements under the United States-Mexico-Canada Agreement (USMCA)."
+   ]
+  }
+ ]
+}
