@@ -1,0 +1,11 @@
+- 05:04 0단계: 미게시·미넘김 확인. setup.sh Chromium 실패 → python3(3.11)에 playwright 1.63.0 설치(사전 설치 Chromium 1243과 맞춤) 후 실행 확인
+- 05:04 [루틴] 발행함 수집 자료 받음 (Cowork 2026-11-25T03:12:00+09:00): 채널 65개·항목 151건, 원문 발췌 4개
+- 05:08 1A 발행함 feeds/2026-11-25 받음 → pickup: 채널 65개(항목 151건), 원문 발췌 4개(Cowork, 짧은 원문 인용만 — partial). 전날(11/24) 게시 완료 확인
+- 05:10 2단계 collect: 2곳 이상 함께 보도 뉴스 없음
+- 05:15 후보 본문 확인(WebFetch): Yahoo 'US Steel Illinois'(AP, 2025-09-09)·'OPEC+ holds output'(Reuters, 2025-11-30)·Investing 'Rio Tinto Resolution Copper'(Reuters, 2026-03-25) — 게재일 범위 밖 → 제외
+- 05:20 WebSearch 보충 7건(구리·알루미늄·석화 크래커·철강 AD·Maruzen·국내 NCC·investing): 범위 안 허용 매체 새 후보 없음 (Maruzen 지바 크래커 폐쇄는 hydrocarbonprocessing.com — 비허용 매체)
+- 3단계 선정:
+  - [스틸] 멕시코 Tyasa 신규 SBQ 제강 설비 상업 생산 개시(Fastmarkets, 11/24 10:25 UTC = 11/24 19:25 KST) — 단독 보도 — 생산·설비·가동(신규 설비 상업 가동, 출하 물량·목표·국가 생산능력 대비 소비 수치)
+- 뺀 후보: Cobre Panama 'restart negotiations'(Reuters via Investing, 11/23 10:38 ET) — 11/24 호(No.57) '조건 5개 수용'과 같은 월요일 회의, 새 사실 없음 / Fastmarkets CBAM 검증 수요 — 의견·전망, 날짜는 기존 규정 일정 / ICIS GPCA GCC 원가 경쟁력 — 전망·의견(11/24 호와 같은 판단), 본문 부분 인용뿐 / 스틸데일리·철강금속신문(英 한국산 후판 AD 확정·베트남산 컬러강판·中 니켈광 수입 등) — 유료·접근 차단으로 본문 없음 / 가격 기사(구리 11개월 저점 등) / 비철·레진·화공 — 범위 안 읽을 수 있는 새 사실 기사 없음 → 비움
+- 6단계: render --check 통과(오류 0, 경고: slide2 단독 보도). PIL 이 시스템 패키지와 충돌해 pillow 재설치 후 렌더 3장(테마 light, No.58). JPG 3장 육안 확인 — 6M 칸 줄바꿈 고쳐 재렌더, 이상 없음. dedup: 새 사건
+- 받은 곳: Cowork 수집 자료(발췌 4, Tyasa 는 루틴에서 다시 읽어 원문 조각 보강) + 직접 WebSearch 보충
