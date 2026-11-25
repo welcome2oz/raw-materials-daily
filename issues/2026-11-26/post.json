@@ -1,0 +1,224 @@
+{
+  "id": "2026-11-26-brief",
+  "date": "2026-11-26",
+  "issue": 59,
+  "category": "brief",
+  "topic": "maker",
+  "caption": "11월 25일(현지) 국내외 보도 기준 원재료 뉴스 2건.\n\n1) 에쓰오일 샤힌 프로젝트 준공…울산 온산 9조2580억원 투자, 연간 석유화학 제품 생산능력 약 320만t 추가, 시운전 거쳐 내년 중 상업가동 계획. 사빅(SABIC)과 PE 수출 마케팅 계약\n2) 美 EIA, 11월 20일로 끝난 주 원유 재고 1.1 million 배럴 증가(예상 1.5 million 배럴). 쿠싱 534,000 배럴 감소, 휘발유 1.7 million 배럴·증류유 715,000 배럴 증가\n\n구매 관점은 의견이며, 정확한 내용은 각 원문을 확인하세요.",
+  "hashtags": [
+    "#원자재",
+    "#석유화학",
+    "#폴리에틸렌",
+    "#원유재고",
+    "#에쓰오일"
+  ],
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TODAY'S RAW MATERIALS NEWS",
+      "title": "에쓰오일 샤힌\n**9.3조 석화단지 준공**",
+      "sub": "11월 25일(현지) 국내외 보도 기준\n오늘의 원재료 뉴스 2건",
+      "toc": true
+    },
+    {
+      "type": "news",
+      "category": "resin",
+      "topic": "maker",
+      "src": [
+        "edaily-soil-shaheen",
+        "hk-soil-shaheen"
+      ],
+      "headline": "에쓰오일 샤힌\n**9.3조 석화단지 준공**",
+      "toc": "에쓰오일 샤힌 준공, 석유화학 생산능력 연 320만t 추가",
+      "orig": "에쓰오일, 9.3조 ‘샤힌 프로젝트’ 준공…\"새로운 50년 연다\"(종합)",
+      "facts": [
+        {
+          "t": "사빅(SABIC)과 폴리에틸렌(PE) 수출 마케팅 계약 체결",
+          "src": "edaily-soil-shaheen"
+        }
+      ],
+      "why": "국내 PE 신규 물량 유입 시점·수출 비중 점검",
+      "key": {
+        "value": "320만t",
+        "label": "연간 석유화학 제품 생산능력 추가"
+      },
+      "viz": [
+        {
+          "type": "status",
+          "title": "에쓰오일 · 샤힌 프로젝트 · 울산 온산",
+          "items": [
+            {
+              "k": "DONE",
+              "v": "11월 25일 준공 기념행사",
+              "sub": "2022년 11월 투자결정 후 약 4년",
+              "tone": "alert"
+            },
+            {
+              "k": "NEXT",
+              "v": "시운전 거쳐 내년 중 상업가동 계획",
+              "tone": "warn"
+            },
+            {
+              "k": "FEED",
+              "v": "원료 83% 자체 정유시설에서 조달 계획",
+              "src": "hk-soil-shaheen"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "320",
+              "unit": "만t",
+              "label": "연간 석유화학 제품 생산능력 추가",
+              "hi": true
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "half": true,
+          "items": [
+            {
+              "value": "12→25",
+              "unit": "%",
+              "label": "전체 생산 중 석유화학 비중"
+            }
+          ]
+        }
+      ],
+      "coverage": [
+        {
+          "publisher": "이데일리",
+          "title": "에쓰오일, 9.3조 ‘샤힌 프로젝트’ 준공…\"새로운 50년 연다\"(종합)",
+          "url": "https://www.edaily.co.kr/News/Read?newsId=03109446645649328&mediaCodeNo=257",
+          "date": "2026-11-25"
+        },
+        {
+          "publisher": "한국경제",
+          "title": "에쓰오일, 9조 들인 초대형 석화단지 완공",
+          "url": "https://www.hankyung.com/article/2026112502371",
+          "date": "2026-11-25"
+        }
+      ],
+      "update_of": "2026-11-03-s2"
+    },
+    {
+      "type": "news",
+      "category": "chemical",
+      "topic": "supply",
+      "src": "inv-eia-crude-stocks-nov20",
+      "headline": "美 원유 재고\n**주간 1.1M 배럴 증가**",
+      "toc": "美 EIA, 11월 20일 주간 원유 재고 1.1M 배럴 증가",
+      "orig": "EIA says US crude stocks rise 1.1M barrels to 418.9M barrels",
+      "why": "원유·정제 제품 수급 여력 확인",
+      "key": {
+        "value": "1.1M",
+        "label": "11월 20일 주간 美 원유 재고 증가(배럴)"
+      },
+      "viz": [
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "1.1",
+              "unit": "million 배럴",
+              "label": "원유 재고 증가 (예상 1.5 million)",
+              "hi": true
+            },
+            {
+              "value": "-534,000",
+              "unit": "배럴",
+              "label": "쿠싱 원유 재고"
+            }
+          ]
+        },
+        {
+          "type": "status",
+          "title": "美 EIA · 11월 20일로 끝난 주",
+          "items": [
+            {
+              "k": "GASOLINE",
+              "v": "휘발유 재고 1.7 million 배럴 증가",
+              "sub": "217.7 million 배럴"
+            },
+            {
+              "k": "DISTILLATE",
+              "v": "증류유 재고 715,000 배럴 증가",
+              "sub": "105.6 million 배럴"
+            },
+            {
+              "k": "RUNS",
+              "v": "정제 원유 투입 하루 428,000 배럴 증가"
+            }
+          ]
+        }
+      ],
+      "coverage": [
+        {
+          "publisher": "Investing.com",
+          "title": "EIA says US crude stocks rise 1.1M barrels to 418.9M barrels",
+          "url": "https://www.investing.com/news/commodities-news/eia-says-us-crude-stocks-rise-11m-barrels-to-4189m-barrels-93CH-5051205",
+          "date": "2026-11-25"
+        }
+      ]
+    },
+    {
+      "type": "closing"
+    }
+  ],
+  "sources": [
+    {
+      "id": "edaily-soil-shaheen",
+      "publisher": "이데일리",
+      "title": "에쓰오일, 9.3조 ‘샤힌 프로젝트’ 준공…\"새로운 50년 연다\"(종합)",
+      "date": "2026-11-25",
+      "time": "14:57",
+      "accessed": "2026-11-26",
+      "url": "https://www.edaily.co.kr/News/Read?newsId=03109446645649328&mediaCodeNo=257",
+      "evidence": [
+        "에쓰오일이 국내 석유화학 산업 사상 최대 규모의 투자사업인 ‘샤힌 프로젝트’를 완공했다.",
+        "에쓰오일은 25일 서울 신라호텔에서 창립 50주년 및 샤힌 프로젝트 준공 기념행사를 개최했다.",
+        "샤힌 프로젝트는 울산 온산국가산업단지에 총 9조2580억원을 투자해 세계 최대 규모의 스팀 크래커와 TC2C(Thermal Crude to Chemicals) 설비",
+        "2022년 11월 최종투자결정(FID) 이후 약 4년 만에 결실을 맺었다.",
+        "에쓰오일은 샤힌 프로젝트를 통해 연간 약 320만톤(t)의 석유화학 제품 생산능력을 추가로 확보하게 됐다.",
+        "전체 제품 생산에서 석유화학이 차지하는 비중도 기존 12%에서 25%로 두 배 이상 확대된다.",
+        "회사는 안정적인 시운전을 거쳐 내년 중 상업가동에 돌입할 계획이다.",
+        "에쓰오일은 아람코 계열사인 사빅(SABIC)과 폴리에틸렌(PE) 제품의 수출 마케팅 계약을 체결했다."
+      ]
+    },
+    {
+      "id": "hk-soil-shaheen",
+      "publisher": "한국경제",
+      "title": "에쓰오일, 9조 들인 초대형 석화단지 완공",
+      "date": "2026-11-25",
+      "time": "17:43",
+      "accessed": "2026-11-26",
+      "url": "https://www.hankyung.com/article/2026112502371",
+      "evidence": [
+        "에쓰오일은 25일 서울 신라호텔에서 창립 50주년 및 샤힌 프로젝트 완공 기념식을 열었다.",
+        "올해 시운전을 끝내고 내년 상업 가동에 들어가면 연간 석유화학 제품 생산능력은 320만t 늘어난다.",
+        "에쓰오일은 필요한 원료의 83%를 자체 정유시설에서 조달해 원가 경쟁력을 높일 계획이다."
+      ]
+    },
+    {
+      "id": "inv-eia-crude-stocks-nov20",
+      "publisher": "Investing.com",
+      "title": "EIA says US crude stocks rise 1.1M barrels to 418.9M barrels",
+      "date": "2026-11-25",
+      "time": "11:10 AM",
+      "accessed": "2026-11-26",
+      "url": "https://www.investing.com/news/commodities-news/eia-says-us-crude-stocks-rise-11m-barrels-to-4189m-barrels-93CH-5051205",
+      "evidence": [
+        "Crude stockpiles rose by 1.1 million barrels in the week ended November 20, bringing total inventories",
+        "Analysts had forecast a build of 1.5 million barrels.",
+        "At the Cushing, Oklahoma delivery hub, crude stocks fell by 534,000 barrels during the same period.",
+        "Refinery crude runs increased by 428,000 barrels per day, while refinery utilization rates climbed",
+        "Gasoline stocks rose by 1.7 million barrels to 217.7 million barrels, matching analyst expectations.",
+        "Distillate stockpiles, which cover diesel and heating oil, added 715,000 barrels to reach 105.6 million"
+      ]
+    }
+  ]
+}
