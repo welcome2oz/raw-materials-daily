@@ -1,0 +1,12 @@
+- 05:04 [루틴] 발행함 수집 자료 받음 (Cowork 2026-11-28T03:30:00+09:00): 채널 3개·항목 10건, 원문 발췌 3개
+- 05:04 [루틴] setup: python playwright 1.65 → 1.63.0 로 맞춰 사전 설치 Chromium 사용. raw_parts A~H(채널 61개)를 runs/raw 에 배치
+- 05:20 [루틴] 2단계 collect.py: 후보 nonferrous 10·steel 25·resin 0·chemical 5. 다음 호수 No.61 (토요일 호, 게재일 11-27~11-28 KST)
+- 05:25 [루틴] 3단계 선정
+  - 스틸: 이데일리 '불황에 K철강 감산·설비 매각…' — 단독 보도 — 생산·설비 가동 중단(동국제강 포항 코일 철근 약 5주 중단·약 2만t 감산, 대한제강 신평 압연라인 중단, 현대제철 포항2공장 설비 매각). 이전 호에 동국제강·대한제강 게시 없음
+  - 화공: Reuters(via Investing.com) 'Iraq in talks with OPEC for higher oil quota…' — 단독 보도 — 수급·정책(OPEC+ 2027년 1분기 생산목표 동결 원칙 합의, 이라크 생산능력 평가 4.9M bpd 불만·탈퇴 경고)
+  - 뺀 후보: KIET 2027 철강 전망(철강금속신문·스틸데일리 2곳) — 연구기관 전망 발표로 새 사실(가동·정책 결정) 아님, 애매하여 제외·스틸 1건 한도는 가동 중단 기사에 사용 / US Steel Granite City(Yahoo) — 2025-09-09 AP 기사, 범위 밖 / Ero Copper Tucumã 중단 — MINING.COM 읽기 불가·허용 매체 전재본 없음 / CNGR 인니 알루미늄 제련소(Bloomberg) — 전재본 없음 / Argus OPEC 11월 생산 — 차단·게재일 불명 / Yahoo 'OPEC+ holds oil output steady, agrees capacity mechanism' — 게재일 불명(과거 기사 추정) / 철강금속신문 동·아연·니켈·알루미늄 시황 — 가격 시황 기사 / 냉매 컨설팅 MOU — 행사성
+  - 비철·레진: 조건 맞는 기사 없음 → 비움
+- 05:28 [루틴] 4단계: Cowork 발췌(기사당 원문 문장 3개) 사용. 이데일리 기사는 루틴 WebFetch 로 원문 문장 4개 추가 발췌해 같은 파일에 덧붙임
+- 05:32 [루틴] 6단계: render --check 오류 0(경고: 단독 보도 2건 — 위 기준 기록), 렌더 4장(다크), dedup 중복 없음. JPG 4장 확인 — 잘림·겹침 없음
+- 05:33 [루틴] 환경: render 의 PIL 이 python3.11 과 맞지 않아 pillow 재설치(작업 환경만, 키트 수정 없음)
+- 보고: 받은 곳 = Cowork 수집 자료(발행함 feeds/2026-11-28, raw_parts 포함) / 뉴스 2건(이데일리, Reuters via Investing.com) / 7단계 gh_handoff 로 claude/intelligent-planck-3ikqsj push
